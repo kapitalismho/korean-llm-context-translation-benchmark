@@ -1,0 +1,554 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-dyadic-batch-02",
+  "items": [
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 이번 중간고사 수학 공부 진짜 미친 듯이 밤새서 100점 맞을지도 몰라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오, 진짜? 맨날 야자 시간에 엎드려 자더니 이번엔 웬일로 빡공했네. 결과 기대할게."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 시험 끝나고 가채점해 봤는데 뒤에 주관식 다섯 문제 다 날아가서 50점 나왔어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이야, 100점은 무슨, 아주 대단한 수학 천재 나셨네."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "수학 천재는 찬사가 아니라, 50점을 맞은 상대를 비웃고 조롱하는 반어법(What a math genius we have here / Yeah right, genius)이다.",
+        "commonFailureModes": [
+          "가채점 50점의 실패 서사를 잊어버리고 an amazing math genius arrived 처럼 직역하여 칭찬으로 만들어버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 100점 호언장담 -> 50점 폭망 -> '수학 천재'라는 조롱의 화용적 톤 변경 추적."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 부장님이 오늘 저녁에 부서 전체 다같이 삼겹살 회식하자고 하시더라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아 진짜? 나 오늘 진짜 6시 칼퇴하고 집 가서 우리 집 늙은 강아지 약 먹여야 하는데..."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "에이, 다 같이 가는 열외 없는 분위긴데 너 혼자만 빠지면 부장님 엄청 서운해하실걸?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래, 내 강아지는 굶어 죽든 말든 회식 가서 열심히 고기나 구워야지."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "강아지가 죽든 말든 진짜 상관없다는 게 아니라, 어쩔 수 없이 끌려가는 강압적 상황에 대한 분노 섞인 수동 공격적 체념(Fine, I guess I will just go grill meat while my dog starves)이다.",
+        "commonFailureModes": [
+          "강아지를 굶어 죽일 작정이라며 동물 학대 뉘앙스로 번역하거나, I must grill meat happily 처럼 순응적인 톤으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 강아지 약 먹이기(중요도 높음)가 눈치(동조 압력)로 인해 좌절될 때 발현되는 원망의 화용 구조 투영."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 이번에 새로 이사 가는 전셋집 보증금 모자라다며? 원하면 내가 200만 원 빌려줄까?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 고마운데 괜찮아. 은행에 대출 조금 더 나오나 알아보고 어떻게든 내가 알아서 해결해 볼게."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "에이, 나한테 부담 안 가져도 돼. 나 어차피 당장 쓸 데도 없이 통장에 놀고 있는 여윳돈이라서 그래."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그렇게 말해주는 네 마음만으로도 난 이미 보증금 넉넉하게 다 채운 기분이야."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "돈을 받았다는 뜻이 아니라 상대방의 호의에 깊이 감사하며 결국 최종 거절(I decline your offer but deeply appreciate the thought)하는 표현이다.",
+        "commonFailureModes": [
+          "돈을 이미 다 채웠다며 물리적인 입금(I already received enough deposits)이 일어난 것으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 금전 대여 제안 -> 1차 거절 -> 재차 제안 -> '마음만으로'라는 클리셰적인 거절 표현의 정중한 거절 의도 파악."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 저녁에 나 오랜만에 고등학교 동창들이랑 술 약속 있어서 자정 넘어서 엄청 늦게 들어갈게."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "벌써 이번 주만 세 번째 술 약속이네. 알았어, 어차피 말려도 나갈 거니까 조심히 놀고 와."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "응 미안해, 애들이 자꾸 카톡으로 부르니까 도저히 안 나갈 수가 없네. 금방 마시고 올게."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아예 천천히 마시다 내일 아침 해 뜨면 들어와라. 나 혼자 침대 아주 넓고 편하게 잘 자면 되지 뭐."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "해 뜨면 들어와(Stay out until sunrise)나 편하게 자면 되지(I will sleep comfortably alone)는 축복이 아니라 상대방에게 심한 죄책감을 주려는 화난 비꼬기(Guilt-tripping / So angry)다.",
+        "commonFailureModes": [
+          "Please take your time and stay out late 처럼 진심으로 배려하는 다정한 문장으로 번역하여 분노를 소거해버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 3번의 술 약속이라는 짜증 유발 요소가 해 뜨면 들어와라는 극단적 권유 배후의 비꼬기 의도를 형성함."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "김 대리, 어제 지시한 해외 파트너사 미팅 자료 영문 초안 다 작성했나? 오후에 바로 보고해야 돼."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "네, 부장님. 방금 오탈자 검수까지 모두 완벽하게 마치고 부장님 사내 메일로 방금 송부드렸습니다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "수고했어. 근데 3페이지 북미 진출 매출 그래프 수치가 약간 작년 분기 옛날 데이터 같은데?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "죄송합니다, 즉각 최신 연도 데이터로 그래프를 전면 수정하여 다시 보고 올리겠습니다."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "직속 상사(부장)의 지적에 대해 극도로 정중하고 각 잡힌 군대식 비즈니스 존댓말(I apologize, I will immediately revise it and report back)이다.",
+        "commonFailureModes": [
+          "I will fix it and show it to you 가벼운 업무 분위기로 번역하여 부장-대리 간의 수직적 한국 회사 위계질서를 무너뜨린다."
+        ],
+        "validationNotes": "contextExpectation=use. 지시 -> 보고 -> 지적 -> 즉각 수정(극존칭)의 사내 보고 어투 캐리 오버."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 너 어제 내가 빌려준 닌텐도 스위치 게임기 도대체 어디 뒀냐? 방에 아무리 찾아도 없네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아, 진짜 미안. 그거 내가 카페에서 잠깐 화장실 간 사이에 어떤 놈이 들고 튀었어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "돌았냐? 그거 내가 야간 알바해서 한 푼 두 푼 모아 산 내 보물 1호인데 진짜 미쳤어? 당장 내놓으라고!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진정해 이 미친놈아, 똑같은 새 걸로 결제해서 물어놓을 테니까 제발 소리 지르지 말고 입 좀 다물어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "진짜 절친한 친구 사이에서 심한 과실과 분노가 오가는 극도로 거칠고 공격적인 하대 슬랭투(Calm down crazy bastard, I will buy you a new one so shut your mouth)이다.",
+        "commonFailureModes": [
+          "입 좀 다물어(shut your mouth)를 please be quiet로 필터링하거나 미친놈을 sir/friend 등으로 순화하여 맹렬한 적대감을 소멸시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 물건 도난에 대한 친구의 거친 분노(돌았냐?)를 받아치는 동등하게 거칠고 상스러운 어투 유지."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아니, 제가 오늘 오전에 돌잔치용으로 예약 주문한 케이크가 축하 문구도 없이 빈 채로 배달 왔잖아요!"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "고객님, 정말 대단히 죄송합니다. 주말이라 주문이 밀려 주방 직원이 픽업 포장 과정에서 큰 실수를 한 것 같습니다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이거 하나 때문에 우리 애 중요한 생일 파티 다 망쳤는데 이거 환불해 줄 거예요, 말 거예요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "소중한 날에 큰 불편을 드려 고개 숙여 사과드리며, 결제하신 금액 전액을 아무 조건 없이 즉시 환불 처리해 드리겠습니다."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "극도로 분노한 스토어 고객을 응대하는 CS 직원의 납작 엎드린 서비스업 극존칭 어투(We deeply apologize for the inconvenience and will immediately refund the full amount)이다.",
+        "commonFailureModes": [
+          "I am sorry and I will refund you 처럼 평이한 사과로 바꾸어 고개 숙여 사과드린다 등의 비굴할 정도로 낮은 서비스 톤을 깎아먹는다."
+        ],
+        "validationNotes": "contextExpectation=use. 극대노한 손님 클레임 -> CS 직원의 방어적이고 기계적인 최고 수준의 예의 어투 유지(경어체)."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "자기야, 나 오늘 회사에서 짜증 나는 부장님한테 억울하게 털려서 진짜 너무 우울하고 기운 없더 ㅠㅠㅠ"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "헉, 울 애기 짜증 나게 누가 감히 괴롭혀써! 내가 당장 찾아가서 아주 그냥 다 혼내주까?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "웅 ㅠㅠ 빨리 퇴근하구 나랑 매운 떡볶이 먹으면서 쓰레기 같은 부장 욕 좀 오조오억번 들어주라아앙."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "당요나지, 내 쟈기 오늘 내가 세상에서 젤루 맛나고 매운 떡볶이 왕창 사주께용. 쪽쪽!"
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "혀 짧은소리와 과장된 애정 표현(애교)이 점철된 연인 간의 유치한 카톡 대화톤(Of coursey, my baby, I will buy you the spiciest tteokbokki in the world, mwah!)이다.",
+        "commonFailureModes": [
+          "오타로 점철된 당요나지, 젤루, 사주께용 을 표준 맞춤법으로 교정해버려 애교(aegyo) 감성을 철저히 파괴하고 Of course, I will buy you tteokbokki 로 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴 내내 축적된 연인 간의 혀 짧은 구어체(애교 톤)를 찌그려진 형태의 번역(Cutie pie, baby talk)으로 캐리할 것."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 네가 전화로 알려준 레시피 대로 프라이팬에 올리브유 두르고 썰어둔 마늘 달달 볶기 시작했어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "잘했어. 그 다음에 마늘 표면 색깔이 노릇노릇해지면 썰어둔 양파 붓고 같이 볶아야 돼."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아, 잠시 유튜브 영상 딴짓하다가 냄새나서 보니까 마늘이 완전 시커멓게 숯덩이로 타버렸는데 어떡해?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그럼 파스타에서 쓴맛 나서 다 망친 거니까 아깝더라도 다 쓰레기통에 버리고 프라이팬부터 설거지 다시 해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "마늘 볶음 -> 딴짓으로 인한 전소 -> 전부 폐기 및 설거지로 이어지는 돌이킬 수 없는 인과적 실패 서사(Since it is ruined, throw it away and wash the pan)다.",
+        "commonFailureModes": [
+          "망친 것(ruined food)을 버린다는 인과를 놓치고 프라이팬을 버리라고 오역하거나, 탄 마늘만 버리라며 요리 맥락을 임의로 왜곡한다."
+        ],
+        "validationNotes": "contextExpectation=use. 조리 과정의 시간 순서와 재료가 타버린 결과에 대한 원인-결과 지시 명령(버리기 -> 재설거지)."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 지금 너 만나러 2호선 타고 뚝섬역 가고 있는데 방금 앞차 고장 나서 열차가 통째로 멈춰 섰어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "뭐? 우리 인기 교양 수강신청 피켓팅 시간까지 딱 15분 남았는데 예약해둔 PC방 늦으면 어떡해."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 바로 내려서 카카오 택시 타려니까 갑자기 비 쏟아져서 길 엄청 막혀. 진짜 완벽하게 망한 듯."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "하... 어쩔 수 없다. 피씨방은 물 건너갔으니 그냥 길바닥에서 폰 데이터로 수강신청 클릭이나 해보자."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "지하철 고장 -> 택시 교통체증 -> 물리적 PC방 도착 불가 -> 최후의 수단으로 모바일 시도라는 인과적 절망 체인이다.",
+        "commonFailureModes": [
+          "폰 데이터로 길바닥에서 하자는 대안의 원인이 PC방 도착 불가라는 점을 잇지 못하고 길바닥에 PC방이 있다거나 폰으로 택시를 잡자고 환각을 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 이동 수단의 연쇄적 실패 서사 끝에 도출된 최후의 모바일 결단의 논리성 검증."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 저번에 내 생일 때 큰맘 먹고 백화점에서 사준 베이지색 캐시미어 100% 니트 진짜 잘 입고 다녀."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "응, 그거 진짜 부드럽고 따뜻하더라. 방금 고깃집 다녀와서 냄새나는 것 같길래 세탁기에 넣고 온수 울코스 돌렸어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야 미쳤어?! 그거 캐시미어라 온수 세탁하면 조직 다 오그라들고 줄어들어서 완전 핏 다 망가진단 말이야!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 어쩐지 방금 세탁기에서 꺼내보니까 강아지가 입을 법한 옷처럼 조그맣게 주먹만 해져 있더라."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "캐시미어를 온수에 세탁한 원인으로 옷이 개복숭아처럼 줄어들었다(It shrank so much it looks like dog clothes)는 결과 확인 문장이다.",
+        "commonFailureModes": [
+          "세탁기에서 강아지가 나왔다 거나 개 옷을 세탁기에 넣었다 고 옷과 개구멍을 착각하는 치명적 주어/보어 왜곡이 생길 수 있다."
+        ],
+        "validationNotes": "contextExpectation=use. 고급 의류 온수 세탁(원인) -> 강박적 경고(중간 서사) -> 옷 크기의 극단적 수축(결과 확정) 인과."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 오늘부터 여름에 바디프로필 사진 찍으려고 무염 닭가슴살만 먹으면서 지독하게 식단 할 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "과연 의지박약인 네가 길거리 떡볶이랑 프라이드치킨의 달콤한 유혹을 단 하루라도 참을 수 있을지 진짜 의문이다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 진짜 지금 아까부터 배고파서 쓰러질 거 같지만 꾹 참고 방금 닭가슴살 샐러드만 간신히 꾸역꾸역 먹었어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래? 근데 왜 지금 내 눈앞에 있는 쓰레기통 맨 위에 방금 네가 은밀하게 버린 명랑 핫도그 나무 막대기가 꽂혀있지?"
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "샐러드만 먹었다는 거짓 선언(원인)이 현재 쓰레기통 안의 핫도그 막대기(물리적 증거) 발견으로 인해 논파당하는 사이다 추궁 서사다.",
+        "commonFailureModes": [
+          "쓰레기통에 꽂힌 핫도그 막대기라는 물리적 객체 묘사를 놓치고 쓰레기통에 샐러드가 있다 로 번역하거나 닭가슴살 핫도그로 합체시켜 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 다이어트 허세 -> 상대의 불신 -> 본인의 샐러드 취식 주장 -> 결정적 증거(핫도그 막대기) 발견으로 이어지는 모순 격파."
+      }
+    }
+  ]
+}

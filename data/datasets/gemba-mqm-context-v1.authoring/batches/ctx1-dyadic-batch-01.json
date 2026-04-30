@@ -1,0 +1,414 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-dyadic-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "새로 온 인턴들 사원증은 다 발급됐나요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "네, 내일 출근하면 바로 나눠주려고요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'나눠주려고요'의 대상은 앞서 언급된 인턴들의 사원증들(plural)이며, 이를 인턴들에게 전달한다는 의미이다.",
+        "commonFailureModes": [
+          "한국어 원문에는 지시대명사가 생략되었으나, 영어로 번역할 때 맥락이 없다면 목적어를 아예 누락하거나 단수형(it)으로 오역한다(정답은 them)."
+        ],
+        "validationNotes": "contextExpectation=use 샘플. 한국어의 목적어 생략(zero anaphora)을 영어 번역 시 제대로 복수형 대명사로 살려내는지 묻는 까다로운 레퍼런스 해소 문제."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번에 본사에서 파견 온 줄리아 연구원 어때요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "실력은 좋은데, 아직 한국어가 서툴러서 힘들어하는 거 같아요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'힘들어하는 거 같아요'의 주체는 앞서 언급된 여성 이름인 줄리아이다. 영어 번역 시 주어로 명시적인 She가 등장해야 한다.",
+        "commonFailureModes": [
+          "앞 턴의 이름(줄리아)이 여성임을 인지하지 못하고, 주어를 He나 They로 대충 뭉뚱그려 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 줄리아라는 대상의 성별(여성)을 문맥에서 파악해야만 대명사 성별 오류(Gender Error)를 범하지 않음."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "location_time_deixis"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 회의록이랑 발표 자료 전부 다 출력할까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아뇨, PDF로 만들어서 그냥 미팅룸으로 쏴주세요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'쏴주세요'의 대상은 회의록과 발표자료(복수 문건)이다. 이것들을 디지털 형식(PDF)으로 회의실에 전송(send/transfer)해 달라는 뜻이다.",
+        "commonFailureModes": [
+          "문맥이 없으면 '쏴주세요'를 물리적인 사격(shoot)으로 번역하거나, 목적어를 it(단수)로 오역하여 두 종류의 문건임을 누락한다."
+        ],
+        "validationNotes": "contextExpectation=use. 출력물 대신 디지털 파일로 전송해달라는 의미이며, 여러 문건에 대한 지시(them)가 필요함."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "emotion_flip"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "냉장고에 뒀던 내 딸기 케이크 못 봤어?!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "어? 아까 막내가 엄청 맛있게 먹던데."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'먹던데'의 목적어는 앞서 화를 내며 찾은 '딸기 케이크'이다. 막내(youngest one)가 그것(it)을 먹고 있었다는 뜻이다.",
+        "commonFailureModes": [
+          "영어 번역 시 반드시 필요한 목적어(it)를 누락하여 The youngest was eating deliciously처럼 불완전하고 어색한 문장을 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 영어 타동사에 필수적인 목적어가 한국어에선 앞 턴에 의존해 생략되었을 때 모델이 목적어를 복원하는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 출장 렌터카 예약은 어떻게 할까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "김 대리가 법인 카드로요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "김 대리가 법인 카드로 '예약할 것이다'는 서술어가 생략된 구조다. (Deputy Kim will book it with the corporate card.)",
+        "commonFailureModes": [
+          "생략된 서술어를 파악하지 못해 Deputy Kim with a corporate card 처럼 불완전한 명사구나 문맥과 전혀 동떨어진 서술어로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 주어와 도구격(로)만 남고 핵심 동사(예약하다)가 아예 사라진 구어체 생략 문장 복원 구조."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "response_pair_dependency"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 디자인 시안, A안이랑 B안 중에 어떤 게 나아 보여요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "저는 무조건 A안이요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "본인은 무조건 A안이 '낫다/선택하겠다(I prefer / I choose)'는 동사가 생략된 대답이다.",
+        "commonFailureModes": [
+          "I am unconditionally plan A 와 같이 주어(나)와 보어(A안)를 be 동사로 직역해버려 자신이 계획 A라는 황당한 뜻이 된다."
+        ],
+        "validationNotes": "contextExpectation=use. 선택을 요구하는 문맥에서 명사로만 답했을 때 be동사가 아닌 prefer/choose 등의 의미를 살려 번역하는지 테스트."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이 식당, 김치찌개는 맛있는데 계란말이가 영 별로네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "난 둘 다 별론데."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "화자는 앞서 언급된 김치찌개와 계란말이 '둘 다 맛이 없다(I don't like either / they are both bad)'고 평가하고 있다.",
+        "commonFailureModes": [
+          "'둘 다 별로다'를 맥락 없이 번역하여 I am bad at both(나는 두 가지 다 서투르다)처럼 능력에 대한 이야기로 심각한 오역을 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 별로다라는 서술어가 맛 평가라는 특정 맥락을 업고 있을 때 올바르게 전이되는지가 관건."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "repair_or_self_correction"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 회의 3시 맞죠?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아뇨, 부장님이 4시 반으로 돌리셨어요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'돌리셨어요'는 회의 일정을 4시 반으로 '미뤘다/변경했다(moved it / pushed it back)'는 생략된 의미를 포함한다.",
+        "commonFailureModes": [
+          "회의 시간을 바꿨다는 맥락 없이 turned, spun처럼 무엇을 물리적으로 돌렸다는 뜻으로 어색하게 직역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 돌리다라는 단어가 일정/약속 문맥을 만났을 때 생략된 대상(회의)과 함께 스케줄을 변경했다는 의미를 잡는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "밖에 햇빛 엄청 센데 자외선 차단제 바르고 가."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "괜찮아, 이거라도 그냥 깊게 쓰고 나가려고."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "이 대화에서 '쓰다'는 문맥상 모자나 선글라스 따위를 머리나 얼굴에 '착용하다(wear/put on)'의 뜻이다.",
+        "commonFailureModes": [
+          "'쓰다'를 문맥 없이 use 나 write 로 직역하여 햇빛 맥락을 전혀 반영하지 못하는 오역을 발생시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 햇빛-차단이라는 뚜렷한 환경 문맥이 '쓰다'의 다양한 의미 중 착용으로 확정해줌."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "sarcasm_or_teasing"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 달 카드값이 왜 벌써 한도 초과지?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "너 저번에 인터넷으로 옷 엄청 긁어댈 때부터 알았다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'긁어댈'은 신용카드로 '결제하다(swipe / max out on clothes)'의 뜻이며 옷을 많이 샀음을 의미한다.",
+        "commonFailureModes": [
+          "'긁다'를 말 그대로 옷을 손톱으로 긁다(scratch it)라고 번역하여, 카드 과소비 문맥을 파괴하고 황당한 뜻이 된다."
+        ],
+        "validationNotes": "contextExpectation=use. 카드를 긁다라는 관용구가 축약되면서 옷을 긁어댔다고 표현할 때 맥락으로 결제/소비를 유추해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "팀장님이 방금 전에 찾으시던 작년도 워크샵 영수증 어디 있어요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 그거, 아까 결재선으로 급하게 태워 보냈습니다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'태워 보냈다'는 결재 시스템/라인에 서류를 '편승시켜 제출했다(routed it / submitted it)'는 회사 은어이다.",
+        "commonFailureModes": [
+          "'태우다'를 문자 그대로 불에 태웠다(burned it down)고 오역하여 문맥상 제출/결재가 아닌 서류 훼손의 뜻으로 만들어버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 영수증/결재라는 명확한 오피스 상황에서 은어가 쓰였을 때 맥락을 잡아내어 폭력적인 직역을 회피하는지 검증."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "맥주 두 잔, 사이다 한 잔 시켰는데 더 시킬 사람?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나는 운전해야 되니까 사이다로 깔게요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'깔게요'는 음료수 병을 '열겠다/마시겠다(open/have)'는 의미나 그쪽 길을 '선택하겠다(go with)'는 뜻의 구어체이다.",
+        "commonFailureModes": [
+          "음료 주문 맥락을 파악하지 못하고 바닥에 깐다(lay/spread)거나 까내린다(insult)는 전혀 다른 뜻으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 사이다가 음료수임이 앞 턴에 주어져 있으므로, 까다라는 거친 동사가 뚜껑을 여는 행위나 특정 선택에 정착(settle)함으로 제한됨."
+      }
+    }
+  ]
+}

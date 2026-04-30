@@ -1,0 +1,34 @@
+{
+  "name": "korean-llm-context-translation-benchmark",
+  "version": "1.0.0",
+  "description": "Korean multi-turn context translation benchmark comparing LLMs with commercial translation services",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "npm run test:unit",
+    "bench:cli": "tsx src/index.ts",
+    "test:watch": "tsx watch src/index.ts",
+    "test:unit": "node --import tsx --test tests",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "report:ranking-chart": "tsx scripts/generate-ranking-chart.ts",
+    "reports:public": "tsx scripts/export-public-reports.ts",
+    "release:public": "tsx scripts/build-public-release.ts",
+    "release:verify": "tsx scripts/verify-public-release.ts",
+    "dataset:context:init": "tsx scripts/generate-context-authoring-scaffold.ts",
+    "dataset:context:validate-scaffold": "tsx scripts/validate-context-authoring.ts --mode scaffold",
+    "dataset:context:validate-authored": "tsx scripts/validate-context-authoring.ts --mode authored",
+    "dataset:context:freeze": "tsx scripts/freeze-context-dataset.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^1.34.0",
+    "@inquirer/prompts": "^8.1.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "glob": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

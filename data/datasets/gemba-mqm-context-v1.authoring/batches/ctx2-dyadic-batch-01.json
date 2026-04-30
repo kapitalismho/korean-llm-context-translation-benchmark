@@ -1,0 +1,477 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx2-dyadic-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 엄마가 주신 반찬통 두 개 다 냉장고에 넣었어?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아직 식탁 위에 그냥 뒀어. 뚜껑도 안 닫았네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 빨리 닫아서 냄새 안 나게 맨 위칸에 넣어놔."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "닫아서 넣어야 할 대상은 앞서 언급된 반찬통 두 개(복수형)이다. 영어 번역 시 복수 대명사(them)를 사용해야 한다.",
+        "commonFailureModes": [
+          "반찬통이 두 개라는 이전 턴의 정보를 잊고 단수 대명사(it)로 얼버무리거나 목적어를 아예 탈락시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. dyadic 모드에서의 복수 대상 유지 추적."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "너네 옆집에 새로 이사 온 스웨덴 금발 남학생 말이야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아 걔? 어제 엘리베이터에서 마주쳤는데 엄청 쑥스러워하더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "한국말 아예 못 한대? 내가 가서 인사라도 해볼까?"
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "한국말을 못 하는 주체는 금발 남학생(he)이다.",
+        "commonFailureModes": [
+          "자연스러운 한국어 생략 구조를 견디지 못하고 화자 본인(I)이 한국말을 못 한다고 번역하거나 she/they 등으로 성별을 틀린다."
+        ],
+        "validationNotes": "contextExpectation=use. 2턴 전에 등장한 인물(남성)의 성별 정보를 현재 턴의 생략된 주어에 매핑하는 능력 테스트."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 어제 큰맘 먹고 아이패드 프로 최고 사양으로 질렀어!"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "오 대박. 나도 어제 다이소 가서 천 원짜리 액정 클리너 세트 하나 샀는데."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아, 그럼 그거 오면 나 한 장만 빌려줘. 지문 좀 닦아보게."
+        },
+        "relevantContextIndices": [
+          1
+        ],
+        "intendedInterpretation": "그거 와 빌려달라는 대상은 다이소 액정 클리너(it)이다. 화자가 자신의 아이패드를 닦으려는 맥락이다.",
+        "commonFailureModes": [
+          "아이패드 프로를 빌려달라는 둥 대상을 착각하거나, 한 장(one sheet/piece)의 의미를 파악하지 못해 완전히 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 화자 본인의 비싼 패드와 상대방의 싼 클리너가 만날 때, 빌려줘 의 대상을 올바르게 조준하는가."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번에 새로 오신 영어 원어민 선생님 앨리스 말이야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어, 성격 되게 깐깐하고 숙제도 엄청 많이 내주신다는 분?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 복도에서 마주쳤는데 완전 해맑게 웃고 계시던데?"
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "완전 해맑게 웃고 있는 주체는 앨리스 선생님(she)이다. 존댓말(계시던데)을 통해 주어가 선생님임을 확정 짓는다.",
+        "commonFailureModes": [
+          "웃고 있는 주체를 화자(I)로 오역하거나, 성별을 무시하고 He was smiling 이라고 쓴다."
+        ],
+        "validationNotes": "contextExpectation=use. 존경어(계시던데)를 단서로 활용하여 3인칭 여성 주어를 정확히 복구해 내는 화용론적 추론 검증."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 팀장님이 김 대리한테 내일 또 지각하면 진짜 죽는다고 엄청 화내시던데."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 방금 김 대리님 회식 자리에서 소주 네 병째 박살내고 계셔..."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "헐... 내일 아침 출근 완전 망했"
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "내일 아침 출근은 완전히 망했다(ruined / doomed)는 강한 예측을 하다가 STT 오류나 말더듬으로 끊긴 구조다.",
+        "commonFailureModes": [
+          "망했 이라는 잘린 글자를 제대로 인식하지 못하고 문맥에 맞는 doomed/ruined 처럼 동사로 완성하지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 지각 경고 -> 만취 의 인과율을 바탕으로 출근이 파탄났다는 부정적 서술어 비전 제시."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "교수님, 이번 학기 제 졸업 논문 최종 심사표 다 작성하셨습니까?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어, 거의 다 했는데 자네 서류 쪽 코멘트를 좀 더 다듬고 있네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아, 알겠습니다. 그럼 제가 이따가 다시 연구실로."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "교수님 연구실로 다시 '찾아뵙겠습니다/가겠습니다(visit / come by / go to)'가 생략된 정중한 인사말 구조다.",
+        "commonFailureModes": [
+          "연구실로(to the lab)만 맹목적으로 직역하여 I will to the lab later 처럼 동사 자리를 뻥 뚫어놓는다."
+        ],
+        "validationNotes": "contextExpectation=use. 학생이 교수에게 하는 정중어 구조에서, 방향/장소(연구실로)에 부합하는 이동 동사 복원."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "너 노트북 새로 산다며? 맥북이랑 그램 중에 뭐 살지 정했어?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "계속 고민하다가 결국 들고 다니기 가벼운 게 최고인 것 같아서 그램으로 마음이 기우네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나도 예전에 어깨 빠질 뻔하다 결국 가벼운 그램으로."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "무거운 노트북 대신 가벼운 그램으로 마음을 굳히고 '샀다/바꾸었다/선택했다(bought / switched to / chose)'는 뜻이다.",
+        "commonFailureModes": [
+          "명사인 그램에만 집중해서 I am a gram 처럼 비상식적 번역을 내뱉거나 서술어가 실종된 구를 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 제품 선택의 맥락 속에서 명사로 문장이 닫힐 때, 구매/선택의 결정 동사를 소환하는지 관찰."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "너 어제 지민이랑 대판 싸웠다며. 좀 풀었어?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아침에 내가 먼저 장문의 미안하다는 카톡을 남기긴 했어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래서? 아직도 걔한테서 답장이?"
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "싸움 후 사과 메시지를 보냈으니 답장이 '안 왔어?/없어?(has not come? / no reply?)'라고 묻는 부정 의문문 생략이다.",
+        "commonFailureModes": [
+          "아직도 답장이(Still a reply?) 라며 긍정/중립 의문문으로 만들어 앞선 갈등 상황의 팽팽한 긴장감을 단절시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 갈등 해소 여부를 타진하는 과정에서 생략된 서술어가 부정형(안 오다)임을 문맥으로 파악해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "너 이번 주말에 보는 토익 시험 공부는 많이 했어?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아직 모의고사 한 회차도 안 풀었어... 진짜 미치겠다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그냥 이번 시험은 깔끔하게 말아먹고 다음 달 거 확실하게 노려."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "시험을 말아먹다는 완전히 망치다/포기하다(bomb it / mess it up / screw it up)는 뜻의 일상적 속어다.",
+        "commonFailureModes": [
+          "시험지를 국밥처럼 말아 먹으라(roll it up and eat it)고 번역하여 엽기적인 식사 권유로 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 공부를 안 한 절망적 상태(context)가 말아먹다를 폭망/포기의 뜻으로 한정시킴."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 소개팅하고 온 민수 봤어? 사진이랑 완전 똑같이 생겨서 훈훈하더라."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "오 성공했나 보네? 성격도 매너 있고 좋대?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아니, 입 여는 순간 완전 쌍욕 섞인 싼티나는 말투 써서 확 깼대."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "확 깨다는 환상이나 호감이 깨져서 정이 떨어지다(was a total turn-off / broke the illusion)는 뜻이다.",
+        "commonFailureModes": [
+          "갑자기 졸음에서 깼다(woke up)거나 그릇 같은 걸 물리적으로 부숴버렸다(broke completely)고 터무니없이 직역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 외모 호감 -> 매너/말투 불호 라는 반전 맥락이 깨다를 연애적 환상 파괴의 속어로 해독되게 함."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 김 부장님 이번에 또 우리 부서에 말도 안 되는 말꼬리 잡기 지시 내린 거 들었어?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 그 인간은 왜 그 모양이냐. 일은 제대로 하나도 안 하면서."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나이만 헛으로 처먹어서 진짜 상사로 모시고 일하기 너무 짜증 나."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "나이를 처먹다는 나이를 헛되이 들었다(getting older / aged)는 뜻의 강한 비속어 섞인 멸칭이다.",
+        "commonFailureModes": [
+          "나이(age)와 헛으로(vain) 그리고 처먹다(eat heavily)를 결합하여 물리적으로 나이라는 숫자를 입으로 우적우적 먹었다고 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 상사의 무능함에 분통을 터뜨리는 직장인/부하 직원의 한탄 맥락 속에서 다의어 먹다의 연령 지칭 해석."
+      }
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 알바 대타 너무 많이 뛰어서 온몸이 찌뿌둥하고 스트레스 장난 아니야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "그러니까 주말에 좀 쉬어야지. 집에서 뭐 하면서 쉴 건데?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그냥 소파에 누워서 넷플릭스 켜놓고 시원한 맥주나 마시면서 피로 좀 풀려고."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "피로를 풀다는 스트레스나 피로를 해소하다/풀어버리다(relieve / relax)는 뜻이다.",
+        "commonFailureModes": [
+          "피로(fatigue)를 수학 문제 풀듯이 해결하다(solve)나 매듭 풀듯이 끄르다(untie)로 기계적으로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 알바 스트레스 및 맥주 휴식 맥락과 피로라는 목적어가 결합하여 풀다의 뜻을 해소(relieve)로 유도함."
+      }
+    }
+  ]
+}

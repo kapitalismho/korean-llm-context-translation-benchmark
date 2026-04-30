@@ -1,0 +1,416 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-single-batch-02",
+  "items": [
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "sarcasm_or_teasing"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 새로 산 핸드폰 떨어뜨려서 하루 만에 액정이 완전 박살 났어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 내 인생 참 잘 돌아간다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "자신의 인생이 평탄하지 못하고 재수가 없음을 자조적으로 비꼬는(sarcasm/sigh) 화용론적 의도이다.",
+        "commonFailureModes": [
+          "앞 턴의 엄청난 악재(액정 박살)를 무시하고 My life is running really well 이라며 긍정적이고 희망찬 작동 상태로 번역해버린다."
+        ],
+        "validationNotes": "contextExpectation=use. single 모드. 본인의 불행한 맥락을 깐 뒤 긍정 단어(잘 돌아간다)를 썼을 때 완벽한 자조적 비꼬기로 번역되는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 내가 진짜 아끼는 한정판 향수니까 오늘만 특별히 너 빌려주는 거야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "대신 진짜 딱 한 번만 살짝이다?"
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "향수를 뿌리는 횟수를 한 번으로 제한하겠다는 강한 조건이자 경고(Make sure you only spray it once)를 담은 발화이다.",
+        "commonFailureModes": [
+          "향수라는 맥락과 빌려주는 행위의 경고성을 잃어버리고 Instead, it is just softly once 처럼 서술어가 증발된 기괴한 명사구로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 살짝이다 라는 명사 종결형 경고가 향수 분사 맥락을 안고서 제대로 경고성 서술어로 재생성되는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어머님, 다음 주에 아버님이랑 두 분이서 놀러 가시게 제주도 펜션 예약해 드릴까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "비용은 제가 다 낼 테니까 그냥 두 분은 몸만 오시면 돼요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "시아버지/장인어른 등의 윗어른에게 짐이나 돈 부담 없이 편하게 오시라고 안심시키는 정중한 설득(Just bring yourselves / Don't worry about anything)이다.",
+        "commonFailureModes": [
+          "몸만 오다를 literally come with only your bodies 로 번역하여 위협적이거나 기괴한 육체적 뉘앙스를 풍기게 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 가족 간 효도 여행 제안 맥락과 결합된 몸만 오다 가 안심시키기(reassurance) 기능으로 작동."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "김 대리, 퇴근 시간 다 된 건 아는데 이 보고서 내일 아침 회의 전까지 무조건 필요하거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "무슨 뜻인지 알지?"
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "상급자가 하급자에게 야근을 해서라도 끝내놓으라는 강력하고 억압적인 압박(You know what you have to do / Get it done)을 간접적으로 던지는 말이다.",
+        "commonFailureModes": [
+          "압박과 지시의 뉘앙스를 빼먹고 단순히 언어적 의미를 이해했냐는 순수 질문(Do you know what it means?)으로 가볍게 넘겨버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 비즈니스 상하관계(부장-대리)에서 나오는 알아차리라는 압력성 발화의 전이."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 너 어제 술 먹고 길거리에서 남의 집 담벼락에 오줌 싼 거 동영상 다 찍혔더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 가지가지 한다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "상대의 한심한 행동을 비난하는 절친 사이의 극도로 격의 없는 조롱(You are unbelievable / You really do all sorts of stupid things)이다.",
+        "commonFailureModes": [
+          "친구 간의 수치스러운 맥락을 인지하지 못하고 You do various things처럼 중립적이고 점잖게 다양한 활동을 한다는 뜻으로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 수치스러운 사건을 배경으로 한 절친 간의 강한 비난 톤 유지 점검."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어르신, 날씨도 엄청 쌀쌀한데 여기 전기장판 온도 좀 더 올려드릴까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "눈치 보지 말고 그냥 편하게 말씀해 주세요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "어르신에게 편의를 제공하려는 공손하고 따뜻한 배려(Please feel free to tell me / Don't hesitate to ask)이다.",
+        "commonFailureModes": [
+          "친절한 배려의 톤을 놓치고 Tell me comfortably 라며 형식적이거나 딱딱하게 직역하여 정중함의 두께를 잃어버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 봉사자나 보호자가 어르신을 대하는 따뜻하고 조심스러운 존댓말의 톤 캐리어가 필수적."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 너 저번에 체육대회 때 내가 빌려준 축구화 왜 역대급으로 질질 끌고 안 주냐?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "내일 당장 안 가져와?!"
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "친하지만 화가 난 선배/친구가 후배에게 물건 반환을 강하게 압박하는 거친 톤(You better bring it tomorrow! / Bring it back right now!)이다.",
+        "commonFailureModes": [
+          "분노와 압박의 톤을 담지 못하고 Aren't you bringing it tomorrow? 처럼 순수하게 내일 가져오지 않는지 묻는 약한 의문문으로 변질시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 빌려준 것을 못 받은 짜증과 위계 지배적 톤을 반영한 강한 명령조 의문문 번역."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "고객님, 현재 가입하신 5G 베이직 요금제로는 데이터 무제한 혜택을 받으실 수 없습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이 부분 꼭 숙지하시고 이용에 참고 부탁드립니다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "서비스 제공자가 고객에게 주의사항을 안내하는 매우 공식적이고 건조한 비즈니스 포멀(Please keep this in mind and refer to it / Please be advised) 톤이다.",
+        "commonFailureModes": [
+          "고객 대상 안내 톤을 잃고 Please memorize this part 처럼 숙지하다를 기계적인 암기로 번역하거나 투박한 명령문으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 전형적인 CS(Customer Service) 안내 문구에서의 고도로 정제된 비즈니스 톤 매너 유지 여부 규명."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 밤새도록 전공과목 벼락치기 하느라 에너지 드링크를 무려 세 캔이나 마셨어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래서 머리는 멍한데 심장은 지금 미친 듯이 뛰어."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "에너지 드링크 과다 복용이라는 앞선 원인 때문에 현재 심박수가 요동치는 결과(That's why my heart is racing right now)로 이어짐을 명시.",
+        "commonFailureModes": [
+          "너무 많은 카페인 섭취라는 핵심 인과관계를 놓치고 그래서를 And so 로 뚝 끊어버려 신체적 부작용에 대한 원인-결과 구조를 약화시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 과거의 비정상적 행위가 현재의 비정상적 신체 반응을 이끌어냈다는 명확한 causal linkage."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "일단 삼겹살을 먼저 바싹 굽고 나서 코팅된 그 돼지기름에 신김치를 볶아야 돼."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "다 볶고 나면 마지막에 송송 썬 파랑 김가루 넣고 밥 비비는 거 국룰인 거 알지?"
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "고기 굽기 -> 기름에 김치 볶기 -> 다 볶은 후 밥 비비기 라는 명확한 시간적 순서 구조(Once it's all fried, after that)이다.",
+        "commonFailureModes": [
+          "다 볶고 나면 이라는 시간적 선후 관계를 나타내는 절을 When frying everything 처럼 동시성으로 오역하여 요리 순서를 꼬이게 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. 요리 레시피 설명처럼 step-by-step 절차법에서 이전 스텝 완료 후(다 볶고 나면)를 정확하게 순차적으로 이어받는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "repair_or_self_correction"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어? 방금 내가 과장님한테 올릴 험담 카톡을 실수로 부서 전체 톡방에 올렸네!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아씨, 지금 당장 빛의 속도로 지워야겠다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "치명적인 실수를 깨달은 직후, 시간적 지연 없이 즉각적으로(Right this second / Immediately) 행동에 착수해야 하는 긴급함.",
+        "commonFailureModes": [
+          "빛의 속도나 당장이라는 극도의 즉시성을 I will delete it at the speed of light 처럼 느긋한 미래형 서술어나 과도한 직역으로 긴박한 시점을 무너뜨린다."
+        ],
+        "validationNotes": "contextExpectation=use. 시점 인식 직후 행동 개시라는 긴급한 시간 간격(zero-lag)을 영문 부사와 시제로 제대로 표출해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 이번 달 월급 들어오면 뒤도 안 돌아보고 바로 적금 통장으로 100만 원부터 뺄 거야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그렇게 안 하면 또 미친 듯이 쇼핑하느라 며칠 만에 다 날릴 게 뻔하거든."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'그렇게 안 하면'은 앞 턴의 선제적 조치(적금 빼기)를 하지 않을 경우(If I don't do that) 발생하는 결과를 인과적으로 연결한다.",
+        "commonFailureModes": [
+          "앞선 특정 행동(적금 빼기)을 인지하지 못하고 If I don't do it like that 처럼 모호하게 방식을 가리키는 것으로 엉성하게 연결한다."
+        ],
+        "validationNotes": "contextExpectation=use. 특정 예방 조치를 조건절로 삼아 과거의 실패 패턴(쇼핑으로 탕진)이 재발할 것임을 연결하는 능동적 인과 구조."
+      }
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-dyadic-batch-03",
+  "items": [
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야 어제 넷플릭스에 새로 올라온 좀비 드라마 봤냐? 완전 꿀잼이더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 배고파. 오늘 점심 뭐 먹지?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "드라마 시청 상황에서 점심 메뉴 고민으로 대화 주제가 완전히 넘어갔다. 현재 발화는 독립적으로 번역되어야 한다.",
+        "commonFailureModes": [
+          "앞선 드라마의 문맥에 과도하게 묶여, 드라마 속 인물들이 무엇을 먹었는지(What did they eat)나 좀비와 관련된 뜻으로 억지로 연관 지어 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore 샘플. 강력한 화제(좀비물) 뒤에 일상적 화제(점심)가 나오면 번역기가 문맥을 무시하고 독립적으로 해석하는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "할아비가 뉴스 보니까 내일 태풍 온다더라. 우산 꼭 챙겨 가라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "네, 근데 할아버지가 쓰시는 아이패드 충전기 어디 뒀어요?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "태풍 및 우산 이야기에서 할아버지의 아이패드 충전기 위치를 묻는 딴청/주제 전환이다. 충전기에 관한 내용으로만 번역되어야 한다.",
+        "commonFailureModes": [
+          "폭우에 충전기가 젖을 위험이라든가 날씨 상황과 태블릿을 강제로 엮어 번역하여 의미를 미묘하게 망가뜨린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 손윗사람의 잔소리/걱정에 대답만 하고 바로 본인의 볼일(충전기)로 화제를 돌리는 일상적 세대 차이 대화."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "선배님, 다음 주 동아리 축제 때 부스 운영 시간표 다 짰습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오 고생했어. 근데 넌 좀 요즘 만나는 사람 없어?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "동아리 부스라는 공적인 내용에서 후배의 사적인 연애사(만나는 사람/데이트 상대)로 주제가 급선회했다.",
+        "commonFailureModes": [
+          "'만나는 사람'을 연애 대상이 아니라 부스 운영을 위해 섭외/만나야 하는 사람(people you meet for the booth)으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 선배가 갑자기 사생활 화제를 던지는 전형적인 패턴으로, 앞 턴의 공적 문맥을 완전히 무시해야 맞게 번역됨."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 딜러샵 가서 새로 나온 외제차 보고 왔는데 디자인 진짜 멋있더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "난 요즘 잠이 부족해서 그런가, 자기 전에 따뜻한 차나 한 잔 마셔야겠어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "화자가 말한 '차'는 마시는 차(tea)이다. 상대방이 자동차(car) 이야기를 했더라도 음료로 해석하는 것이 맞다.",
+        "commonFailureModes": [
+          "앞 턴의 자동차 맥락에 속아 '따뜻한 차'를 데워진 자동차(warm car)로 오역하거나 드라이브를 뜻하는 문장으로 완전히 망쳐버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 동일 표기 이의어(차=car/tea)를 활용한 의도적인 낚시. 뒤 턴의 국소 문맥(마시다)이 앞 턴의 거대 문맥을 씹어먹어야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번에 제주도 목장에 가서 조카들 태워주려고 말 타는 법 배웠어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오 멋지네요 선배님. 근데 제 말 좀 끝까지 들어주시면 안 될까요?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "후배가 하는 '말'은 본인의 발화(words/what I am saying)를 의미한다. 승마의 동물 말(horse)로 번역해서는 안 된다.",
+        "commonFailureModes": [
+          "듣다(listen)의 목적어인 '말'을 앞선 턴의 동물 말(horse)로 번역하여 I need you to listen to my horse 처럼 치명적으로 우스꽝스러운 오류를 낸다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 역시 철자가 같은 다의어를 활용한 낚시. 선배/후배라는 일상적 위계를 추가하여 register도 체크."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 주식 계좌 완전 파란 불이라서 눈물 날 거 같아..."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "야, 저기 횡단보도 파란 불이다. 빨리 건너자!"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "'파란 불'은 주식 시장의 하락(blue=loss in Korea)이 아니라 횡단보도의 보행 신호(green light)를 뜻한다.",
+        "commonFailureModes": [
+          "주식 하락장 문맥에 휩쓸려 횡단보도의 신호를 경제적 손실(blue light / drop)의 뜻으로 오역하거나 색상을 잘못 고수한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 관용적 비유(주식 파란불=하락)가 진짜 물리적 신호등(보행 신호=녹색)과 충돌할 때 로컬 맥락을 존중해야 하는 극단적 함정."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 저번에 매운 마라탕 먹고 응급실 실려갔잖아. 오늘은 절대 안 돼."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 스트레스 너무 받아서 무조건 제일 매운 맛으로 먹을 거야."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "현재 발화는 문맥을 직접 받아치거나 지칭하지 않고 완전히 독립된 문장이지만, 내용상 앞 턴의 제약(매운 것 절대 금지)을 완전히 무시하고 상반된 행동(매운 것 먹기)을 강행하고 있다. 현재 발화에만 충실하게 무조건 먹는다고 번역해야 한다.",
+        "commonFailureModes": [
+          "앞 턴의 절대 안돼 라는 강력한 금지 문맥에 지배당해, 현재 발화의 강한 의지를 꺾어서 부정문으로 번역하거나 \"먹으면 안 될까?\"식으로 무화시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore 샘플. 그거 옛날 이야기야 식으로 앞을 받아치면 Use 화용이 되어버리므로, 철저히 독립된 형태의 모순되는 선언(stale fact vs new fact)으로 구성."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "Yesterday",
+            "sourceText": "이번 주말 내내 태풍 오고 폭우 쏟아진대. 글램핑 예약해둔 거 다 글렀어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "하늘에 구름 한 점도 없네! 고기 굽기 완전 딱 좋은 날씨야."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "과거의 예보(폭우/태풍)가 현재의 발화 상황(구름 없이 맑음)에서 완전히 뒤집혔다. 화자는 독립적으로 현재의 아주 맑은 날씨를 묘사하고 있다.",
+        "commonFailureModes": [
+          "앞 턴의 폭우라는 강렬한 절망적 문맥에 오염되어, 현재 하늘이 맑다는 사실을 의문문(Isn't it sunny?)으로 바꾸거나 비꼬는 형태(Sarcasm)로 번역해버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore 샘플. 앞 턴의 오래된 날씨 정보(stale context)를 철저히 부수고, 자기 충족적(self-contained)인 맑은 날씨 문장을 그대로 직역할 수 있는지 측정."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "1 month ago",
+            "sourceText": "너 저번부터 계속 영어 스터디 가기 싫어서 환불받을 거라고 난리였잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이번 주말에 스터디원들이랑 1박 2일로 여행 가기로 했어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "과거의 스터디에 대한 혐오감/탈퇴 의사가 스터디원과 여행을 간다는 완전한 친밀함으로 업데이트되었다. 스터디에 완전히 적응한 현재 발화만을 100% 번역해야 한다.",
+        "commonFailureModes": [
+          "과거의 \"가기 싫다\"는 강한 혐오 맥락의 관성 때문에 스터디원과 여행 가는 것을 취소했다거나 가기 싫은데 억지로 간다는 식으로 원문에 없는 부정적 뉘앙스를 합성한다."
+        ],
+        "validationNotes": "contextExpectation=ignore 샘플. 대립되는 감정 상태 전이. 대꾸나 반응이 아니라 두 독립적 사실의 물리적 모순을 LLM이 견뎌내는지(ignore) 검증."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "3 hours ago",
+            "sourceText": "나 방금 고속터미널에서 출발했어!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아니 왜 아직도 안 와 대체 어디쯤이야?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "상대가 3시간 전에 출발했다는 메타데이터 정보가 해석에 도움을 주지만, 3 hours ago라는 텍스트를 번역본 자체에 직접 편입시켜서는 안 된다. 번역할 대상문은 오직 \"아니 왜 아직도 안 와\" 부분이다.",
+        "commonFailureModes": [
+          "메타데이터의 '3시간 전'이라는 정보를 문자 그대로 번역문 속에 직역하여 구겨 넣는 환각(hallucination of metadata) 오류를 발생시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 메타데이터(relativeTimeLabel)는 상황 인지에만 쓰이고 영문 결과물에는 절대로 노출되지 않아야 하는 함정."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "Yesterday night",
+            "sourceText": "솔직히 너 어제 나한테 말 너무 심하게 한 거 알아?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "미안... 아침부터 왜 또 화를 내고 그래."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "Yesterday night과 아침 이라는 대비가 자연스럽게 이어지지만, 화자의 대사는 오직 사과와 현재 아침 상황의 짜증뿐이다. 메타데이터 텍스트를 대상 문장에 합치지 말아야 한다.",
+        "commonFailureModes": [
+          "Yesterday night이라는 레이블 내용을 그대로 주워담아 Yesterday night you..., why are you angry this morning 처럼 번역문에 합성해버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 과거 시점의 시간이 레이블로 명시될 때, 그것이 번역에 literal string으로 삽입되는지 여부 측정."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아저씨, 전 짜장면 먹을 건데 아저씨는 뭐 드실래요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나도 그냥 똑같은 걸로 할게."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "speakerRole(other, self)은 발화자를 구분하기 위한 JSON 메타데이터일 뿐이다. 화자는 동네 꼬마에게 짜장면으로 통일하겠다고 말하고 있다.",
+        "commonFailureModes": [
+          "본인의 역할 이름인 Self 를 번역본에 직접 넣어 I, as Self, want the same 이나 Self also wants.. 처럼 기계적인 정보 오염을 낸다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 번역 시스템이 JSON 레이블 이름 자체를 번역해야 하는 문맥이나 명사로 착각하는지 확인하기 위함."
+      }
+    }
+  ]
+}

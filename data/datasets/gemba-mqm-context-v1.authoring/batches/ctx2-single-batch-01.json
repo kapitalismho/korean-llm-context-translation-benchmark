@@ -1,0 +1,478 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx2-single-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 펜션 엠티 가서 무리로 찍은 단체 사진들 수십 장 쫙 다 받았어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그중에서 딱 한 장 너랑 나랑 둘이서만 엽기 표정 짓고 찍힌 거 아까 톡으로 보냈잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 너무 웃기게 나와서 그러는데 나 그거 인스타 스토리에 올려도 대?"
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "올리려는 '그거(it)'는 턴 0의 단체 사진들(수십 장)이 아니라 턴 1의 엽기 표정 사진(한 장)이다.",
+        "commonFailureModes": [
+          "첫 턴의 단체 사진들에 꽂혀서 them으로 번역하거나, 올려도 돼? 의 대상을 생략하여 어색한 영문을 만든다."
+        ],
+        "validationNotes": "contextExpectation=use. single 모드 3단계를 걸치며 복수(단체들) -> 단수(우리 둘 사진) 중 단수 목적어를 맵핑."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "저번에 파티에서 만났던 키 크고 단발머리인 프랑스 교환학생 여자애 기억나지?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "걔가 어제 디엠으로 갑자기 자기 곧 겨울방학 때 서울 놀러 온다고 연락했더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "가이드 겸 한국어 회화 선생님 좀 해달라는데 나 영어 진짜 못해서 큰일 났네."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "해달라고 부탁하는 주체는 프랑스 교환학생 여자애(she)이다.",
+        "commonFailureModes": [
+          "한국어 생략 구조를 견디지 못하고 화자 본인이나 가상의 3인칭 남성(he)을 주어로 끼워 넣는 치명적 오역을 범한다."
+        ],
+        "validationNotes": "contextExpectation=use. 2턴 전의 여성(여자애)과 1턴의 걔 를 이어받아, 목적 턴의 숨은 주어(she)를 복원."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "사장님, 방금 지시하신 결산 서류철은 B동 3층 대회의실 원탁 테이블 위에 먼저 올려뒀습니다."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그리고 커피는 아직 식지 않도록 텀블러에 담아서 여기 탕비실에 보관 중입니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이제 곧 미팅 시작하실 테니 얼른 가져오라고만 하시면 바로 대령하겠습니다."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "가져오라고 명령하는 주체는 사장님(you/사장님)이고, 대령하는 대상은 커피(it)다. (서류는 이미 회의실에 있음)",
+        "commonFailureModes": [
+          "주어와 목적어를 혼동하여 내가 사장님을 대령한다거나 무언가를 식탁 위로 가져간다며 이전 턴 서류 위치와 조합하는 등 인지 붕괴 발생."
+        ],
+        "validationNotes": "contextExpectation=use. 존댓말과 상황(서류 세팅 끝, 커피 대기 중)을 통해 명령의 주체와 목적어를 입체적으로 복원."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "우리 집 고양이는 츄르 간식만 보면 눈 돌아가서 미친 듯이 달려들잖아."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 아까 비싼 돈 주고 새로 산 연어 캔을 처음 까주니까 냄새만 맡고 화장실 구석으로 도망치더라고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "요즘 배가 너무 불렀나 봐. 진짜 이럴 땐 입맛 맞추기 까다로워서 미치겠어."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "배가 부르고 입맛이 까다로운 대상은 고양이(he/she/it)이다.",
+        "commonFailureModes": [
+          "화자 본인(I)의 배가 부르다거나 I am picky 라며 사람 주어로 직역해 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 2턴 전 등장한 동물 주어를 현재 평가의 주어로 유지하는 능력."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내일 아침 일찍 건강검진 있어서 오늘 밤 9시부터 물 한 모금도 마시면 안 된대."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 지금 내 눈앞에 어제 먹다 남은 양념치킨이 계속 아른아른거려서 안달이 나 죽겠어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아, 침만 엄청 꼴깍 넘어가고 이 배고픔 진짜 도무지 못 참겠..."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "배고픔을 못 참겠다(can not stand it / endure it)는 의미를 발음하다가 의도적으로 말끝을 흐린/인식 오류 낸 생략 형태이다.",
+        "commonFailureModes": [
+          "못 참겠... 을 literally cannot endure... 처럼 점묘법으로 묘사하다가 동사를 던져버리고 문법 파괴 상태로 출력한다."
+        ],
+        "validationNotes": "contextExpectation=use. 참다 라는 동사 어간 뒤에 잘린 STT 폼을 문맥(단식, 치킨)에 맞춰 동사구로 영어 영작해 내기."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "팀장님, 저번 달 부서 실적 보고서 폰트는 전부 맑은 고딕으로 통일하라고 하셨죠?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "표 양식도 기존 세로형 말고 가로형으로 길게 뽑아 달라고 하셔서 싹 고쳐놨습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그럼 다 수정된 최종 원본 파일은 지금 바로 팀장님 사내 메일로."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "수정된 파일을 팀장님 메일로 '보내드리겠습니다/전송하겠습니다(will send / will forward)'가 생략된 조사 종결체이다.",
+        "commonFailureModes": [
+          "I will to your company email 처럼 send 같은 필수 전달 동사를 상상해 내지 못해 구멍 난 영어 문장을 배출한다."
+        ],
+        "validationNotes": "contextExpectation=use. 보고서 수정 보고 맥락 -> 목적지(메일) -> 전송 행위 도출."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말 데이트는 모처럼 화창하니까 한강 공원에 돗자리 깔고 치맥이나 할까 생각했지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아침에 뉴스 보니까 주말 내내 미세먼지 수치 최악이라 밖에서 뭐 먹었다간 코 완전 막힌다네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "눈물을 머금고 그냥 안전하게 우리 동네 앞 단골 삼겹살집으로 최종 합의."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "삼겹살집으로 장소를 '바꾸기로 타협했다/가기로 결정했다(agreed on / settled for / decided to go to)'는 뜻의 은어적 명사 종결체이다.",
+        "commonFailureModes": [
+          "합의(agreement)라는 명사를 그대로 살려 Final agreement to the pork belly place 처럼 동사 없는 명사구로 방치한다."
+        ],
+        "validationNotes": "contextExpectation=use. 한강 실패 -> 고깃집 대안 선택이라는 맥락이 명사 '합의'를 결정/이동 동사로 변환하도록 유도함."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 방금 전남친 인스타 스토리 몰래 염탐하다가 실수로 좋아요 하트를 눌러버린 거 있지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 심장 쿵 내려앉아서 0.1초 만에 취소 누르고 내 계정 아예 비공개로 돌려버리긴 했는데."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아직도 손발이 덜덜 떨리고 진짜 너무 쪽팔려서 당분간 고개를 못 들겠..."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "부끄러워서 사람들을 볼 낯이 없다는 관용적 도피 표현인 고개를 못 들겠다(cant show my face / can not raise my head)가 짤린 형태다.",
+        "commonFailureModes": [
+          "쪽팔림 맥락을 이해 못 해 고개를 들다를 물리적으로 목 디스크가 와서 고개를 못 드는 것(my neck cant lift my head)으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. SNS 실수라는 공감대 맥락과 관용구의 절단부 복원 능력 측정."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 스크린 너무 많이 봐서 눈이 침침하길래 블루라이트 완벽 차단 안경을 새로 하나 맞췄잖아."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 이게 코받침이 너무 낮게 설계돼서 고개만 숙여도 자꾸 흘러내려 엄청 짜증나네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "차라리 렌즈를 끼는 게 낫지, 이런 싸구려를 대체 어떻게 매일 쓰고 일해."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "안경을 '쓰다'는 작성하다나 맛이 쓴 것이 아니라 착용하다(wear)이다.",
+        "commonFailureModes": [
+          "안경 맥락을 잊고 싸구려 도구를 writing 펜처럼 오역하거나, 맛이 써서(bitter) 어떻게 일하냐는 등 괴상한 output을 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 2턴 동안 쌓인 안경(glasses) 빌드업이 쓰다를 착용(wear)으로 못 박게 만듦."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 환절기라 그런지 어제부터 계속 으슬으슬 춥고 잔기침이 안 떨어져서 죽겠어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "혹시 몰라서 아까 동네 내과 가서 독감 코로나 키트 검사 다 했는데 다행히 둘 다 음성이래."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데도 원장님이 엉덩이에 영양제 주사 강력 추천하셔서 강제로 맞고 왔어."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "주사를 '맞다'는 신체에 접종하다(get a shot / receive an injection)는 뜻이다.",
+        "commonFailureModes": [
+          "원장님에게 엉덩이를 물리적으로 구타당했다(got hit by the doctor)고 폭행 사건으로 둔갑시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 내과 진료 및 음성 판정 맥락이 주사를 맞다의 의료용 행위로 안착하도록 닻을 내림."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말에 회사 창립 20주년 기념일 대규모 행사 겹쳐서 기획팀 완전 초상집 분위기야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "거기에 하반기 연말 정산 기간까지 겹쳐버려서 부서 전체 전화통에 불이나고 있거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "내 몸뚱아리가 제발 세 개였으면 좋겠을 정도로 요즘 진짜 일복이 빵빵 터졌다니까."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "일복이 '터지다'는 감당할 수 없을 만큼 일거리가 쏟아져 들어오다(overwhelmed with work / flooded with work)는 반어적 속어다.",
+        "commonFailureModes": [
+          "일이나 폭탄이 물리적으로 빵 터져버렸다(my work exploded like a bomb)고 직역하여 회사를 폭파시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 회사 초상집+전화 불남 등 겹악재 맥락에서 일복 터지다의 고통스러운 다의어를 도출함."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "다음 주 수요일 당장 기말고사인데 아직 수학 시험 범위 절반도 진도 못 나간 거 실화냐."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "게다가 학교 수학 쌤이 이번엔 반평균 깎으려고 점수 테러용 킬러 문항 낸다고 으름장 놓으셨어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이러다가 내신 등급 완전 수직 강하할 텐데 이번 수학은 진짜 도대체 어떻게 쳐야 할지 막막해."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "시험을 '치다'는 시험에 응시하다(take the test / take the exam)는 뜻이다.",
+        "commonFailureModes": [
+          "치다 라는 물리적 타격 의미에 갇혀서 수학 시험지를 어떻게 때려야 할지(how to hit the math exam) 등으로 처참하게 갈 길을 잃는다."
+        ],
+        "validationNotes": "contextExpectation=use. 기말고사, 킬러 문항 등의 학교 맥락을 토대로 동사 치다를 응시(taking an exam)로 스위치함."
+      }
+    }
+  ]
+}

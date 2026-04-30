@@ -1,0 +1,498 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-single-batch-03",
+  "items": [
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 아침에 자다 일어났는데 갑자기 오른쪽 아랫배가 예리한 칼로 찌르듯이 아파서 숨도 제대로 못 쉬겠더라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "결국 119 구급차 타고 응급실로 실려 와서 씨티 찍어보니까 급성 맹장염이라서 당장 입원하고 수술해야 된대."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 링거로 무통 주사 잔뜩 맞았는데도 배가 너무 찢어질 거 같이 고통스러워서 응급실 침대에서 계속 뒹굴면서 울고 있어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 내일 저녁 8시에 오픈하는 아이유 콘서트 vip석 취소표 풀리는 거 무조건 예매 매크로 돌려서라도 무조건 잡아야 해."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "급성 맹장염으로 수술을 앞둔 극심한 고통의 응급실 서사를 완전히 무시하고, 아이유 콘서트 티켓팅을 다짐하는 엉뚱한 독립 발화다.",
+        "commonFailureModes": [
+          "응급실이나 수술이라는 문맥을 콘서트 예매 발화와 엮어 병원에서 콘서트를 본다거나 콘서트 취소표를 찢는다 로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 생명이 오가는 응급실 서사와 아이돌 콘서트 예매라는 완전히 단절된 두 주제를 교차 오염 없이 분리 번역."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 밤에 피곤하게 야근 퇴근하고 원룸 현관문 도어락 비밀번호 누르고 집에 들어갔는데 방구석 옷장이 싹 다 뒤집어져 있는 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "알고 보니까 도둑놈이 베란다 방범 창문을 쇠지렛대로 다 깨부수고 들어와서 내 현금 금고랑 소중한 노트북까지 다 털어갔어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 감식반 경찰관들 와서 집안 전체에 지문 채취 가루 뿌리고 폴리스 라인 치고 경찰서에서 진술서 쓰느라 밤새 한숨도 못 잤어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아침부터 너무 허기져서 역전 국밥집 가서 뜨끈한 국물에 오징어젓갈 잔뜩 올려서 특 사이즈로 시원하게 완뚝하고 싶다."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "가택 침입 특수 절도범 사건 처리에 대한 심각한 경찰 수사 맥락을 버리고, 단순히 배가 고파 국밥을 한 그릇 다 비우고(완뚝) 싶다는 일상 식욕 발화다.",
+        "commonFailureModes": [
+          "도둑이 국밥을 먹었다 거나, 경찰서 유치장에서 국밥을 먹는다 는 식의 무리한 맥락 통합을 시도한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 심각한 강력 범죄 수사 맥락과 완전히 절연된 오전의 국밥 식욕 묘사를 직역."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 진짜 내가 정말 간절하게 가고 싶었던 제일 큰 외국계 기업 최종 임원 면접이었는데 완전 바보 멍청이처럼 망쳤어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "영어로 1분 동안 장점 위주로 자기소개하라고 찔러왔는데 갑자기 머리가 하얘져서 아무 말도 못 하고 꿀 먹은 벙어리처럼 서 있었어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "압박 면접관이 한숨 푹 쉬면서 그냥 이제 그만 나가보라고 차갑게 말해서 나 지금 로비 화장실 휴지통 앞에서 펑펑 우는 중이야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아까 지하철역 계단 앞에서 본 쪼그만 포메라니안 강아지 엉덩이가 갓 구운 식빵처럼 생겨서 너무 빵빵하고 귀여웠는데 헤헤."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "인생이 달린 최종 면접 탈락의 비극적 좌절 서사에서 갑작스럽게 벗어나 길거리에서 본 강아지의 치명적인 귀여움(식빵 같은 엉덩이)을 회상하는 문장이다.",
+        "commonFailureModes": [
+          "화장실에서 면접관이 강아지 엉덩이 같다고 환각을 내거나 면접에서 강아지에 대해 답했다며 환상 번역을 생산한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 하이 스테이크 취업 실패의 서사와 큐티펫(강아지) 묘사의 철저한 독립성 검증."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내년 화창한 봄에는 나도 드디어 지긋지긋한 노처녀 딱지 떼고 진짜 평생을 함께 믿고 살아갈 착하고 좋은 사람 만나고 싶어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 어제 남정네 잘 붙는다고 엄청 유명하게 소문난 용하다는 점집 가서 부적도 10만 원이나 주고 쓰고 굿도 하려고 알아보고 왔어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 내년에 남자 생기면 시골 친척들이랑 친구들 다 불러 모아서 고급 호텔에서 아주 성대하게 잔치 열고 평생 자랑하고 싶단 말이야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 점심 메뉴는 그냥 귀찮으니까 집 앞 김밥천국 가서 김 펄펄 나는 뜨끈한 잔치국수나 한 그릇 호로록 먹어야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "결혼식 하객에게 전통적으로 대접하는 국수 먹다 라는 관용적 은유가 아니라 물리적으로 분식집에서 파는 멸치 육수 베이스의 실존하는 요리인 잔치국수(banquet noodles / warm noodles)를 먹는다는 뜻이다.",
+        "commonFailureModes": [
+          "1-3턴의 결혼/잔치 열망 서사에 휘말려 김밥천국에서 결혼식을 올리겠다 거나 잔치국수를 먹겠다를 결혼하겠다(get married)로 심각하게 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 결혼 맥락의 암시적 관용구(잔치/국수)를 문자 그대로의 분식집 점심 메뉴 번역으로 복구."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 요즘 주말마다 오프라인 독서 모임이랑 직장인 와인 동호회 열심히 나가면서 진짜 새로운 각계각층의 유능한 사람들 엄청 많이 사귀고 있거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제도 모임 뒤풀이에서 친하게 알게 된 어떤 성공한 스타트업 피씨엠 대표님이 자기네 회사 VIP 파티에 지인 자격으로 특급 초대해주셨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "확실히 이곳저곳 돌아다니면서 인맥 관리 단단히 해두니까 다른 데선 못 구하는 예상치 못한 고급 정보도 엄청 많이 얻고 사회생활하는 데 너무 유리하더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 내가 태어날 때부터 선천적으로 뼈대가 굵고 양쪽 발볼이 너무 넓어서 앞코가 뾰족하고 예쁜 구두를 신으면 새끼발가락이 터져서 찢어질 거 같아."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "관용어 발이 넓다(마당발, 인맥이 넓다)가 아니라 신체 부위인 물리적인 발의 폭(Width of the foot / wide feet)이 넓다는 뜻이다.",
+        "commonFailureModes": [
+          "1-3턴의 인맥 강화 서사 때문에 발볼이 너무 넓다를 나의 네트워크 인맥이 너무 방대해서 새끼발가락이 아프다 는 기괴한 비유법 융합물로 창조해버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 인맥/네트워킹의 맥락(발이 넓다의 비유적 상황)이 물리적 신발 사이즈(발볼) 번역을 방해하지 못하게 막음."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "솔직히 내가 내 주변 친구들에 비해서 남자 보는 조건 기운 잣대 기준이 그렇게 흠잡을 정도로 까다로운 것도 절대 아닌데 왜 이렇게 지독하게 연애가 안 되는지 모르겠어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "난 복잡하게 안 보고 그냥 키는 180 이상에 인서울 대학 무조건 나오고 연봉 최소 7천 이상에 절대 담배 안 피우고 나한테만 다정한 사람이면 딱 되거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 주변 친척들이나 지인들은 자꾸 나한테 제발 백마탄 왕자님 꿈 깨라며 현실을 좀 파악하고 내 주제 파악 좀 하라고 맨날 모일 때마다 팩폭 구박만 하고 난리야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 어제 스튜디오에서 찍은 취업용 증명사진 파일 열어보니까 양쪽 눈꼬리가 너무 하늘 위로 높게 치켜 올라가 있어서 인상이 무슨 불독처럼 너무 사나워 보여."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "관용어 눈이 높다(배우자 선택 기준이 까다롭다)가 아니라 안면 부위인 실제 양쪽 눈의 끝부분 모양(the outer corners of my eyes are angled too high)이 물리적으로 위를 향해 매섭게 생겼다는 뜻이다.",
+        "commonFailureModes": [
+          "1-3턴의 배우자 조건(눈이 높다) 서사에 지배당해 증명사진에 내 기준이 너무 높게 찍혔다 거나 눈이 높아서 불독을 찾는다 로 파국적 오역이 발생한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 이상형/까다로움 서사(눈이 높다의 원형질)에 기만당하지 않고 안면 부위의 생김새(눈꼬리가 올라감) 직역 유지."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 원래 태생이 심장 약한 엄청난 쫄보라서 미스터리나 심리 공포 영화 장르는 극장 근처에 아예 쳐다보지도 못하고 새빨간 포스터만 우연히 봐도 거품 물고 기절하거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "초등학생 어릴 때 전설의 고향 구미호 편 티비에서 우연히 잠깐 스쳐 지나가듯 봤다가 잔상이 남아서 무려 한 달 동안 엄마 품에서 덜덜 떨며 오줌 싸면서 지리며 잤어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 대학 동기 친구들이 매번 핼러윈 파티 시즌 때 놀이공원 귀신의 집이나 호러메이즈 가자고 꼬셔도 난 무조건 입구 밖에서 벤치 지키며 혼자 외롭게 팝콘이나 먹어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 방금 넷플릭스에 뜬 컨저링 엑소시스트 호러 무비를 혼자 원룸 불 다 끄고 새벽 2시에 무삭제 풀버전으로 봤는데 개뿔 너무 유치하고 시시해서 하품만 쩍쩍 나오더라."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "1~3턴에서 극도로 강조된 극강의 공포증(쫄보 서사)을 완벽하게 무시하고/배신하고, 현재 시점에 제일 무서운 공포 영화를 보면서 하품을 하는 용감한 무덤덤함을 날것 그대로 번역해야 한다.",
+        "commonFailureModes": [
+          "AI가 이전 턴의 쫄보 설정을 지켜내기 위해 너무 무서웠다 거나 기절했다 고 결과를 정반대로 뒤집거나, 영화를 보지 않았다 고 멋대로 주술 관계를 부순다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 공포 극도로 혐오하는 설정 붕괴를 허용하여 하품 나오는 시시함의 모순 결과를 직역."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "난 진짜 선천적으로 간에 알코올 분해 효소가 아예 1도 없어서 도수 10도짜리 순한 소주 반 잔만 실수로 마셔도 온몸이 토마토처럼 빨개지고 심장 쿵쾅거리다 응급실 실려가."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 대학교 1학년 신입생 환영회 술자리 첫날때도 선배들 다 마시는데 나 혼자 테이블 구석에 쭈그려서 칠성 사이다만 홀짝이느라 분위기 텐션 절대 못 맞추고 완전히 겉돌았어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그날 응급실 다녀온 이후로 내 평생 죽기 전까지 내 입안에 단 한 방울의 알코올 액체도 절대 입술에 닿게 하지 않겠다고 부처님이랑 할머니 납골당 앞에서 피눈물 흘리며 맹세까지 했지."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "드디어 불금이니까 오늘 밤엔 이태원 핫플 클럽 돔페리뇽 예약 룸 잡아서 독한 앱솔루트 보드카랑 양주 두 병 화끈하게 까고 데낄라 샷으로 들이부어서 내일 없이 미친 듯이 꽐라 돼야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "알코올 분해 효소 부족과 철저한 금주 서약을 무참히 박살 내고, 독주(보드카, 데낄라)를 들이부어 만취하겠다(get wasted)는 욕망의 발화다.",
+        "commonFailureModes": [
+          "AI가 화자의 간 건강과 맹세를 수호하기 위해 꽐라 돼야지 를 무알코올 음료를 마신다 로 순화하거나 친구를 먹인다 고 타자화시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 선천적 알코올 분해 불가/절대 금주 서사(1-3턴) 파괴 후 독점적 음주 폭주 발화 충실히 영작 숙제."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나는 방 안에 놓인 인테리어 소품이나 물건 딱 하나라도 1센티미터 제자리에 안 놓여 있으면 호흡곤란 오고 스트레스받아서 진짜 미쳐버리는 극도의 강박증 완벽주의 미니멀리스트야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내 하얀색 방에 딱 봐도 잘 때 쓸 매트리스 침대랑 심플한 책상 덜렁 두 개 빼고는 아무것도 안 두고, 옷장 옷도 딱 계절별로 단 3벌씩만 남기고 싹 다 당근마켓에 진작에 내다 팔았어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "눈부신 흰색 대리석 바닥에 까만 머리카락 단 한 가닥이라도 떨어진 꼴을 내 두 눈 뜨고 절대 못 참고 못 봐서 하루에 로봇 청소기 2번 돌리고 내 손으로 물걸레질을 5번씩 박박 돌리거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 퇴근하고 들어왔는데 내 방바닥엔 지금 도대체 언제 먹었는지 일주일 훌쩍 지난 곰팡이 핀 피자 박스랑 냄새나는 꾸덕한 입던 양말이 널브러져 있어서 발 디딜 틈도 없이 더럽네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "극강의 결벽증적 미니멀리즘과 청소 강박 서사와 완벽하게 모순되게, 화자의 현재 방이 쓰레기와 곰팡이 핀 박스로 더럽혀져 있는 끔찍한 위생 상태를 번역해야 한다.",
+        "commonFailureModes": [
+          "강박증자답게 양말과 박스를 지금 치운다 거나 이웃집 이야기라고 거짓 치환하여 미니멀리스트 화자의 순수성을 복원하려 무리수를 다발한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 무결점 결벽증 설정(1-3턴)을 박살내는 일주일 된 피자 조각과 양말 쓰레기장의 난장판 묘사."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "5 years ago",
+            "sourceText": "오늘 두근거리는 마음으로 동네 근처 인문계 고등학교 파릇파릇한 1학년 신입생 입학식 다녀왔는데, 엄마가 사준 교복 상의 사이즈가 너무 아빠 옷처럼 헐렁하게 커서 코미디언 양복 입은 거 같아."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "5 years ago",
+            "sourceText": "하 빨리 답답한 이 학교에서 조기 졸업하고 교복 벗어던진 자유로운 스무 살 어른 성인 돼서 새벽 첫차 다닐 때까지 피씨방 밤새 가서 게임하고 호프집에서 치킨에 생맥주 시원하게 마시는 게 내 인생 유일한 소원이야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "5 years ago",
+            "sourceText": "근데 망할 지금 내 통금 있는 현실은 내일모레 칠 무시무시한 중간고사 수학 시험 범위 구석구석 족보 기출문제나 미친 듯이 책상 앞에서 눈 뒤집고 풀어야 하는 불쌍한 고딩 노예 신세니까 슬프다 한숨만 나와."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아싸 드디어 방금 눈물겨운 4년제 대학교 학사모 날리는 졸업식 행사 끝나고 내일 대기업 첫 직장 설레는 출근 준비하려고 맞춤 정장 투피스 세트 백화점 가서 깔끔하게 내돈내산으로 픽업해왔지롱."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 과거(5 years ago) 고등학생 신분과 어린 학생 서사를 무시하고, 이미 대학교를 완전히 졸업하고 대기업 출근을 앞둔 당당한 사회인 시점(현재)으로 번역해야 한다.",
+        "commonFailureModes": [
+          "5 years ago I picked up a suit 라며 5년 전을 강제로 기입해 과거 시제로 고정해버리거나, 교복 픽업으로 어휘를 하향 평준화시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 5년 전의 고등학교 1학년 신입생 서사가 현재 턴의 대졸자/회사원 첫 출근 시제(과거형/현재완료)를 간섭하지 못하도록 차단."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 weeks ago",
+            "sourceText": "어제 강원도 스키장 블랙 다이아몬드 최상급 빙판 코스에서 초보 주제에 괜히 무리해서 S자 멋부리다가 뒤로 확 넘어져서 오른쪽 다리 종아리 뼈가 산산조각이 났어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 weeks ago",
+            "sourceText": "지금 동네 정형외과 6인실 병동에 누워서 하반신 전체에 두꺼운 흰색 석고 통깁스 칭칭 감고 꼼짝없이 링거 줄 매단 침대에 결박돼서 간병인 이모님이 밥도 떠먹여주는 불쌍한 처지야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 weeks ago",
+            "sourceText": "오늘 아침 회진 때 주치의 담당 의사 쌤이 앞으로 내 뼈 붙으려면 최소 두 달은 목발 두 개 짚고 없이는 복도 화장실조차 혼자서 절대 걸어서 못 갈 거라고 세상 절망적인 사형 선고를 하셨어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이야 오늘 미세먼지 하나 없이 맑은 날씨가 너무 상쾌해서 아침 일찍부터 동네 한강 공원 자전거 도로 10킬로미터 코스 거리를 내 튼튼한 두 다리로 전속력으로 쉬지 않고 파워 러닝하고 방금 사워 쫙 하고 왔어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 2주 전(2 weeks ago) 다리뼈 골절/통깁스 상태라는 치명적인 병상 서사와 모순되게, 10km를 전속력으로 뛰어다니는 극강의 건강한 현재 신체 액션을 번역해야 한다.",
+        "commonFailureModes": [
+          "2 weeks ago 를 억지로 붙여 시점을 박살 내거나, 러닝 대신 상상을 했다는 등으로 환각 번역해 2달짜리 통깁스의 인과를 기어코 지켜낸다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 2주 전 두 달짜리 통깁스 진단 서사(불구 상태)를 뒤엎고 현재 10km 마라톤 완주(튼튼한 다리) 액션 무사 통과."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "10 hours ago",
+            "sourceText": "오늘 정신과에서 처방받은 진짜 독한 파란색 수면 알약 두 알이나 물이랑 같이 먹었는데도 눈만 말똥말똥 해져서 도저히 잠이 안 와서 새벽 3시 반까지 전기장판 침대에서 양 1000마리 셌어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "10 hours ago",
+            "sourceText": "스트레스성 불면증이 갈수록 너무 고통스럽게 심해서 다음 주 주말에 강남에 유명한 뇌파 수면 클리닉 진료 특진으로 피의 예약해놨는데 내일 출근해서 아침 주간 회의 시간에 무조건 꾸벅꾸벅 침 흘리며 졸까 봐 벌써부터 미치겠어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "10 hours ago",
+            "sourceText": "신이 있다면 제발 내 이 멈추지 않는 톱니바퀴 같은 걱정 뇌가 불안한 망상 생각 좀 제발 그만 멈추게 하고 제발 딱 단 1시간만이라도 의식 잃고 기절하듯이 푹 깊은 달콤한 렘수면 잠에 빠졌으면 소원이 없겠다 진짜 제발 살려줘."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 동네 파워 헬스장 피크타임에 당당하게 가서 등 운동 데드리프트 100키로 최고 기록 아드레날린 폭발하게 세우고, 바로 옆 메가커피에서 카페인 만땅 에스프레소 투샷 벤티 사이즈 얼음 동동 띄워서 식도로 시원하게 빨리듯이 빨고 있지롱."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 10시간 전(10 hours ago) 지독한 불면증 및 피로, 수면 갈망이라는 차분한 서사를 벗어나, 고중량 짐(Gym) 트레이닝과 고카페인(에스프레소) 섭취라는 폭발적인 현재의 각성 액션을 번역해야 한다.",
+        "commonFailureModes": [
+          "수면제를 먹어 데드리프트를 상상한다 거나 에스프레소를 마시고 잠든다는 기적의 모순 융합을 시도하거나 Ten hours ago 를 강제로 삽입한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 10시간 전의 수면제 복용 및 깊은 잠 갈망 상황이 데드리프트 100kg+투샷 에스프레소라는 극단적 각성 행위에 잔존하지 않도록 분리."
+      }
+    }
+  ]
+}

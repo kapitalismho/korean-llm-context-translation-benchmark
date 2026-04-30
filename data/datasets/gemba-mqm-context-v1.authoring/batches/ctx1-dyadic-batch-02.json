@@ -1,0 +1,412 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-dyadic-batch-02",
+  "items": [
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "부장님, 내일까지 마무리하라 하신 기획안 모레까지는 안 될까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그건 좀."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'그건 좀' 뒤에는 (어려운데/곤란해)가 생략되어 있다. 하급자의 일정 연장 요청을 상급자가 단호하지만 완곡하게 거절(No, we can't / That's a bit difficult)하는 상황이다.",
+        "commonFailureModes": [
+          "'그건 좀'을 문자 그대로 That is a little 이나 That is some 으로 번역하여, 문장이 붕 뜨고 거절이라는 화용론적 의도(Pragmatic intent)가 완전히 증발해버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 거절을 직접적으로 말하지 않고 '좀'으로 끝내는 한국어 특유의 화용론적 생략 구조."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "sarcasm_or_teasing"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 달 신사업 예산, 본사에서 반의반으로 깎았다는데?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "잘 돌아간다 진짜."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'잘 돌아간다'는 기계 따위가 잘 작동한다는 뜻이 아니라, 회사의 부조리한 결정을 비꼬며 탄식하는(What a great system / This is ridiculous) 의도이다.",
+        "commonFailureModes": [
+          "예산이 삭감되었다는 부정적 맥락을 무시하고 It runs well / It is spinning well 과 같이 긍정적이고 물리적인 작동 상태로 직역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 상황적 문맥과 모순되는 긍정의 표현을 썼을 때, 그것이 비꼬기(sarcasm) 텐트를 가진다는 것을 잡아내는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이 무거운 박스들 제가 3층 회의실까지 다 올려드릴까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아, 됐어요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'됐어요'는 상대의 호의나 제안을 사양/거절(No thanks / I'm fine)하는 의도이다.",
+        "commonFailureModes": [
+          "앞선 제안 맥락을 파악하지 못하고 It is done (이루어졌다) 이나 That works (그렇게 합시다/좋습니다)로 역으로 수락/완료의 의미로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. '되다'라는 동사가 제안 뒤에 왔을 때 사양/거절의 화용론적 의무를 띠는 현상."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주식 시장 반등할 거라는데, 빚내서 투자해볼까?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "글쎄다."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'글쎄다'는 상대방의 제안이나 생각에 대해 깊은 회의감이나 동의하지 않음(I heavily doubt that / I wouldn't be so sure)을 표출하는 의도이다.",
+        "commonFailureModes": [
+          "'글쎄요' 계열을 단순한 생각의 지연(Well... / Let me see)으로만 번역하여 부정적, 회의적인 스탠스를 제대로 전달하지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 위험한 제안 직후에 വരുന്ന 글쎄다는 단순 망설임이 아니라 부정/만류의 화용론적 기능을 수행함."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "대표님, 내일 오전에 예정된 투자자 미팅 관련 특이사항 없습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "알았어."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'알았어'는 대표가 하급자의 보고를 수용하는 상황이다. 반말이긴 하나 업무적이고 권위 있는 수용(I got it. / Understood. / Thanks, you may go)의 톤이 실려야 한다.",
+        "commonFailureModes": [
+          "너무 캐주얼하게 Gotcha, dude 나 Okay 류로 번역하여, 대표-하급자 보고 상황의 비즈니스적 톤과 권위적 위계를 상실한다."
+        ],
+        "validationNotes": "contextExpectation=use. 반말이라고 해서 무조건 친구 사이의 캐주얼이 아님. 수직적 비즈니스 상황(대표-직원)의 반말 뉘앙스를 영어로 얼마나 점잖게(또는 권위있게) 치환하는가."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 오늘 밤에 클럽 갈 건데 올 거냐?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "물어보나 마나지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "친한 친구들의 대화. 아주 강한 수락(Hell yeah / You bet / Of course I'm in)이다.",
+        "commonFailureModes": [
+          "격식 없는 톤을 무시하고 It goes without saying 이나 I do not need to ask 처럼 딱딱하고 문어체적인 영어로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 앞 턴의 은어나 톤(클럽 갈 건데 올 거냐)을 통해 친밀도가 극도로 높음을 파악하고 슬랭에 가까운 영어 톤을 유지해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "고객님, 반품 처리를 위해 내일 오후 방문 수거를 진행해도 괜찮으실까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그때 저 집에 없는데."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "서비스 직원에게 고객이 일정 불가를 통보하는 상황. 정중한 상황이므로 Oh, I won't be home then 수준의 상식적이고 정중한 통보가 되어야 한다.",
+        "commonFailureModes": [
+          "서비스 응대 맥락을 고려하지 않고 I am not there 나 I am absent 와 같이 로봇 같거나 상대방을 무시하는 듯한 퉁명스러운 톤으로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 고객센터 상황이므로 반말/평어체 '없는데'조차도 실제로는 꽤 정중한 사회적 톤을 띠게 됨을 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "교수님, 이번 중간고사 대체 과제 제출 기한을 하루만 연장해 주실 수 있을까요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "안 돼요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "핵심 권위자(교수)의 학사 일정에 대한 단호하고 객관적인 거절(No. / That's not permitted.)이다.",
+        "commonFailureModes": [
+          "교수-학생 간 공적 거절의 무게감을 빼먹고 단순히 It doesn't work(작동하지 않습니다) 등 사물/시스템 대상으로 번역하거나 지나치게 캐주얼하게 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 학생의 정중한 요청에 대해 교수가 짧게 자를 때의 딱딱하고 공적인 거절 톤을 영어로 잘 옮기는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 회식에서 끝까지 달렸다며? 오늘 출근해서 괜찮아?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래서 오후 반차 썼잖아."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'그래서'는 앞선 음주 사실 때문에 숙취가 있다는 원인-결과를 직접 이어준다(That's why I took the afternoon off).",
+        "commonFailureModes": [
+          "인과관계의 강도(That's why)를 살리지 못하고 단순히 And so 로 약하게 이어버리거나 맥락 없이 그래서를 불친절하게 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 앞 턴의 사건이 지금 발화의 명백한 원인으로 기능하는 인과 사슬 구조."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 달에도 영업팀들 전체 목표 실적에 미달할 것 같습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그럼 다 같이 짐 싸는 거지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'그럼'은 앞 턴의 성과 미달이라는 조건이 충족된다면(If that happens / In that case) 해고당할 것이라는 의미.",
+        "commonFailureModes": [
+          "'그럼(그러면)'을 시간적 순서를 의미하는 then 이나 대화 연결구 well 정도로 가볍게 넘겨서 파괴적인 인과-조건 관계를 잃어버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 상대의 나쁜 예측을 IF 절로 받아서 최악의 결과(해고)로 이어버리는 조건-인과 관계 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 점심 먹고 양치질은 제대로 했어?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "치실까지 아까 다 했지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'다 했지'는 양치를 포함한 식후 관리 행위가 앞서 과거에 이미 성공적으로 완료되었음(I already flossed)을 시제와 함께 명확히 한다.",
+        "commonFailureModes": [
+          "앞의 과거 경험 묻는 맥락을 무시하고, 단순히 I floss 등 일반적인 습관이나 현재시제로 번역하여 과거 발생 완료의 시점을 무너뜨린다."
+        ],
+        "validationNotes": "contextExpectation=use. 했어?(과거/완료)라는 질문 문맥을 받아 '다 했지'가 명확히 과거에 이루어진 행동 완료로 번역되는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "repair_or_self_correction"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "보내주신 이메일에 계약서 첨부파일이 없던데요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아뿔싸, 지금 바로 다시 쏠게요."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "상대의 지적(첨부파일 누락)을 듣자마자 시간 간격 없이 곧바로(Right now / Immediately) 결함을 수정하겠다는 시간적 인접성 강조.",
+        "commonFailureModes": [
+          "아뿔싸 와 지금 바로 의 긴박한 시점 맥락을 놓치고 I will send it again 처럼 언제 보낼지 알 수 없는 느긋한 평서문으로 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 치명적 실수를 발견한 직후의 긴박한 시간적 리액션(지금 바로)이 영어 부사로 제대로 표현되어야 함."
+      }
+    }
+  ]
+}

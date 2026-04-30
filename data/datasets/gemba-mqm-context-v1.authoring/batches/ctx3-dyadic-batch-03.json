@@ -1,0 +1,498 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-dyadic-batch-03",
+  "items": [
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 내일 아침 완전 중요한 공기업 최종 면접이라며? 정장 충비나 예상 질문 준비는 다 했어?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아니, 진짜 너무 떨려서 방금 약국에서 청심환 사 먹고 자리에 앉아서 면접 스크립트 달달 외우는 중이야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너무 잔뜩 쫄지 말고 원래 평소 하던 대로 당당하게 자신감 있게 말해. 넌 무조건 합격할 거니까!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 어제 롤 새로 나온 전설급 스킨 일러스트 디자인 진짜 미치게 예쁘게 뽑히지 않았냐?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "진지한 면접 준비 서사에서 완전히 벗어나, 갑자기 게임(리그 오브 레전드) 스킨 디자인을 극찬하는 독립 발화다.",
+        "commonFailureModes": [
+          "면접용 스킨(피부 관리)으로 오역하거나, 면접 질문으로 게임 스킨이 나왔다는 둥 맥락을 강압적으로 이어 붙인다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 압박 면접 서사(1-3턴)와 완전히 단절된 게임 그래픽 화제 전환을 직역하는지 검증."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 김 과장님 아버님 갑작스럽게 돌아가셨다며. 오늘 퇴근하고 장례식장 조문 갈 거야?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "응, 오늘 일이 손에 안 잡히더라. 퇴근하자마자 부서원들 다 같이 문상 가기로 했어. 너무 안타까워..."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나도 이따가 밤에 따로 찾아가서 위로해 드리려고. 혹시 부조금 봉투에는 보통 얼마 넣는 게 적당할까?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아까 점심에 시켜 먹은 마라탕 진짜 화끈하게 너무 매워서 아직도 뱃속이 미친 듯이 쓰리네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "장례식의 무거운 추모 분위기를 깨고, 점심에 먹은 매운 음식의 고통을 서술하는 일상 불평 발화다.",
+        "commonFailureModes": [
+          "장례식장 육개장이나 밥이 맵다고 오역하여 상갓집 조문 맥락에 마라탕과 속쓰림을 욱여넣는다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 초상집(장례) 서사를 무시하고 마라탕과 복통에 관한 문장만 엄격하게 분리 번역."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 방금 고속도로에서 10중 추돌 대형 사고 났다며! 피 엄청 흘린다던데 어디 크게 안 다쳤어?!"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "응, 뒤차가 브레이크 못 밟고 세게 박아서 차는 반파됐는데 다행히 내가 다친 데는 거의 없어 보이네."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 큰일 날 뻔했네. 겉으론 멀쩡해도 내상 입었을 수 있으니까 당장 응급실 가서 정밀 검사부터 제대로 받아!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "집으로 걸어가는 길에 혹시 붕어빵 트럭 보이면 슈크림 맛으로 3천 원어치만 따끈하게 사다 줘."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "교통사고 응급 상황 서사를 벗어나 한가롭게 겨울 간식(붕어빵) 심부름을 시키는 독립 발화다.",
+        "commonFailureModes": [
+          "응급실에서 붕어빵을 사 오라고 하거나, 사고 현장에서 붕어빵 트럭을 박았다는 식의 환각 맥락 결합을 시도한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 심각한 대형 교통사고 -> 한가로운 간식 구걸의 극명한 톤/주제 전환."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 신제품 기획안 네가 낸 아이디어 덕분에 완전히 대박 나서 팀장님이 너 완전 칭찬하셨다며?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 회의 시간에 민망해 죽는 줄 알았어. 부서원 다 같이 고생한 건데 팀장님이 나만 너무 비행기를 태우시더라고."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아니야 겸손 떨지 마, 네가 솔직히 진짜 제일 핵심 역할을 했으니까 당연히 그 정도 칭찬과 대우는 받아야지!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "내일 제주도로 2박 3일 힐링 출장 갈 때 탈 대한항공 비행기 표 방금 앱으로 예매 완료했어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "물리적인 여객기 항공권(flight ticket / airplane ticket)을 예매했다는 뜻이다.",
+        "commonFailureModes": [
+          "2턴의 관용적 비행기를 태우다(flatter/overpraise)에 오염되어, 칭찬 티켓을 샀다거나 출장 가서 칭찬을 받을 거라는 오역을 낸다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 비행기 태우다(띄워주다) 관용구 함정 -> 실제 항공편 비행기(Airplane)의 독립적 물리 객체 번역."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 저번에 진짜 목숨 걸고 올인해서 지원했던 그 대기업 하반기 공채 서류 전형 최종 결과 어떻게 됐어?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 밤에 홈페이지에 합격자 발표 났는데 이번에도 어김없이 깔끔하게 미역국 먹고 처참하게 광탈당했어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아이고... 너무 상처받고 낙심하지 말고 다음 상반기에 다시 웃으면서 도전해 보자. 네 스펙이면 떡을 치고 충분해."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 우리 엄마 환갑 생신이신데 내가 직접 최상급 투뿔 한우 넣고 미역국 한 솥 맛있게 푹 끓여놨어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "진짜 식용으로 먹는 미역국(seaweed soup) 요리를 뜻한다.",
+        "commonFailureModes": [
+          "2턴의 미역국을 먹다(시험에서 미끄러지다/낙방하다)의 환영을 봐서 엄마 생신에 낙방을 끓인다거나, 시험 탈락 스프를 끓였다고 직역의 선을 넘는다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 낙방을 뜻하는 미역국(관용구) 떡밥을 뿌린 후, 요리 맥락의 Literal 미역국 등장 시 과잉 의역 차단."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 어제 새로 알게 된 썸남이랑 시내 중심가 분위기 좋은 이탈리안 레스토랑에서 저녁 먹기로 한 거 아니었어?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "말도 마. 나 영하 10도에 밖에서 2시간 동안 레스토랑 앞에서 덜덜 떨며 기다렸는데 결국 비참하게 바람맞았어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "뭐라고?! 그 미친놈이 사람을 밖에서 얼려 죽이려고 진짜 제정신이야? 당장 연락처 모조리 차단하고 상종도 하지 마!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방 안 공기가 하도 탁해서 환기하려고 창문 살짝 열어놨더니 어디선가 진짜 차가운 똥바람이 쌩쌩 불어 들어오네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "자연 현상으로서 쌩쌩 부는 물리적인 바람/돌풍(cold wind / strong breeze)이다.",
+        "commonFailureModes": [
+          "2턴의 바람을 맞다(약속에서 바람맞다/stood up) 관용구에 홀려, 창문을 열었더니 방 안으로 나를 바람맞힌 남자가 불어 들어온다거나 남자가 매몰차다는 의미로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 데이트 약속 파토(바람)의 화용 맥락이 방 안의 물리적 기상 현상(바람)을 번역하는 데 간섭하지 않도록 방어."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 요새 주식장에 넣은 거 반토막 나서 통장 잔고 완전히 박살 났다고 맨날 집에서 컵라면만 먹고 살지 않아?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "응, 다음 달 내 불쌍한 월급날이 올 때까지 커피 찌꺼기 씹으면서 하루에 5천 원 이상 절대 안 쓰고 숨만 쉬면서 살려고."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "짠하고 불쌍한 녀석... 내가 주말에 내 카드로 순대 국밥이라도 한 그릇 든든하게 사줄 테니까 꾹 참고 며칠만 버텨."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나 방금 5성급 호텔 하이엔드 스시 오마카세 예약 풀렸길래 1인당 35만 원짜리 디너 코스로 시원하게 긁었지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "강력한 절약 맹세를 무참히 배신하고, 35만 원짜리 초호화 식사를 결제하는 독자적이고 모순된 발화다.",
+        "commonFailureModes": [
+          "AI가 앞선 가난 서사를 지키기 위해 오마카세를 3,500원짜리로 번역하거나, 내가 긁은 게 아니라 친구가 사줬다며 주어와 서술어를 임의로 개조한다(과잉 교정)."
+        ],
+        "validationNotes": "contextExpectation=ignore. 파산 극빈 서사를 박살내는 고급 오마카세 소비의 모순을 직역."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 너 바람둥이 남자친구가 몰래 뒤에서 전 여자친구랑 매일 밤 카톡 연락하다가 너한테 제대로 걸렸다며? 어떻게 할 거야?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어떻게 하긴 뭘 어떻게 해. 당장 새벽에 헤어지자고 쌍욕 한 바가지로 퍼붓고 모든 연락망 다 차단했어. 진짜 꼴도 쳐다보기 싫어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 네가 백번 천번 잘한 결정이야! 그런 쓰레기 같은 놈은 미련 1도 갖지 말고 단번에 네 인생 호적에서 영원히 파버려야 돼."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "우리 세상에서 제일 스윗한 자기가 사준 반짝이는 예쁜 다이아 목걸이 차고 내일 1주년 기념 호캉스 데이트 갈 생각에 너무 가슴이 설레."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "전 남자친구와의 끔찍한 이별 맹세를 어기고, 남자친구와의 애정 넘치는 1주년 데이트를 기대하는 문장이다.",
+        "commonFailureModes": [
+          "이별을 정당화하기 위해 새 남자친구라고 멋대로 주어를 생성하거나, 목걸이를 팔아버리러 간다는 등 번역의 선을 넘어 소설을 쓴다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 저주와 파국의 이별 서사(1-3턴)가 애정 폭발의 로맨스 서사(마지막 턴)를 오염시키지 않는지 감시."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 당장 다음 주 일요일이 여동생 럭셔리 호텔 결혼식이라서 핏 딱 붙는 실크 스퀘어넥 무조건 입어야 해서 빡세게 굶는다지 않았어?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어, 진짜 뼈를 깎는 고통으로 독하게 마음먹고 어제저녁 6시부터 물 한 모금 안 마시고 필사적으로 굶는 다이어트 중이야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "그래, 기왕 진짜 큰맘 먹고 이틀 동안 굶는 거 끝까지 악착같이 버텨서 예쁜 원피스 입고 친척들 사이에서 사진 예쁘게 잘 나와야지."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 몰라 진짜 너무 굶어서 배고파 죽을 거 같아서 못 참겠으니까 당장 페퍼로니 피자 라지 사이즈랑 매운 양념 치킨 두 마리 배달시켜야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "단식 투쟁의 다이어트를 포기하고 어마어마한 양의 고칼로리 음식을 폭식하겠다는 선언 방해 단독 발화다.",
+        "commonFailureModes": [
+          "단식을 지켜주기 위해 치킨 모양의 다이어트 식품을 시킨다거나, 시켜서 남에게 먹인다는 식의 왜곡 번역을 가한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 극한의 처절한 억제 의지(1-3턴)를 제물초처럼 던져버리는 욕망의 분출 모순 방어."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "1 year ago",
+            "sourceText": "요즘 비트코인 엄청 폭락해서 다들 재산 탕진하고 한강 다리로 간다 난리인데 네 마이너스 통장 계좌는 좀 무사해?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "1 year ago",
+            "sourceText": "어제 딱 평가 손익 -50% 찍고 파란불 들어오자마자 진짜 눈물을 뚝뚝 흘리며 머금고 코인 다 손절 쳤어. 내 인생에 다신 안 해."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "1 year ago",
+            "sourceText": "진짜 네가 제일 현명하게 엑싯 잘했어. 푼돈 남은 돈이라도 건진 게 어디야. 당분간 폭락장인 업비트 주식 앱 아예 쳐다보지도 마."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 핸드폰에 업비트 알리머 팝업 떴는데 내가 바닥에서 긁은 내 코인 진짜 하루 만에 떡상해서 수익률 1000% 찍었네 유후!"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 과거(1 year ago) 실패담과 무관하게, 현재 목적 턴에 발생한 가상화폐 대박 수익률(1000%)을 독립 번역해야 한다.",
+        "commonFailureModes": [
+          "메타데이터의 1년 전을 문장에 강제로 삽입하여 1 year ago I made 1000% returns 라고 쓰거나 수익 단위를 원으로 멋대로 격하시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 1년 전이라는 태그와 당시의 코인 폭락/휴지통 결말 서사가 현재 턴의 대박 서사에 개입하지 못하게 함."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "3 days ago",
+            "sourceText": "야 너 이번 주말에 산속에 집중 폭우 기상특보 엄청 급하게 쏟아진대. 글램핑 펜션 세 달 전에 예약해 놓은 거 취소해야 되는 거 아냐?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "3 days ago",
+            "sourceText": "진짜 날씨 요정 다 죽었네 우울하고 짜증 나게. 황금 같은 주말 연휴에 비 오면 산에 가서 물웅덩이 피하는 거 말고 할 게 하나도 없잖아."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "3 days ago",
+            "sourceText": "내 말이. 위약금 수수료 몇십만 원 눈탱이 엄청 물리더라도 그냥 과감하게 취소하고 날씨 좋은 다음 달로 싹 다 날짜 미루는 게 정신 건강에 좋을 듯."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "푸른 나무 가득한 숲속 산꼭대기 글램핑장에 뭉게구름 떠 있고 햇빛 쨍쨍하고 날씨 너무 좋아서 야외에서 불멍 불 피우면서 마시멜로랑 고기 구워 먹기 딱 좋다 진짜."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 3일 전(3 days ago) 폭우 예보와 예약 취소 위기 상황과 정반대로, 현재 목적 턴에 펼쳐진 맑은 날씨와 글램핑장의 즐거움을 번역해야 한다.",
+        "commonFailureModes": [
+          "Three days ago, the weather was nice 라며 3일 전이라고 명시해 버리거나 캠핑 취소 맥락을 살려 I wish the weather were nice 처럼 가정법으로 왜곡시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 3일 전 태그와 폭우/취소 서사가 기생하지 못하고 현재형 쨍쨍한 긍정 발화 도출."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "너 드디어 오늘 아침 운전 면허증 2종 보통 도로주행 실기 시험 떨리는 마음으로 마지막으로 보는 날이잖아. 이번엔 진짜 합격할 것 같아?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "아 진짜 대기실 의자에 앉아있는데 심장 터질 만큼 너무 긴장돼서 미치겠어. 어제 덜덜 외운 T자 코스 평행 주차 공식 뇌에서 하얗게 다 까먹을까 봐 조마조마 떠는 중이야."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "괜히 긴장 타지 마. 조수석에 채점관 깐깐한 감독관 타도 너무 주눅 들어서 쫄지 말고, 평소 동네 연습 면허 학원 강사님이랑 부드럽게 핸들링 연습하던 대로만 속으로 되뇌이면서 천천히 차분하게 해."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "면허증 재수 없이 단 한 번에 백 점 만점 무감점 수석으로 따버리고 지금 뚜껑 열리는 새빨간 스포츠카 끌고 해안 도로 창문 내리고 바람맞으면서 신나게 과속 드라이브 중이지롱."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 상의 두 시간 전(2 hours ago) 면허 시험 직전의 초조한 극강의 공포 상태와 무관하게, 합격 후 스포츠카를 몰며 허세를 부리는 현재 시점 발화다.",
+        "commonFailureModes": [
+          "2시간 전(Two hours ago)을 출력하거나, 면허도 없는데 스포츠카를 모는 게 이상하다 판단해 게임 속 드라이브라고 환각 번역을 넣거나 긴장하고 있다고 시제를 맞춘다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 2시간 전의 시험 대기 서사와 떨림이 현재 턴의 스포츠카 질주 및 합격 통보 허세를 방해해선 안 됨."
+      }
+    }
+  ]
+}

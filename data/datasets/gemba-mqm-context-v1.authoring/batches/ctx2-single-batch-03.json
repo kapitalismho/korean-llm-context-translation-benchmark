@@ -1,0 +1,438 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx2-single-batch-03",
+  "items": [
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 내일 대학원 면접인데 너무 심장이 떨리고 긴장돼서 청심환까지 사다 놨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "혹시라도 교수님들이 날카로운 압박 질문 던지면 머리 하얘질까 봐 걱정이야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 내일 저녁 메뉴는 무조건 마라로제 떡볶이로 이미 굳건하게 정해놨음."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "면접에 대한 긴장감 서사를 뒤로하고 완전히 독립적인 저녁 메뉴 선정 이야기를 직역해야 한다.",
+        "commonFailureModes": [
+          "면접 끝나고 마라로제 떡볶이를 교수님과 먹는다거나, 저녁 메뉴 질문을 던질까 봐 걱정한다는 식으로 기존 맥락과 강제 결합을 시도한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 대학원 면접(무거운 주제) -> 떡볶이 타령(가벼운 주제)의 급커브."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 부장님이 내 기획안 보더니 당장 쓰레기통에 처박으라고 미친 듯이 소리 지르셨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 회사 자존심 다 상하고 당장 사표 쓰고 싶어서 몰래 화장실에서 눈물만 주룩주룩 났잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "새로 나온 아이폰 프로 맥스 진짜 색깔 너무 미치게 예쁘게 잘 빠졌더라."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "직장 상사에게 혼난 슬픈 이야기에서 핸드폰 신제품 디자인 찬양으로 완전히 180도 주제가 바뀐 단독 발화다.",
+        "commonFailureModes": [
+          "아이폰을 쓰레기통에 처박았다거나 부장님이 아이폰 색깔을 예뻐했다는 등 이전 맥락의 주어/목적어를 환각 복사해 온다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 부장님 질책 맥락 단절 확인."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "다음 주말에 남자친구 부모님 처음 뵙기로 해서 도대체 어떤 옷을 입고 가야 할지 멘붕이야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "단정한 백화점 투피스를 살까 아니면 그냥 깔끔한 흰 블라우스에 검정 슬랙스를 매치할까?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "요즘 넷플릭스 신작 스릴러 드라마 진짜 스토리 전개 엄청나게 빠르고 긴장감 대박이야."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "상견례 옷차림 고민에서 넷플릭스 드라마 시청 후기로 점프하는 발화.",
+        "commonFailureModes": [
+          "드라마 속 인물의 옷차림을 참고하겠다거나, 남자친구 부모님과 스릴러 드라마를 볼 예정이라는 식의 컨텍스트 오염을 발생시킨다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 옷차림 고민과 넷플릭스 드라마 감상의 완전 분리."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내일 모레 당장 마감인 핵심 프로젝트인데 메인 서버 개발자가 갑자기 어제부터 잠수 탔어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 당장 코드 합치지 않으면 납기일 절대 못 맞추고 클라이언트한테 거액의 소송 당할 위기야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "출근길에 타고 오던 내 자동차 앞바퀴 타이어에 구멍이 엄청 크게 뚫렸네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "자동차 타이어에 구멍 펑크가 난 물리적인 상황(got a flat tire / tire got punctured)이다.",
+        "commonFailureModes": [
+          "프로젝트가 펑크 나다(ruined/canceled)라는 관용적 표현의 환영에 갇혀, my car hit a project or the project got punctured on my way to work 로 박살난 번역을 한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 프로젝트 파탄(=펑크) 서사가 실제 자동차 타이어 구멍 서사를 덮어씌우는지 유도하는 함정."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 이제 드디어 불법 토토랑 도박 사이트 아이디 다 삭제하고 정신 차리기로 굳게 결심했어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 이번에야말로 그동안 흔들렸던 과거에서 손을 씻고 제대로 된 인간으로 새 출발 할 거니까 지켜봐 줘."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "외출하고 돌아오면 화장실에서 액체 비누로 두 손부터 꼼꼼하게 문질러 닦아야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "외출 후의 개인 위생을 위해 손을 물리적으로 씻겠다는 단순 선언(wash hands with soap)이다.",
+        "commonFailureModes": [
+          "2턴의 관용적 손을 씻다(과거 청산)에 지나치게 몰입해 질병이나 도박의 때를 비누로 씻어낸다느니, 도박장에 외출하고 돌아온다는 둥 번역을 비튼다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 도박 청산 서사가 물리적인 손 씻기 생물학적/위생적 행위를 방해하는 걸 차단함."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "벌써 진급 누락만 세 번째인데 나보다 실력 없는 후배들은 다 팀장 달고 있어서 진짜 서러워."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 승진 심사에서도 나 혼자만 물을 먹었으니 이대로면 퇴사하고 치킨집이나 차려야 할 듯."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아까 점심 때 식당에서 찌개를 너무 짜게 먹어서 그런지 얼음물만 벌컥벌컥 마시게 되네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "음식을 짜게 먹어 진짜 식수(water)를 마신다는 뜻이다.",
+        "commonFailureModes": [
+          "2턴의 물을 먹다(승진 누락/거절당함)라는 관용구에 전염되어, 승진 심사에서 짜게 거절당해서 얼음물을 마셨다 거나 승진 누락의 슬픔을 얼음처럼 차갑게 삼킨다 고 소설을 쓴다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 회사 승진 누락(물 먹음) 서사 -> 실제 수분 섭취 번역 분리."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 오늘부로 진짜 내 목숨을 걸고 독하게 마음먹고 평생 피우던 담배 영원히 끊기로 맹세했어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 주머니에 있던 가스 라이터랑 남은 담배 두 갑도 변기에 넣고 확 물 내려버렸거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "가서 말보로 레드 한 갑이랑 라이터 하나만 새로 사다 줄래? 금단현상 때문에 짜증 나 죽겠네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "앞의 맹세를 완전히 깨버리고 새로 담배를 심부름시키는 무너진 화자의 독립 발화다.",
+        "commonFailureModes": [
+          "금연 선언을 어떻게든 지켜주기 위해 말보로 대신 껌을 사오라거나, 이미 변기에 내린 담배를 사오라고 번역하는 등 AI의 과잉 교정이 들어간다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 금연 맹세(과거 정보)가 현재의 담배 구매(모순)를 막는 걸 허용치 않음."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 진짜 지출 방어해야 되는 거지라서 오늘 점심은 유통기한 지난 삼각김밥 하나로 때울 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "다음 주 월급 들어오기 전까지 하루에 만 원 이상 절대 안 쓸 거니까 약속 잡자고 나 부르지 마."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "강남 오마카세 예약 성공했는데 1인당 25만 원짜리 디너 코스로 방금 시원하게 카드 긁었지롱."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "절약 선언을 배신하고 초고가 식사를 결제하는 독자적 발화다.",
+        "commonFailureModes": [
+          "하루 만 원 이하라는 제한에 묶여 25만 원짜리를 25,000원으로 깎아 번역하거나(숫자 훼손), 결제를 취소했다며 망상 번역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 절약 맹세를 깨고 돈 낭비하는 뻔뻔한 직역 유도."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "바깥에 비 쏟아지고 날씨 진짜 최악이라서 난 오늘 하루 종일 내 침대 밖으로 한 발짝도 안 나갈 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그냥 두꺼운 겨울 이불 푹 뒤집어쓰고 방구석에서 넷플릭스 로맨스 영화나 정주행하면서 푹 쉴래."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "우산도 없이 밖에서 흠뻑 젖으면서 폭우 뚫고 10키로 러닝 뛰고 오니까 진짜 아드레날린 터진다."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "방구석 시체 선언을 파기하고 폭우 속을 달린 후의 흥분을 단독 번역해야 한다.",
+        "commonFailureModes": [
+          "침대 밖으로 안 나간다며? 라는 시스템의 꼰대력이 발동해 영화 속 주인공이 뛰는 걸 봤다 고 번역하거나 가상 현실 러닝으로 비튼다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 방구석 은둔 서사를 정면 돌파하는 우중 러닝 모순문."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "Yesterday",
+            "sourceText": "오늘 점심에 병원 갔더니 의사 선생님이 당장 술 입에 대지도 말고 싹 끊으라고 무섭게 경고하셨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "Yesterday",
+            "sourceText": "혈액 검사 보니까 간 수치 완전 쓰레기라서 이대로 한 달만 더 가면 대학병원에 바로 입원해야 된대."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "지금 불금인데 얼음 동동 띄워서 엄청 차가운 소맥 시원하게 한잔 말아먹고 그냥 바닥에 뻗고 싶다."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "어제(Yesterday)의 심각한 건강 경고를 뒤로한 채, 지금 현재(Now) 소맥을 먹고 싶다는 현재 목적 문장만을 독립 번역한다.",
+        "commonFailureModes": [
+          "메타데이터를 본문에 우겨넣어 Yesterday I wanted to drink a somaek 처럼 과거 시제로 번역해 버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. Yesterday 메타 태그가 현재 시제 발화에 기생하지 못하게 차단."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "1 year ago",
+            "sourceText": "코로나 때 주식 물린 거 눈물 머금고 3년 존버한 끝에 드디어 본전 찾아서 방금 전량 당장 다 매도 완료했어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "1 year ago",
+            "sourceText": "진짜 내 심장 갈아먹는 기분이라 다시는 내 인생 80년 동안 주식 투자 같은 멍청한 짓은 절대 안 할 거다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아, 새로 뜬 바이오 테마주 풀매수 타이밍 완벽하게 바닥에서 제일 먼저 잡아서 수익률 벌써 100% 찍었네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "1년 전(1 year ago)의 주식 포기 선언과 상관없이, 현재 새로 진입해 대박을 낸 발화만을 번역한다.",
+        "commonFailureModes": [
+          "1 year ago, I hit 100% return 으로 번역해 1년 전의 기쁨으로 둔갑시키거나 과거 은퇴 선언과 섞어버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 1년 전 시간에 속지 않고 철저히 목적 문장의 맥락 단절 번역."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "나 드디어 두 달 만에 운전면허 도로주행 시험 감점 하나도 없이 만점으로 합격하고 신나서 집 가는 길이야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "이제 완전 타고난 베스트 드라이버니까 조만간 내가 내 차 끌고 너희들 픽업해서 서울 근교로 드라이브 싹 시켜줄게."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 아직도 고속도로에서 옆 차선 변경할 때마다 너무 무서워서 핸들 잡은 손바닥에 식은땀이 줄줄 흘러."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "2시간 전의 자신만만한 상태에서, 현재 직접 차를 몰면서 느끼는 공포를 서술하는 독립 발화다.",
+        "commonFailureModes": [
+          "2 hours ago I was sweating on the highway 라며 시간적 배경을 목적 문장의 부사구로 강제 투입해 의미 체계를 부순다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 2 hours ago 태그를 버리고 현재형의 공포심 직역 검증."
+      }
+    }
+  ]
+}

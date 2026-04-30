@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["has_no_error", "errors"],
+  "properties": {
+    "has_no_error": { "type": "boolean" },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "class", "target_span_text", "source_span_text", "explanation"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["minor", "major", "critical"] },
+          "class": {
+            "type": "string",
+            "enum": [
+              "accuracy/addition",
+              "accuracy/mistranslation",
+              "accuracy/omission",
+              "accuracy/untranslated text",
+              "fluency/character encoding",
+              "fluency/grammar",
+              "fluency/inconsistency",
+              "fluency/punctuation",
+              "fluency/register",
+              "fluency/spelling",
+              "style/awkward",
+              "terminology/inappropriate for context",
+              "terminology/inconsistent use",
+              "non-translation",
+              "other"
+            ]
+          },
+          "target_span_text": { "type": ["string", "null"] },
+          "source_span_text": { "type": ["string", "null"] },
+          "explanation": { "type": "string" }
+        }
+      }
+    }
+  }
+}

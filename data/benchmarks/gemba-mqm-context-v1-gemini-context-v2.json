@@ -1,0 +1,18 @@
+{
+  "benchmarkId": "gemba-mqm-context-v1-gemini-context-v2",
+  "description": "Reference-free context-aware benchmark using the Gemini context v2 prompt.",
+  "sharedPromptFile": "../prompts/gemini-context-v2.md",
+  "dataFile": "../datasets/gemba-mqm-context-v1/runtime.json",
+  "targetLanguages": [
+    "en",
+    "ja",
+    "zh-Hans"
+  ],
+  "targetLanguageLabels": {
+    "en": "English",
+    "ja": "Japanese",
+    "zh-Hans": "Chinese Simplified"
+  },
+  "datasetKind": "context",
+  "judgePromptSetId": "gemba-mqm-context-v1"
+}

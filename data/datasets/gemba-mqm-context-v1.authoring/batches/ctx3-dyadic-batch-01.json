@@ -1,0 +1,550 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-dyadic-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "저번에 우리가 이케아 가서 샀던 큰 진열형 책장이랑 작은 서랍장 기억나?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어, 맞아. 책장은 거실 소파 옆에 뒀고, 서랍장은 내 침대 옆에 바짝 붙여놨지."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 침대 옆에 둔 건 아무리 봐도 방 벽지 색깔이랑 너무 안 어울려서 튀는 것 같네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나도 방금 그렇게 생각해서 내일 당장 중고마켓에 그거 올려서 팔아버릴까 해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "팔아버리려는 그거(it)는 턴 0의 책장이나 가구 전체가 아니라 턴 1, 2에서 특정한 침대 옆의 서랍장(the drawer)이다.",
+        "commonFailureModes": [
+          "가구 두 개를 모두 팔아버린다(sell them)고 복수형으로 묶거나, 거실에 있는 책장(the bookshelf)으로 대상을 착각한다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴 동안 좁혀지는 물리적 객체의 위치를 추적해 단수 목적어 매핑."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 옛날 중학교 때 맨날 같이 다니던 그 두꺼운 뿔테 안경 쓴 남자애 철수 기억나냐?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "당연하지! 걔 수학 진짜 잘해서 나 맨날 야자 때 과외해주고 밥 얻어먹고 그랬잖아."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 길에서 우연히 마주쳤는데 완전 살 빼고 수염 기른 근육맨 돼서 딴 사람인 줄 알았어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "와 대박, 그렇게 완전히 달라졌으면 나라도 절대 못 알아보고 그냥 쌩 지나쳤겠다."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "못 알아보고 지나친 대상은 과거의 뿔테 안경을 쓰던 철수가 변한 현재의 헬스보이 철수(him)이다.",
+        "commonFailureModes": [
+          "한국어의 목적어 생략 때문에 I would have just passed by 라고 대상 없이 직역하거나, 그녀(her) 등 임의의 성별을 부여한다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴 전의 남자애 철수라는 성별 정보를 현재 턴까지 끌어와 him으로 복원하는가."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 부서 팀 회식 장소 후보군으로 강남역 고깃집 세 군데랑 일식집 한 군데 찾아봤어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "수고 많았어. 근데 우리 부장님이 심한 해산물 갑각류 알레르기 있으시니까 일식집은 일단 무조건 빼야겠다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아 맞다, 그 중요한 걸 깜빡했네. 그럼 일식당 빼버리고 남은 후보들로 다시 표 만들어서 단톡방에 올릴까?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "응, 그냥 귀찮은데 표 만들지 말고 그것들 중에서 네가 리뷰 보고 제일 괜찮은 곳으로 바로 결제해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "그것들(them)은 고깃집 3군데(the three meat restaurants)이다.",
+        "commonFailureModes": [
+          "단수형 it으로 번역하여 식당 1군데로 표현하거나, 일식집을 포함한 4군데 전체라고 의역 오류를 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴에 걸친 배제 논리(4개 중 1개 제외 -> 남은 3개 집합)를 대명사 them으로 올바르게 지칭."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 내일부터 진짜 새벽 5시 반에 일어나서 주 5일 수영장 가기로 독하게 마음먹었어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "네가? 맨날 아침 9시 통근버스도 놓쳐서 택시 타는 주제에 과연 그게 작심삼일이나 갈까 궁금하다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "진짜 이번엔 수영 학원비 30만 원 한 번에 피 같은 내 돈으로 다 결제해서 아까워서라도 무조건 갈 거거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래 알았어, 네가 과연 그거 정확히 며칠이나 갈 수 있을지 내가 바로 옆에서 똑똑히 지켜볼게."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "지켜볼 그거(how long it will last / it)는 수영장에 가는 행위나 습관이다.",
+        "commonFailureModes": [
+          "그거 를 물리적인 영수증이나 30만 원 현찰 결제 내역으로 오역하여 물리적인 물건을 며칠이나 보존하는지 지켜본다고 쓴다."
+        ],
+        "validationNotes": "contextExpectation=use. 수영 결심(추상적 행동) -> 조롱 -> 반박 -> 행동 유지 기간 모니터링 으로 이어지는 추상 명사 대명사화."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말 데이트 때 미세먼지도 없고 날씨도 엄청 좋다길래 내가 외곽 예쁜 카페 가자고 했잖아."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "응, 안 그래도 어디 갈지 인터넷 뒤져봤는데 남양주 팔당댐 쪽에 뷰 좋은 빵집 있더라."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 주말이라 차 엄청 심하게 막힐 것 같은데 그냥 고생하지 말고 서울 안에서 연남동이나 갈까?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "에이, 기왕 모처럼 콧바람 쐬러 나가기로 한 거 그냥 차 막혀도 무조건 남양주로."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "남양주로.는 남양주 가자 / 남양주로 향하자(Let us go to / Let us head to Namyangju)가 조사에서 끊긴 형태다.",
+        "commonFailureModes": [
+          "무조건 남양주로 를 to Namyangju 만 달랑 쓰고 문장의 동사(go, head)를 구성하지 못해 번역을 터뜨려버린다."
+        ],
+        "validationNotes": "contextExpectation=use. A 제안 -> B 구체화 -> A 회피 -> B 집념 의 3턴 서사에서 가다 동사를 복원."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 팀장님이 한 달 만에 부서 전체 회식하자고 법카 주셨는데 엄청 비싼 한우 고깃집 갈까?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "법카면 당연히 무조건 소고기지! 나 진짜 오늘 점심도 굶어서 한우 배 터지게 먹을 자신 있어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아 차, 근데 방금 막내 김 대리님 지독한 장염 걸리셔서 죽밖에 못 드신다고 단톡방에 올리셨네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아... 너무 얄밉게 우리만 먹으면 눈치 보이네... 그럼 아쉽지만 눈물을 머금고 소고기는 다음 기회로 포기할..."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "포기할...은 아쉬움을 남기며 포기할 수밖에 / 포기해야겠다(have to give up / guess we should give up)의 어간 짤림이다.",
+        "commonFailureModes": [
+          "give up... 이라고 달랑 동사만 남기고, I need to/should 같은 미래/의무 조동사를 증발시켜 문맥을 살리지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 기대 -> 변수 -> 아쉬운 양보 로 이어지는 심리적 흐름이 끊긴 포기하다에 should/have to 를 붙이게 유도."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "너 저번에 나한테 억지로 빌려간 내 다이어트 식단 관련 한정판 책자 다 읽었으면 반납 좀 해."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "미안미안 아직 반의반도 못 읽었는데, 혹시 책 돌려줄 겸 오늘 저녁에 퇴근하고 잠깐 만날래?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "나 오늘 저녁엔 강남역에서 저녁 요가 수업 풀타임으로 있어서 이동 못 하는데 강남으로 올 수 있어?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오케이, 어차피 내 잘못이니까 단 한마디도 토 달지 않고 곧장 강남 요가 학원 앞으로."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "학원 앞으로.는 학원 앞으로 갈게 / 갈 테니 기다려(I will go to ~ / I will meet you in front of)의 조사 마감이다.",
+        "commonFailureModes": [
+          "앞으로(forward)라는 단어의 방향성을 잘못 살려 I will move forward to the academy 처럼 어색한 전진 동사를 붙이거나 전치사구만 둔다."
+        ],
+        "validationNotes": "contextExpectation=use. 채무자의 석고대죄 느낌이 이동 동사에 반영된 조동사 복원 검증."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "야 진짜 큰일 났다! 오늘 저녁에 갑자기 우리 엄마가 너네 자취방으로 고향 반찬 잔뜩 갖다주신대."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "뭐라고?! 나 지금 방 완전 한 달 동안 쓰레기 안 버린 돼지우린데 어떡해! 당장 대청소해야겠다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "엄마 지금 고속 버스터미널 도착하셔서 택시 타고 오시면 한 30분 남았을 테니까 일단 눈에 띄는 쓰레기부터 숨겨!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "으아악 미쳤다 진짜! 대충 입던 옷가지들 몽땅 옷장에 쑤셔 박고 락스 풀어서 화장실 바닥부터 미친 듯이 닦..."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "닦...은 다급해서 달리며 내뱉는 닦아야겠다 / 닦을게(I need to scrub / I gotta wipe)다.",
+        "commonFailureModes": [
+          "wipe... 라고 어간만 덜렁 남기고, I need to/gotta 같은 긴급함을 나타내는 구어체 의무 조동사를 증발시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 30분 데드라인 상황에서의 극한의 다급함이 조동사 영작에 녹아드는지 검증."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "큰일 났다, 수영장 여성 탈의실 3번 락커에 분명히 똑바로 넣어둔 내 비싼 애플 스마트워치 어디 갔지?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 수영 끝나고 네가 손목 완전 답답하다고 풀어서 네 검은색 운동 가방 앞주머니에 대충 넣는 거 내가 봤어."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아 맞다! 진짜 요즘 내 정신머리가 왜 이러냐. 이따 러닝할 때 심박수 재야 되니까 당장 꺼내야지."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "안 그래도 조그만해서 잃어버릴까 봐 조마조마했는데 말 나온 김에 얼른 손목에 꽉 차."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "손목에 차다는 시계 붙이다(wear / put it on)이다.",
+        "commonFailureModes": [
+          "손목을 발로 강하게 걷어차다(kick the wrist) 든가 꽉 차오르다(filled to the brim) 등으로 폭력적이거나 괴상한 번역을 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 탈의실, 시계, 심박수의 맥락이 마지막 손목에 차다 를 Wear로 강력하게 제약함."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 회사에서 프로젝트 때문에 매일 밤새워서 스트레스 받아 그런지 정수리가 너무 휑하게 탈모가 와서 우울해."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아직 젊은데 병원 가서 먹는 탈모약이나 두피에 바르는 비싼 영양제라도 사야 하는 거 아냐?"
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "근본적인 치료는 이미 틀렸고 그냥 어제 인터넷에서 힙스터들이 쓰는 비니 모자 열 개 세트 주문했어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래, 겨울에 추운데 머리 휑하게 허전하게 다니는 것보단 차라리 평생 그거라도 매일 쓰고 다녀라."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "비니 모자를 쓰다는 머리에 착용하다(wear)이다.",
+        "commonFailureModes": [
+          "모자를 노트에 펜으로 쓰다(write the hat)거나 모자 맛이 너무 쓰다(the hat is bitter)고 오역한다. 탈모약(약은 쓰다) 맥락에 낚여서."
+        ],
+        "validationNotes": "contextExpectation=use. 탈모, 비니 주문 서사가 쓰다 를 Wear로 못 박음."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 회사 점심 메뉴로 시킨 중국집 마라탕이 진짜 양이 세숫대야처럼 구역질 나게 많아서 절반이나 남겼어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "너구리처럼 혼자서 3인분짜리 점보 특대 사이즈를 욕심내서 욱여넣었으니까 당연히 다 못 먹고 터질 지경이 되지."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 진짜 호흡 곤란 올 거 같이 숨도 못 쉴 것 같아서 편의점 까스활명수 두 병이나 원샷했는데 효과가 1도 없네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나까지 덩달아 소화 안 되고 체할 거 같네. 일단 딱딱한 의자에서 내려와서 침대에 똑바로 누운 다음 배부터 둥글게 스다듬어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "배는 소화기가 있는 사람의 신체 부위 복부(stomach / belly / tummy)이다.",
+        "commonFailureModes": [
+          "소화불량 맥락을 무시하고 과일 배(pear)를 스다듬거나 바다에 떠 있는 선박(ship/boat)을 침대 위에서 쓰다듬는다고 출력한다."
+        ],
+        "validationNotes": "contextExpectation=use. 폭식, 소화제, 눕기 서사를 결합해 다의어 배 를 Abdomen 부위로 확정."
+      }
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "dyadic",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 미세먼지에 환절기 알레르기까지 제대로 겹쳐서 축농증 걸린 마냥 누런 콧물이 폭포수처럼 쏟아져."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "빨리 시간 날 때 이비인후과 가서 처방전 받고 코감기약 안 지어 먹었어? 그러다 진짜 코 헐어서 피 나겠다."
+          },
+          {
+            "speakerRole": "other",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 강한 약으로 먹고 있는데도 두루마리 휴지로 하도 닦아내서 벌써 인중이랑 콧볼이 다 부풀어 오르고 따가워 죽겠어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "코 막힌다고 너무 세게 흥! 하고 무식하게 냅다 코만 풀지 말고 따뜻한 보리차 좀 텀블러에 담아서 마시면서 진정해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "코를 풀다는 콧물을 밖으로 세게 내보내다(blow the nose)이다.",
+        "commonFailureModes": [
+          "묶여있던 밧줄을 풀다(untie the nose) 나 어려운 수학 문제를 풀듯이 코를 해결하다(solve the nose), 혹은 화를 풀다(release the anger of the nose)로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 알레르기, 휴지, 감기약 서사가 흥! 이라는 의성어와 결합해 풀다 를 Blow로 제약함."
+      }
+    }
+  ]
+}

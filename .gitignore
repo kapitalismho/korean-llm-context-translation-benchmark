@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+output/
+*.log
+*.console.log
+.ruff_cache/
+.cache/
+.tmp/
+temp/
+AGENTS.md
+opencode.json

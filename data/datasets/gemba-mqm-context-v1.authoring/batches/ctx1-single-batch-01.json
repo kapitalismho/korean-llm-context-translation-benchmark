@@ -1,0 +1,408 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-single-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 오프라인 매장 가서 여름용 샌들이랑 슬리퍼 샀어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 재고가 없대서 결국 집으로 다 배송시켜달라고 했지 뭐."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'다 배송시켜달라고'의 목적어는 샌들과 슬리퍼(복수)이다. 영어 번역 시 복수형 목적어(them)가 반드시 필요하다.",
+        "commonFailureModes": [
+          "앞 턴의 구체적인 복수 대상을 놓치고 단순 단수(it)로 얼버무리거나 목적어를 아예 누락하여 영어 문법을 파괴한다."
+        ],
+        "validationNotes": "contextExpectation=use. single 모드. 동일 화자가 복수 명사를 던진 후 다음 턴에 생략했을 때 제대로 수 일치를 하는지 추적."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아, 우리 동네 세탁소 아저씨 진짜 너무 불친절해."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘도 인사했는데 완전 무시하고 그냥 쌩 가시더라니까."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "인사를 무시하고 간 주체는 세탁소 아저씨(남성)이다. 직역 과정에서 명확한 남성 주어(He)를 살려 번역해야 한다.",
+        "commonFailureModes": [
+          "주어를 He로 명시하지 않고 They를 쓰거나 무작정 she로 때려 맞추는 등 성별 복원을 실패한다."
+        ],
+        "validationNotes": "contextExpectation=use. 아저씨라는 한국어 어휘의 성별 정보를 다음 턴의 생략된 주어 자리에 정확히 할당(referent)하는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "길고양이 중에 꼬리 짧고 애교 많은 치즈냥이 한 마리 있잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "방금 우리 집 마당에서 참치 캔 하나 다 비우고 넘어갔어."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "참치 캔을 다 비우고 간 주체는 치즈냥이(동물, it/the cat/he/she)이다.",
+        "commonFailureModes": [
+          "앞 턴의 고양이 맥락을 무시하고, 문맥 없는 한국어의 디폴트 주어 복원 방식에 따라 화자 본인(I)이 참치 고양이캔을 다 비웠다고 기괴하게 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 주어가 생략된 타동사 문장에서 본인(I)이 아닌 앞 턴의 3인칭 동물 객체를 찾아 주어로 채워 넣어야만 참사를 막을 수 있음."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 딱 한 상자 남은 한정판 눈사람 케이크 드디어 구했어!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "집에 오자마자 침대에 겉옷 던져두고 바로 열어서 먹어치웠지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "열어서 먹어치운 대상은 한정판 눈사람 케이크이다. 영어 타동사(eat/devour) 뒤에는 반드시 그것(it)이 목적어로 와야 한다.",
+        "commonFailureModes": [
+          "목적어 없이 I opened and devoured 처럼 불완전한 문장으로 마무리하거나, 멍청하게 앞의 겉옷(coat)을 먹어치운 것으로 문장 구조를 꼬아버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 가까이 위치한 함정 명사(겉옷)를 지나쳐 진짜 핵심 목적어(케이크)를 찾아내어 영어의 필수 목적어 자리를 채우는 능력을 검증."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말에 동기들은 전부 부산으로 놀러 갔다더라고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나도 기차 예매할까 하다가 그냥 집에서 넷플릭스로."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "넷플릭스를 보며 주말을 '보냈다/때웠다/결정했다(decided to watch / settled for)'는 서술어가 통째로 생략된 구어체이다.",
+        "commonFailureModes": [
+          "그냥 집에서 넷플릭스로(Just home with Netflix)라는 기형적인 명사+전치사구로만 남겨두어 영어 문장의 서술어를 증발시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 명사+조사(~로)로 종결되는 구조에서 맥락에 맞는 동작 동사나 결정 동사를 능동적으로 생성해내는지 평가."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 과일 가게에서 사과랑 배 중에 엄청 고민했거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "결국 할아버지 제사상에 올릴 거라 제일 크고 예쁜 배로."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "크고 예쁜 배로 '샀다/결정했다(bought it / went with)'는 동사가 생략되었다.",
+        "commonFailureModes": [
+          "동원 가능한 서술어 없이 I am a big pretty pear 처럼 화자 본인이 과일이라는 환각성 직역을 하거나 문장을 끝맺지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 고민-특정 조건-명사로 끝나는 흐름에서 '선택/구매'의 동사를 문맥에서 추론해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "할머니, 저 내일 한 달 동안 유럽 배낭여행 출발해요."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "걱정 마세요, 비상약부터 엄마가 챙겨주신 부적까지 가방 제일 안쪽에 꼼꼼하게."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "손자가 할머니에게 안심시키며 짐을 가방 안쪽에 꼼꼼하게 '챙겼다/넣었다(packed them / put them)'고 말하는 생략 구조이다.",
+        "commonFailureModes": [
+          "'꼼꼼하게'를 carefully라는 부사로만 깔아놓고 정작 핵심 액션(pack/put)을 번역하지 못해 I carefully to the inside of the bag 처럼 문법 파괴 발생."
+        ],
+        "validationNotes": "contextExpectation=use. 손윗사람 대상 정중어조(걱정 마세요)와 부사(꼼꼼하게)로 끝나는 특이한 한국어 생략. 맥락의 배낭여행이 짐 싸기 동사를 강제함."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 카페에서 내 옛날 절친이었던 지민이 우연히 마주쳤어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "어색하게 인사만 대충 하고 요즘엔 완전히 연락을."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "과거 절친이었으나 현재는 연락을 완전히 '끊었다/안 한다(cut off / lost contact)'는 뜻이다.",
+        "commonFailureModes": [
+          "연락을 완전히(completely contact) 라고 형용사나 부사 덩어리로 오역하며 끊었다/안 한다는 핵심 수술부를 찾아내지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 옛날엔 절친, 지금은 어색하다는 앞뒤 맥락의 콘트라스트를 통해 연락을 부정/단절하는 동사 복원 요망."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 팀장님이 부서 단식에서 1차는 본인이 전부 쏜다고 엄청 생색내셨잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 방금 영수증 알림 보니까 결국 법인 카드로 긁으셨더라고."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'긁다'는 신용카드로 식대 등을 '결제하다(swiped / paid with)'는 뜻의 한국어 속어다.",
+        "commonFailureModes": [
+          "'법인 카드로 긁다'를 말 그대로 법인카드의 플라스틱 표면을 긁어 상처를 냈다(scratched the corporate card)고 직역해버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 결제/회식 맥락이 신용카드와 결합된 긁다를 소비 행위로 디코딩하게 해주는 강력한 단서."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 아침 9시 컴퓨터실 수강신청 클릭 진짜 전쟁이었어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 나 운 완전 좋게 제일 인기 있는 꿀교양 과목 두 개나 물었어!"
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'물다'는 동물이 이빨로 무는 것이 아니라, 좋은 기회나 대상을 재빠르게 '채다/얻어내다(snagged / secured)'는 비유적 표현이다.",
+        "commonFailureModes": [
+          "'과목을 물다'를 문자 그대로 클래스/과목을 신체 부위인 이빨로 물어뜯어버렸다(bit two classes)고 번역하는 황당한 오역."
+        ],
+        "validationNotes": "contextExpectation=use. 수강신청의 타이밍 싸움이라는 맥락이 물다를 사냥/확보의 의미로 강제함."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 홍대 클럽에서 어떤 취한 남자가 선 넘으면서 자꾸 치근덕대더라구."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "너무 귀찮아서 폰에 그냥 가짜 번호 하나 대충 찍어주고 바로 화장실로 튀었지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "연락처를 '찍어주다'는 번호를 핸드폰 키패드로 '눌러 입력해주다/건네주다(punched in / gave)'를 의미한다.",
+        "commonFailureModes": [
+          "번호를 사진 찍어주다(took a photo of the number)나 도장/스탬프를 찍어주다(stamped the number) 처럼 전혀 관련 없는 물리적 행동으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 남녀 간의 치근덕대는 헌팅 맥락에서 가짜 번호를 준다는 전형적인 상황. 찍어주다의 올바른 다의어 처리 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 오후에 본 동네 편의점 알바 면접 느낌 괜찮았어. 점장님도 맘에 들어하시고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "물론 낼모레까지 연락 안 오면 그냥 길 건너 피씨방 공고도 바로 찔러봐야지."
+        },
+        "relevantContextIndices": [
+          0
+        ],
+        "intendedInterpretation": "'찔러보다'는 구직 시장에서 물리적 폭력을 가하는 게 아니라, 부담 없이 가볍게 '지원해보다 / 시도해보다(give it a shot / apply casually)'는 뜻이다.",
+        "commonFailureModes": [
+          "피씨방 공고문에 칼이나 창 같은 예리한 물건으로 찌른다(stab / poke)는 폭력적이고 파괴적인 직역으로 문맥을 파탄 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 구직 활동(편의점 알바 면접) 맥락이 다음 타깃(피씨방)에 대한 찔러보다를 가벼운 시도/지원으로 구속함."
+      }
+    }
+  ]
+}

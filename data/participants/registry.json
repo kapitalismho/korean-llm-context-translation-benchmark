@@ -1,0 +1,154 @@
+[
+  {
+    "participantId": "qwen-3.6-plus",
+    "displayName": "Qwen 3.6 Plus",
+    "provider": "qwen",
+    "providerModelId": "qwen3.6-plus"
+  },
+  {
+    "participantId": "qwen-3.6-flash",
+    "displayName": "Qwen 3.6 Flash",
+    "provider": "qwen",
+    "providerModelId": "qwen3.6-flash"
+  },
+  {
+    "participantId": "qwen-3.5-plus",
+    "displayName": "Qwen 3.5 Plus",
+    "provider": "qwen",
+    "providerModelId": "qwen3.5-plus"
+  },
+  {
+    "participantId": "qwen-3.5-flash",
+    "displayName": "Qwen 3.5 Flash",
+    "provider": "qwen",
+    "providerModelId": "qwen3.5-flash"
+  },
+  {
+    "participantId": "qwen-3.6-plus-nocontext",
+    "displayName": "Qwen 3.6 Plus (No context)",
+    "provider": "qwen",
+    "providerModelId": "qwen3.6-plus"
+  },
+  {
+    "participantId": "qwen-3.6-flash-nocontext",
+    "displayName": "Qwen 3.6 Flash (No context)",
+    "provider": "qwen",
+    "providerModelId": "qwen3.6-flash"
+  },
+  {
+    "participantId": "qwen-3.5-plus-nocontext",
+    "displayName": "Qwen 3.5 Plus (No context)",
+    "provider": "qwen",
+    "providerModelId": "qwen3.5-plus"
+  },
+  {
+    "participantId": "qwen-3.5-flash-nocontext",
+    "displayName": "Qwen 3.5 Flash (No context)",
+    "provider": "qwen",
+    "providerModelId": "qwen3.5-flash"
+  },
+  {
+    "participantId": "gemini-3-flash",
+    "displayName": "Gemini 3 Flash",
+    "provider": "gemini",
+    "providerModelId": "gemini-3-flash-preview"
+  },
+  {
+    "participantId": "gemini-3.1-flash-lite",
+    "displayName": "Gemini 3.1 Flash-lite",
+    "provider": "gemini",
+    "providerModelId": "gemini-3.1-flash-lite-preview"
+  },
+  {
+    "participantId": "gemini-2.5-flash-lite",
+    "displayName": "Gemini 2.5 Flash-lite",
+    "provider": "gemini",
+    "providerModelId": "gemini-2.5-flash-lite"
+  },
+  {
+    "participantId": "gemini-3-flash-nocontext",
+    "displayName": "Gemini 3 Flash (No context)",
+    "provider": "gemini",
+    "providerModelId": "gemini-3-flash-preview"
+  },
+  {
+    "participantId": "gemini-3.1-flash-lite-nocontext",
+    "displayName": "Gemini 3.1 Flash-lite (No context)",
+    "provider": "gemini",
+    "providerModelId": "gemini-3.1-flash-lite-preview"
+  },
+  {
+    "participantId": "gemini-2.5-flash-lite-nocontext",
+    "displayName": "Gemini 2.5 Flash-lite (No context)",
+    "provider": "gemini",
+    "providerModelId": "gemini-2.5-flash-lite"
+  },
+  {
+    "participantId": "gemma-4-26b-openrouter",
+    "displayName": "Gemma 4 26B via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "google/gemma-4-26b-a4b-it"
+  },
+  {
+    "participantId": "gemma-4-26b-openrouter-nocontext",
+    "displayName": "Gemma 4 26B via OpenRouter (No context)",
+    "provider": "openrouter",
+    "providerModelId": "google/gemma-4-26b-a4b-it"
+  },
+  {
+    "participantId": "gemma-4-26b-openrouter-nocontext-baseline",
+    "displayName": "Gemma 4 26B via OpenRouter (No context baseline)",
+    "provider": "openrouter",
+    "providerModelId": "google/gemma-4-26b-a4b-it",
+    "promptFile": "../prompts/simple-translation.md"
+  },
+  {
+    "participantId": "deepseek-v4-flash",
+    "displayName": "DeepSeek V4 Flash",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-flash"
+  },
+  {
+    "participantId": "deepseek-v4-flash-nocontext",
+    "displayName": "DeepSeek V4 Flash (No context)",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-flash"
+  },
+  {
+    "participantId": "deepseek-v4-flash-nocontext-baseline",
+    "displayName": "DeepSeek V4 Flash (No context baseline)",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-flash",
+    "promptFile": "../prompts/simple-translation.md"
+  },
+  {
+    "participantId": "deepseek-v4-flash-openrouter",
+    "displayName": "DeepSeek V4 Flash via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "deepseek/deepseek-v4-flash"
+  },
+  {
+    "participantId": "deepl-api",
+    "displayName": "DeepL API",
+    "provider": "deepl",
+    "providerModelId": "deepl-api"
+  },
+  {
+    "participantId": "deepl-api-nocontext",
+    "displayName": "DeepL API (No context)",
+    "provider": "deepl",
+    "providerModelId": "deepl-api"
+  },
+  {
+    "participantId": "google-cloud-translate-basic",
+    "displayName": "Google Cloud Translation Basic",
+    "provider": "google-translate-basic",
+    "providerModelId": "google-translate-basic"
+  },
+  {
+    "participantId": "google-translate-web",
+    "displayName": "Google Translate Web",
+    "provider": "google-web",
+    "providerModelId": "google-translate-web"
+  }
+]

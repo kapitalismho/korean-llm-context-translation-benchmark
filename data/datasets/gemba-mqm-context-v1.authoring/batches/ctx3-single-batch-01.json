@@ -1,0 +1,546 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-single-batch-01",
+  "items": [
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 백화점 쇼핑 가서 가을용 브라운 트렌치코트랑 신상 검은색 가죽 재킷을 둘 다 피팅룸에서 입어봤어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "트렌치코트는 어깨 핏이 진짜 예술이었는데 가격표 보니까 내 예산을 훌쩍 넘어서 눈물을 머금고 포기했지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "대신 재킷은 시즌 마감 세일 중이라 딱 10만 원이길래 망설임 없이 기분 좋게 일시불 카드로 시원하게 긁었어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "매장에 당장 맞는 사이즈 재고가 없다길래 그냥 그걸로 내일 우리 집으로 바로 택배 배송시켜달라고 했어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "택배 배송을 시킨 '그것(it)'은 트렌치코트가 아니라 구매 결제된 검은 가죽 재킷(the black leather jacket)이다.",
+        "commonFailureModes": [
+          "그것을 복수형(them)으로 처리하여 두 옷을 모두 배송시킨다거나, 포기했던 트렌치코트로 오역하여 결제 맥락을 파괴한다."
+        ],
+        "validationNotes": "contextExpectation=use. 2개의 후보 -> 1개 포기 -> 1개 결제라는 선형 서사를 통해 단수 지시어 매핑."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 카페에서 공부하는데 내 노트북 바로 옆자리에 어떤 키 엄청 크고 잘생긴 외국인 남자가 앉았거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 그 사람이 갑자기 내 어깨를 톡톡 치더니 유창한 한국어로 노트북 충전기 좀 빌릴 수 있냐고 예의 바르게 묻더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내가 흔쾌히 어댑터 빌려주니까 나중에 고맙다면서 자기 영어 이름 알려주고 아이스 아메리카노까지 직접 사서 내 자리에 놔줬어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "솔직히 외모부터 매너까지 진짜 내 이상형에 너무 가까워서 어떻게든 걔 번호라도 한 번 용기 내서 꼭 물어볼 걸 그랬어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "번호를 물어볼 '걔(him)'는 3턴 전에 등장한 잘생긴 외국인 남자(the foreigner)이다.",
+        "commonFailureModes": [
+          "걔를 여성 대명사(she)나 중성(they)으로 무작위 번역하거나, I should have asked for the number 처럼 목적어를 누락한다."
+        ],
+        "validationNotes": "contextExpectation=use. 카페 이방인(남자)과의 교류 서사를 통해 마지막 턴의 대명사에 남성(him) 성별 부여."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번에 강남 토익 스터디원 모집 글 올렸는데 지원한 사람 중에 대학교 재학생 두 명이랑 직장인 세 분이 있었어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 직장인 세 분은 면접 수요일 저녁마다 정기 야근이나 회식이 있어서 내가 정해둔 룰이랑 시간이 너무 안 맞더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 눈물을 머금고 시간 도저히 안 맞는 그분들은 스터디원 합류를 죄송하다고 아주 정중하게 거절했지."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "결국 최종적으로 살아남은 그 애들이랑 당장 내일 저녁 6시에 강남역 카페에서 오리엔테이션 첫 모임 조촐하게 하기로 함."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "합격한 '그 애들(them/the students)'은 지원자 5명 중 직장인 3명을 제외하고 남은 대학교 재학생 두 명(the two college students)이다.",
+        "commonFailureModes": [
+          "직장인을 포함한 전체 5명으로 뭉뚱그리거나(the guys), 거절당한 직장인들을 주어로 삼아 스터디를 강행하는 치명적 오역이 발생한다."
+        ],
+        "validationNotes": "contextExpectation=use. 5명 후보 -> 3명 직장인 탈락 -> 남은 2명 대상을 지칭하는 복수형 대명사 추적."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "referent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 진짜 마음 굳게 먹고 내년 초에 다니던 진상 회사 확 때려치우고 6개월 동안 유럽 배낭여행 훌쩍 떠날 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 부모님한테 말씀드렸더니 미쳤냐면서 당장 정신 차리고 재취업 이력서나 준비하라고 엄청난 등짝 스매싱을 날리시더라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래도 난 이미 적금 예금 다 깼고 런던행 비행기 편도 티켓까지 수수료 불사하고 결제해버려서 절대 뒤로 못 물러나."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "누가 내 귀 옆에서 아무리 제발 가지 말라고 생떼를 쓰며 뜯어말려도 난 무조건 그거 안 꺾고 내 인생 내 맘대로 살 거니까 기약해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "꺾지 않을 '그거(it)'는 항공권이라는 물리적 티켓이 아니라 유럽 배낭여행을 떠나겠다는 나의 결심/고집(determination/plan)이다.",
+        "commonFailureModes": [
+          "그것을 비행기 티켓으로 해석해 I will not fold the ticket 처럼 문자 그대로 종이를 안 접겠다고 물리적 훼손으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 여행 선언 -> 주변의 반대 -> 재정적 퇴로 차단 서사를 통해 그거를 추상적 의지/계획으로 매핑."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 오후에 회사 반차 내고 완전 오랜만에 동창 친구들 만나서 한강 뚝섬 공원 가서 돗자리 펴고 치맥하며 놀기로 했거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 갑자기 한강 쪽에 미친 듯이 비가 억수같이 쏟아져서 야외에서 노는 건 사치고 완전히 계획 다 물 건너가버렸어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어쩔 수 없이 다들 단톡방에서 비 안 맞는 실내에서 시간 보낼 곳 엄청 찾다가 그냥 코엑스 아쿠아리움이나 구경 가자고 합의 봤어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나 지금 막 뚝섬역에서 지하철 탔는데 수족관 너무 기대돼. 얼른 2호선 삼성역 환승해서 당장 코엑스 메가박스 쪽으로."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "쪽으로. 는 코엑스 방향으로 갈게/가야지(I am heading to / I will go to)라는 이동 동사가 생략된 구어체 통신문이다.",
+        "commonFailureModes": [
+          "문장에 동사가 없다고 toward COEX 만 달랑 부사구로 번역하여 비문(Fragmented sentence)을 만들어버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 한강 파토 -> 코엑스 변경 -> 현재 이동 중이라는 동선 서사를 기반으로 도착지 이동 동사 복기."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 인터넷 애플스토어에서 아이패드 프로 12.9인치 최고 사양 풀옵션으로 장바구니에 담아놓고 결제 버튼 당장 누를까 엄청 고민했어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 내 폰으로 은행 통장 잔고 앱 켜서 확인해 보니까 이번 달 식비랑 원룸 월세 내고 나면 잔액이 아예 마이너스 찍히겠더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이율 높은 카드 할부로 12개월 긁을까도 생각했는데 다음 달 카드값 도저히 감당 못 해서 20대에 신용불량자 될 거 같아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "하아... 진짜 너무 영롱해서 눈물 날 정도로 무지 사고 싶지만 내 미래 인생을 위해 그냥 조용히 장바구니 목록에서 삭제할..."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "삭제할... 은 아쉬움 속에 장바구니에서 물건을 지워야겠다/지울 수밖에 없다는 (have to delete / guess I will remove) 슬픈 체념적 조동사를 동반한다.",
+        "commonFailureModes": [
+          "delete... 라며 어간만 투척하고 주어나 문장을 끝맺는 미래/의무 조동사를 생략하여 감정선을 망가뜨린다."
+        ],
+        "validationNotes": "contextExpectation=use. 지름신 강림 -> 가난 직시 -> 할부 포기 로 이어지는 좌절 3단계를 I have to / I should 형태의 동사구로 복원."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 회식에서 소주 엄청 마시고 집에 와서 옷도 못 벗고 그대로 기절했는데 오늘 아침에 눈 떠보니까 내 200만 원짜리 최신형 스마트폰이 없어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 갔던 술집 구석구석 전화해 봐도 종업원이 분실물 안 들어왔다 그러고 타고 온 택시 기사님 영수증 번호도 못 찾아서 진짜 미치고 팔짝 뛰겠네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 내 룸메이트 친구가 자기 폰으로 경찰청 유실물 통합 포털 사이트에 내 기종 비슷한 핸드폰 올라와 있는지 싹 다 새로고침하며 검색해 줬거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 하늘이 도왔다! 다행히 10분 거리 파출소 창고 하나에 보관돼 있다고 방금 연락 왔대. 나 당장 택시비 빌려서 파출소 당직 경찰관님한테 곧장."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "경찰관님한테 곧장. 은 경찰관에게 곧장 갈게/뛰어갈게(I will run to / head straight to the police officer)라는 절박한 액션의 생략이다.",
+        "commonFailureModes": [
+          "straight to the police officer 로 전치사 구만 덩그러니 번역해, 내가 간다(I will go)는 주체적 행위를 소거시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 폰 분실 -> 절망 -> 파출소 발견 서사를 바탕으로 택시비까지 빌린 화자의 급박한 이동 동사 영작."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "ellipsis_completion"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 부장님이 내일 아침 9시 전체 임원진 회의에 쓸 부서 실적 요약 피피티 발표 자료를 오늘 밤 자정 전까지 혼자 다 만들라는 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 나 아까 저녁 7시에 칼퇴 준비 다 하고 컴퓨터 껐는데 갑자기 팀 단톡방에 팀원들 다 보게 이렇게 미친 폭탄 업무 공지를 때리시는 거 있지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 허겁지겁 집 와서 벽시계 보니까 벌써 밤 10시 반이라서 데드라인 자정까지 남은 시간 딱 1시간 반밖에 없는데 불안해 미쳐버리겠네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "으아악 넷플릭스 보려던 내 금요일 밤 주말 다 날아갔어! 일단 당장 노트북 전원 켜고 부엌 커피 포트에 물부터 끓여서 믹스 커피 두 봉지 찢어 벌컥벌컥 들이붓고 진하게 타야..."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "타야... 는 각성용 커피를 타 마셔야겠다(I need to make/brew coffee)는 급박한 의무 조동사 문장이다.",
+        "commonFailureModes": [
+          "brew/mix... 라고 동사 원형만 번역에 던져버리고 I have to / need to 와 같은 데드라인(1시간 반) 압박감을 살리지 못한다."
+        ],
+        "validationNotes": "contextExpectation=use. 자정 야근 데드라인과 1시간 반이라는 시간 압박 정보가 I gotta brew 와 같은 의무형 조동사를 만들어냄."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 아침부터 마법의 날 생리통이 너무 심해서 아랫배가 칼로 끊어질 것 같이 아프고 식은땀이 줄줄 흘러서 회사 탕비실 소파에 시체처럼 누워있었어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "회사 앞 약국에서 제일 쎈 진통제 두 알 사 먹었는데도 효과가 하나도 없고 손발이 얼음장처럼 차갑게 다 굳어가네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "다행히 착한 옆자리 동기 서포터가 나 과로로 쓰러질 거 같다고 자기 서랍에 아껴둔 비싼 홍삼 꿀차 액기스 티백 박스를 선뜻 공짜로 주더라고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 진짜 구세주나 천사가 따로 없어. 일단 종이컵 제일 큰 거에 정수기 뜨거운 물 가득 받아서 살기 위해 이거부터 진하게 타."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "꿀차 티백을 따뜻한 물에 타다 는 음료를 물에 섞어 우려내다/만들다(brew / mix / make)이다.",
+        "commonFailureModes": [
+          "차를 타다 라는 관용구 동음이의어 때문에 자동차나 놀이기구를 타다(ride the tea)로 오역하거나 불에 태우다(burn the tea)로 이상하게 직역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 생리통 냉증 -> 꿀차 액기스 티백 전달 -> 정수기 물 붓기 콤보가 동사 타다 를 Brew/Mix 로 강력 제약."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 요즘 회사에서 프로젝트할 때 매번 회의 지각하고 서류 수치 틀리는 실수 연발했더니 부장님한테 진짜 단단히 억울하게 완전 찍혔어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 주간 회의 시간에도 내가 밤새 피 터지게 쓴 기획안 보더니 그딴 건 당장 파쇄기 쓰레기통에나 찢어 버리라고 팀원들 쫙 다 보는 앞에서 망신을 주더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "솔직히 내가 데이터 검증 안 한 잘못한 부분도 분명히 있긴 한데, 그래도 직장 상사가 어떻게 부모님 욕 인신공격까지 섞어가며 그렇게 심하게 선을 넘게 혼내냐."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "너무 억울하고 분해서 어제 화장실 문 잠그고 밤새 끅끅거리며 울었잖아. 난 아무리 혼나도 진짜 부장님이 남 생각 1도 없이 함부로 내뱉는 그 뾰족하고 가시 돋친 말이 너무 상처야."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "부장님이 내뱉는 말 은 입에서 나오는 언어적 폭언과 발언(words / remarks / words you say)이다.",
+        "commonFailureModes": [
+          "가시 돋친 말이라는 비유적 수사를 그대로 직역하여 가시 달린 승마장 말(spiky horse)이나 달의 마지막(end of the month)으로 환각 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 망신 주기, 인신공격, 혼내기, 내뱉다 등 3턴 간의 발화 서사가 동음이의어 말 을 언어로 한정함."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 달 전공 필수 기말고사가 너무 극악으로 어려워서 학생들 평균 점수 완전 반토막 났다고 교수님이 갑자기 이번 주말에 재시험 일정을 강제로 잡으셨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "억울해 죽겠지만 어제 새벽 4시까지 도서관에서 무식하게 두꺼운 전공 서적 3번이나 회독하고 족보 예상 기출문제 싹 다 백지에 쓰면서 달달 외웠어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 9시에 강의실에서 빈 시험지 딱 처음 받았을 땐 또 망한 거 같아 막막했는데, 막상 펜 들고 풀다 보니까 어젯밤에 내가 찍은 아는 문제만 쏙쏙 기적처럼 나와서 30분 만에 술술 풀리더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 이 정도면 나 이번 악명 높은 전공 과목 A+ 학점 무난하게 씹어먹고 받을 듯. 어우 내 대학 인생 4년 지금까지 이렇게 빈틈없이 완벽하게 100점짜리 시험을 치다니!"
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "시험을 완벽하게 치다 는 시험을 훌륭하게 수행하고 응시하다(take the exam / ace the exam)이다.",
+        "commonFailureModes": [
+          "치다 를 주먹으로 때리고 타격을 입히는 것으로 해석해 시험지를 강하게 때리다(hit the exam / punch the test paper)라거나 장난을 치다(joke the exam)로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 기말고사 재시험, 족보 암기, 문제 풀이 서사에서 동음이의어 치다 가 Take a test 로 필터링됨."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "sense_disambiguation"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "요즘 두 달 전부터 이상하게 밥만 먹으면 소화가 너무 안 되고 위장이 송곳으로 콕콕 찌르듯이 아파서 결국 못 참고 동네 내과 방문해서 수면 위내시경을 풀코스로 받았거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "결과 보는데 의사 선생님이 위궤양 위염 초기 심각한 증상이라고 당분간 술 담배 매운 거 짠 거 절대 입에 대지도 금지하고 맹맹한 흰죽만 먹으라고 엄청 혼내셨어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 내시경 병원 검사비 십얼마랑 점막 보호 치료용 짜 먹는 물약이랑 알약 2주일치를 한꺼번에 처방받아서 밑에 1층 약국에서 카드로 다 결제했단 말이야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 직장인 건강보험 팍팍 적용돼서 망정이지 천만다행이다, 만약 혜택 안 그랬으면 이번 달 쪼들리는 생활비 당장 빵꾸 날 정도로 내 월급에서 너무 많은 쌩돈이 허무하게 들 뻔했어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "쌩돈이 들다 는 돈이 비용으로 소모되거나 지출되다(cost so much money / spend too much money)이다.",
+        "commonFailureModes": [
+          "돈이 물리적으로 무거워서 들어 올리다(lift so much money) 라거나, 돈이 내 월급 안으로 빈집털이범처럼 들어오다(enter my paycheck)로 괴상하게 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 내시경 검사비, 물약 결제, 생활비 빵꾸 위기라는 전형적인 의료비 지출(Cost/Spend) 맥락 매핑."
+      }
+    }
+  ]
+}

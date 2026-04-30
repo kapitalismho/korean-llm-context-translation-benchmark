@@ -1,0 +1,484 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx2-single-batch-02",
+  "items": [
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "sarcasm_or_teasing"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 야근하다가 너무 스트레스 받아서 편의점에서 컵라면이랑 삼각김밥 3개를 까먹었거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 아침에 눈뜨자마자 체중계 올라가니까 정확히 2키로가 쪄있더라고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나이트 루틴 하나는 진짜 살찌게 기가 막히게 완벽하다니까."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "완벽하다는 진짜 칭찬이 아니라, 폭직으로 2kg가 찌는 최악의 야식 루틴을 어이없어하며 자조하는 반어법(My night routine is perfectly ruining my diet)이다.",
+        "commonFailureModes": [
+          "야식으로 인한 체중 증가라는 자조적 맥락을 파악하지 못하고, 기가 막히게 완벽하다를 긍정적 찬사(amazing and perfect)로만 직역해 어색함을 남긴다."
+        ],
+        "validationNotes": "contextExpectation=use. 1~2턴의 실패 서사(폭식, 체중 증가)가 마지막 턴의 형용사(완벽하다)의 극성을 완전히 반대로 뒤집는 화용 능력 평가."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "동아리 회비 횡령하고 잠적한 전 회장 놈한테 어제 카톡으로 돈 언제 갚을 거냐고 따졌어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그랬더니 자기도 지금 지갑 사정이 너무 어렵다면서 오히려 내 번호를 차단 박아버리더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래, 내가 그냥 길 가다 액땜 제대로 한 번 똥 밟은 셈 쳐야지 어쩌겠어."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "똥 밟은 셈 치다 는 진짜 대변을 밟았다는 뜻이 아니라, 불운한 일을 겪고 체념하며 잊어버리겠다(Consider it bad luck and let it go)는 관용적 분노 섞인 체념이다.",
+        "commonFailureModes": [
+          "차단당한 억울한 맥락 보존에 실패하고 literally stepped on poop 이라고 배설물을 물리적으로 밟은 것으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 돈을 떼이고 차단당한 상황 수동적 체념 -> 똥 밟았다는 관용구의 올바른 은유적 투사 검증."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 신입사원 김 대리가 나한테 쪼르르 와서는 자기 업무 너무 많다고 울상을 짓더라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 나도 지금 내 메인 프로젝트 마감 코앞이라 회사에서 이틀째 집에 못 가고 있거든."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "누구는 뭐 회사에 맛있는 거 먹고 꿀 빨러 오는 줄 아나 봐."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "꿀 빨러 오다 는 진짜 벌꿀을 먹는 게 아니라 편하게 놀고 먹으며 날로 먹으려 하다(have it easy / slack off)는 뜻이다. 신입사원의 징징거림에 대한 짜증이다.",
+        "commonFailureModes": [
+          "본인이 더 바쁘다는 맥락을 잊고 진짜 회사에 꿀을 핥아먹으러(suck honey) 온다는 직역으로 문맥을 파괴한다."
+        ],
+        "validationNotes": "contextExpectation=use. 본인의 격무 상황(2턴)을 비교 우위로 삼아 타인의 투정(1턴)에 대해 꿀 빤다라는 속어로 카운터 치는 인텐트."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 방금 통장 잔고 탈탈 털어서 이번 달 원룸 월세랑 밀린 관리비 다 냈더니 3천 원 남았어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 집에 쌀도 똑 떨어지고 냉장고엔 일주일 전 먹다 남은 쉰 김치밖에 없네."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 저녁에 혹시 너네 집 가서 치킨 시켜 먹어도 돼? 뒷정리랑 분리수거는 내가 다 할게."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "돈이 없으므로 치킨은 상대방(너)이 결제하라는 간접적이고 뻔뻔한(혹은 절박한) 구걸(Can you buy me chicken at your place?)이다.",
+        "commonFailureModes": [
+          "화자가 치킨을 사 들고 가겠다(Can I order chicken to your place)는 식으로 주체를 반대로 해석한다. 3천 원 남았다는 맥락을 놓치면 발생함."
+        ],
+        "validationNotes": "contextExpectation=use. 파산 상태 서사(1, 2턴) 기반으로 목적 턴의 치킨 시켜 먹방이 타인의 비용 지불을 내포한 간접 요청임을 이해하는가."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야 너 어제 신촌에서 술 마시다 말고 도대체 인사도 없이 어디로 도망갔냐?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 우리가 네 몫까지 밀린 안줏값 다 결제하느라 진짜 잔고 바닥나고 피똥 쌀 뻔했어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 당장 카카오페이로 5만 원 안 쏘면 진짜 손절이니까 알아서 해라."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "돈을 보내지 않으면 관계를 끊어버리겠다(If you do not wire 50k won today, we are done)는 매우 공격적이고 격의 없는 찐친 슬랭체이다.",
+        "commonFailureModes": [
+          "안 쏘면 을 물리적인 총격(If you do not shoot)으로 번역하거나, Please send 50,000 won today 처럼 지나치게 점잖은 문어체로 톤을 죽여버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 야, 도망갔냐, 피똥 싸다 등 거친 욕설에 가까운 1~2턴의 톤을 받아 안 쏘면 손절 이라는 슬랭적 번역체로 이어갈 것."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "사장님, 이번 주 금요일로 예정되었던 외부 임원진 골프 회동 취소 건 관련하여 보고드립니다."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 아침 기상청 특보에 따르면 당일 오전에 거센 폭우와 강풍이 예상된다고 합니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "일정을 다음 주 수요일로 다시 조율해서 캘린더에 올려 놓겠습니다."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "상사에게 사유를 보고하고 대안을 제시하는 극도로 정중하고 격식 있는 비즈니스 존댓말(I will reschedule and update the calendar)이다.",
+        "commonFailureModes": [
+          "보고 맥락을 살리지 못하고 I will put it on the calendar 처럼 회사 동료에게 말하듯 캐주얼하게 번역해 회사 내 위계질서 톤을 망친다."
+        ],
+        "validationNotes": "contextExpectation=use. 보고드립니다 등에서 시작된 압도적 상하관계의 포멀한 텍스트 톤이 마지막 캘린더 세팅 발화까지 유지되는지 체크."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "엄마, 저번 환갑 생신 때 내가 무리해서 사드린 그 빨간색 등산복 패딩 말이야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이모가 어제 보더니 자기 입고 있는 것보다 훨씬 예쁘다고 막 부러워했다며?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "다음번엔 내가 무리해서라도 이모 것도 세트로 하나 사서 깜짝 배송으로 보내드릴게."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "엄마에게 애교를 부리며 반말(말이야, ~며?)과 존대(~보내드릴게)를 자연스럽게 섞어 쓰는 친근감 넘치는 가족톤(I will buy one for auntie too and send it to you)이다.",
+        "commonFailureModes": [
+          "가족 간의 다정함을 기계적 반말(I will send it to her)이나 완전히 사무적인 비즈니스 존대(I shall deliver it)로 왜곡한다."
+        ],
+        "validationNotes": "contextExpectation=use. 엄마에게 비싸게 생색내며 이모를 챙기는 다정한 딸/아들의 어투 유지 여부."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "야, 너 저번 주말에 내 방 몰래 기어 들어와서 내 향수 마음대로 뿌리고 나갔지?"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그거 내가 스무 살 생일 선물로 받은 해외 한정판이라서 엄청 아껴 쓰던 거란 말이야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 한 번만 더 허락 없이 내 물건에 손대면 그땐 가만 안 둬."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "동생이나 룸메이트에게 경고하는 극도로 분노하고 강압적인 하대 어조(If you touch my things without permission one more time, you are dead meat)이다.",
+        "commonFailureModes": [
+          "야, 몰래 기어 들어와서 의 도발적 톤을 누락하고 Please do not touch my things 로 정중한 호소문처럼 번역해 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 물건을 도둑맞은 분노와 하대(야, 너) 어음이 가만 안 둬 라는 협박의 톤 높이에 반영될 것."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-001",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 아침에 출근할 때 지옥철에서 사람들한테 엄청 치이면서 억지로 끼어 탔어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "회사 도착해서 팟캐스트 들으려고 가방을 열어보니까 바깥 지퍼가 활짝 열려있더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "결국 새로 산 무선 이어폰 한쪽 잃어버려서 하루 종일 일도 손에 안 잡히고 우울해."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "지옥철 압사 -> 가방 열림 -> 이어폰 분실이라는 물리적/시간적 인과율(Because the bag was open, I ended up losing an earbud)이다.",
+        "commonFailureModes": [
+          "출근길 혼잡과 가방 열림의 원인-결과를 결국(ended up)이라는 표현에 매끄럽게 응집시키지 못하고 분리된 세 개의 문장으로만 병렬 처리한다."
+        ],
+        "validationNotes": "contextExpectation=use. 지옥철 혼잡이 가방 열림을 유발하고, 그것이 이어폰 분실로 이어지는 causal event sequence 재현."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-002",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 인터넷 요리 채널 레시피 보고 태어나서 처음으로 김치찌개 끓여보고 있거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 막 냄비에 썰어둔 돼지고기 먼저 달달 볶다가 신김치 넣고 같이 볶는 것까진 끝냈어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이제 여기에 쌀뜨물 붓고 다진 마늘만 한 숟가락 넣고 푹 끓이면 드디어 끝이다."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "찌개 조리의 시간적 절차(Now that I roasted meat and kimchi, I just need to pour water and add garlic)를 순서대로 전달하는 흐름이다.",
+        "commonFailureModes": [
+          "이제여기에(Now here/On top of this)라는 절차적 연결사를 무시하고 독립된 행위로 직역해 시간의 선후관계(볶고 나서 끓이는) 접합을 약화시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 볶기 완료 -> 물 붓고 끓이기라는 요리의 시간적 순서(Sequence)를 이어주는 접착제 역할."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-003",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 낮에 분명히 세탁기 쾌속으로 돌려놓고 빨래 건조대에 다 예쁘게 널어놨다고 굳게 믿었어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 방금 낼 아침에 당장 입을 흰 셔츠 찾으려고 베란다 나갔다가 뒷목 잡고 쓰러질 뻔했잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "세탁기 통 안에 냄새나고 물기 축축한 채로 뭉쳐있는 빨래들이 그대로 들어있네."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "과거의 착각(널어놨다)이 현재의 베란다 방문으로 인해 거짓(안 널고 썩고 있음)으로 판별되는 모순 폭로 구조이다.",
+        "commonFailureModes": [
+          "널어놨다며 뻥친 과거 발화의 맥락적 모순 충격을 살리지 못하고, 그저 세탁기 안에 빨래가 있다고 평이하게 번역해 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 널었다고 생각함(과거 착각) -> 베란다에서 경악함(현재 인식 변환) -> 세탁기에 그대로 있음(사실 관계 확정)이라는 인식론적 연쇄."
+      }
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-004",
+      "locked": {
+        "contextTurnCount": 2,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 저녁 6시 이후로 물 한 모금 안 마시고 오늘 아침에 거울 봤는데 얼굴 붓기가 하나도 안 빠진 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "알고 보니까 나도 모르게 새벽에 몽유병 환자처럼 편의점 다녀와서 컵라면 하나를 국물까지 다 먹었대."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이러니까 아무리 낮에 독하게 굶어봐야 다 밑 빠진 독에 물 붓기고 의미가 없지."
+        },
+        "relevantContextIndices": [
+          0,
+          1
+        ],
+        "intendedInterpretation": "금식 노력(원인)이 새벽의 무의식적 라면 취식(사건)으로 인해 밑 빠진 독에 물 붓기(vain effort / pouring water into a bottomless pitcher)라는 헛수고(결과)로 끝났음을 정리하는 인과문이다.",
+        "commonFailureModes": [
+          "새벽에 라면을 먹어서 굶은 게 의미가 없어졌다는 인과 사슬을 놓치고 literally pouring water into a broken pot 라고 이상한 속담을 기계 번역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 굶음 -> 새벽 야식 -> 그러니까 헛수고(=밑독물) 로 귀결되는 아이러니 인과 체인 테스트."
+      }
+    }
+  ]
+}

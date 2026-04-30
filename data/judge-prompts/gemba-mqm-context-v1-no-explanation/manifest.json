@@ -1,0 +1,26 @@
+{
+  "name": "gemba-mqm-context-v1-no-explanation",
+  "upstream": {
+    "repo": "https://github.com/MicrosoftTranslator/GEMBA",
+    "commit": "a7a7eff8e46998447c6cbf09d06affc8f1b99ab4",
+    "promptFile": "gemba/prompt.py",
+    "rubricFile": "gemba/gemba_mqm_utils.py"
+  },
+  "mqmClasses": [
+    "accuracy/addition",
+    "accuracy/mistranslation",
+    "accuracy/omission",
+    "accuracy/untranslated text",
+    "fluency/character encoding",
+    "fluency/grammar",
+    "fluency/inconsistency",
+    "fluency/punctuation",
+    "fluency/register",
+    "fluency/spelling",
+    "style/awkward",
+    "terminology/inappropriate for context",
+    "terminology/inconsistent use",
+    "non-translation",
+    "other"
+  ]
+}

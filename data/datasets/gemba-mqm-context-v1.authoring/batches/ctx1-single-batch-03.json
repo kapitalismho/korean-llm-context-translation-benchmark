@@ -1,0 +1,380 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx1-single-batch-03",
+  "items": [
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "어제 넷플릭스에 새로 올라온 드라마 진짜 시간 가는 줄 모르고 정주행했어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아 배고프다. 이따 점심으로 마라탕이나 시켜 먹을까?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "드라마 정주행이라는 주제에서 점심 메뉴 고민으로 완전히, 독립적으로 주제가 전환되었다.",
+        "commonFailureModes": [
+          "앞 턴의 시청 정보에 과도하게 묶여, 점심을 드라마 보면서 먹겠다(while watching)거나 드라마 내용 속의 마라탕으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. single 발화자의 혼잣말성 주제 급선회. 뒷 문장이 완벽히 분리되어 번역되는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말에 동아리 엠티 가는 장소가 강원도 산골짜기로 확정 났대."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "근데 내 앞머리 너무 짧고 이상하게 잘라진 거 같지 않냐?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "엠티 장소(공적 통보) 이야기에서 자신의 헤어스타일(사적 고민)로 맥락이 갑자기 점프했다. 앞머리 이야기만 직역해야 한다.",
+        "commonFailureModes": [
+          "엠티 장소, 산골짜기와 강제로 엮어서 앞머리가 산처럼 잘렸다거나 바람에 날리는 엠티에서의 머리로 오역을 생성한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 의식의 흐름에 따른 일상적 점프."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "topic_shift_independence"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "할머니, 어제 제가 병원에서 타다 드린 무릎 관절약은 좀 드셔 보셨어요?"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오늘 장날인데 밖에 나가서 맛있는 찐빵 좀 사다 드릴까요?"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "관절약 복용 여부 질문에서 장날 간식거리 제안으로 화제가 넘어갔다. 찐빵 사드릴지 여부만 독립적으로 번역한다.",
+        "commonFailureModes": [
+          "약과 엮어서 약 먹고 나서 찐빵을 먹을지(to take pills with)나 병원에서 찐빵을 사 올지 묻는 식으로 문맥을 과결합한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 손윗사람에 대한 걱정과 돌봄 맥락 속에서의 독립된 제안."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 이번 달에 신발 뽑기 당첨돼서 진짜 비싼 한정판 운동화 샀잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "덕분에 당분간 허리띠 꽉 졸라매고 살아야 할 듯."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "'허리띠를 졸라매다'는 돈을 아껴 쓰다(tighten one's belt / cut back on spending)는 관용구이다.",
+        "commonFailureModes": [
+          "앞 턴의 옷/신발(패션 아이템) 맥락에 심하게 낚여서, 문자 그대로 바지의 허리띠 버클을 조이겠다(literally tighten my physical belt)고 번역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 신발(의류) 맥락이 허리띠(의류)라는 다의어/관용구의 직역을 유도하는 거대한 함정."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 뷔페에서 완전 과식했더니 배가 터질 것처럼 부르고 숨쉬기도 힘들어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "오, 저기 강 한가운데 백조 모양으로 예쁘게 떠 있는 배 좀 봐."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "화자가 가리키는 '배'는 강에 떠 있는 탈것인 선박(boat / ship)이다.",
+        "commonFailureModes": [
+          "앞 턴의 신체 부위(stomach / belly) 맥락에 속아, 백조 모양의 위장(swan-shaped stomach)이 강에 떠 있다고 엽기적으로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 신체 배와 선박 배 동음이의어의 충돌에서 로컬 정보(강 한가운데, 떠 있는)가 압도해야 함."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "false_lead_trap"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 밖에는 우박 섞인 진눈깨비랑 눈이 엄청나게 퍼붓고 있어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "역시 사람은 매사에 눈이 높아야 크게 성공하는 법인 것 같아."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "'눈이 높다'는 기준이나 이상향이 높다(having high standards)는 의미이다.",
+        "commonFailureModes": [
+          "퍼붓는 눈(snow) 문맥에 오염되어, 눈(기상현상)이 높이 쌓여야 성공한다든지 The snow must be high 처럼 황당하게 직역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 신체 눈과 기상현상 눈의 충돌. 철저히 current 문장의 관용적 의미만 번역할 수 있는지 측정."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "나 진짜 이번 여름엔 다이어트 성공할 거라서 오늘부터 저녁은 안 먹어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "사장님! 여기 삼겹살 3인분에 공깃밥 두 개 바로 세팅해 주세요!"
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "과거의 다짐(다이어트/저녁 굶기)과 완벽히 모순되는 현재의 폭식 행동(삼겹살 3인분 주문)이다. 주문하는 문장만 독립적으로 번역해야 한다.",
+        "commonFailureModes": [
+          "저녁은 안 먹는다는 강력한 stale context를 지키기 위해, 고기를 시키지만 안 먹는다고 비틀거나 의문형(Can I order...?)으로 뭉뚱그린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 화자 본인이 바로 이전 턴에 했던 맹세를 다음 턴에 스스로 부수는 일상적 모순 코미디. 독립 번역 요망."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "Yesterday",
+            "sourceText": "어차피 이번 주말 내내 폭우 쏟아진다고 하니까 그냥 집에나 박혀 있어야지."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "바람 선선하게 불고 하늘 맑은 것 보소. 무조건 한강 공원 가야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "과거의 비관적 예측(폭우)을 현재 맑은 하늘의 묘사가 완전히 덮어씌웠다. 현재 한강 공원 가겠다는 화창한 발화 구조를 그대로 번역해야 한다.",
+        "commonFailureModes": [
+          "폭우가 쏟아질 거라는 이전 정보에 끌려가서, 맑지 않지만 가야 한다거나 집에 한강 공원을 차린다는 둥 의미를 어그러뜨린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 기상 예측이 빗나갔음을 보여주는 자기충족적 현재 문장. 상대 방어 발화가 아니므로 완벽한 단독 문장."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "stale_context_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "1 hour ago",
+            "sourceText": "옆집 강아지 덩치도 산만 한 데다 엄청 사나워서 가까이 가기 너무 무서워."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "와, 지금 나한테 배 까고 발라당 누워서 애교 부리는 거 완전 천사 그 자체네."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "무서워했던 과거 인상과 완전히 반전된, 배 까고 애교 부리는 개를 귀여워하는 현재 상황 묘사다.",
+        "commonFailureModes": [
+          "사납고 무섭다는 속성에 갇혀, 배 까고 눕는 행동을 공격 준비나 공포스러운 행동으로 묘사하는 괴상한 형용사를 동원한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 시간 흐름에 따른 내적 판단 변경. 독립적인 애정/경탄 표현."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-001",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "10 years ago",
+            "sourceText": "와, 나 스무 살 때만 해도 진짜 밤새 술 마시고 미친 듯이 놀러 다녔는데."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이제는 체력이 달려서 밤 10시만 되면 눈이 막 감긴다."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 '10년 전'은 맥락을 설명할 뿐 번역 대상이 아니다. 현재 10시면 피곤하다는 정보만 번역해야 한다.",
+        "commonFailureModes": [
+          "'10 years ago'라는 텍스트를 그대로 가져와 10 years ago, I fell asleep at 10처럼 과거의 상태로 환각을 일으켜 번역한다."
+        ],
+        "validationNotes": "contextExpectation=ignore. single 모드에서의 시간 도약 메타데이터가 대상 문장에 침범하는지 테스트."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-002",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "Last summer",
+            "sourceText": "그때 한 달 동안 바다 서핑 배울 때는 진짜 물속에만 살았잖아."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "지금은 샤워하러 화장실 물에 들어가는 것조차 귀찮아 죽겠어."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "메타데이터 '작년 여름'이 상황 전환을 보여주지만, 번역 내용 자체에는 아무런 텍스트 개입을 하지 않아야 한다.",
+        "commonFailureModes": [
+          "Last summer I was too lazy to take a shower처럼 작년 여름이라는 메타데이터 텍스트를 대상 문장 서두에 복사해다 붙인다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 계절이나 긴 시점의 이동이 주어졌을 때 번역기가 이를 번역해야 할 명사로 착각하는지 확인."
+      }
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-003",
+      "locked": {
+        "contextTurnCount": 1,
+        "speakerMode": "single",
+        "contextExpectation": "ignore",
+        "primaryPhenomenon": "metadata_nonliteral_resistance"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": "2 hours ago",
+            "sourceText": "나 드디어 미친 듯이 준비했던 토익 900점 넘었어! 진짜 대박이다!"
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아빠한테 바로 전화해서 결과 자랑해야지."
+        },
+        "relevantContextIndices": [],
+        "intendedInterpretation": "방구석에서 점수를 확인한 뒤 아빠에게 전화하겠다는 의지. 2 hours ago는 앞서 성적을 확인한 시점을 뜻할 뿐이다.",
+        "commonFailureModes": [
+          "2 hours ago I called my dad처럼 2시간 전이라는 메타데이터 레이블을 주워 먹고 과거 시제로 마음대로 변환시켜 버린다."
+        ],
+        "validationNotes": "contextExpectation=ignore. 화자 본인의 환희 맥락에서 메타데이터 레이블 오염을 거르는지 점검."
+      }
+    }
+  ]
+}

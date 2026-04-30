@@ -1,0 +1,50 @@
+[
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "English source:\n```I do apologise about this, we must gain permission from the account holder to discuss an order with another person, I apologise if this was done previously, however, I would not be able to discuss this with yourself without the account holders permission.```\nGerman translation:\n```Ich entschuldige mich dafür, wir müssen die Erlaubnis einholen, um eine Bestellung mit einer anderen Person zu besprechen. Ich entschuldige mich, falls dies zuvor geschehen wäre, aber ohne die Erlaubnis des Kontoinhabers wäre ich nicht in der Lage, dies mit dir involvement.```\n\nBased on the source segment and machine translation surrounded with triple backticks, identify error types in the translation and classify them. The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling), style (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.\nEach error is classified as one of three categories: critical, major, and minor. Critical errors inhibit comprehension of the text. Major errors disrupt the flow, but what the text is trying to say is still understandable. Minor errors are technically errors, but do not disrupt the flow or hinder comprehension.\n\nReturn the result as JSON with this structure:\n{\n  \"has_no_error\": boolean,\n  \"errors\": [\n    {\n      \"severity\": \"minor\" | \"major\" | \"critical\",\n      \"class\": \"<allowed MQM class>\",\n      \"target_span_text\": string | null,\n      \"source_span_text\": string | null,\n      \"explanation\": string\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "{\n  \"has_no_error\": false,\n  \"errors\": [\n    {\n      \"severity\": \"major\",\n      \"class\": \"accuracy/mistranslation\",\n      \"target_span_text\": \"involvement\",\n      \"source_span_text\": null,\n      \"explanation\": \"The translation leaves “involvement” untranslated, causing a mistranslation.\"\n    },\n    {\n      \"severity\": \"major\",\n      \"class\": \"accuracy/omission\",\n      \"target_span_text\": null,\n      \"source_span_text\": \"the account holder\",\n      \"explanation\": \"The translation omits the reference to the account holder.\"\n    },\n    {\n      \"severity\": \"minor\",\n      \"class\": \"fluency/grammar\",\n      \"target_span_text\": \"wäre\",\n      \"source_span_text\": null,\n      \"explanation\": \"The grammatical form is incorrect in context.\"\n    },\n    {\n      \"severity\": \"minor\",\n      \"class\": \"fluency/register\",\n      \"target_span_text\": \"dir\",\n      \"source_span_text\": null,\n      \"explanation\": \"The informal register is inappropriate in context.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "English source:\n```Talks have resumed in Vienna to try to revive the nuclear pact, with both sides trying to gauge the prospects of success after the latest exchanges in the stop-start negotiations.```\nCzech translation:\n```Ve Vídni se ve Vídni obnovily rozhovory o oživení jaderného paktu, přičemž obě partaje se snaží posoudit vyhlídky na úspěch po posledních výměnách v jednáních.```\n\nBased on the source segment and machine translation surrounded with triple backticks, identify error types in the translation and classify them. The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling), style (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.\nEach error is classified as one of three categories: critical, major, and minor. Critical errors inhibit comprehension of the text. Major errors disrupt the flow, but what the text is trying to say is still understandable. Minor errors are technically errors, but do not disrupt the flow or hinder comprehension.\n\nReturn the result as JSON with this structure:\n{\n  \"has_no_error\": boolean,\n  \"errors\": [\n    {\n      \"severity\": \"minor\" | \"major\" | \"critical\",\n      \"class\": \"<allowed MQM class>\",\n      \"target_span_text\": string | null,\n      \"source_span_text\": string | null,\n      \"explanation\": string\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "{\n  \"has_no_error\": false,\n  \"errors\": [\n    {\n      \"severity\": \"major\",\n      \"class\": \"accuracy/addition\",\n      \"target_span_text\": \"ve Vídni\",\n      \"source_span_text\": null,\n      \"explanation\": \"The translation adds an extra occurrence of “ve Vídni”.\"\n    },\n    {\n      \"severity\": \"major\",\n      \"class\": \"accuracy/omission\",\n      \"target_span_text\": null,\n      \"source_span_text\": \"the stop-start\",\n      \"explanation\": \"The translation omits the stop-start aspect of the negotiations.\"\n    },\n    {\n      \"severity\": \"minor\",\n      \"class\": \"terminology/inappropriate for context\",\n      \"target_span_text\": \"partaje\",\n      \"source_span_text\": null,\n      \"explanation\": \"The chosen term is inappropriate in context.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "Chinese source:\n```大众点评乌鲁木齐家居卖场频道为您提供高铁居然之家地址，电话，营业时间等最新商户信息，找装修公司，就上大众点评```\nEnglish translation:\n```Urumqi Home Furnishing Store Channel provides you with the latest business information such as the address, telephone number, business hours, etc., of high-speed rail, and find a decoration company, and go to the reviews.```\n\nBased on the source segment and machine translation surrounded with triple backticks, identify error types in the translation and classify them. The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling), style (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.\nEach error is classified as one of three categories: critical, major, and minor. Critical errors inhibit comprehension of the text. Major errors disrupt the flow, but what the text is trying to say is still understandable. Minor errors are technically errors, but do not disrupt the flow or hinder comprehension.\n\nReturn the result as JSON with this structure:\n{\n  \"has_no_error\": boolean,\n  \"errors\": [\n    {\n      \"severity\": \"minor\" | \"major\" | \"critical\",\n      \"class\": \"<allowed MQM class>\",\n      \"target_span_text\": string | null,\n      \"source_span_text\": string | null,\n      \"explanation\": string\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "{\n  \"has_no_error\": false,\n  \"errors\": [\n    {\n      \"severity\": \"critical\",\n      \"class\": \"accuracy/addition\",\n      \"target_span_text\": \"of high-speed rail\",\n      \"source_span_text\": null,\n      \"explanation\": \"The translation adds unrelated content about high-speed rail.\"\n    },\n    {\n      \"severity\": \"major\",\n      \"class\": \"accuracy/mistranslation\",\n      \"target_span_text\": \"go to the reviews\",\n      \"source_span_text\": null,\n      \"explanation\": \"The translation mistranslates the closing call to action.\"\n    },\n    {\n      \"severity\": \"minor\",\n      \"class\": \"style/awkward\",\n      \"target_span_text\": \"etc.,\",\n      \"source_span_text\": null,\n      \"explanation\": \"The punctuation and phrasing are awkward.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

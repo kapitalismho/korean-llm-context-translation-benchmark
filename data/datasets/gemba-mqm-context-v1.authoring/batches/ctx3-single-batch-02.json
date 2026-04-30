@@ -1,0 +1,554 @@
+{
+  "datasetId": "gemba-mqm-context-v1",
+  "batchId": "ctx3-single-batch-02",
+  "items": [
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 오후에 집 근처 로또 판매점에서 당첨 확률 높다는 수동 번호로 큰맘 먹고 5만 원어치나 샀어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번에 혹시 1등 당첨되면 당장 퇴사 명분 삼고 강남에 아파트 한 채 바로 파워 결제해야지 하고 김칫국 엄청 마셨지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 생방송 추첨 끝나고 큐알 코드로 확인해 봤는데 5만 원어치 번호 중에 진짜 단 한 개도 안 맞고 다 빗나가더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "이야, 5만 원이나 투자해서 숫자 하나도 못 맞추는 놀라운 확률을 뚫은 거 보면 난 진짜 투자 재테크의 귀재가 분명해."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "재테크의 귀재는 투자를 잘한다는 뜻이 아니라 5만 원을 모두 날린 자신의 끔찍한 운과 투자 실력을 한탄하는 자조적 비꼬기(Sarcasm: I am a genius at losing money)이다.",
+        "commonFailureModes": [
+          "1-3턴의 당첨 실패 서사를 망각하고 I am clearly a financial genius 처럼 화려한 투자 실력을 갖췄다며 문자 그대로의 찬사로 오역한다."
+        ],
+        "validationNotes": "contextExpectation=use. 투자 실패의 맥락이 귀재(genius)라는 명사와 충돌하여 빈정거림/자조적 태도 도출."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 롤 랭크 게임 돌리는데 시작하자마자 우리 팀 정글러가 상대 진영으로 아무 생각 없이 무리하게 쳐들어가는 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내가 핑 엄청 찍으면서 제발 뒤로 빼라고 경고했는데 기어코 들어가더니 결국 1분 만에 처참하게 퍼스트 블러드 따이고 죽더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그 뒤로 계속 팀원들 남 탓만 하더니 고의로 수십 번을 죽어줘서 결국 15분 만에 우리 본진 넥서스가 시원하게 밀려버렸어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "진짜 혼자서 우리 팀 게임을 완벽하게 다 터뜨려주신 우리 위대하신 정글러님 덕분에 아주 행복하고 즐거운 판이었어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "위대하신 정글러나 행복한 판은 칭찬이 아니라, 게임을 고의로 패배하게 만든 트롤 유저에 대한 극도의 분노를 담은 반어법(Thanks to our great jungler who ruined the game, it was such a \"happy\" match)이다.",
+        "commonFailureModes": [
+          "팀이 패배했다(넥서스가 밀렸다)는 부정 서사를 무시하고 it was a truly happy game thanks to the great jungler 라고 순수하게 칭찬해 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 트롤링 패배 서사 -> 위대하신/행복하고 즐거운 이라는 극한의 비꼬기 의도 번역."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 고등학교 동창회 단톡방에서 다음 달에 제주도 풀빌라 펜션 빌려서 2박 3일 다 같이 신나게 놀러 가자고 공지가 올라왔네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 나 요즘 빡세게 취업 준비하느라 주말 알바도 다 그만둬서 당장 낼 비행기 값이랑 펜션 숙소 회비 20만 원조차 없단 말이야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "애들이 돈 쪼들리면 자기네들이 십시일반으로 모아서 내줄 테니까 제발 몸만이라도 오라고 자꾸 꼬드기는데 솔직히 그딴 동정 너무 비참해."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "어차피 빚지고 가면 돈 눈치 보느라 신나게 놀지도 못할 텐데 애들 다정한 마음만 진짜 고맙게 받고 이번 여행은 깔끔하게 패스하려고."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "애들 다정한 마음만 고맙게 받겠다는 것은, 친구들의 금전적 지원을 실제로 돈으로 받는다는 뜻이 아니라 호의만 감사히 여기되 여행 참여는 거절하겠다는 선언(I appreciate the thought, but I will pass)이다.",
+        "commonFailureModes": [
+          "돈 지불 제안을 진짜로 수락하는 뜻으로 오역하여 I will gladly accept their money and pass the trip 으로 의미를 박살 낸다."
+        ],
+        "validationNotes": "contextExpectation=use. 회비 부족 -> 친구들의 지원 제안 제기 -> 자존심 문제 -> 마음만 받는다(정중한 거절)의 화용."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "pragmatic_intent_resolution"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이번 주말에 봄맞이 방 청소 대대적으로 하려고 어제 쿠팡에서 물티슈랑 먼지떨이 같은 청소 용품 엄청 많이 샀거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 막상 아침 9시에 눈 뜨니까 유튜브 쇼츠 알고리즘에 빠져서 침대에 누워서 하루 죙일 스마트폰 화면만 멍하니 봤네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "지금 벌써 해 다 지고 밤 10시가 넘었는데 결국 로봇 청소기 버튼 한 번 안 누르고 옆에 배달 음식 쓰레기만 더 산더미처럼 쌓였어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "그래, 내가 무슨 청소냐. 이 더러운 먼지구덩이 방구석에서 평생 게으르게 뒹굴뒹굴 돼지처럼 살다가 숨 막혀 죽어버리면 되지 뭐."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "돼지처럼 구르다 죽어버리면 되지 는 정말 죽기를 바라는 게 아니라 계획을 지키지 못한 자신의 나태함에 대한 극심한 자기혐오와 자책(Self-loathing: Fine, I will just rot in this dump like a lazy pig)이다.",
+        "commonFailureModes": [
+          "진짜 자살을 암시하는 문구로 심각하게 해석하거나, I guess I should just live like a pig and die 처럼 평온한 미래 계획으로 톤을 왜곡한다."
+        ],
+        "validationNotes": "contextExpectation=use. 계획 실패와 나태함의 반복 서사로 축적된 극단적 자책 톤 매핑."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "금일 오전 9시부로 영업 2팀에서 제출한 하반기 신제품 마케팅 전략 기획안 1차 검토 작업을 모두 완료하였습니다."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "해당 기획안의 3페이지 예산안 타당성이 다소 부족하여 추가적인 보완이 필요하다는 피드백을 유선상으로 전달한 바 있습니다."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "방금 전 영업 2팀 최 과장으로부터 예산안 데이터가 전면 수정된 2차 기획안을 사내 이메일망을 통해 다시 수령하였습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "수정된 데이터를 면밀하게 검토한 후, 내일 오전 경영진 정기 회의 전까지 최종 승인 여부를 기안으로 상신하도록 하겠습니다."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "상신하도록 하겠습니다 는 회사 업무 일지나 공식 보고서에 쓰이는 극도로 정중하고 건조한 비즈니스 포멀 어투(I will report/submit it for approval)이다.",
+        "commonFailureModes": [
+          "I will show it to the bosses 처럼 캐주얼한 번역체를 써서 보고서 특유의 격식(상신, 검토, 수령 등의 한자어 뉘앙스)을 깎아먹는다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴 동안 일관되게 유지된 군대식/보고서식 업무 일지 어조 캐리오버."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아 ㅆㅂ 진짜 아침부터 출근길 만원 지하철 타다가 얼타는 표정의 어떤 미친 아저씨한테 발등 제대로 콱 밟혀서 개빡치네."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아프냐고 사과라도 하든가. 남의 발 뭉개놓고 귀에 노이즈 캔슬링 이어폰 꽂은 채로 폰만 쳐다보고 모른 척 쌩까는 게 진짜 얼탱이가 없더라."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내가 어이없어서 옆에서 빤히 쳐다보니까 뭘 꼴아보냐는 식으로 위아래로 기분 나쁘게 훑어보는데 진짜 그 자리에서 명치 한 대 칠 뻔했어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "아침 댓바람부터 세상에 정신 나간 미친 또라이 새끼들 왤케 많은지. 그냥 길 가다 드러운 똥 밟았다고 생각하고 퇴근 전까지 빨리 잊어버려야지."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "또라이 새끼들, 똥 밟았다는 일상에서 스트레스받은 화자의 극도로 거칠고 반항적인 욕설/슬랭투(Fucking crazy bastards everywhere. I should just think I stepped in shit and forget it)이다.",
+        "commonFailureModes": [
+          "There are so many weird people. I should forget it 이라고 순화하여 강렬한 빡침의 감정선과 욕설(Swearing) 강도를 평면화시킨다."
+        ],
+        "validationNotes": "contextExpectation=use. 3턴 내내 축적된 분노와 욕설(ㅆㅂ, 개빡치네, 얼탱이, 명치 치다)의 거친 슬랭톤 유지."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "안뇨옹! 오늘은 우리 사랑스러운 구독자 뽀쨕이 애기들한테 내가 평소에 젤루 아끼는 최애 쿨톤 핑크 블러셔 추천해 주려고 카메라 켰찌롱!"
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "이거 가루 날림도 없고 뽀송한 발색 진짜 양쪽 볼따구에 한 번만 콕 올려주면 완전 뽀용뽀용해서 요정 같아 보인다구 다들 엄청 탐냈던 그 제품이양."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "가격도 할인받으면 겨우 한 개에 만 원밖에 안 해서 완전 혜자 가격이니까 다들 근처 올리브영 빅세일할 때 무조건 당장 달려가서 장바구니에 쟁여놔야 해."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "구럼 오늘 내 과즙팡팡 뷰티 꿀팁 영상 끝까지 안 나가고 재밌게 봐주구 다들 조아요랑 빨간 구독 버튼 꼭꼭 눌러주기 쌤이랑 약쏘옥!"
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "안뇨옹, 켰찌롱, 약쏘옥 등 1020 뷰티 유튜버 특유의 하이텐션 애교 및 인터넷 방송 혀 짧은 구어체(Hii! Promise me to hit subscribe and like button!)이다.",
+        "commonFailureModes": [
+          "단어의 오타를 전부 바른 문법으로 인식해 Hello everyone, please press the like button 처럼 다큐멘터리 내레이터 수준으로 정제해 버린다."
+        ],
+        "validationNotes": "contextExpectation=use. 유튜버와 구독자 간의 하이텐션 뷰티 크리에이터 자막 어투(애교, 이모지 감성) 캐리오버."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "register_carryover"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [
+          "addressivity"
+        ],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "자 방금 들어오신 시청자 여러분, 지금 바로 상대 진영 최종 보스 몹 뚝배기 깨러 레이드 극딜 하이라이트 영상 바로 달립니다. 집중하세요."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아 서버 렉 뭐야! 갑자기 핑 100까지 튀어서 피하기 생존 스킬 삑사리 났잖아. 이거 개발사 영자들 돈만 빨아먹고 서버 관리 안 하냐 갓겜 수준 진짜."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "휴 일단 마나 포션 쭉쭉 빨면서 뒤쪽 바위에서 존버 타다가 제 공격 궁극기 쿨타임 돌면 바로 점멸 플래시 쓰고 이니시 화끈하게 걸겠습니다."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "나이스! 방금 광역 데미지 오지게 들어갔죠? 보스 몹 컷 완료 개꿀띠, 바로 영웅 템 전리품 파밍 맛깔나게 드가자!"
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "데미지 오지게, 개꿀띠, 파밍 드가자 등 게임 스트리머 특유의 신조어와 속어가 범벅된 방송 톤(Nice! The damage was sick right? Boss down ezpz, let us dive straight into looting!)이다.",
+        "commonFailureModes": [
+          "뚝배기 깨다, 존버, 개꿀띠 등 게임 은어를 살리지 못하고 I killed the boss properly 처럼 게임이라는 장르적 생동감을 제거한다."
+        ],
+        "validationNotes": "contextExpectation=use. 라이브 스트리밍 시청자를 대상으로 한 텐션 높은 게이머 속어/신조어 유지."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-001",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 혼자 밥 먹으려고 요리 유튜브 쇼츠 보니까 전자레인지 전용 용기에 계란 넣고 딱 1분만 돌리면 초간단 반숙 수란이 완성된다고 하더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그래서 나도 집에서 뚱뚱한 머그컵에 정수기 물 붓고 날계란 조심스럽게 톡 까서 넣은 다음에 노른자 안 터뜨리고 그대로 렌지에 넣고 돌렸어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 한 40초쯤 윙윙 돌아갔을 때 갑자기 렌지 안에서 퍽 혹은 펑 하는 엄청난 폭발음이 크게 들리면서 틈새로 연기가 확 나더라."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "겁나서 문 슬쩍 열어보니까 전자레인지 벽면 사방천지에 노란 폭탄 맞은 것처럼 찐득한 계란 노른자 찌꺼기가 다 들러붙어서 청소하느라 1시간 동안 죽는 줄 알았어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "노른자를 터뜨리지 않고 렌지에 돌림 -> 엄청난 폭발 발생 -> 렌지 내부 전체를 노란 노른자 잔해로 뒤덮어 청소 지옥에 빠졌다는 완벽한 물리적 인과 서사다.",
+        "commonFailureModes": [
+          "계란 폭탄이 터졌다는 묘사(노란 폭탄)를 진짜 군사용 폭탄이 터진 것으로 극단적 오역을 하거나 컵이 폭발했다고 원인을 왜곡한다."
+        ],
+        "validationNotes": "contextExpectation=use. 수란 조리법 -> 계란 폭발 -> 내부 유리창 찌꺼기 청소라는 시간적/인과적 요리 실패기 영작."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-002",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "오늘 기분 전환 겸 백화점 매장에서 20만 원 주고 진짜 구름처럼 새하얀 한정판 나이키 농구 운동화 새로 사서 처음으로 개시하고 신고 나갔지."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "근데 편의점 길 가다가 갑자기 하늘에서 구멍 뚫린 것처럼 예보에도 없던 소나기가 미친 듯이 쏟아져서 앞 바닥 점자블록이 다 진흙탕이 된 거야."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "당황해서 비 피하려고 상가 처마 밑으로 막 후다닥 뛰어가다가 그만 시커먼 흙탕물 웅덩이를 발바닥으로 제대로 팍 밟아버렸어."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "집에 와서 불 켜고 보니까 내 눈부시던 하얀 한정판 운동화가 지저분하게 똥 밟은 얼룩소처럼 여기저기 꺼멓게 꼬질꼬질 변해버려서 완전 울고 싶어."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "새하얀 신발 착용 -> 폭우로 인한 흙탕물 웅덩이 생성 -> 발을 헛디뎌 웅덩이 밟음 -> 희던 신발이 시커멓게 더러워졌다는 인과 체인이다.",
+        "commonFailureModes": [
+          "얼룩소처럼 꺼멓게 변했다는 직유법을 직역하여 진짜 진흙탕 안에서 소를 밟아 소똥이 묻었다거나 신발이 죽은 얼룩소로 변했다는 환각을 본다."
+        ],
+        "validationNotes": "contextExpectation=use. 백색 객체 -> 진흙탕 노출 -> 오염(검은 얼룩) 생성을 명백한 인과 관계로 도출."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-003",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "내일 제일 친한 중학교 동창 친구 생일이라서 밤에 홈베이킹으로 달달한 초코칩 쿠키 반죽 예쁘게 동그랗게 빚어서 오븐 트레이 위에 띄엄띄엄 올렸거든."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "유튜브 영상 레시피에는 180도 온도에서 딱 15분만 겉바속촉으로 굽고 꺼내라고 적혀있었는데, 소파에서 폰 하다가 깜박 잠이 들어서 30분이나 구워버렸어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "주방에서 엄청나게 탄 냄새가 진동해서 놀라 가지고 화들짝 깨서 오븐 문 열어보니까 귀여운 쿠키 표면이 완전 새까만 화산재 돌멩이처럼 굳어있더라고."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "포크로 살짝 쎄게 찔러봤는데 유리창도 단번에 깰 정도로 돌보다 더 단단해서 이건 구제 불능으로 도저히 사람이 먹을 수가 없으니 싹 다 음식물 쓰레기통에 처박아야지."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "적정 시간 초과 굽기 -> 수분 다 날아가고 새까맣게 탐 -> 돌멩이 수준의 극강의 경도(단단함) -> 결국 폐기라는 조리 실패 인과 사슬이다.",
+        "commonFailureModes": [
+          "유리창도 단번에 깰 정도라는 은유적 강도 표현을 오역해서 쿠키를 버리려다 실수로 주방 유리창을 깨버렸다는 식의 가짜 액션을 추가한다."
+        ],
+        "validationNotes": "contextExpectation=use. 시간 조절 실패(원인) -> 강도 증가(결과) -> 취식 불가 및 폐기 처분의 논리적 흐름."
+      }
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-004",
+      "locked": {
+        "contextTurnCount": 3,
+        "speakerMode": "single",
+        "contextExpectation": "use",
+        "primaryPhenomenon": "temporal_or_causal_linkage"
+      },
+      "status": "approved",
+      "fill": {
+        "secondaryPhenomena": [],
+        "contextTurns": [
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "아까 아침에 일어났는데 배가 아파서 유튜브 쇼츠 신나게 보면서 큰일 볼일 보려고 바지 뒷주머니에 내 소중한 아이폰 대충 꽂아놓고 화장실 변기에 앉았어."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "다 싸고 휴지로 닦은 다음에 일어나서 엉거주춤 바지 지퍼 추스르는데 갑자기 주머니 헐렁한 틈 사이로 아이폰이 중력의 법칙에 따라 스르륵 훌러덩 미끄러지더라고."
+          },
+          {
+            "speakerRole": "self",
+            "relativeTimeLabel": null,
+            "sourceText": "그대로 손쓸 틈도 없이 경쾌하게 퐁당 소리 내면서 똥물 가득한 변기통 한가운데로 내 피 같은 아이폰이 완벽한 자세로 다이빙을 해버린 거야."
+          }
+        ],
+        "currentSource": {
+          "speakerRole": "self",
+          "relativeTimeLabel": null,
+          "sourceText": "당장 울면서 두꺼운 고무장갑 끼고 똥물 속 폰 건져서 뜨거운 드라이기로 30분 말려봤는데 화면에 초록색 줄 가고 지지직거리더니 결국 전원이 영영 안 켜지고 사망했네."
+        },
+        "relevantContextIndices": [
+          0,
+          1,
+          2
+        ],
+        "intendedInterpretation": "주머니에 넣음 -> 움직임으로 이탈 -> 똥물이 담긴 변기에 빠짐(침수) -> 회생 시도 실패 및 기기 완전 고장(사망)이라는 스마트폰 침수 사건의 인과 서사다.",
+        "commonFailureModes": [
+          "똥물을 말렸다는 식으로 목적어가 교차 오염되거나 아이폰이 스스로 다이빙해서 고무장갑을 꼈다는 주술 관계 환각 오류가 나온다."
+        ],
+        "validationNotes": "contextExpectation=use. 뒷주머니 수납 -> 배변 후 기립 -> 침수 -> 드라이어 응급처치 -> 완전 고장의 연쇄적 물리 작용."
+      }
+    }
+  ]
+}

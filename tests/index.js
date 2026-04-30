@@ -1,0 +1,11 @@
+import './benchmark-config.test.ts';
+import './benchmark-types.test.ts';
+import './gemba-assets.test.ts';
+import './index-cli.test.ts';
+import './normalize-gemba.test.ts';
+import './openrouter-client.test.ts';
+import './provider-factory.test.ts';
+import './reporting.test.ts';
+import './run-artifacts.test.ts';
+import './runner.test.ts';
+import './vertex-judge.test.ts';
