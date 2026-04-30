@@ -78,7 +78,6 @@ For detailed setup, see `docs/reproducibility.md`.
 - `docs/dataset.md` — dataset schema and authoring process
 - `docs/evaluation.md` — GEMBA-MQM-based judging details
 - `docs/results.md` — detailed result analysis
-- `docs/cost-analysis.md` — cost/value assumptions
 - `docs/limitations.md` — interpretation limits
 - `docs/reproducibility.md` — setup and runner instructions
 - `docs/third-party-notices.md` — third-party attribution

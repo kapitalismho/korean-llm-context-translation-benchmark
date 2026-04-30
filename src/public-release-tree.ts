@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, mkdirSync, rmSync, statSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { globSync } from 'glob';
@@ -23,29 +23,30 @@ const FILE_ALLOWLIST = [
   'tsconfig.json',
   'tsconfig.test.json',
   'data/LICENSE',
-  'tests/index.js',
+  'data/benchmarks/gemba-mqm-context-v1-gemini-context-v2.json',
+  'data/prompts/gemini-context-v2.md',
+  'data/prompts/simple-translation.md',
+  'tests/reporting.test.ts',
   'reports/leaderboard.overall.csv',
   'reports/leaderboard.by-language.csv',
   'reports/leaderboard.by-context-expectation.csv',
   'reports/context-behavior.csv',
-  'reports/cost-efficiency.csv',
   'reports/run-summary.json',
 ];
 
 const GLOB_ALLOWLIST = [
   'src/**/*.ts',
-  'tests/**/*.ts',
-  'data/benchmarks/**/*.json',
   'data/datasets/**/*',
-  'data/judge-prompts/**/*',
+  'data/judge-prompts/gemba-mqm-context-v1/**/*',
   'data/participants/**/*',
   'data/prompt-examples/**/*',
   'data/prompt-rules/**/*',
-  'data/prompts/**/*',
   'docs/*.md',
   'docs/assets/**/*',
   'vendor/gemba/**/*',
 ];
+
+const PUBLIC_TEST_INDEX = 'import \'./reporting.test.ts\';\n';
 
 const SCRIPT_ALLOWLIST = [
   'scripts/freeze-context-dataset.ts',
@@ -62,8 +63,21 @@ const BLOCKED_PUBLIC_PATHS = [
   '.env',
   'AGENTS.md',
   'opencode.json',
+  'data/benchmarks/gemba-mqm-context-v1.json',
+  'data/benchmarks/gemba-mqm-context-v1-rework.json',
+  'data/benchmarks/gemba-mqm-context-v1-rework-no-explanation.json',
+  'data/benchmarks/gemba-mqm-context-v1-system-context.json',
+  'data/benchmarks/gemba-mqm-v1.json',
+  'data/benchmarks/gemba-mqm-v1.pilot.json',
+  'data/judge-prompts/gemba-mqm-context-v1-no-explanation',
+  'data/judge-prompts/gemba-mqm-v1',
+  'data/prompts/gemini.md',
+  'data/prompts/gemini-context-rework.md',
+  'data/prompts/gemini-system-context-minimal.md',
+  'docs/cost-analysis.md',
   'docs/superpowers',
   'docs/reports/2026-04-22-gemba-mqm-context-benchmark-final-report-ko.md',
+  'reports/cost-efficiency.csv',
   'output',
   'node_modules',
   '.ruff_cache',
@@ -115,6 +129,13 @@ function copyRelativeFile(projectRoot: string, outDir: string, relativePath: str
   return true;
 }
 
+function writePublicTestIndex(outDir: string): void {
+  const destination = path.join(outDir, 'tests', 'index.js');
+
+  mkdirSync(path.dirname(destination), { recursive: true });
+  writeFileSync(destination, PUBLIC_TEST_INDEX, 'utf8');
+}
+
 function addIfPublicFile(files: Set<string>, projectRoot: string, relativePath: string): void {
   const normalizedPath = normalizeRelativePath(relativePath);
 
@@ -158,6 +179,8 @@ export function buildPublicReleaseTree(options: PublicReleaseTreeOptions): Publi
       filesCopied += 1;
     }
   }
+  writePublicTestIndex(outDir);
+  filesCopied += 1;
 
   for (const blockedPath of BLOCKED_PUBLIC_PATHS) {
     if (existsSync(path.join(outDir, blockedPath))) {

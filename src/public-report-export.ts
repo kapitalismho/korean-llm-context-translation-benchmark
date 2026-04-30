@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 export interface PenaltySummaryRow {
@@ -78,36 +78,16 @@ export interface ExportPublicReportsResult {
   files: string[];
 }
 
-export const COST_ASSUMPTIONS: Record<string, number> = {
-  'qwen-3.5-flash': 0.0371,
-  'qwen-3.5-plus': 0.1419,
-  'deepseek-v4-flash': 0.1720,
-  'gemma-4-26b-openrouter': 0.1723,
-  'gemini-3.1-flash-lite': 0.3216,
-  'gemini-3-flash': 0.6432,
-};
-
 const REPORT_FILE_NAMES = [
   'leaderboard.overall.csv',
   'leaderboard.by-language.csv',
   'leaderboard.by-context-expectation.csv',
   'context-behavior.csv',
-  'cost-efficiency.csv',
   'run-summary.json',
 ] as const;
 
 export const FIXED_DECIMAL_COLUMNS = new Set([
   'mean_penalty',
-  'estimated_translation_cost_usd',
-  'usd_per_sample',
-  'mean_penalty_per_usd',
-  'cost_per_1k_app_translations_usd',
-  'translations_per_usd',
-  'translations_per_0_07_usd',
-  'translations_per_0_08_usd',
-  'translations_per_0_10_usd',
-  'quality_weighted_cost',
-  'value_index',
   'missed_required_context_rate',
   'misused_context_rate',
 ]);
@@ -546,48 +526,6 @@ function buildContextBehaviorRows(mainRun: LoadedRun, deeplRuns: LoadedRun[]): C
   ];
 }
 
-function buildCostEfficiencyRows(overallRows: PublicOverallRow[]): CsvRow[] {
-  const provenance = 'See reports/run-summary.json for benchmark config, dataset fingerprint, prompt version, judge backend/model, participant set, and caveats.';
-  const assumptionNote = 'App-usage estimate assumes 1,200 input tokens and 14.4 output tokens per translation.';
-  const rows = overallRows.map((row) => {
-    const costPer1k = COST_ASSUMPTIONS[row.participant_id];
-    const qualityWeightedCost = costPer1k !== undefined && row.mean_penalty !== null
-      ? costPer1k * row.mean_penalty * row.mean_penalty
-      : undefined;
-    const baseNote = costPer1k === undefined
-      ? 'No public app-usage cost assumption for this participant.'
-      : assumptionNote;
-    const note = row.caveat.length > 0 ? `${baseNote} ${row.caveat}.` : baseNote;
-
-    return {
-      participant_id: row.participant_id,
-      participant_display_name: row.participant_display_name,
-      mean_penalty: row.mean_penalty,
-      cost_per_1k_app_translations_usd: costPer1k,
-      translations_per_usd: costPer1k === undefined ? undefined : 1000 / costPer1k,
-      translations_per_0_07_usd: costPer1k === undefined ? undefined : 70 / costPer1k,
-      translations_per_0_08_usd: costPer1k === undefined ? undefined : 80 / costPer1k,
-      translations_per_0_10_usd: costPer1k === undefined ? undefined : 100 / costPer1k,
-      quality_weighted_cost: qualityWeightedCost,
-      value_index: undefined,
-      source_run_id: row.source_run_id,
-      provenance,
-      note,
-    };
-  });
-  const qualityWeightedCosts = rows
-    .map((row) => row.quality_weighted_cost)
-    .filter((value): value is number => typeof value === 'number' && Number.isFinite(value));
-  const bestQualityWeightedCost = qualityWeightedCosts.length === 0 ? undefined : Math.min(...qualityWeightedCosts);
-
-  return rows.map((row) => ({
-    ...row,
-    value_index: bestQualityWeightedCost === undefined || typeof row.quality_weighted_cost !== 'number'
-      ? undefined
-      : (bestQualityWeightedCost / row.quality_weighted_cost) * 100,
-  }));
-}
-
 function formatCsvCell(column: string, value: CsvCell): string {
   if (value === undefined || value === null) {
     return '';
@@ -703,11 +641,6 @@ function buildRunSummary(
       caveat: row.caveat,
       sourceRunId: row.source_run_id,
     })),
-    costAssumptions: {
-      currency: 'USD',
-      values: COST_ASSUMPTIONS,
-      provenance: 'Static public release assumptions for translation costs; see cost-efficiency.csv for derived values.',
-    },
     caveats: [
       'Raw mean penalty is the primary score; lower is better.',
       'DeepL rows are reuse-only partial rows with missing cells and are marked benchmark_valid=false.',
@@ -727,6 +660,7 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
   const generatedAtUtc = options.generatedAtUtc ?? new Date().toISOString();
 
   mkdirSync(reportsDir, { recursive: true });
+  rmSync(path.join(reportsDir, 'cost-efficiency.csv'), { force: true });
 
   const mainRun = loadRun(outputRoot, options.mainRunId);
   const deeplRuns = [options.deeplContextRunId, options.deeplNoContextRunId]
@@ -766,14 +700,6 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
     buildContextBehaviorRows(mainRun, deeplRuns),
   );
   files.push(contextBehaviorPath);
-
-  const costEfficiencyPath = path.join(reportsDir, 'cost-efficiency.csv');
-  writeCsv(
-    costEfficiencyPath,
-    ['participant_id', 'participant_display_name', 'mean_penalty', 'cost_per_1k_app_translations_usd', 'translations_per_usd', 'translations_per_0_07_usd', 'translations_per_0_08_usd', 'translations_per_0_10_usd', 'quality_weighted_cost', 'value_index', 'source_run_id', 'provenance', 'note'],
-    buildCostEfficiencyRows(overallRows),
-  );
-  files.push(costEfficiencyPath);
 
   const runSummaryPath = path.join(reportsDir, 'run-summary.json');
   writeJson(runSummaryPath, buildRunSummary(generatedAtUtc, mainRun, deeplRuns, overallRows));

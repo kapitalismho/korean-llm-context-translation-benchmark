@@ -7,7 +7,6 @@
     "leaderboard.by-language.csv",
     "leaderboard.by-context-expectation.csv",
     "context-behavior.csv",
-    "cost-efficiency.csv",
     "run-summary.json"
   ],
   "primaryScore": {
@@ -600,18 +599,6 @@
       "sourceRunId": "gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514"
     }
   ],
-  "costAssumptions": {
-    "currency": "USD",
-    "values": {
-      "qwen-3.5-flash": 0.0371,
-      "qwen-3.5-plus": 0.1419,
-      "deepseek-v4-flash": 0.172,
-      "gemma-4-26b-openrouter": 0.1723,
-      "gemini-3.1-flash-lite": 0.3216,
-      "gemini-3-flash": 0.6432
-    },
-    "provenance": "Static public release assumptions for translation costs; see cost-efficiency.csv for derived values."
-  },
   "caveats": [
     "Raw mean penalty is the primary score; lower is better.",
     "DeepL rows are reuse-only partial rows with missing cells and are marked benchmark_valid=false.",
