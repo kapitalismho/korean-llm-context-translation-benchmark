@@ -329,8 +329,7 @@ export function renderSlideReadyRankingChartSvg(options: RenderSlideReadyRanking
   ].join('');
 }
 
-export function renderSlideReadyRankingChartHtml(svg: string): string {
-  return [
+export function renderSlideReadyRankingChartHtml(svg: string): string {  return [
     '<!doctype html>',
     '<html lang="en">',
     '<head>',
@@ -353,4 +352,119 @@ export function renderSlideReadyRankingChartHtml(svg: string): string {
     '</body>',
     '</html>',
   ].join('\n');
+}
+
+export type ColumnChartCategory = 'api-llm' | 'local-llm' | 'dedicated-mt' | 'commercial';
+
+export interface RenderColumnLeaderboardChartOptions {
+  rows: readonly PenaltySummaryRow[];
+  title?: string;
+  subtitle?: string;
+  judgeLabel: string;
+}
+
+const COLUMN_TITLE = 'Mean error penalty per sentence';
+const COLUMN_SUBTITLE = 'Korean → EN / JA / ZH-Hans · 216 multi-turn samples × 3 languages · GEMBA-MQM evaluation · Lower is better';
+const COLUMN_FONT_FAMILY = 'Segoe UI, Helvetica, Arial, sans-serif';
+
+const COLUMN_CATEGORY_FILLS: Record<ColumnChartCategory, string> = {
+  'api-llm': '#2563eb',
+  'local-llm': '#2563eb',
+  'dedicated-mt': '#2dd4bf',
+  commercial: '#f59e0b',
+};
+
+const COLUMN_SHORT_LABELS: Record<string, string> = {
+  'gemma4-31b': 'Gemma 4 31B',
+  'gemma-4-26b-openrouter': 'Gemma 4 26B',
+  'deepseek-v4-flash-0731-openrouter': 'DeepSeek V4F 0731',
+  'gemma4-e4b-fp16': 'Gemma 4 E4B fp16',
+  'gemma4-e4b-qat-q4': 'Gemma 4 E4B QAT Q4',
+  'gemma4-e4b-qat-q2': 'Gemma 4 E4B QAT Q2',
+  'milmmt-4b-native': 'MiLMMT X0',
+  'milmmt-4b-puripuly-policy': 'MiLMMT X2',
+  'papago-web': 'Papago',
+  'deepl-api': 'DeepL',
+  'deepl-api-nocontext': 'DeepL (no ctx)',
+  'google-cloud-translate-basic': 'Google Basic',
+};
+
+export function classifyColumnChartCategory(participantId: string): ColumnChartCategory {
+  if (participantId.startsWith('gemma4-e4b-')) {
+    return 'local-llm';
+  }
+
+  if (participantId.startsWith('milmmt-')) {
+    return 'dedicated-mt';
+  }
+
+  if (COMMERCIAL_IDS.has(participantId)) {
+    return 'commercial';
+  }
+
+  return 'api-llm';
+}
+
+export function renderColumnLeaderboardChartSvg(options: RenderColumnLeaderboardChartOptions): string {
+  const title = options.title ?? COLUMN_TITLE;
+  const subtitle = options.subtitle ?? COLUMN_SUBTITLE;
+  const rows = options.rows
+    .filter((row) => row.mean_penalty !== null)
+    .slice()
+    .sort((left, right) => (left.mean_penalty ?? 0) - (right.mean_penalty ?? 0));
+
+  const width = 960;
+  const plotLeft = 70;
+  const plotRight = width - 30;
+  const plotWidth = plotRight - plotLeft;
+  const plotTop = 120;
+  const barCount = rows.length;
+  const bandWidth = plotWidth / barCount;
+  const barWidth = bandWidth * 0.62;
+  const labelRoom = 96;
+  const yAxisMax = Math.ceil(Math.max(...rows.map((row) => row.mean_penalty ?? 0), 1) / 2) * 2;
+  const plotBottom = 430;
+  const plotHeight = plotBottom - plotTop;
+  const footerY = plotBottom + labelRoom + 44;
+  const height = footerY + 16;
+  const yScale = (penalty: number): number => plotBottom - (penalty / yAxisMax) * plotHeight;
+  const gridlines: string[] = [];
+
+  for (let tick = 0; tick <= yAxisMax; tick += 2) {
+    const y = yScale(tick);
+
+    gridlines.push(
+      `<line x1="${plotLeft}" y1="${y}" x2="${plotRight}" y2="${y}" stroke="#e2e8f0" stroke-width="1" />`,
+      `<text x="${plotLeft - 12}" y="${y + 5}" font-size="13" fill="#64748b" text-anchor="end">${tick}</text>`,
+    );
+  }
+
+  const bars = rows.map((row, index) => {
+    const penalty = row.mean_penalty ?? 0;
+    const fill = COLUMN_CATEGORY_FILLS[classifyColumnChartCategory(row.participant_id)];
+    const bandCenter = plotLeft + (index * bandWidth) + (bandWidth / 2);
+    const barTop = yScale(penalty);
+    const label = COLUMN_SHORT_LABELS[row.participant_id] ?? row.participant_display_name;
+
+    return [
+      `<g data-participant-id="${escapeXml(row.participant_id)}">`,
+      `<rect x="${(bandCenter - (barWidth / 2)).toFixed(1)}" y="${barTop.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${(plotBottom - barTop).toFixed(1)}" fill="${fill}" />`,
+      `<text x="${bandCenter.toFixed(1)}" y="${(barTop - 8).toFixed(1)}" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">${formatPenalty(penalty)}</text>`,
+      `<text x="${bandCenter.toFixed(1)}" y="${(plotBottom + 14).toFixed(1)}" font-size="13" fill="#334155" text-anchor="end" transform="rotate(-45 ${bandCenter.toFixed(1)} ${plotBottom + 14})">${escapeXml(label)}</text>`,
+      `</g>`,
+    ].join('');
+  });
+
+  return [
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="column-chart-title column-chart-subtitle" font-family="${COLUMN_FONT_FAMILY}">`,
+    `<rect width="100%" height="100%" fill="#ffffff" />`,
+    `<text id="column-chart-title" x="${width / 2}" y="42" font-size="24" font-weight="700" fill="#0f172a" text-anchor="middle">${escapeXml(title)}</text>`,
+    `<text id="column-chart-subtitle" x="${width / 2}" y="70" font-size="14" fill="#64748b" text-anchor="middle">${escapeXml(subtitle)}</text>`,
+    ...gridlines,
+    `<line x1="${plotLeft}" y1="${plotTop}" x2="${plotLeft}" y2="${plotBottom}" stroke="#94a3b8" stroke-width="1.5" />`,
+    `<line x1="${plotLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}" stroke="#94a3b8" stroke-width="1.5" />`,
+    ...bars,
+    `<text x="${plotLeft}" y="${footerY}" font-size="13" fill="#64748b" text-anchor="start">Judge model: ${escapeXml(options.judgeLabel)}</text>`,
+    `</svg>`,
+  ].join('');
 }

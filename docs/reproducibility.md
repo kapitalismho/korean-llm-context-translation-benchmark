@@ -47,5 +47,6 @@ node --import tsx scripts/generate-ranking-chart.ts \
   --run-id <run-id> \
   --summary-path experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/summary-overall.penalty.json \
   --run-status-path experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/run-status.json \
-  --svg-out docs/assets/leaderboard-2026-08.svg
+  --svg-out docs/assets/leaderboard-2026-08.svg \
+  --judge-label "Gemini 3.7 Flash"
 ```
