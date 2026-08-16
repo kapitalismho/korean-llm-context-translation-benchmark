@@ -56,7 +56,7 @@ export function repairJudgeFailures(
 
     try {
       const repairedRecord = normalizeJudgeResponse({
-        rawJsonText: record.raw_judge_output,
+        rawJudgeOutput: record.raw_judge_output,
         runId: record.run_id,
         sourceId: record.source_id,
         targetLanguage: record.target_language,

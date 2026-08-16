@@ -1,18 +1,8 @@
-Target language: ${targetLanguageLabel}
-Context (oldest to newest):
-${contextBlock}
-
-Current source:
-```${currentSource}```
-
-Candidate translation:
+${targetLanguageLabel} source:
+```${contextBlock}
+${currentSource}```
+${targetLanguageLabel} translation:
 ```${translation}```
 
-Evaluate only the translation of the current source utterance. Use previous Korean source turns only as context for disambiguation. If the current source should be interpreted independently, penalize context-driven errors rather than rewarding forced carryover.
-
-Return JSON with:
-{
-  "has_no_error": boolean,
-  "errors": [...],
-  "contextBehavior": "used_correctly" | "missed_required_context" | "ignored_irrelevant_context" | "misused_context" | "unclear"
-}
+Based on the source segment and machine translation surrounded with triple backticks, identify error types in the translation and classify them. The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling), style (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.
+Each error is classified as one of three categories: critical, major, and minor. Critical errors inhibit comprehension of the text. Major errors disrupt the flow, but what the text is trying to say is still understandable. Minor errors are technically errors, but do not disrupt the flow or hinder comprehension.

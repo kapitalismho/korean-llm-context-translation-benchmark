@@ -27,8 +27,21 @@ Severity weights are:
 
 For a participant, `mean_penalty` is the mean total penalty over valid judged cells.
 
-## Current Public Result Source
+## Experiments
 
-The primary public result source is run `gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514`, using prompt `gemini-context-v2.md`, dataset fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`, judge backend `vertex`, and judge model `gemini-3.1-pro-preview`.
+All experiments run on dataset `gemba-mqm-context-v1` (fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`). Everything else may differ per experiment:
 
-DeepL rows come from reuse-only partial integrations and are annotated separately in `reports/leaderboard.overall.csv`.
+| | 2026-04 (archived) | 2026-08 (current) |
+| --- | --- | --- |
+| Run ID | `gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514` | `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01` |
+| Translation prompt | `gemini-context-v2.md` | `puripuly-translation-latest.md` (MiLMMT arms use their own) |
+| Judge model | `gemini-3.1-pro-preview` | `google/gemini-3.7-flash:batch` |
+| Judge backend | Vertex AI | OpenRouter Batch API |
+| Judge prompt format | JSON structured output | Upstream GEMBA-MQM text annotation |
+| Participants | Gemini/Gemma/Qwen/DeepSeek + DeepL + Google | Gemma 31B/26B, DeepSeek 0731, local E4B ×3, MiLMMT ×2, Papago, DeepL, Google |
+| Extra arms | no-context baselines | quantization and prompt-regime arms |
+| Reports | CSV under `experiments/2026-04-…/reports/` | JSON under `experiments/2026-08-…/reports/` |
+
+Because the prompt, judge, and judge prompt format differ, scores from different experiments are not directly comparable. Compare systems only within one experiment.
+
+The 2026-08 run is a fork-and-merge continuation: 5,828 translations were reused from an earlier run of the same benchmark config, 1,296 were imported (Papago, DeepSeek 0731), and only missing cells were judged fresh. See `experiments/2026-08-…/fork-prepared.json`.

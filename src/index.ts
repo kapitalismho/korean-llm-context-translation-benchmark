@@ -12,6 +12,9 @@ import { isContextRuntimeSample, loadContextRuntimeDataset } from './context-dat
 import { prepareForkRun } from './fork-run.js';
 import { GeminiCliGembaJudge } from './gemini-cli-judge.js';
 import type { BenchmarkTestCase, Condition, SentenceTestCase } from './llm-client.js';
+import { LazyClient } from './llm-client.js';
+import { OpenRouterBatchGembaJudge } from './openrouter-batch-judge.js';
+import { getOpenRouterApiKey } from './openrouter.js';
 import {
   loadParticipantRegistry,
   resolveSelectedParticipants,
@@ -63,9 +66,17 @@ export function buildConditionsFromParticipants(params: {
       prompt,
       dataFile: params.benchmarkConfig.dataFile,
       testCases: params.testCases,
-      client: clientFactory(participant.provider, participant.providerModelId, params.env, {
+      messageLayout: participant.messageLayout,
+      llamaCppServerUrl: participant.llamaCppServerUrl,
+      llamaCppMode: participant.llamaCppMode,
+      // Lazy: a fully-reused participant (all cells copied by a fork) never
+      // constructs a client, so missing credentials for reused rows cannot
+      // abort the run before the copied artifacts are used.
+      client: new LazyClient(() => clientFactory(participant.provider, participant.providerModelId, params.env, {
         messageLayout: participant.messageLayout,
-      }),
+        llamaCppServerUrl: participant.llamaCppServerUrl,
+        llamaCppMode: participant.llamaCppMode,
+      })),
     };
   });
 }
@@ -128,6 +139,7 @@ interface CliOptions {
   judgeConcurrency?: string;
   forkFromRun?: string;
   rejudgeFromRun?: string;
+  forkAllowPromptMismatch?: boolean;
   resume?: boolean;
   judge?: boolean;
 }
@@ -156,7 +168,7 @@ export function buildProgram(): Command {
     .option('--benchmark-config <path>', 'Benchmark config JSON path', 'data/benchmarks/gemba-mqm-v1.json')
     .option('--participant-registry <path>', 'Participant registry JSON path')
     .option('--participants <ids>', 'Comma-separated participant ids for fresh runs')
-    .option('--judge-backend <backend>', 'Judge backend: vertex or gemini-cli', 'vertex')
+    .option('--judge-backend <backend>', 'Judge backend: vertex, gemini-cli, or openrouter-batch', 'vertex')
     .option('--judge-model <model>', 'Gemini model used for judging')
     .option('--gemini-cli-bin <path>', 'Gemini CLI binary for --judge-backend gemini-cli')
     .option('--run-id <id>', 'Stable run id for resumable artifacts')
@@ -167,6 +179,8 @@ export function buildProgram(): Command {
     .option('--translation-concurrency-per-model <n>', 'Max concurrent translation API calls per provider model')
     .option('--judge-concurrency <n>', 'Max concurrent judge API calls', '1')
     .option('--fork-from-run <runId>', 'Create a new run that reuses successful translations from an existing run')
+    .option('--fork-allow-prompt-mismatch', 'Allow forking from a run whose translation prompt differs (reused translations keep historical prompt provenance)')
+    .option('--fork-exclude-participants <ids>', 'Comma-separated participant ids to leave uncopied when forking (fresh translation)')
     .option('--rejudge-from-run <runId>', 'Reuse translations from an existing run and execute judge only')
     .option('--resume', 'Resume from existing artifacts')
     .option('--no-judge', 'Skip the judge phase');
@@ -175,11 +189,11 @@ export function buildProgram(): Command {
 function getBenchmarkTestCaseId(testCase: BenchmarkTestCase): string {
   return isContextRuntimeSample(testCase) ? testCase.sampleId : String(testCase.id);
 }
-
 function parsePositiveIntegerOption(
   value: string | undefined,
   flag: '--limit' | '--translation-concurrency' | '--translation-concurrency-per-model' | '--judge-concurrency',
 ): number | undefined {
+
   if (value === undefined) {
     return undefined;
   }
@@ -200,8 +214,8 @@ function parsePositiveIntegerOption(
 function parseJudgeBackendOption(value: string | undefined): JudgeBackend {
   const backend = value ?? 'vertex';
 
-  if (backend !== 'vertex' && backend !== 'gemini-cli') {
-    throw new Error('--judge-backend must be vertex or gemini-cli');
+  if (backend !== 'vertex' && backend !== 'gemini-cli' && backend !== 'openrouter-batch') {
+    throw new Error('--judge-backend must be vertex, gemini-cli, or openrouter-batch');
   }
 
   return backend;
@@ -217,6 +231,18 @@ function parseOptionalNonBlankString(value: string | undefined, flag: string): s
   }
 
   return value;
+}
+
+function parseEnvPositiveInteger(value: string | undefined): number | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (!/^[1-9]\d*$/.test(value)) {
+    return undefined;
+  }
+
+  return Number(value);
 }
 
 function parseNonNegativeIntegerOption(
@@ -256,6 +282,8 @@ export function assertValidCliOptions(options: {
   judgeConcurrency?: string;
   forkFromRun?: string;
   rejudgeFromRun?: string;
+  forkAllowPromptMismatch?: boolean;
+  forkExcludeParticipants?: string;
 }): {
   limit?: number;
   delayMs: number;
@@ -265,6 +293,8 @@ export function assertValidCliOptions(options: {
   geminiCliBin?: string;
   translationConcurrencyPerModel: number;
   judgeConcurrency: number;
+  forkAllowPromptMismatch: boolean;
+  forkExcludeParticipantIds: string[];
 } {
   if (options.resume && options.rejudgeFromRun) {
     throw new Error('--resume and --rejudge-from-run cannot be used together');
@@ -282,6 +312,14 @@ export function assertValidCliOptions(options: {
     throw new Error('--resume requires --run-id so the existing manifest can be validated');
   }
 
+  if (options.forkAllowPromptMismatch && !options.forkFromRun) {
+    throw new Error('--fork-allow-prompt-mismatch requires --fork-from-run');
+  }
+
+  if (options.forkExcludeParticipants && !options.forkFromRun) {
+    throw new Error('--fork-exclude-participants requires --fork-from-run');
+  }
+
   if (options.rejudgeFromRun && !options.judgeModel) {
     throw new Error('--rejudge-from-run requires --judge-model');
   }
@@ -295,7 +333,10 @@ export function assertValidCliOptions(options: {
   }
 
   if (options.resume && options.participants) {
-    throw new Error('--participants is not allowed with --resume');
+    // Allowed: --resume --participants scopes the resume to a SUBSET of the
+    // run manifest participants (sequential one-model-at-a-time passes and
+    // partial-pass recovery). The subset is validated against the manifest
+    // snapshots below; unknown ids are rejected.
   }
 
   if (options.rejudgeFromRun && options.participants) {
@@ -340,6 +381,8 @@ export function assertValidCliOptions(options: {
     translationConcurrencyPerModel:
       parsePositiveIntegerOption(translationConcurrencyValue, translationConcurrencyFlag) ?? 1,
     judgeConcurrency: parsePositiveIntegerOption(options.judgeConcurrency ?? '1', '--judge-concurrency') ?? 1,
+    forkAllowPromptMismatch: options.forkAllowPromptMismatch === true,
+    forkExcludeParticipantIds: parseCsvOption(options.forkExcludeParticipants),
   };
 }
 
@@ -348,7 +391,24 @@ export function createJudgeClient(params: {
   judgeModel?: string;
   geminiCliBin?: string;
   env: Environment;
-}): VertexGembaJudge | GeminiCliGembaJudge | null {
+}): VertexGembaJudge | GeminiCliGembaJudge | OpenRouterBatchGembaJudge | null {
+  if (params.judgeBackend === 'openrouter-batch') {
+    if (!params.judgeModel) {
+      throw new Error('--judge-backend openrouter-batch requires --judge-model (e.g. google/gemini-3.7-flash:batch)');
+    }
+
+    if (!params.judgeModel.endsWith(':batch')) {
+      throw new Error(`--judge-model for the openrouter-batch backend must be a :batch slug (e.g. google/gemini-3.7-flash:batch), got ${params.judgeModel}`);
+    }
+
+    return new OpenRouterBatchGembaJudge({
+      model: params.judgeModel,
+      apiKey: getOpenRouterApiKey(params.env),
+      apiBaseUrl: params.env.OPENROUTER_BATCH_API_BASE_URL,
+      pollIntervalMs: parseEnvPositiveInteger(params.env.OPENROUTER_BATCH_POLL_INTERVAL_MS),
+    });
+  }
+
   if (!params.judgeModel) {
     return null;
   }
@@ -457,7 +517,23 @@ export async function main(argv = process.argv): Promise<void> {
       limitApplied = rejudgeRun.limitApplied;
     } else if (options.resume) {
       const existingManifest = loadRunManifest(outputDir, runId, 'resume');
-      participants = existingManifest.participants;
+      const manifestParticipantsById = new Map(
+        existingManifest.participants.map((participant) => [participant.participantId, participant]),
+      );
+
+      if (options.participants) {
+        const requestedIds = parseCsvOption(options.participants);
+        const missingIds = requestedIds.filter((id) => !manifestParticipantsById.has(id));
+
+        if (missingIds.length > 0) {
+          throw new Error(`--resume --participants references ids not in the run manifest: ${missingIds.join(', ')}`);
+        }
+
+        participants = requestedIds.map((id) => manifestParticipantsById.get(id) as ParticipantDefinition);
+      } else {
+        participants = existingManifest.participants;
+      }
+
       limitApplied = existingManifest.limitApplied;
       forkFromRunId = existingManifest.forkFromRunId;
     } else {
@@ -491,6 +567,8 @@ export async function main(argv = process.argv): Promise<void> {
           limitApplied,
           allowedSourceIds: testCases.slice(0, limitApplied).map(getBenchmarkTestCaseId),
           participants,
+          allowPromptMismatch: validatedOptions.forkAllowPromptMismatch,
+          excludeCopiedParticipantIds: validatedOptions.forkExcludeParticipantIds,
         });
         effectiveRunId = forkRun.runId;
         forkFromRunId = options.forkFromRun;

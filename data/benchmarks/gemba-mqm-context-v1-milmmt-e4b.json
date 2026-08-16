@@ -1,0 +1,18 @@
+{
+  "benchmarkId": "gemba-mqm-context-v1-milmmt-e4b",
+  "description": "Issue #1: local Gemma 4 E4B deployment variants and Xiaomi MiLMMT-46-4B arms vs Gemma 4 31B and reused 26B/Google/DeepL baselines, all on the canonical PuriPuly translation prompt (except MiLMMT X0 native).",
+  "sharedPromptFile": "../prompts/puripuly-translation-latest.md",
+  "dataFile": "../datasets/gemba-mqm-context-v1/runtime.json",
+  "targetLanguages": [
+    "en",
+    "ja",
+    "zh-Hans"
+  ],
+  "targetLanguageLabels": {
+    "en": "English",
+    "ja": "Japanese",
+    "zh-Hans": "Chinese Simplified"
+  },
+  "datasetKind": "context",
+  "judgePromptSetId": "gemba-mqm-context-v1"
+}

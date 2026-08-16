@@ -4,7 +4,9 @@ import { GeminiClient } from './gemini.js';
 import { GoogleTranslateBasicClient } from './google-translate-basic.js';
 import { GoogleWebClient } from './google-web.js';
 import type { LLMClient, Provider, TranslationMessageLayout } from './llm-client.js';
+import { LlamaCppClient, type LlamaCppMode } from './llamacpp.js';
 import { OpenRouterClient, getOpenRouterApiKey } from './openrouter.js';
+import { PapagoClient } from './papago.js';
 import { QwenClient } from './qwen.js';
 
 type Environment = Record<string, string | undefined>;
@@ -12,6 +14,8 @@ type GeminiTranslationBackendPreference = 'api' | 'vertex' | 'auto';
 
 export type CreateClientOptions = {
     messageLayout?: TranslationMessageLayout;
+    llamaCppServerUrl?: string;
+    llamaCppMode?: LlamaCppMode;
 };
 
 function resolveGeminiTranslationVertexLocation(env: Environment): string | undefined {
@@ -25,6 +29,16 @@ function requireApiKey(name: string, env: Environment): string {
     }
 
     return apiKey;
+}
+
+function parsePositiveIntEnv(env: Environment, name: string, fallback: number): number {
+    const raw = env[name];
+    if (!raw) {
+        return fallback;
+    }
+
+    const parsed = Number(raw);
+    return Number.isFinite(parsed) && parsed > 0 ? Math.round(parsed) : fallback;
 }
 
 export function getApiKeyForProvider(provider: Provider, env: Environment): string {
@@ -42,6 +56,9 @@ export function getApiKeyForProvider(provider: Provider, env: Environment): stri
         case 'google-translate-basic':
             return requireApiKey('GOOGLE_TRANSLATE_API_KEY', env);
         case 'google-web':
+        case 'papago':
+            return '';
+        case 'llamacpp':
             return '';
     }
 }
@@ -109,7 +126,13 @@ export function createClient(provider: Provider, model: string, env: Environment
         case 'qwen':
             return new QwenClient(getApiKeyForProvider(provider, env), model);
         case 'openrouter':
-            return new OpenRouterClient(getApiKeyForProvider(provider, env), model, undefined, undefined, options.messageLayout);
+            return new OpenRouterClient(
+                getApiKeyForProvider(provider, env),
+                model,
+                env.OPENROUTER_API_BASE_URL,
+                undefined,
+                options.messageLayout,
+            );
         case 'deepseek':
             return new DeepSeekClient(getApiKeyForProvider(provider, env), model);
         case 'deepl':
@@ -118,5 +141,23 @@ export function createClient(provider: Provider, model: string, env: Environment
             return new GoogleTranslateBasicClient(getApiKeyForProvider(provider, env), model);
         case 'google-web':
             return new GoogleWebClient(model);
+        case 'papago':
+            return new PapagoClient({
+                modelName: model,
+                pythonCommand: env.PAPAGO_PYTHON,
+                bridgeScriptPath: env.PAPAGO_BRIDGE_PATH,
+                workDir: env.PAPAGO_WORK_DIR,
+                requestTimeoutMs: parsePositiveIntEnv(env, 'PAPAGO_CLIENT_TIMEOUT_MS', 90_000),
+            });
+        case 'llamacpp':
+            if (!options.llamaCppServerUrl) {
+                throw new Error('llamacpp participants require a llamaCppServerUrl (registry field or client option)');
+            }
+
+            return new LlamaCppClient({
+                serverUrl: options.llamaCppServerUrl,
+                model,
+                mode: options.llamaCppMode ?? 'chat',
+            });
     }
 }

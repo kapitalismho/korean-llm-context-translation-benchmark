@@ -111,7 +111,6 @@ export interface VertexJudgeRequestInput {
         parts: Array<{ text: string }>;
     }>;
     userPromptTemplate: string;
-    responseSchema: unknown;
     templateVariables: Record<string, string>;
 }
 
@@ -187,10 +186,7 @@ export function buildVertexJudgeRequest(input: VertexJudgeRequestInput) {
             },
         ],
         config: {
-            temperature: 0,
             systemInstruction: input.systemPrompt,
-            responseMimeType: 'application/json',
-            responseJsonSchema: input.responseSchema,
             thinkingConfig: getVertexJudgeThinkingConfig(input.model) as any,
         },
     };
@@ -228,7 +224,6 @@ export class VertexGembaJudge {
                 model: this.config.model,
                 contents: 'Return {"ok":true}',
                 config: {
-                    temperature: 0,
                     responseMimeType: 'application/json',
                     responseJsonSchema: {
                         type: 'object',

@@ -1,0 +1,121 @@
+{
+  "en": [
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "source_id": "ctx2-single-use-referent_resolution-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-single-use-referent_resolution-001::en::deepl-api"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx1-single-use-register_carryover-003",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx1-single-use-register_carryover-003::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx1-single-use-temporal_or_causal_linkage-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx1-single-use-temporal_or_causal_linkage-001::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx1-single-ignore-topic_shift_independence-003",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx1-single-ignore-topic_shift_independence-003::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx1-dyadic-ignore-topic_shift_independence-003",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx1-dyadic-ignore-topic_shift_independence-003::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx2-single-ignore-stale_context_resistance-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-single-ignore-stale_context_resistance-001::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx2-single-ignore-stale_context_resistance-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-single-ignore-stale_context_resistance-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx2-dyadic-use-referent_resolution-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-dyadic-use-referent_resolution-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx2-dyadic-use-temporal_or_causal_linkage-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-dyadic-use-temporal_or_causal_linkage-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-single-use-register_carryover-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-single-use-register_carryover-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-single-ignore-stale_context_resistance-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-single-ignore-stale_context_resistance-001::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-single-ignore-stale_context_resistance-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-single-ignore-stale_context_resistance-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-single-ignore-metadata_nonliteral_resistance-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-single-ignore-metadata_nonliteral_resistance-002::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-dyadic-ignore-topic_shift_independence-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-dyadic-ignore-topic_shift_independence-001::en::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "source_id": "ctx3-dyadic-use-sense_disambiguation-004",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-dyadic-use-sense_disambiguation-004::en::gemma4-e4b-fp16"
+    }
+  ],
+  "ja": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx1-single-use-pragmatic_intent_resolution-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx1-single-use-pragmatic_intent_resolution-002::ja::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx2-single-use-register_carryover-002",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx2-single-use-register_carryover-002::ja::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-single-use-sense_disambiguation-004",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-single-use-sense_disambiguation-004::ja::gemma4-e4b-qat-q2"
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "source_id": "ctx3-dyadic-ignore-topic_shift_independence-001",
+      "stable_key": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01::ctx3-dyadic-ignore-topic_shift_independence-001::ja::gemma4-e4b-qat-q2"
+    }
+  ],
+  "zh-Hans": []
+}

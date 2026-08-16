@@ -1,4 +1,5 @@
 import type { ContextRuntimeSample } from './context-benchmark-types.js';
+import type { LlamaCppMode } from './llamacpp.js';
 import type { CallUsageMetrics } from './run-metrics.js';
 
 /**
@@ -151,7 +152,48 @@ export interface LLMClient {
     ): Promise<TranslationResult>;
 }
 
-export type Provider = 'gemini' | 'qwen' | 'openrouter' | 'deepseek' | 'deepl' | 'google-translate-basic' | 'google-web';
+export type Provider = 'gemini' | 'qwen' | 'openrouter' | 'deepseek' | 'deepl' | 'google-translate-basic' | 'google-web' | 'llamacpp' | 'papago';
+
+/**
+ * Defers client construction until the first actual call. Reused participants
+ * (for example DeepL/Google rows whose cells are all copied by a fork) never
+ * construct a client, so missing provider credentials for fully-reused rows
+ * cannot abort the run.
+ */
+export class LazyClient implements LLMClient {
+    private cached: LLMClient | null = null;
+
+    constructor(private readonly factory: () => LLMClient) {}
+
+    private get(): LLMClient {
+        if (this.cached === null) {
+            this.cached = this.factory();
+        }
+
+        return this.cached;
+    }
+
+    getModelName(): string {
+        return this.get().getModelName();
+    }
+
+    getProviderName(): string {
+        return this.get().getProviderName();
+    }
+
+    getRequestTimeoutMs(): number {
+        return this.get().getRequestTimeoutMs();
+    }
+
+    async translate(
+        text: string,
+        systemPrompt: string,
+        sourceLang: string,
+        targetLang: string,
+    ): Promise<TranslationResult> {
+        return this.get().translate(text, systemPrompt, sourceLang, targetLang);
+    }
+}
 
 /** A single test condition: model + prompt + data combination */
 export interface Condition {
@@ -164,6 +206,9 @@ export interface Condition {
     dataFile: string;        // Test data file path
     testCases: BenchmarkTestCase[];   // Loaded test cases
     client: LLMClient;       // Initialized client
+    messageLayout?: TranslationMessageLayout;
+    llamaCppServerUrl?: string;
+    llamaCppMode?: LlamaCppMode;
 }
 
 export interface SentenceTestCase {

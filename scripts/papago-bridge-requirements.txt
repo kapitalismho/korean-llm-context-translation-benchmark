@@ -1,0 +1,4 @@
+# Python dependencies for the Papago bridge (scripts/papago-bridge.py).
+# Install into any Python 3.10+ environment, e.g.:
+#   python -m pip install -r scripts/papago-bridge-requirements.txt
+httpx>=0.27,<1

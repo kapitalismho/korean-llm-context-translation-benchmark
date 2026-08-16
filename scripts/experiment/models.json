@@ -1,0 +1,53 @@
+[
+  {
+    "participantId": "gemma4-e4b-qat-q2",
+    "expectedRepo": "unsloth/gemma-4-E4B-it-qat-GGUF",
+    "expectedRevision": "8c5a9e4fd5482e2be20fe0bf013b4c262a8f4265",
+    "ggufFile": "gemma-4-E4B-it-qat-UD-Q2_K_XL.gguf",
+    "localPath": "models/gemma-4-E4B-it-qat-UD-Q2_K_XL.gguf",
+    "sha256": "79dde517866cfbb5c00230b530de17910fc7fc78f8827554d0e14281ce5faf03",
+    "llamaCppServerUrl": "http://127.0.0.1:8080",
+    "llamaCppMode": "chat"
+  },
+  {
+    "participantId": "gemma4-e4b-qat-q4",
+    "expectedRepo": "unsloth/gemma-4-E4B-it-qat-GGUF",
+    "expectedRevision": "8c5a9e4fd5482e2be20fe0bf013b4c262a8f4265",
+    "ggufFile": "gemma-4-E4B-it-qat-UD-Q4_K_XL.gguf",
+    "localPath": "models/gemma-4-E4B-it-qat-UD-Q4_K_XL.gguf",
+    "sha256": "df0fd4ee07072c607c29a0a1cb4f98918426cca12f45a2776bdd6ee6d09a4de3",
+    "llamaCppServerUrl": "http://127.0.0.1:8081",
+    "llamaCppMode": "chat"
+  },
+  {
+    "participantId": "gemma4-e4b-fp16",
+    "expectedRepo": "unsloth/gemma-4-E4B-it-GGUF",
+    "expectedRevision": "bfc15c382204943c3a8fff0c750b94ae2364d7a3",
+    "ggufFile": "gemma-4-E4B-it-BF16.gguf",
+    "localPath": "models/gemma-4-E4B-it-BF16.gguf",
+    "sha256": "38e0dba6818d18e2b41062c7b3b9083dcfddc44767078c415ff7e13661911ba5",
+    "llamaCppServerUrl": "http://127.0.0.1:8082",
+    "llamaCppMode": "chat",
+    "note": "unquantized 16-bit reference (BF16 GGUF); issue row name stays fp16"
+  },
+  {
+    "participantId": "milmmt-4b-native",
+    "expectedRepo": "mradermacher/MiLMMT-46-4B-v1.0-GGUF",
+    "expectedRevision": "765aa350dc9aa28c41e2a9e34e1b25d56c0d3911",
+    "ggufFile": "MiLMMT-46-4B-v1.0.f16.gguf",
+    "localPath": "models/MiLMMT-46-4B-v1.0.f16.gguf",
+    "sha256": "ad0b6df7f0449958184830f496994298ebd9effa915b97811d6e653fed19d059",
+    "llamaCppServerUrl": "http://127.0.0.1:8083",
+    "llamaCppMode": "completion"
+  },
+  {
+    "participantId": "milmmt-4b-puripuly-policy",
+    "expectedRepo": "mradermacher/MiLMMT-46-4B-v1.0-GGUF",
+    "expectedRevision": "765aa350dc9aa28c41e2a9e34e1b25d56c0d3911",
+    "ggufFile": "MiLMMT-46-4B-v1.0.f16.gguf",
+    "localPath": "models/MiLMMT-46-4B-v1.0.f16.gguf",
+    "sha256": "ad0b6df7f0449958184830f496994298ebd9effa915b97811d6e653fed19d059",
+    "llamaCppServerUrl": "http://127.0.0.1:8083",
+    "llamaCppMode": "completion"
+  }
+]

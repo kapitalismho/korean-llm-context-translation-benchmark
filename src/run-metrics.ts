@@ -65,6 +65,22 @@ const PRICING_SNAPSHOT: Record<string, PricingEntry> = {
     inputPerMillionUsd: 0.14,
     outputPerMillionUsd: 0.28,
   },
+  'deepseek:deepseek-v4-pro': {
+    inputPerMillionUsd: 0.435,
+    outputPerMillionUsd: 0.87,
+  },
+  'openrouter:deepseek/deepseek-v4-pro': {
+    inputPerMillionUsd: 0.435,
+    outputPerMillionUsd: 0.87,
+  },
+  'openrouter:google/gemini-3.7-flash': {
+    inputPerMillionUsd: 0.375,
+    outputPerMillionUsd: 1.875,
+  },
+  'openrouter-batch:google/gemini-3.7-flash': {
+    inputPerMillionUsd: 0.1875,
+    outputPerMillionUsd: 0.9375,
+  },
 };
 
 function roundUsd(value: number): number {
@@ -82,9 +98,13 @@ export function computeCallCost(metrics: CallUsageMetrics, _pricingVersion: stri
     };
   }
 
+  // Reasoning/thinking tokens are billed at output-token rates for every provider
+  // that reports them (Gemini thoughtsTokenCount, OpenRouter reasoning tokens, ...).
+  const effectiveOutputTokens = metrics.outputTokens + (metrics.reasoningTokens ?? 0);
+
   const computedCostUsd = roundUsd(
     ((metrics.inputTokens / 1_000_000) * pricing.inputPerMillionUsd)
-      + ((metrics.outputTokens / 1_000_000) * pricing.outputPerMillionUsd),
+      + ((effectiveOutputTokens / 1_000_000) * pricing.outputPerMillionUsd),
   );
 
   return {

@@ -103,6 +103,64 @@
     "promptFile": "../prompts/simple-translation.md"
   },
   {
+    "participantId": "gemma-4-31b-openrouter",
+    "displayName": "Gemma 4 31B via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "google/gemma-4-31b-it"
+  },
+  {
+    "participantId": "gemma4-31b",
+    "displayName": "Gemma 4 31B via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "google/gemma-4-31b-it",
+    "promptFile": "../prompts/puripuly-translation-latest.md"
+  },
+  {
+    "participantId": "gemma4-e4b-qat-q2",
+    "displayName": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+    "provider": "llamacpp",
+    "providerModelId": "gemma-4-E4B-it-qat-UD-Q2_K_XL",
+    "llamaCppServerUrl": "http://127.0.0.1:8080",
+    "llamaCppMode": "chat",
+    "promptFile": "../prompts/puripuly-translation-latest.md"
+  },
+  {
+    "participantId": "gemma4-e4b-qat-q4",
+    "displayName": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+    "provider": "llamacpp",
+    "providerModelId": "gemma-4-E4B-it-qat-UD-Q4_K_XL",
+    "llamaCppServerUrl": "http://127.0.0.1:8081",
+    "llamaCppMode": "chat",
+    "promptFile": "../prompts/puripuly-translation-latest.md"
+  },
+  {
+    "participantId": "gemma4-e4b-fp16",
+    "displayName": "Gemma 4 E4B fp16 (llama.cpp)",
+    "provider": "llamacpp",
+    "providerModelId": "gemma-4-E4B-it-fp16",
+    "llamaCppServerUrl": "http://127.0.0.1:8082",
+    "llamaCppMode": "chat",
+    "promptFile": "../prompts/puripuly-translation-latest.md"
+  },
+  {
+    "participantId": "milmmt-4b-native",
+    "displayName": "MiLMMT 46-4B X0 (native)",
+    "provider": "llamacpp",
+    "providerModelId": "MiLMMT-46-4B-v1.0.f16",
+    "llamaCppServerUrl": "http://127.0.0.1:8083",
+    "llamaCppMode": "completion",
+    "promptFile": "../prompts/milmmt-x0-native.md"
+  },
+  {
+    "participantId": "milmmt-4b-puripuly-policy",
+    "displayName": "MiLMMT 46-4B X2 (PuriPuly policy)",
+    "provider": "llamacpp",
+    "providerModelId": "MiLMMT-46-4B-v1.0.f16",
+    "llamaCppServerUrl": "http://127.0.0.1:8083",
+    "llamaCppMode": "completion",
+    "promptFile": "../prompts/milmmt-x2-puripuly.md"
+  },
+  {
     "participantId": "deepseek-v4-flash",
     "displayName": "DeepSeek V4 Flash",
     "provider": "deepseek",
@@ -122,10 +180,47 @@
     "promptFile": "../prompts/simple-translation.md"
   },
   {
+    "participantId": "deepseek-v4-flash-0731",
+    "displayName": "DeepSeek V4 Flash (0731 GA)",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-flash"
+  },
+  {
     "participantId": "deepseek-v4-flash-openrouter",
     "displayName": "DeepSeek V4 Flash via OpenRouter",
     "provider": "openrouter",
     "providerModelId": "deepseek/deepseek-v4-flash"
+  },
+  {
+    "participantId": "deepseek-v4-flash-0731-openrouter",
+    "displayName": "DeepSeek V4 Flash (0731) via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "deepseek/deepseek-v4-flash-0731"
+  },
+  {
+    "participantId": "deepseek-v4-pro",
+    "displayName": "DeepSeek V4 Pro",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-pro"
+  },
+  {
+    "participantId": "deepseek-v4-pro-nocontext",
+    "displayName": "DeepSeek V4 Pro (No context)",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-pro"
+  },
+  {
+    "participantId": "deepseek-v4-pro-nocontext-baseline",
+    "displayName": "DeepSeek V4 Pro (No context baseline)",
+    "provider": "deepseek",
+    "providerModelId": "deepseek-v4-pro",
+    "promptFile": "../prompts/simple-translation.md"
+  },
+  {
+    "participantId": "deepseek-v4-pro-openrouter",
+    "displayName": "DeepSeek V4 Pro via OpenRouter",
+    "provider": "openrouter",
+    "providerModelId": "deepseek/deepseek-v4-pro"
   },
   {
     "participantId": "deepl-api",
@@ -150,5 +245,11 @@
     "displayName": "Google Translate Web",
     "provider": "google-web",
     "providerModelId": "google-translate-web"
+  },
+  {
+    "participantId": "papago-web",
+    "displayName": "Papago Web",
+    "provider": "papago",
+    "providerModelId": "papago-web"
   }
 ]

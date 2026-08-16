@@ -3,9 +3,11 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import type { Provider, TranslationMessageLayout } from './llm-client.js';
+import type { LlamaCppMode } from './llamacpp.js';
 
-const REGISTRY_PROVIDERS = new Set<Provider>(['gemini', 'qwen', 'openrouter', 'deepseek', 'deepl', 'google-translate-basic', 'google-web']);
+const REGISTRY_PROVIDERS = new Set<Provider>(['gemini', 'qwen', 'openrouter', 'deepseek', 'deepl', 'google-translate-basic', 'google-web', 'llamacpp', 'papago']);
 const REGISTRY_MESSAGE_LAYOUTS = new Set<TranslationMessageLayout>(['system-context']);
+const REGISTRY_LLAMACPP_MODES = new Set<LlamaCppMode>(['chat', 'completion']);
 
 type RawParticipantDefinition = {
   participantId?: unknown;
@@ -14,6 +16,8 @@ type RawParticipantDefinition = {
   providerModelId?: unknown;
   messageLayout?: unknown;
   promptFile?: unknown;
+  llamaCppServerUrl?: unknown;
+  llamaCppMode?: unknown;
 };
 
 export interface ParticipantDefinition {
@@ -24,6 +28,8 @@ export interface ParticipantDefinition {
   messageLayout?: TranslationMessageLayout;
   promptFile?: string;
   promptFingerprintSha256?: string;
+  llamaCppServerUrl?: string;
+  llamaCppMode?: LlamaCppMode;
 }
 
 export function loadParticipantRegistry(pathOrUrl: string | URL): ParticipantDefinition[] {
@@ -51,14 +57,23 @@ export function loadParticipantRegistry(pathOrUrl: string | URL): ParticipantDef
 
     const messageLayout = requireOptionalMessageLayout(item.messageLayout, index);
     const promptFile = requireOptionalPromptFile(item.promptFile, index, registryDir);
+    const provider = requireProvider(item.provider, index);
+    const llamaCppServerUrl = requireOptionalLlamaCppServerUrl(item.llamaCppServerUrl, index);
+    const llamaCppMode = requireOptionalLlamaCppMode(item.llamaCppMode, index);
+
+    if (provider === 'llamacpp' && llamaCppServerUrl === undefined) {
+      throw new Error(`registry[${index}].llamaCppServerUrl is required when provider is llamacpp`);
+    }
 
     return {
       participantId,
       displayName: requireString(item.displayName, `registry[${index}].displayName`),
-      provider: requireProvider(item.provider, index),
+      provider,
       providerModelId: requireString(item.providerModelId, `registry[${index}].providerModelId`),
       ...(messageLayout ? { messageLayout } : {}),
       ...(promptFile ? { promptFile } : {}),
+      ...(llamaCppServerUrl ? { llamaCppServerUrl } : {}),
+      ...(llamaCppMode ? { llamaCppMode } : {}),
     };
   });
 }
@@ -113,7 +128,7 @@ function requireString(value: unknown, fieldName: string): string {
 
 function requireProvider(value: unknown, index: number): Provider {
   if (typeof value !== 'string' || !REGISTRY_PROVIDERS.has(value as Provider)) {
-    throw new Error(`registry[${index}].provider must be one of gemini, qwen, openrouter, deepseek, deepl, google-translate-basic, or google-web.`);
+    throw new Error(`registry[${index}].provider must be one of gemini, qwen, openrouter, deepseek, deepl, google-translate-basic, google-web, llamacpp, or papago.`);
   }
 
   return value as Provider;
@@ -141,6 +156,30 @@ function requireOptionalPromptFile(value: unknown, index: number, registryDir: s
   }
 
   return resolve(registryDir, value);
+}
+
+function requireOptionalLlamaCppServerUrl(value: unknown, index: number): string | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    throw new Error(`registry[${index}].llamaCppServerUrl must be a non-empty string when provided.`);
+  }
+
+  return value;
+}
+
+function requireOptionalLlamaCppMode(value: unknown, index: number): LlamaCppMode | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (typeof value !== 'string' || !REGISTRY_LLAMACPP_MODES.has(value as LlamaCppMode)) {
+    throw new Error(`registry[${index}].llamaCppMode must be chat or completion when provided.`);
+  }
+
+  return value as LlamaCppMode;
 }
 
 function isRecord(value: unknown): value is RawParticipantDefinition {

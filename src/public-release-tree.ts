@@ -24,14 +24,13 @@ const FILE_ALLOWLIST = [
   'tsconfig.test.json',
   'data/LICENSE',
   'data/benchmarks/gemba-mqm-context-v1-gemini-context-v2.json',
+  'data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json',
   'data/prompts/gemini-context-v2.md',
   'data/prompts/simple-translation.md',
+  'data/prompts/puripuly-translation-latest.md',
+  'data/prompts/milmmt-x0-native.md',
+  'data/prompts/milmmt-x2-puripuly.md',
   'tests/reporting.test.ts',
-  'reports/leaderboard.overall.csv',
-  'reports/leaderboard.by-language.csv',
-  'reports/leaderboard.by-context-expectation.csv',
-  'reports/context-behavior.csv',
-  'reports/run-summary.json',
 ];
 
 const GLOB_ALLOWLIST = [
@@ -43,6 +42,7 @@ const GLOB_ALLOWLIST = [
   'data/prompt-rules/**/*',
   'docs/*.md',
   'docs/assets/**/*',
+  'experiments/**/*',
   'vendor/gemba/**/*',
 ];
 
@@ -56,6 +56,9 @@ const SCRIPT_ALLOWLIST = [
   'scripts/export-public-reports.ts',
   'scripts/build-public-release.ts',
   'scripts/verify-public-release.ts',
+  'scripts/llama-server.ps1',
+  'scripts/papago-bridge.py',
+  'scripts/papago-bridge-requirements.txt',
 ];
 
 const BLOCKED_PUBLIC_PATHS = [
@@ -77,7 +80,8 @@ const BLOCKED_PUBLIC_PATHS = [
   'docs/cost-analysis.md',
   'docs/superpowers',
   'docs/reports/2026-04-22-gemba-mqm-context-benchmark-final-report-ko.md',
-  'reports/cost-efficiency.csv',
+  'reports',
+  'scripts/experiment',
   'output',
   'node_modules',
   '.ruff_cache',

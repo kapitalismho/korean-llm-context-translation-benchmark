@@ -57,6 +57,20 @@ export interface BenchmarkReports {
   }>;
 }
 
+export interface CommonCellLeaderboardRow {
+  participant_id: string;
+  participant_display_name: string;
+  mean_penalty: number | null;
+  samples: number;
+}
+
+export interface CommonCellReports {
+  overall: CommonCellLeaderboardRow[];
+  byLanguage: Record<TargetLanguageCode, CommonCellLeaderboardRow[]>;
+  byContextExpectation: Record<string, CommonCellLeaderboardRow[]>;
+  commonCellCount: number;
+}
+
 function meanPenaltyForSlice(records: readonly NormalizedJudgeRecord[], participantId: string): number | null {
   const participantRecords = records.filter(
     (record) => record.participant_id === participantId && record.summary !== null,
@@ -250,6 +264,100 @@ function buildNormalizedOverallSummary(
         : normalizedPenalties.reduce((sum, value) => sum + value, 0) / normalizedPenalties.length,
     };
   });
+}
+
+function buildCommonCellLeaderboard(
+  records: readonly NormalizedJudgeRecord[],
+  participants: readonly ReportingParticipantSnapshot[],
+): CommonCellLeaderboardRow[] {
+  const okByParticipant = new Map(
+    participants.map((participant) => [
+      participant.participantId,
+      records.filter(
+        (record) => record.participant_id === participant.participantId
+          && record.status === 'ok'
+          && record.summary !== null,
+      ),
+    ]),
+  );
+
+  // Common cells are (source_id, target_language) pairs present for EVERY
+  // participant; stable keys embed the participant id and cannot be intersected.
+  const cellKeyOf = (record: NormalizedJudgeRecord): string => `${record.source_id}::${record.target_language}`;
+  let commonCellKeys: Set<string> | null = null;
+
+  for (const participantOk of okByParticipant.values()) {
+    const participantKeys = new Set(participantOk.map(cellKeyOf));
+
+    if (participantKeys.size === 0) {
+      commonCellKeys = new Set<string>();
+      break;
+    }
+
+    if (commonCellKeys === null) {
+      commonCellKeys = participantKeys;
+      continue;
+    }
+
+    const intersection = new Set<string>();
+
+    for (const key of commonCellKeys) {
+      if (participantKeys.has(key)) {
+        intersection.add(key);
+      }
+    }
+
+    commonCellKeys = intersection;
+  }
+
+  const commonKeys = commonCellKeys ?? new Set<string>();
+
+  return participants.map((participant) => {
+    const participantOk = okByParticipant.get(participant.participantId) ?? [];
+    const commonRecords = participantOk.filter((record) => commonKeys.has(cellKeyOf(record)));
+
+    return {
+      participant_id: participant.participantId,
+      participant_display_name: participant.displayName,
+      mean_penalty: commonRecords.length === 0
+        ? null
+        : commonRecords.reduce((sum, record) => sum + (record.summary?.total_penalty ?? 0), 0) / commonRecords.length,
+      samples: commonRecords.length,
+    };
+  });
+}
+
+export function buildCommonCellReports(
+  records: readonly NormalizedJudgeRecord[],
+  participants: readonly string[] | readonly ParticipantDefinition[],
+  targetLanguages: TargetLanguageCode[] = BENCHMARK_LANGUAGES,
+): CommonCellReports {
+  const participantSnapshots = normalizeReportingParticipants(participants);
+  const overall = buildCommonCellLeaderboard(records, participantSnapshots);
+  const commonCellCount = overall.reduce((max, row) => Math.max(max, row.samples), 0);
+  const byLanguage = Object.fromEntries(
+    targetLanguages.map((language) => [
+      language,
+      buildCommonCellLeaderboard(
+        records.filter((record) => record.target_language === language),
+        participantSnapshots,
+      ),
+    ]),
+  ) as CommonCellReports['byLanguage'];
+  const byContextExpectation = Object.fromEntries(
+    [...new Set(records.map((record) => record.context_expectation))]
+      .filter((value): value is 'use' | 'ignore' => value === 'use' || value === 'ignore')
+      .sort()
+      .map((expectation) => [
+        expectation,
+        buildCommonCellLeaderboard(
+          records.filter((record) => record.context_expectation === expectation),
+          participantSnapshots,
+        ),
+      ]),
+  );
+
+  return { overall, byLanguage, byContextExpectation, commonCellCount };
 }
 
 export function buildBenchmarkReports(

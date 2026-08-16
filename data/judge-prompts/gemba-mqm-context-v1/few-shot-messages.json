@@ -3,7 +3,7 @@
     "role": "user",
     "parts": [
       {
-        "text": "Target language: English\nContext (oldest to newest):\n1. [other, 10s ago] 저기 걸려있는 모자 진짜 귀엽다.\n\nCurrent source:\n```한번 써봐```\n\nCandidate translation:\n```Try writing it once.```\n\nEvaluate only the translation of the current source utterance. Use previous Korean source turns only as context for disambiguation. If the current source should be interpreted independently, penalize context-driven errors rather than rewarding forced carryover."
+        "text": "English source:\n```1. [other, 10s ago] 저기 걸려있는 모자 진짜 귀엽다.\n한번 써봐```\nEnglish translation:\n```Try writing it once.```\n\nBased on the source segment and machine translation surrounded with triple backticks, identify error types in the translation and classify them. The categories of errors are: accuracy (addition, mistranslation, omission, untranslated text), fluency (character encoding, grammar, inconsistency, punctuation, register, spelling), style (awkward), terminology (inappropriate for context, inconsistent use), non-translation, other, or no-error.\nEach error is classified as one of three categories: critical, major, and minor. Critical errors inhibit comprehension of the text. Major errors disrupt the flow, but what the text is trying to say is still understandable. Minor errors are technically errors, but do not disrupt the flow or hinder comprehension."
       }
     ]
   },
@@ -11,7 +11,7 @@
     "role": "model",
     "parts": [
       {
-        "text": "{\"has_no_error\":false,\"errors\":[{\"severity\":\"major\",\"class\":\"accuracy/mistranslation\",\"target_span_text\":\"writing\",\"source_span_text\":\"써봐\",\"explanation\":\"Given the context about a hat, 써봐 means try wearing it on, not writing it.\"}],\"contextBehavior\":\"missed_required_context\"}"
+        "text": "Critical:\nno-error\nMajor:\naccuracy/mistranslation - \"writing\"\nMinor:\nno-error\ncontextBehavior: missed_required_context"
       }
     ]
   }

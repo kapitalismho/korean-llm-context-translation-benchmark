@@ -32,11 +32,15 @@ function sameJsonValue(left: unknown, right: unknown): boolean {
   return JSON.stringify(left) === JSON.stringify(right);
 }
 
+function canonicalizeParticipant(participant: ParticipantDefinition): string {
+  return JSON.stringify(participant, Object.keys(participant).sort());
+}
+
 function assertExactParticipantSnapshotMatch(
   selectedParticipant: ParticipantDefinition,
   sourceParticipant: ParticipantDefinition,
 ): void {
-  if (!sameJsonValue(selectedParticipant, sourceParticipant)) {
+  if (canonicalizeParticipant(selectedParticipant) !== canonicalizeParticipant(sourceParticipant)) {
     throw new Error(`Selected participant ${selectedParticipant.participantId} does not match the source manifest snapshot`);
   }
 }
@@ -100,11 +104,17 @@ export function prepareForkRun(input: {
   limitApplied: number;
   allowedSourceIds: string[];
   participants: ParticipantDefinition[];
+  allowPromptMismatch?: boolean;
+  excludeCopiedParticipantIds?: string[];
 }) {
   const sourceManifest = loadRunManifest(input.outputDir, input.sourceRunId, 'fork');
   const participants = input.participants.map(attachPromptFingerprint);
 
-  if (sourceManifest.benchmarkId !== input.benchmarkId) {
+  // The benchmarkId is a run-family label; dataset identity is strictly
+  // protected below by datasetKind/datasetVersion/datasetFingerprintSha256.
+  // An explicit prompt-mismatch fork may legitimately rename the family
+  // (for example a new experiment config that reuses a historical run).
+  if (!input.allowPromptMismatch && sourceManifest.benchmarkId !== input.benchmarkId) {
     throw new Error('Source run benchmarkId does not match the requested fork configuration');
   }
 
@@ -120,12 +130,14 @@ export function prepareForkRun(input: {
     throw new Error('Source run dataset fingerprint does not match the requested fork configuration');
   }
 
-  if (sourceManifest.promptVersion !== input.promptVersion) {
-    throw new Error('Source run promptVersion does not match the requested fork configuration');
-  }
+  if (!input.allowPromptMismatch) {
+    if (sourceManifest.promptVersion !== input.promptVersion) {
+      throw new Error('Source run promptVersion does not match the requested fork configuration');
+    }
 
-  if (sourceManifest.promptFingerprintSha256 !== input.promptFingerprintSha256) {
-    throw new Error('Source run prompt fingerprint does not match the requested fork configuration');
+    if (sourceManifest.promptFingerprintSha256 !== input.promptFingerprintSha256) {
+      throw new Error('Source run prompt fingerprint does not match the requested fork configuration');
+    }
   }
 
   if (sourceManifest.judgePromptVersion !== input.judgePromptVersion) {
@@ -149,6 +161,8 @@ export function prepareForkRun(input: {
   );
   const overlappingParticipantIds = new Set<string>();
 
+  const excludeCopiedParticipantIds = new Set(input.excludeCopiedParticipantIds ?? []);
+
   for (const participant of participants) {
     const sourceParticipant = sourceParticipantsById.get(participant.participantId);
     if (!sourceParticipant) {
@@ -156,7 +170,10 @@ export function prepareForkRun(input: {
     }
 
     assertExactParticipantSnapshotMatch(participant, sourceParticipant);
-    overlappingParticipantIds.add(participant.participantId);
+
+    if (!excludeCopiedParticipantIds.has(participant.participantId)) {
+      overlappingParticipantIds.add(participant.participantId);
+    }
   }
 
   const sourceRunDir = path.join(input.outputDir, input.sourceRunId);
@@ -188,7 +205,21 @@ export function prepareForkRun(input: {
       stable_key: reusedStableKeyBySourceStableKey.get(record.stable_key) ?? record.stable_key,
     }));
 
-  const canReuseJudgeArtifacts = sourceManifest.judgeModelId !== null
+  // Carry forward the unresolved source failures (for example DeepL's four
+  // missing cells) as destination failure records so the translation queue
+  // skips them instead of regenerating paid cells; coverage reporting keeps
+  // the source-run cell counts.
+  const copiedTranslationFailures = sourceTranslationFailures
+    .filter((record) => overlappingParticipantIds.has(record.participant_id))
+    .filter((record) => allowedSourceIds.has(record.source_id))
+    .filter((record) => unresolvedFailureStableKeys.has(record.stable_key))
+    .map((record) => ({
+      ...record,
+      stable_key: buildReusedStableKey(record, input.newRunId),
+    }));
+
+  const canReuseJudgeArtifacts = !input.allowPromptMismatch
+    && sourceManifest.judgeModelId !== null
     && sourceManifest.judgeModelId === input.judgeModelId
     && sourceManifest.judgeBackend === (input.judgeBackend ?? 'vertex');
   const sourceNormalizedJudges = canReuseJudgeArtifacts
@@ -251,7 +282,16 @@ export function prepareForkRun(input: {
     vendoredGembaCommit: input.vendoredGembaCommit,
     resume: false,
     forkFromRunId: input.sourceRunId,
+    ...(input.allowPromptMismatch ? { forkPromptMismatchAllowed: true } : {}),
   });
+
+  // Crash-safety order: failure records FIRST (an interrupted fork that loses
+  // translations must never lose the carried-forward failures, or a resume
+  // would regenerate paid cells), then translations, then the rest, and the
+  // fork-prepared marker LAST as the atomic completion signal.
+  for (const record of copiedTranslationFailures) {
+    writeJsonlRecord(layout.translationFailuresJsonlPath, record as unknown as Record<string, unknown>);
+  }
 
   for (const record of copiedTranslations) {
     writeJsonlRecord(layout.translationJsonlPath, record as unknown as Record<string, unknown>);
@@ -272,6 +312,19 @@ export function prepareForkRun(input: {
   for (const record of copiedJudgeMetrics) {
     writeJsonlRecord(layout.judgeMetricsJsonlPath, record as unknown as Record<string, unknown>);
   }
+
+  const forkPreparedMarkerPath = path.join(layout.runDir, 'fork-prepared.json');
+  fs.writeFileSync(
+    forkPreparedMarkerPath,
+    `${JSON.stringify({
+      sourceRunId: input.sourceRunId,
+      newRunId: input.newRunId,
+      copiedTranslationCount: copiedTranslations.length,
+      copiedFailureCount: copiedTranslationFailures.length,
+      allowPromptMismatch: input.allowPromptMismatch === true,
+      preparedAtUtc: new Date().toISOString(),
+    }, null, 2)}\n`,
+  );
 
   return {
     runId: input.newRunId,

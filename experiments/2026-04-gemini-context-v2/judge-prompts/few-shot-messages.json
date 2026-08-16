@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "Target language: English\nContext (oldest to newest):\n1. [other, 10s ago] 저기 걸려있는 모자 진짜 귀엽다.\n\nCurrent source:\n```한번 써봐```\n\nCandidate translation:\n```Try writing it once.```\n\nEvaluate only the translation of the current source utterance. Use previous Korean source turns only as context for disambiguation. If the current source should be interpreted independently, penalize context-driven errors rather than rewarding forced carryover."
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "{\"has_no_error\":false,\"errors\":[{\"severity\":\"major\",\"class\":\"accuracy/mistranslation\",\"target_span_text\":\"writing\",\"source_span_text\":\"써봐\",\"explanation\":\"Given the context about a hat, 써봐 means try wearing it on, not writing it.\"}],\"contextBehavior\":\"missed_required_context\"}"
+      }
+    ]
+  }
+]

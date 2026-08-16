@@ -13,3 +13,4 @@ output/
 temp/
 AGENTS.md
 opencode.json
+.zcode/

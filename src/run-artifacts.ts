@@ -8,7 +8,7 @@ import type { ParticipantDefinition } from './participant-registry.js';
 
 export const RUN_MANIFEST_VERSION = 3;
 
-export type JudgeBackend = 'vertex' | 'gemini-cli';
+export type JudgeBackend = 'vertex' | 'gemini-cli' | 'openrouter-batch';
 
 export interface RunLayout {
   runDir: string;
@@ -48,10 +48,14 @@ export interface RunManifestV3 {
   forkFromRunId?: string;
   rejudgeFromRunId?: string;
   reusedTranslations?: boolean;
+  forkPromptMismatchAllowed?: boolean;
   vertexProject?: string | null;
   vertexRegion?: string | null;
   geminiCliBin?: string;
   vendoredGembaCommit?: string;
+  openRouterBatchJobIds?: string[];
+  openRouterBatchApiBaseUrl?: string;
+  openRouterBatchModelId?: string;
 }
 
 export interface TranslationFailureArtifactRecord {
@@ -131,8 +135,8 @@ function requireDatasetKind(value: unknown, fieldName: string = 'datasetKind'): 
 }
 
 function requireJudgeBackend(value: unknown, fieldName: string = 'judgeBackend'): JudgeBackend {
-  if (value !== 'vertex' && value !== 'gemini-cli') {
-    throw new Error(`Run manifest must define ${fieldName} as "vertex" or "gemini-cli"`);
+  if (value !== 'vertex' && value !== 'gemini-cli' && value !== 'openrouter-batch') {
+    throw new Error(`Run manifest must define ${fieldName} as "vertex", "gemini-cli", or "openrouter-batch"`);
   }
 
   return value;
@@ -214,6 +218,8 @@ function requireParticipants(value: unknown): ParticipantDefinition[] {
       `participants[${index}].promptFingerprintSha256`,
     );
     const messageLayout = requireOptionalMessageLayout(item.messageLayout, `participants[${index}].messageLayout`);
+    const llamaCppServerUrl = requireOptionalString(item.llamaCppServerUrl, `participants[${index}].llamaCppServerUrl`);
+    const llamaCppMode = requireOptionalLlamaCppMode(item.llamaCppMode, `participants[${index}].llamaCppMode`);
     if (promptFile !== undefined && promptFingerprintSha256 === undefined) {
       throw new Error(`Run manifest must define participants[${index}].promptFingerprintSha256 when participants[${index}].promptFile is present`);
     }
@@ -221,16 +227,44 @@ function requireParticipants(value: unknown): ParticipantDefinition[] {
       throw new Error(`Run manifest must define participants[${index}].promptFile when participants[${index}].promptFingerprintSha256 is present`);
     }
 
+    const provider = requireString(item.provider, `participants[${index}].provider`) as ParticipantDefinition['provider'];
+    if (provider === 'llamacpp' && llamaCppServerUrl === undefined) {
+      throw new Error(`Run manifest must define participants[${index}].llamaCppServerUrl when provider is llamacpp`);
+    }
+
     return {
       participantId: requireString(item.participantId, `participants[${index}].participantId`),
       displayName: requireString(item.displayName, `participants[${index}].displayName`),
-      provider: requireString(item.provider, `participants[${index}].provider`) as ParticipantDefinition['provider'],
+      provider,
       providerModelId: requireString(item.providerModelId, `participants[${index}].providerModelId`),
       ...(messageLayout ? { messageLayout } : {}),
       ...(promptFile ? { promptFile } : {}),
       ...(promptFingerprintSha256 ? { promptFingerprintSha256 } : {}),
+      ...(llamaCppServerUrl ? { llamaCppServerUrl } : {}),
+      ...(llamaCppMode ? { llamaCppMode } : {}),
     };
   });
+}
+
+function requireOptionalString(value: unknown, fieldName: string): string | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  return requireString(value, fieldName);
+}
+
+function requireOptionalLlamaCppMode(value: unknown, fieldName: string): ParticipantDefinition['llamaCppMode'] | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  const mode = requireString(value, fieldName);
+  if (mode !== 'chat' && mode !== 'completion') {
+    throw new Error(`Run manifest must define ${fieldName} as "chat" or "completion" when provided`);
+  }
+
+  return mode;
 }
 
 function requireOptionalMessageLayout(value: unknown, fieldName: string): ParticipantDefinition['messageLayout'] | undefined {
@@ -289,6 +323,21 @@ function extractFingerprintDefaults(manifest: unknown): ManifestFingerprintDefau
   };
 }
 
+/**
+ * Resume compatibility for participants: the requested (subset) participants
+ * must each EXACTLY match their manifest snapshot. The manifest may contain
+ * more participants than the requested subset — that is how sequential
+ * one-model-at-a-time passes resume without touching other rows.
+ */
+function participantsCompatibleForResume(existing: RunManifestV3, manifest: RunManifestV3): boolean {
+  const existingById = new Map(existing.participants.map((participant) => [participant.participantId, participant]));
+
+  return manifest.participants.every((participant) => {
+    const existingParticipant = existingById.get(participant.participantId);
+    return existingParticipant !== undefined && sameJsonValue(existingParticipant, participant);
+  });
+}
+
 function isCompatibleResumeManifest(existing: RunManifestV3, manifest: RunManifestV3): boolean {
   const judgeModelCompatible = existing.judgeModelId === manifest.judgeModelId
     || existing.judgeModelId === null
@@ -305,7 +354,7 @@ function isCompatibleResumeManifest(existing: RunManifestV3, manifest: RunManife
     && sameJsonValue(existing.targetLanguages, manifest.targetLanguages)
     && sameJsonValue(existing.targetLanguageLabels, manifest.targetLanguageLabels)
     && existing.limitApplied === manifest.limitApplied
-    && sameJsonValue(existing.participants, manifest.participants)
+    && participantsCompatibleForResume(existing, manifest)
     && sameJsonValue(existing.forkFromRunId, manifest.forkFromRunId);
 
   if (isRejudgeResumeManifest(existing)) {
@@ -378,6 +427,9 @@ export function parseRunManifestV3(
   const vertexRegion = requireOptionalStringOrNull(manifest.vertexRegion, 'vertexRegion');
   const geminiCliBin = requireOptionalStringOrNull(manifest.geminiCliBin, 'geminiCliBin');
   const vendoredGembaCommit = requireOptionalStringOrNull(manifest.vendoredGembaCommit, 'vendoredGembaCommit');
+  const openRouterBatchJobIds = requireOptionalStringArray(manifest.openRouterBatchJobIds, 'openRouterBatchJobIds');
+  const openRouterBatchApiBaseUrl = requireOptionalStringOrNull(manifest.openRouterBatchApiBaseUrl, 'openRouterBatchApiBaseUrl');
+  const openRouterBatchModelId = requireOptionalStringOrNull(manifest.openRouterBatchModelId, 'openRouterBatchModelId');
   const forkFromRunId = requireOptionalStringOrNull(manifest.forkFromRunId, 'forkFromRunId');
   const rejudgeFromRunId = requireOptionalStringOrNull(manifest.rejudgeFromRunId, 'rejudgeFromRunId');
   const judgePromptVersion = requireString(manifest.judgePromptVersion, 'judgePromptVersion');
@@ -389,6 +441,9 @@ export function parseRunManifestV3(
   const reusedTranslations = manifest.reusedTranslations === undefined
     ? undefined
     : requireBoolean(manifest.reusedTranslations, 'reusedTranslations');
+  const forkPromptMismatchAllowed = manifest.forkPromptMismatchAllowed === undefined
+    ? undefined
+    : requireBoolean(manifest.forkPromptMismatchAllowed, 'forkPromptMismatchAllowed');
 
   return {
     manifestVersion: RUN_MANIFEST_VERSION,
@@ -423,13 +478,46 @@ export function parseRunManifestV3(
     forkFromRunId: forkFromRunId === null ? undefined : forkFromRunId,
     rejudgeFromRunId: rejudgeFromRunId === null ? undefined : rejudgeFromRunId,
     reusedTranslations,
+    ...(forkPromptMismatchAllowed === undefined ? {} : { forkPromptMismatchAllowed }),
     vertexProject: vertexProject === undefined ? undefined : vertexProject,
     vertexRegion: vertexRegion === undefined ? undefined : vertexRegion,
     geminiCliBin: geminiCliBin === null || geminiCliBin === undefined ? undefined : geminiCliBin,
     vendoredGembaCommit: vendoredGembaCommit === null || vendoredGembaCommit === undefined
       ? undefined
       : vendoredGembaCommit,
+    ...(openRouterBatchJobIds ? { openRouterBatchJobIds } : {}),
+    ...(openRouterBatchApiBaseUrl === undefined || openRouterBatchApiBaseUrl === null
+      ? {}
+      : { openRouterBatchApiBaseUrl }),
+    ...(openRouterBatchModelId === undefined || openRouterBatchModelId === null
+      ? {}
+      : { openRouterBatchModelId }),
   };
+}
+
+function requireOptionalStringArray(value: unknown, fieldName: string): string[] | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  if (!Array.isArray(value)) {
+    throw new Error(`Run manifest must define ${fieldName} as an array of strings when provided`);
+  }
+
+  return value.map((item, index) => requireString(item, `${fieldName}[${index}]`));
+}
+
+/**
+ * Patch the persisted run manifest (used for batch job identity updates).
+ * Written atomically (temp file + rename) so a crash cannot leave a truncated
+ * manifest that would break resume.
+ */
+export function updateRunManifest(layout: RunLayout, patch: Partial<RunManifestV3>): void {
+  const existing = JSON.parse(fs.readFileSync(layout.manifestPath, 'utf8')) as Record<string, unknown>;
+  const nextContent = `${JSON.stringify({ ...existing, ...patch }, null, 2)}\n`;
+  const tmpPath = `${layout.manifestPath}.tmp`;
+  fs.writeFileSync(tmpPath, nextContent);
+  fs.renameSync(tmpPath, layout.manifestPath);
 }
 
 export function loadRunManifest(

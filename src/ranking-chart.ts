@@ -39,7 +39,7 @@ const LLM_FILL = '#3b82f6';
 const DEEPL_CONTEXT_FILL = '#15803d';
 const DEEPL_NOCONTEXT_FILL = '#86efac';
 const GOOGLE_FILL = '#94a3b8';
-const COMMERCIAL_IDS = new Set(['deepl-api', 'deepl-api-nocontext', 'google-cloud-translate-basic']);
+const COMMERCIAL_IDS = new Set(['deepl-api', 'deepl-api-nocontext', 'google-cloud-translate-basic', 'papago-web']);
 const DEEPL_IDS = ['deepl-api', 'deepl-api-nocontext'] as const;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -89,16 +89,6 @@ function sortPenaltyRows(left: PenaltySummaryRow, right: PenaltySummaryRow): num
 
   return left.mean_penalty - right.mean_penalty
     || left.participant_display_name.localeCompare(right.participant_display_name);
-}
-
-function requireParticipantRow(rows: readonly PenaltySummaryRow[], participantId: string): PenaltySummaryRow {
-  const row = rows.find((candidate) => candidate.participant_id === participantId);
-
-  if (!row || row.mean_penalty === null) {
-    throw new Error(`Missing non-null penalty summary row for ${participantId}`);
-  }
-
-  return row;
 }
 
 function toBarRow(row: PenaltySummaryRow): SlideReadyRankingBarRow {
@@ -205,11 +195,11 @@ export function selectSlideReadyRankingRows(rows: readonly PenaltySummaryRow[]):
     .slice(0, 5)
     .map(toBarRow);
 
-  const commercialRows = [
-    toBarRow(requireParticipantRow(rows, 'deepl-api')),
-    toBarRow(requireParticipantRow(rows, 'deepl-api-nocontext')),
-    toBarRow(requireParticipantRow(rows, 'google-cloud-translate-basic')),
-  ];
+  const commercialRows = rows
+    .filter((row) => row.mean_penalty !== null)
+    .filter((row) => COMMERCIAL_IDS.has(row.participant_id))
+    .sort(sortPenaltyRows)
+    .map(toBarRow);
 
   return [
     ...llmRows,
@@ -244,9 +234,12 @@ export function buildDeepLFailureFootnoteFromRunStatusJson(jsonText: string): st
     expectedByLanguage.set(splitKey.language, Math.max(expectedByLanguage.get(splitKey.language) ?? 0, total));
   }
 
+  const presentDeepLIds = DEEPL_IDS.filter((participantId) =>
+    [...totalsByParticipantLanguage.keys()].some((key) => key.startsWith(`${participantId}::`)));
+
   let unresolvedCount = 0;
 
-  for (const participantId of DEEPL_IDS) {
+  for (const participantId of presentDeepLIds) {
     for (const [language, expected] of expectedByLanguage.entries()) {
       const actual = totalsByParticipantLanguage.get(`${participantId}::${language}`) ?? 0;
       unresolvedCount += Math.max(expected - actual, 0);

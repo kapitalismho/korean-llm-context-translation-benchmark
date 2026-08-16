@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 export interface PenaltySummaryRow {
@@ -10,6 +10,10 @@ export interface PenaltySummaryRow {
 export interface SliceLeaderboardRow extends PenaltySummaryRow {
   samples: number;
   failed_samples: number;
+}
+
+export interface CommonCellRow extends PenaltySummaryRow {
+  samples: number;
 }
 
 export interface SanitizedManifestParticipant {
@@ -45,6 +49,7 @@ export interface RunStatusPublicFields {
   totalNormalized?: number;
   translationFailureHistoricalCount?: number;
   translationFailureUnresolvedCount?: number;
+  commonCellCount?: number;
   missingDeepLKeys?: string[];
   judgeFailureRatesByParticipantLanguage?: Record<string, {
     ok?: number;
@@ -61,6 +66,11 @@ export interface PublicOverallRow {
   benchmark_valid: boolean;
   caveat: string;
   source_run_id: string;
+}
+
+export interface PublicCommonCellRow extends PublicOverallRow {
+  common_cell_samples: number;
+  coverage: 'common-cell' | 'full-available-fallback';
 }
 
 export interface ExportPublicReportsOptions {
@@ -84,6 +94,9 @@ const REPORT_FILE_NAMES = [
   'leaderboard.by-context-expectation.csv',
   'context-behavior.csv',
   'run-summary.json',
+  'leaderboard.overall.common-cell.csv',
+  'leaderboard.by-language.common-cell.csv',
+  'leaderboard.by-context-expectation.common-cell.csv',
 ] as const;
 
 export const FIXED_DECIMAL_COLUMNS = new Set([
@@ -283,6 +296,87 @@ function readByContextExpectation(run: LoadedRun): Record<string, SliceLeaderboa
   );
 }
 
+function readCommonCellPenaltyRows(run: LoadedRun): CommonCellRow[] | null {
+  return readOptionalRows<CommonCellRow>(
+    run,
+    'summary-overall.penalty.common-cell.json',
+    (row) => ({
+      participant_id: asString(row.participant_id),
+      participant_display_name: asString(row.participant_display_name, asString(row.participant_id)),
+      mean_penalty: row.mean_penalty === null ? null : asOptionalNumber(row.mean_penalty) ?? null,
+      samples: asOptionalNumber(row.samples) ?? 0,
+    }),
+  );
+}
+
+function readCommonCellSlices(
+  run: LoadedRun,
+  fileName: string,
+): Record<string, CommonCellRow[]> | null {
+  const filePath = path.join(run.reportsDir, fileName);
+
+  if (!existsSync(filePath)) {
+    return null;
+  }
+
+  const raw = readJson<unknown>(filePath);
+
+  if (!isRecord(raw)) {
+    return null;
+  }
+
+  return Object.fromEntries(
+    Object.entries(raw).map(([slice, value]) => [slice, normalizeCommonCellRows(value)]),
+  );
+}
+
+function normalizeCommonCellRows(value: unknown): CommonCellRow[] {
+  const rawRows = Array.isArray(value)
+    ? value
+    : isRecord(value) && Array.isArray(value.leaderboard)
+      ? value.leaderboard
+      : [];
+
+  return rawRows.map((row) => {
+    if (!isRecord(row)) {
+      throw new Error('Common-cell leaderboard row must be an object');
+    }
+
+    return {
+      participant_id: asString(row.participant_id),
+      participant_display_name: asString(row.participant_display_name, asString(row.participant_id)),
+      mean_penalty: row.mean_penalty === null ? null : asOptionalNumber(row.mean_penalty) ?? null,
+      samples: asOptionalNumber(row.samples) ?? 0,
+    };
+  });
+}
+
+function readOptionalRows<T>(
+  run: LoadedRun,
+  fileName: string,
+  mapper: (row: Record<string, unknown>) => T,
+): T[] | null {
+  const filePath = path.join(run.reportsDir, fileName);
+
+  if (!existsSync(filePath)) {
+    return null;
+  }
+
+  const rows = readJson<unknown>(filePath);
+
+  if (!Array.isArray(rows)) {
+    return null;
+  }
+
+  return rows.map((row) => {
+    if (!isRecord(row)) {
+      throw new Error(`${fileName} for ${run.runId} must be an array of objects`);
+    }
+
+    return mapper(row);
+  });
+}
+
 function normalizeSliceRows(value: unknown): SliceLeaderboardRow[] {
   const rawRows = Array.isArray(value)
     ? value
@@ -377,7 +471,21 @@ function caveatFor(run: LoadedRun, participantId: string): string {
     return run.status.benchmarkValidityNote;
   }
 
+  // Non-reuse partial runs (for example the issue-1 fork whose DeepL row keeps
+  // its four carried-forward missing cells): label the coverage difference.
+  if (!run.status.benchmarkValid && (run.status.translationFailureUnresolvedCount ?? 0) > 0) {
+    return `partial coverage; ${run.status.translationFailureUnresolvedCount} unresolved translation cells (carried forward)`;
+  }
+
   return '';
+}
+
+/**
+ * Participant ids already present in the main run. Separate legacy DeepL runs
+ * must not duplicate rows for participants the main run already covers.
+ */
+function mainRunParticipantIds(mainRun: LoadedRun): Set<string> {
+  return new Set(mainRun.manifest.participants.map((participant) => participant.participantId));
 }
 
 function scoredRowFromPenalty(run: LoadedRun, row: PenaltySummaryRow): PublicScoredRow {
@@ -426,14 +534,107 @@ function sortByMeanPenalty<T extends { mean_penalty: number | null; participant_
 
 function buildOverallRows(mainRun: LoadedRun, deeplRuns: LoadedRun[]): PublicOverallRow[] {
   const rows = readPenaltyRows(mainRun).map((row) => scoredRowFromPenalty(mainRun, row));
+  const mainParticipantIds = mainRunParticipantIds(mainRun);
 
   for (const deeplRun of deeplRuns) {
     rows.push(...readPenaltyRows(deeplRun)
       .filter((row) => isDeepLParticipant(deeplRun, row.participant_id))
+      .filter((row) => !mainParticipantIds.has(row.participant_id))
       .map((row) => scoredRowFromPenalty(deeplRun, row)));
   }
 
   return withRanks(rows);
+}
+
+function buildCommonCellOverallRows(mainRun: LoadedRun): {
+  rows: PublicCommonCellRow[];
+  commonCellCount: number;
+} {
+  const commonCellRows = readCommonCellPenaltyRows(mainRun);
+  const fallback = commonCellRows === null;
+  // The common-cell leaderboard covers only the main run's participants: the
+  // runner computes the in-run intersection over every participant (including
+  // DeepL when it lives in the main run, as in the issue-1 run). Separate
+  // legacy DeepL runs must never be concatenated here, or 648-cell rows would
+  // be mislabeled as common cells next to DeepL's 644.
+  const rows = fallback
+    ? readPenaltyRows(mainRun).map((row) => scoredRowFromPenalty(mainRun, row))
+    : commonCellRows.map((row) => ({
+        participant_id: row.participant_id,
+        participant_display_name: mainRun.participantsById.get(row.participant_id)?.displayName
+          || row.participant_display_name
+          || row.participant_id,
+        mean_penalty: row.mean_penalty,
+        samples: row.samples,
+        failed_samples: 0,
+        benchmark_valid: mainRun.status.benchmarkValid,
+        caveat: caveatFor(mainRun, row.participant_id),
+        source_run_id: mainRun.runId,
+      }));
+  const coverage = fallback ? 'full-available-fallback' : 'common-cell';
+
+  return {
+    rows: withRanks(rows).map((row) => ({ ...row, common_cell_samples: row.samples, coverage })),
+    commonCellCount: mainRun.status.commonCellCount ?? rows.reduce((max, row) => Math.max(max, row.samples), 0),
+  };
+}
+
+function buildCommonCellSliceCsvRows(
+  mainRun: LoadedRun,
+  fileName: string,
+  sliceColumn: string,
+): CsvRow[] {
+  const groupedRows = new Map<string, Array<PublicScoredRow & { coverage: string }>>();
+  const fallbackReadSlices = fileName === 'leaderboard.by-language.common-cell.json'
+    ? readByLanguage
+    : readByContextExpectation;
+
+  function appendRun(run: LoadedRun): void {
+    const commonCellSlices = readCommonCellSlices(run, fileName);
+    const fallback = commonCellSlices === null || Object.keys(commonCellSlices).length === 0;
+    const slices = fallback ? fallbackReadSlices(run) : commonCellSlices;
+    const coverage = fallback ? 'full-available-fallback' : 'common-cell';
+
+    for (const [slice, rows] of Object.entries(slices)) {
+      const sliceRows = groupedRows.get(slice) ?? [];
+
+      sliceRows.push(...rows
+        .map((row) => ({
+          participant_id: row.participant_id,
+          participant_display_name: run.participantsById.get(row.participant_id)?.displayName
+            || row.participant_display_name
+            || row.participant_id,
+          mean_penalty: row.mean_penalty,
+          samples: row.samples,
+          failed_samples: 'failed_samples' in row && typeof row.failed_samples === 'number'
+            ? row.failed_samples
+            : 0,
+          benchmark_valid: run.status.benchmarkValid,
+          caveat: caveatFor(run, row.participant_id),
+          source_run_id: run.runId,
+          coverage,
+        })));
+      groupedRows.set(slice, sliceRows);
+    }
+  }
+
+  appendRun(mainRun);
+
+  return [...groupedRows.entries()]
+    .sort(([left], [right]) => left.localeCompare(right, undefined, { numeric: true }))
+    .flatMap(([slice, rows]) => sortByMeanPenalty(rows).map((row, index) => ({
+      [sliceColumn]: slice,
+      rank: index + 1,
+      participant_id: row.participant_id,
+      participant_display_name: row.participant_display_name,
+      mean_penalty: row.mean_penalty,
+      common_cell_samples: row.samples,
+      failed_samples: row.failed_samples,
+      benchmark_valid: row.benchmark_valid,
+      caveat: row.caveat,
+      coverage: row.coverage,
+      source_run_id: row.source_run_id,
+    })));
 }
 
 function buildSliceCsvRows(
@@ -443,6 +644,7 @@ function buildSliceCsvRows(
   sliceColumn: string,
 ): CsvRow[] {
   const groupedRows = new Map<string, PublicScoredRow[]>();
+  const mainParticipantIds = mainRunParticipantIds(mainRun);
 
   function appendRun(run: LoadedRun, deeplOnly: boolean): void {
     const slices = readSlices(run);
@@ -451,7 +653,7 @@ function buildSliceCsvRows(
       const sliceRows = groupedRows.get(slice) ?? [];
 
       sliceRows.push(...rows
-        .filter((row) => !deeplOnly || isDeepLParticipant(run, row.participant_id))
+        .filter((row) => !deeplOnly || (isDeepLParticipant(run, row.participant_id) && !mainParticipantIds.has(row.participant_id)))
         .map((row) => ({
           participant_id: row.participant_id,
           participant_display_name: participantDisplayName(run, row),
@@ -486,11 +688,13 @@ function buildSliceCsvRows(
 }
 
 function buildContextBehaviorRows(mainRun: LoadedRun, deeplRuns: LoadedRun[]): CsvRow[] {
+  const mainParticipantIds = mainRunParticipantIds(mainRun);
+
   function rowsForRun(run: LoadedRun, deeplOnly: boolean): CsvRow[] {
     const counts = readJson<Record<string, Record<string, number>>>(path.join(run.reportsDir, 'context-behavior.counts.json'));
     const rates = readJson<Record<string, Record<string, number>>>(path.join(run.reportsDir, 'context-behavior.rates.json'));
     const participantIds = [...new Set([...Object.keys(counts), ...Object.keys(rates)])]
-      .filter((participantId) => !deeplOnly || isDeepLParticipant(run, participantId));
+      .filter((participantId) => !deeplOnly || (isDeepLParticipant(run, participantId) && !mainParticipantIds.has(participantId)));
 
     return participantIds.sort().map((participantId) => {
       const participantCounts = counts[participantId] ?? {};
@@ -589,6 +793,7 @@ function buildRunSummary(
   mainRun: LoadedRun,
   deeplRuns: LoadedRun[],
   overallRows: PublicOverallRow[],
+  commonCellRows: PublicCommonCellRow[],
 ): unknown {
   const benchmarkConfig = benchmarkConfigPathForBenchmarkId(mainRun.manifest.benchmarkId);
   const sourceRuns = [mainRun, ...deeplRuns].map((run) => ({
@@ -620,17 +825,47 @@ function buildRunSummary(
     },
     participantSampleCounts: buildParticipantSampleCounts(run),
   }));
+  const caveats = [
+    'Primary score: raw mean penalty over common cells (intersection of cells judged for every participant); lower is better.',
+    'Secondary score: raw mean penalty over all valid cells available per participant; lower is better.',
+    'DeepL rows are reuse-only partial rows with missing cells and are marked benchmark_valid=false.',
+    'Full reruns require paid APIs, credentials, and the configured judge backend/model.',
+  ];
+
+  if (deeplRuns.length > 0) {
+    caveats.push(
+      'Common-cell leaderboards cover only the main run participants; separate legacy DeepL runs are excluded from the common-cell view.',
+    );
+  }
 
   return {
     generatedAtUtc,
-    reportVersion: 1,
+    reportVersion: 2,
     benchmarkConfig,
     publicReports: REPORT_FILE_NAMES,
     primaryScore: {
-      metric: 'raw mean penalty',
+      metric: 'raw mean penalty over common cells (cells judged for every participant)',
       lowerIsBetter: true,
+      source: 'leaderboard.overall.common-cell.csv',
+    },
+    secondaryScore: {
+      metric: 'raw mean penalty over all valid judged cells available per participant',
+      lowerIsBetter: true,
+      source: 'leaderboard.overall.csv',
     },
     sourceRuns,
+    commonCellCount: mainRun.status.commonCellCount ?? commonCellRows.reduce((max, row) => Math.max(max, row.samples), 0),
+    primaryCommonCellLeaderboard: commonCellRows.map((row) => ({
+      rank: row.rank,
+      participantId: row.participant_id,
+      displayName: row.participant_display_name,
+      meanPenalty: row.mean_penalty,
+      commonCellSamples: row.samples,
+      benchmarkValid: row.benchmark_valid,
+      caveat: row.caveat,
+      coverage: row.coverage,
+      sourceRunId: row.source_run_id,
+    })),
     leaderboard: overallRows.map((row) => ({
       rank: row.rank,
       participantId: row.participant_id,
@@ -641,11 +876,7 @@ function buildRunSummary(
       caveat: row.caveat,
       sourceRunId: row.source_run_id,
     })),
-    caveats: [
-      'Raw mean penalty is the primary score; lower is better.',
-      'DeepL rows are reuse-only partial rows with missing cells and are marked benchmark_valid=false.',
-      'Full reruns require paid APIs, credentials, and the configured judge backend/model.',
-    ],
+    caveats,
   };
 }
 
@@ -667,6 +898,7 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
     .filter((runId): runId is string => typeof runId === 'string' && runId.length > 0)
     .map((runId) => loadRun(outputRoot, runId));
   const overallRows = buildOverallRows(mainRun, deeplRuns);
+  const commonCell = buildCommonCellOverallRows(mainRun);
   const files: string[] = [];
 
   const overallPath = path.join(reportsDir, 'leaderboard.overall.csv');
@@ -677,6 +909,14 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
   );
   files.push(overallPath);
 
+  const commonCellOverallPath = path.join(reportsDir, 'leaderboard.overall.common-cell.csv');
+  writeCsv(
+    commonCellOverallPath,
+    ['rank', 'participant_id', 'participant_display_name', 'mean_penalty', 'common_cell_samples', 'benchmark_valid', 'caveat', 'coverage', 'source_run_id'],
+    commonCell.rows,
+  );
+  files.push(commonCellOverallPath);
+
   const byLanguagePath = path.join(reportsDir, 'leaderboard.by-language.csv');
   writeCsv(
     byLanguagePath,
@@ -685,6 +925,14 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
   );
   files.push(byLanguagePath);
 
+  const commonCellByLanguagePath = path.join(reportsDir, 'leaderboard.by-language.common-cell.csv');
+  writeCsv(
+    commonCellByLanguagePath,
+    ['language', 'rank', 'participant_id', 'participant_display_name', 'mean_penalty', 'common_cell_samples', 'benchmark_valid', 'caveat', 'coverage', 'source_run_id'],
+    buildCommonCellSliceCsvRows(mainRun, 'leaderboard.by-language.common-cell.json', 'language'),
+  );
+  files.push(commonCellByLanguagePath);
+
   const byContextExpectationPath = path.join(reportsDir, 'leaderboard.by-context-expectation.csv');
   writeCsv(
     byContextExpectationPath,
@@ -692,6 +940,14 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
     buildSliceCsvRows(mainRun, deeplRuns, readByContextExpectation, 'context_expectation'),
   );
   files.push(byContextExpectationPath);
+
+  const commonCellByContextExpectationPath = path.join(reportsDir, 'leaderboard.by-context-expectation.common-cell.csv');
+  writeCsv(
+    commonCellByContextExpectationPath,
+    ['context_expectation', 'rank', 'participant_id', 'participant_display_name', 'mean_penalty', 'common_cell_samples', 'benchmark_valid', 'caveat', 'coverage', 'source_run_id'],
+    buildCommonCellSliceCsvRows(mainRun, 'leaderboard.by-context-expectation.common-cell.json', 'context_expectation'),
+  );
+  files.push(commonCellByContextExpectationPath);
 
   const contextBehaviorPath = path.join(reportsDir, 'context-behavior.csv');
   writeCsv(
@@ -702,7 +958,7 @@ export function exportPublicReports(options: ExportPublicReportsOptions): Export
   files.push(contextBehaviorPath);
 
   const runSummaryPath = path.join(reportsDir, 'run-summary.json');
-  writeJson(runSummaryPath, buildRunSummary(generatedAtUtc, mainRun, deeplRuns, overallRows));
+  writeJson(runSummaryPath, buildRunSummary(generatedAtUtc, mainRun, deeplRuns, overallRows, commonCell.rows));
   files.push(runSummaryPath);
 
   return { reportsDir, files };

@@ -31,11 +31,18 @@ const REQUIRED_DOCS = [
 ];
 
 const REQUIRED_REPORTS = [
-  'reports/leaderboard.overall.csv',
-  'reports/leaderboard.by-language.csv',
-  'reports/leaderboard.by-context-expectation.csv',
-  'reports/context-behavior.csv',
-  'reports/run-summary.json',
+  'experiments/2026-04-gemini-context-v2/reports/leaderboard.overall.csv',
+  'experiments/2026-04-gemini-context-v2/reports/leaderboard.by-language.csv',
+  'experiments/2026-04-gemini-context-v2/reports/leaderboard.by-context-expectation.csv',
+  'experiments/2026-04-gemini-context-v2/reports/context-behavior.csv',
+  'experiments/2026-04-gemini-context-v2/reports/run-summary.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/README.md',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/manifest.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/fork-prepared.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/summary-overall.penalty.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/run-status.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/leaderboard.by-language.json',
+  'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/context-behavior.rates.json',
 ];
 
 const BLOCKED_PATHS = [
@@ -57,7 +64,8 @@ const BLOCKED_PATHS = [
   'docs/cost-analysis.md',
   'docs/superpowers',
   'docs/reports/2026-04-22-gemba-mqm-context-benchmark-final-report-ko.md',
-  'reports/cost-efficiency.csv',
+  'reports',
+  'scripts/experiment',
   'output',
   'node_modules',
   '.ruff_cache',
@@ -158,11 +166,11 @@ function assertAbsent(root: string, relativePath: string): void {
 }
 
 function assertNoUnexpectedReportFiles(root: string): void {
-  const reportsRoot = path.join(root, 'reports');
+  const reportsRoot = path.join(root, 'experiments', '2026-04-gemini-context-v2', 'reports');
   const expected = new Set(REQUIRED_REPORTS.map((item) => path.basename(item)));
 
   for (const entry of readdirSync(reportsRoot, { withFileTypes: true })) {
-    const relativeEntry = `reports/${entry.name}`;
+    const relativeEntry = `experiments/2026-04-gemini-context-v2/reports/${entry.name}`;
 
     if (!entry.isFile()) {
       throw new Error(`Report artifact must be a file: ${relativeEntry}`);

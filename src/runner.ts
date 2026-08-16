@@ -29,12 +29,15 @@ import type {
     TranslationResult,
 } from './llm-client.js';
 import { normalizeOpenRouterError } from './openrouter.js';
+import { OpenRouterBatchGembaJudge } from './openrouter-batch-judge.js';
+import { normalizePapagoError } from './papago.js';
 import type { ParticipantDefinition } from './participant-registry.js';
 import {
     normalizeJudgeFailure,
     normalizeJudgeResponse,
 } from './normalize-gemba.js';
 import { normalizeQwenError } from './qwen.js';
+import { normalizeLlamaCppError } from './llamacpp.js';
 import {
     executeWithRetries,
     type ExecuteWithRetriesInput,
@@ -47,6 +50,7 @@ import {
     readJsonlRecords,
     type RunManifestV3,
     type TranslationFailureArtifactRecord,
+    updateRunManifest,
     writeJsonlRecord,
     type JudgeBackend,
 } from './run-artifacts.js';
@@ -63,13 +67,14 @@ import {
     type RunStateParticipantSnapshot,
     type RunStateThrottleBucketSnapshot,
 } from './run-observability.js';
-import { buildBenchmarkReports } from './reporting.js';
+import { buildBenchmarkReports, buildCommonCellReports } from './reporting.js';
 import { createProgressReporter } from './progress-reporter.js';
 import { aggregateRunCosts, type BenchmarkPhase, type CallUsageMetrics } from './run-metrics.js';
 import {
     buildVertexJudgeRequest,
     judgeWithRetries,
     type JudgeResult,
+    type JudgeRetryExecutorOptions,
 } from './vertex-judge.js';
 import { runWorkQueue } from './work-queue.js';
 
@@ -161,6 +166,28 @@ export interface RunnerOptions {
 export interface JudgeClient {
     preflight(): Promise<void>;
     judge(request: ReturnType<typeof buildVertexJudgeRequest>): Promise<JudgeResult>;
+}
+
+/**
+ * Batch judge backends resolve items by stable key after a whole-workload
+ * submission; per-item retries are meaningless there because retries happen at
+ * job level inside the adapter.
+ */
+export interface BatchJudgeClient extends JudgeClient {
+    judgeItem(stableKey: string): Promise<{ ok: boolean; rawText: string; usage: CallUsageMetrics }>;
+}
+
+async function resolveJudgeResult(
+    judgeClient: JudgeClient,
+    request: ReturnType<typeof buildVertexJudgeRequest>,
+    stableKey: string,
+    retryOptions: JudgeRetryExecutorOptions,
+): Promise<{ ok: boolean; rawText: string; usage: CallUsageMetrics }> {
+    if ('judgeItem' in judgeClient) {
+        return (judgeClient as BatchJudgeClient).judgeItem(stableKey);
+    }
+
+    return judgeWithRetries(judgeClient, request, 3, retryOptions);
 }
 
 type TranslationMetricsRecord = CallUsageMetrics & { stable_key: string };
@@ -368,6 +395,19 @@ export class TestRunner {
             resume: this.options.resume,
         });
         const manifest = resumeManifest ?? loadRunManifest(this.options.outputDir, this.options.runId, 'resume');
+        if (manifest.forkFromRunId !== undefined && this.options.resume) {
+            // A fork is only resumable after prepareForkRun completed all
+            // copies (carried-forward failures in particular). Without the
+            // marker, resume could regenerate paid cells that a crash left
+            // half-copied. Recovery: delete the partial run directory and
+            // re-run the fresh fork command.
+            const forkPreparedMarkerPath = path.join(layout.runDir, 'fork-prepared.json');
+            if (!fs.existsSync(forkPreparedMarkerPath)) {
+                throw new Error(
+                    `Cannot resume fork run ${this.options.runId}: fork-prepared.json is missing, so the fork prepare did not complete atomically. Delete the partial run directory (${layout.runDir}) and re-run the fresh fork command (--fork-from-run ${manifest.forkFromRunId}) to avoid regenerating paid cells.`,
+                );
+            }
+        }
         const manifestParticipants = manifest.participants;
         const allTargetLangs = [...manifest.targetLanguages];
 
@@ -831,6 +871,10 @@ export class TestRunner {
             if (pendingJudgeItems.length > 0) {
                 const gembaAssets = loadJudgeAssets(this.options.judgePromptVersion);
                 const existingJudgeMetrics = readJsonlRecords<JudgeMetricsRecord>(layout.judgeMetricsJsonlPath);
+                // A crash between the metrics write and the normalized write
+                // would re-judge the cell on resume; dedupe so cost accounting
+                // never aggregates the same stable key twice.
+                const judgeMetricsByStableKey = new Set(existingJudgeMetrics.map((record) => record.stable_key));
                 const judgeBucketKey = buildJudgeThrottleBucketKey(this.options.judgeBackend ?? 'vertex', judgeModelId);
                 let judgeCompleted = completedStableKeys.size;
                 let judgeSucceeded = existingNormalizedJudgeRecords.filter((record) => record.status === 'ok').length;
@@ -888,15 +932,81 @@ export class TestRunner {
                     });
                 };
 
+                const collectedBatchJudgeRequests: Array<{
+                    stableKey: string;
+                    request: ReturnType<typeof buildVertexJudgeRequest>;
+                }> = [];
+                const isBatchJudgeBackend = this.options.judgeBackend === 'openrouter-batch';
+
                 for (const item of pendingJudgeItems) {
-                    buildVertexJudgeRequest({
-                        model: judgeModelId,
-                        systemPrompt: gembaAssets.systemPrompt,
-                        fewShotMessages: gembaAssets.fewShotMessages,
-                        userPromptTemplate: gembaAssets.userPromptTemplate,
-                        responseSchema: gembaAssets.responseSchema,
-                        templateVariables: buildJudgeTemplateVariables(item),
+                    if (!isBatchJudgeBackend) {
+                        continue;
+                    }
+
+                    collectedBatchJudgeRequests.push({
+                        stableKey: item.stable_key,
+                        request: buildVertexJudgeRequest({
+                            model: judgeModelId,
+                            systemPrompt: gembaAssets.systemPrompt,
+                            fewShotMessages: gembaAssets.fewShotMessages,
+                            userPromptTemplate: gembaAssets.userPromptTemplate,
+                            templateVariables: buildJudgeTemplateVariables(item),
+                        }),
                     });
+                }
+
+                if (isBatchJudgeBackend) {
+                    const batchJudge = this.judge as unknown as OpenRouterBatchGembaJudge | null;
+                    if (!batchJudge) {
+                        throw new Error('openrouter-batch judge backend requires a judge client');
+                    }
+
+                    const identity = batchJudge.getEndpointIdentity();
+                    if (manifest.openRouterBatchApiBaseUrl !== undefined && manifest.openRouterBatchApiBaseUrl !== identity.apiBaseUrl) {
+                        throw new Error(`openrouter-batch endpoint mismatch on resume: manifest recorded ${manifest.openRouterBatchApiBaseUrl}, current config is ${identity.apiBaseUrl}`);
+                    }
+
+                    if (manifest.openRouterBatchModelId !== undefined && manifest.openRouterBatchModelId !== identity.model) {
+                        throw new Error(`openrouter-batch model mismatch on resume: manifest recorded ${manifest.openRouterBatchModelId}, current config is ${identity.model}`);
+                    }
+
+                    if ((manifest.openRouterBatchJobIds?.length ?? 0) > 0 && manifest.openRouterBatchApiBaseUrl === undefined) {
+                        // Legacy manifest (job ids without endpoint identity): backfill
+                        // the current identity so future resumes validate.
+                        updateRunManifest(layout, {
+                            openRouterBatchApiBaseUrl: identity.apiBaseUrl,
+                            openRouterBatchModelId: identity.model,
+                        });
+                        log('openrouter-batch: backfilled endpoint identity into legacy manifest');
+                    }
+
+                    const prepared = await batchJudge.prepareBatch({
+                        runDir: layout.runDir,
+                        requests: collectedBatchJudgeRequests,
+                        existingJobIds: manifest.openRouterBatchJobIds,
+                        onJobStatus: (info) => {
+                            log(`batch judge job ${info.jobId}: ${info.status} (${info.completed}/${info.total})`);
+                        },
+                        onNewJobIds: (jobIds) => {
+                            // Persist immediately after each submit so a crash or
+                            // poll interruption can resume without double-spending.
+                            updateRunManifest(layout, {
+                                openRouterBatchJobIds: jobIds,
+                                openRouterBatchApiBaseUrl: identity.apiBaseUrl,
+                                openRouterBatchModelId: identity.model,
+                            });
+                        },
+                    });
+
+                    if (prepared.newJobIds.length > 0) {
+                        log(`OpenRouter batch judge job(s) submitted: ${prepared.newJobIds.join(', ')}`);
+                    }
+
+                    for (const jobCost of prepared.jobCosts) {
+                        if (jobCost.costUsd !== null) {
+                            log(`batch judge job ${jobCost.jobId}: authoritative cost $${jobCost.costUsd}`);
+                        }
+                    }
                 }
 
                 writePhaseState();
@@ -942,11 +1052,10 @@ export class TestRunner {
                                 systemPrompt: gembaAssets.systemPrompt,
                                 fewShotMessages: gembaAssets.fewShotMessages,
                                 userPromptTemplate: gembaAssets.userPromptTemplate,
-                                responseSchema: gembaAssets.responseSchema,
                                 templateVariables: buildJudgeTemplateVariables(item),
                             });
 
-                            const judgeResult = await judgeWithRetries(judgeClient, request, 3, {
+                            const judgeResult = await resolveJudgeResult(judgeClient, request, item.stable_key, {
                                 onFailure: async (event) => {
                                     attemptsUsed = event.attempt;
                                     const inflightState = inflightItems.get(item.stable_key);
@@ -1007,10 +1116,13 @@ export class TestRunner {
                                     });
                                 },
                             });
-                            writeJsonlRecord(layout.judgeMetricsJsonlPath, {
-                                stable_key: item.stable_key,
-                                ...judgeResult.usage,
-                            });
+                            if (!judgeMetricsByStableKey.has(item.stable_key)) {
+                                writeJsonlRecord(layout.judgeMetricsJsonlPath, {
+                                    stable_key: item.stable_key,
+                                    ...judgeResult.usage,
+                                });
+                            }
+
                             judgeCompleted += 1;
                             judgeCostUsd += judgeResult.usage.computedCostUsd ?? 0;
                             currentOverallState.completed = judgeCompleted;
@@ -1029,7 +1141,7 @@ export class TestRunner {
 
                                 try {
                                     const normalizedRecord = normalizeJudgeResponse({
-                                        rawJsonText: judgeResult.rawText,
+                                        rawJudgeOutput: judgeResult.rawText,
                                         runId: this.options.runId,
                                         sourceId: item.source_id,
                                         targetLanguage: item.target_language,
@@ -1541,6 +1653,7 @@ export class TestRunner {
                 const total = value.ok + value.failed;
                 return total > 0 && value.failed / total <= 0.01;
             });
+        const commonCellReports = buildCommonCellReports(normalizedRecords, manifest.participants, manifest.targetLanguages);
 
         fs.writeFileSync(
             path.join(reportsDir, 'run-status.json'),
@@ -1550,6 +1663,7 @@ export class TestRunner {
                 totalNormalized,
                 translationFailureHistoricalCount,
                 translationFailureUnresolvedCount,
+                commonCellCount: commonCellReports.commonCellCount,
                 judgeFailureRatesByParticipantLanguage,
             }, null, 2)}\n`,
         );
@@ -1572,6 +1686,18 @@ export class TestRunner {
         fs.writeFileSync(
             path.join(reportsDir, 'summary-overall.penalty.json'),
             `${JSON.stringify(reports.summaryOverallPenalty, null, 2)}\n`,
+        );
+        fs.writeFileSync(
+            path.join(reportsDir, 'summary-overall.penalty.common-cell.json'),
+            `${JSON.stringify(commonCellReports.overall, null, 2)}\n`,
+        );
+        fs.writeFileSync(
+            path.join(reportsDir, 'leaderboard.by-language.common-cell.json'),
+            `${JSON.stringify(commonCellReports.byLanguage, null, 2)}\n`,
+        );
+        fs.writeFileSync(
+            path.join(reportsDir, 'leaderboard.by-context-expectation.common-cell.json'),
+            `${JSON.stringify(commonCellReports.byContextExpectation, null, 2)}\n`,
         );
         fs.writeFileSync(
             path.join(reportsDir, 'summary-overall.normalized.json'),
@@ -2093,6 +2219,10 @@ function normalizeTranslationError(
             return normalizeOpenRouterError(error, requestTimeoutMs);
         case 'deepseek':
             return normalizeDeepSeekError(error, requestTimeoutMs);
+        case 'llamacpp':
+            return normalizeLlamaCppError(error, requestTimeoutMs);
+        case 'papago':
+            return normalizePapagoError(error, requestTimeoutMs);
     }
 }
 
@@ -2117,12 +2247,29 @@ function resolveManifestParticipants(
                 ? resolveConditionPromptMetadataForManifest(condition, sharedPromptFile)
                 : {};
 
+            // For fresh participants the fork/prepare manifest records the
+            // participant promptFile (even when it equals the shared prompt),
+            // so resume validation must reproduce that snapshot exactly:
+            // always carry the participant-level prompt metadata verbatim when
+            // the participant already carries a fingerprint (fork path). Plain
+            // registry participants have no attached fingerprint — the
+            // condition metadata below supplies it for non-shared prompts and
+            // omits shared-prompt files entirely, keeping the manifest valid.
+            const participantPromptMetadata = participant.promptFile && participant.promptFingerprintSha256
+                ? { promptFile: participant.promptFile, promptFingerprintSha256: participant.promptFingerprintSha256 }
+                : {};
+
             return {
                 participantId: participant.participantId,
                 displayName: participant.displayName,
                 provider: participant.provider,
                 providerModelId: participant.providerModelId,
                 ...(participant.messageLayout ? { messageLayout: participant.messageLayout } : {}),
+                ...(participant.llamaCppServerUrl ? { llamaCppServerUrl: participant.llamaCppServerUrl } : {}),
+                ...(participant.llamaCppMode ? { llamaCppMode: participant.llamaCppMode } : {}),
+                ...participantPromptMetadata,
+                // Condition metadata is validated (throws when a non-shared
+                // promptFile lacks a fingerprint) and takes precedence.
                 ...conditionPromptMetadata,
             };
         });
@@ -2143,6 +2290,9 @@ function resolveManifestParticipants(
             displayName: condition.label,
             provider: condition.provider,
             providerModelId: condition.model,
+            ...(condition.messageLayout ? { messageLayout: condition.messageLayout } : {}),
+            ...(condition.llamaCppServerUrl ? { llamaCppServerUrl: condition.llamaCppServerUrl } : {}),
+            ...(condition.llamaCppMode ? { llamaCppMode: condition.llamaCppMode } : {}),
             ...conditionPromptMetadata,
         });
     }

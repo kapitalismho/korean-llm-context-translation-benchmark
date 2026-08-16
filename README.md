@@ -1,86 +1,68 @@
 # Korean Multi-turn Context Translation Benchmark
 
-**Benchmark run:** 2026-04-29  
-**Evaluation:** GEMBA-MQM-based evaluation adapted for Korean multi-turn context translation
+A Korean multi-turn context translation benchmark comparing LLM systems with conventional commercial translation services, evaluated with GEMBA-MQM-based judging. Korean conversational utterances (1–3 prior context turns) are translated into English, Japanese, and Simplified Chinese, testing both required-context recovery and irrelevant-context rejection.
 
-A Korean multi-turn context translation benchmark comparing LLM systems with conventional commercial translation services. The benchmark covers Korean source-side conversational context translation into English, Japanese, and Simplified Chinese.
+Results are published as a series of experiments on the same frozen dataset. Each experiment uses its own prompt, judge, and participant set, so scores are only comparable within one experiment.
 
-The benchmark package combines the full dataset and authoring assets with GEMBA-MQM-based judge prompts. It also provides the participant registry, public result tables, and an advanced reproduction runner.
+## Current Experiment (2026-08)
 
-## Key Findings
+[experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/](experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/) — local Gemma 4 E4B deployment variants and MiLMMT-46-4B arms vs Gemma 4 31B/26B, DeepSeek V4 Flash 0731, Papago, DeepL, and Google, all on the canonical PuriPuly translation prompt (MiLMMT native arm excepted).
 
-- In Korean multi-turn translation settings, LLM systems showed an advantage over conventional commercial translation services.
-- Within LLM systems, using conversational context improved translation quality compared with no-context baselines.
+- **Gemma 4 31B leads overall (0.333)**, ahead of Gemma 4 26B (0.403) and DeepSeek V4 Flash 0731 (0.606).
+- **DeepSeek V4 Flash 0731 is the best system on Simplified Chinese** (0.327 common-cell) and misses required context on only 1.9% of samples.
+- **Papago Web is the strongest traditional MT service (2.801)**, ahead of DeepL (4.107) and Google Cloud Translation Basic (5.810) — but context-blind (24.5% missed required context).
+- **Local Gemma 4 E4B degrades with quantization** (fp16 1.311 → QAT Q4 1.639 → QAT Q2 collapses at 9.460), and **MiLMMT 46-4B fails in both prompt regimes** (native prompt 2.949 with 24.1% missed context; PuriPuly policy prompt 11.500 with 25.5% misused context).
 
-## Leaderboard
+Primary score: raw mean penalty, lower is better.
 
-Primary score: raw mean penalty from the GEMBA-MQM-based evaluation. Lower is better.
+![Overall leaderboard: lower mean penalty is better](docs/assets/leaderboard-2026-08.svg)
 
-![Overall leaderboard: lower mean penalty is better](docs/assets/leaderboard.png)
-
-| Rank | System | Mean penalty | Samples | Caveat |
+| Rank | System | Mean penalty | Scored samples | Note |
 | ---: | --- | ---: | ---: | --- |
-| 1 | Gemini 3.1 Flash-lite | 0.573 | 648 | Fully valid |
-| 2 | Gemini 3 Flash | 0.596 | 648 | Fully valid |
-| 3 | Gemma 4 26B A4B | 0.813 | 648 | Fully valid |
-| 4 | Qwen 3.5 Plus | 0.958 | 648 | Fully valid |
-| 5 | DeepSeek V4 Flash | 1.025 | 648 | Fully valid |
-| 6 | Gemma 4 26B A4B, no-context baseline | 1.265 | 648 | Fully valid |
-| 7 | DeepSeek V4 Flash, no-context baseline | 1.647 | 648 | Fully valid |
-| 8 | Qwen 3.5 Flash | 2.198 | 648 | Fully valid |
-| 9 | DeepL, context | 4.963 | 644 | Reuse-only partial row |
-| 10 | DeepL, no context | 5.717 | 644 | Reuse-only partial row |
-| 11 | Google Cloud Translation Basic | 5.998 | 648 | Fully valid |
+| 1 | Gemma 4 31B (OpenRouter) | 0.333 | 648 | Fully valid |
+| 2 | Gemma 4 26B A4B (OpenRouter) | 0.403 | 648 | Fully valid |
+| 3 | DeepSeek V4 Flash 0731 (OpenRouter) | 0.606 | 648 | Fully valid |
+| 4 | Gemma 4 E4B fp16 (llama.cpp, local) | 1.311 | 647 | 1 judge failure |
+| 5 | Gemma 4 E4B QAT Q4 (llama.cpp, local) | 1.639 | 648 | Fully valid |
+| 6 | Papago Web | 2.801 | 648 | Context-blind |
+| 7 | MiLMMT 46-4B X0 native prompt | 2.949 | 648 | Sentence-level prompt |
+| 8 | DeepL API | 4.107 | 643 | 4 unresolved + 1 judge failure |
+| 9 | Google Cloud Translation Basic | 5.810 | 648 | Context-blind |
+| 10 | Gemma 4 E4B QAT Q2 (llama.cpp, local) | 9.460 | 631 | 17 judge failures |
+| 11 | MiLMMT 46-4B X2 PuriPuly policy | 11.500 | 648 | Fully valid |
 
-See `reports/` and `docs/results.md` for full slices by target language, context expectation, and context behavior.
+The run reports `benchmarkValid: false` (19 judge failures, 4 unresolved DeepL cells); the common-cell view (625 cells) preserves the full ordering.
 
-## What This Benchmark Measures
+## Previous Experiment (2026-04)
 
-- Korean source utterances with one to three prior context turns.
-- Required-context cases test whether systems recover references, complete ellipsis, preserve register, resolve pragmatic intent, and handle addressivity.
-- Ignore-context cases test whether systems avoid being misled by topic shifts, false leads, or nonliteral metadata traps.
-- English, Japanese, and Simplified Chinese target translations.
+[experiments/2026-04-gemini-context-v2/](experiments/2026-04-gemini-context-v2/) — Gemini 3.1 Flash-lite led (0.573) with context-aware LLMs beating commercial services, and context use beating no-context baselines. It used a different prompt (`gemini-context-v2.md`) and judge (`gemini-3.1-pro-preview`), so its scores are **not directly comparable** with 2026-08.
 
-## Dataset Summary
+## Dataset
 
-- Dataset ID: `gemba-mqm-context-v1`
-- Source language: Korean
-- Target languages: English, Japanese, Simplified Chinese
-- Runtime samples: 216 Korean source items, evaluated across three target languages
-- Public runtime data: `data/datasets/gemba-mqm-context-v1/runtime.json`
-- Public authoring assets: `data/datasets/gemba-mqm-context-v1.authoring/`
+`gemba-mqm-context-v1`: 216 Korean source items × 3 target languages, frozen at fingerprint `9ab9e987…5110`. Runtime data: `data/datasets/gemba-mqm-context-v1/runtime.json`; authoring assets alongside.
 
 ## Reproduction
 
-Full reruns require paid provider APIs, credentials, and a judge model.
-
 ```bash
-npm install
-cp .env.example .env
+npm install && cp .env.example .env
 npm run bench:cli -- \
-  --benchmark-config data/benchmarks/gemba-mqm-context-v1-gemini-context-v2.json \
-  --participants gemini-3.1-flash-lite,gemini-3-flash,gemma-4-26b-openrouter \
-  --judge-model gemini-3.1-pro-preview \
-  --translation-concurrency-per-model 1 \
-  --judge-concurrency 6
+  --benchmark-config data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json \
+  --participants gemma4-31b,gemma-4-26b-openrouter,deepseek-v4-flash-0731-openrouter \
+  --judge-model google/gemini-3.7-flash:batch \
+  --judge-backend openrouter-batch
 ```
 
-For detailed setup, see `docs/reproducibility.md`.
-
-## Caveats
-
-- The automated judge used Gemini 3.1 Pro; judge-model bias may have favored Gemini- and Gemma-family systems.
-- DeepL rows are reuse-only partial rows and are not complete benchmark runs.
+Full reruns need provider APIs, credentials, local llama.cpp servers, and a judge model. See `docs/reproducibility.md`.
 
 ## Documentation
 
-- `docs/methodology.md` — benchmark design and scoring scope
-- `docs/dataset.md` — dataset schema and authoring process
-- `docs/evaluation.md` — GEMBA-MQM-based judging details
+- `experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/README.md` — current experiment details
+- `docs/methodology.md` — benchmark design and experiment comparison
 - `docs/results.md` — detailed result analysis
+- `docs/evaluation.md` — GEMBA-MQM-based judging
+- `docs/dataset.md` — dataset schema and authoring
 - `docs/limitations.md` — interpretation limits
 - `docs/reproducibility.md` — setup and runner instructions
-- `docs/third-party-notices.md` — third-party attribution
 
 ## License
 

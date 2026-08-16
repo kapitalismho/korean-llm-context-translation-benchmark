@@ -1,5 +1,5 @@
 type GeminiThinkingConfig =
-    | { thinkingLevel: 'minimal' | 'high' }
+    | { thinkingLevel: 'minimal' | 'medium' | 'high' }
     | { thinkingBudget: 0 | -1 };
 
 function isGemini3Model(model: string): boolean {
@@ -20,7 +20,7 @@ export function getGeminiTranslationThinkingConfig(model: string): GeminiThinkin
 
 export function getVertexJudgeThinkingConfig(model: string): GeminiThinkingConfig {
     if (isGemini3Model(model)) {
-        return { thinkingLevel: 'high' };
+        return { thinkingLevel: 'medium' };
     }
 
     return { thinkingBudget: -1 };
@@ -34,6 +34,14 @@ export function getOpenRouterTranslationRequestFields(_model: string) {
     return {
         reasoning: {
             enabled: false as const,
+        },
+    };
+}
+
+export function getLlamaCppTranslationRequestFields() {
+    return {
+        chat_template_kwargs: {
+            enable_thinking: false as const,
         },
     };
 }
