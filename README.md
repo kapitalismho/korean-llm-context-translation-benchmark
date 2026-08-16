@@ -25,17 +25,17 @@ Primary score: raw mean penalty — lower is better.
 
 | Rank | System | Mean penalty | Samples |
 | ---: | --- | ---: | ---: |
-| 1 | Gemma 4 31B (OpenRouter) | 0.333 | 648 |
-| 2 | Gemma 4 26B A4B (OpenRouter) | 0.403 | 648 |
-| 3 | DeepSeek V4 Flash 0731 (OpenRouter) | 0.606 | 648 |
-| 4 | Gemma 4 E4B fp16 (llama.cpp, local) | 1.311 | 647 |
-| 5 | Gemma 4 E4B QAT Q4 (llama.cpp, local) | 1.639 | 648 |
-| 6 | Papago Web | 2.801 | 648 |
-| 7 | MiLMMT 46-4B X0 native prompt | 2.949 | 648 |
-| 8 | DeepL API | 4.107 | 643 |
-| 9 | Google Cloud Translation Basic | 5.810 | 648 |
-| 10 | Gemma 4 E4B QAT Q2 (llama.cpp, local) | 9.460 | 631 |
-| 11 | MiLMMT 46-4B X2 PuriPuly policy | 11.500 | 648 |
+| 1 | Gemma 4 31B | 0.333 | 648 |
+| 2 | Gemma 4 26B A4B | 0.403 | 648 |
+| 3 | DeepSeek V4 Flash 0731 | 0.606 | 648 |
+| 4 | Gemma 4 E4B fp16 | 1.311 | 647 |
+| 5 | Gemma 4 E4B QAT Q4 | 1.639 | 648 |
+| 6 | Papago | 2.801 | 648 |
+| 7 | MiLMMT 46-4B | 2.949 | 648 |
+| 8 | DeepL | 4.107 | 643 |
+| 9 | Google Translation Basic | 5.810 | 648 |
+| 10 | Gemma 4 E4B QAT Q2| 9.460 | 631 |
+| 11 | MiLMMT 46-4B Context policy | 11.500 | 648 |
 
 ## Previous Experiment (2026-04)
 
