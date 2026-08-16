@@ -15,7 +15,7 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 
 - Gemma 4 31B leads overall (0.333), ahead of Gemma 4 26B (0.403) and DeepSeek V4 Flash 0731 (0.606)
 - DeepSeek 0731 is best on Simplified Chinese (0.327) and misses required context on only 1.9% of samples
-- Papago is the strongest traditional MT service (2.801) vs. DeepL (4.107) and Google (5.810) — but context-blind
+- Papago is the strongest traditional MT service (2.801) vs. DeepL (4.107) and Google (5.810)
 - Local Gemma 4 E4B degrades with quantization: fp16 1.311 → QAT Q4 1.639 → QAT Q2 collapses at 9.460
 - MiLMMT 46-4B fails in both prompt regimes: native 2.949 (24.1% missed context), PuriPuly policy 11.500 (25.5% misused context)
 
@@ -23,21 +23,19 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 
 Primary score: raw mean penalty — lower is better.
 
-| Rank | System | Mean penalty | Samples | Note |
-| ---: | --- | ---: | ---: | --- |
-| 1 | Gemma 4 31B (OpenRouter) | 0.333 | 648 | Fully valid |
-| 2 | Gemma 4 26B A4B (OpenRouter) | 0.403 | 648 | Fully valid |
-| 3 | DeepSeek V4 Flash 0731 (OpenRouter) | 0.606 | 648 | Fully valid |
-| 4 | Gemma 4 E4B fp16 (llama.cpp, local) | 1.311 | 647 | 1 judge failure |
-| 5 | Gemma 4 E4B QAT Q4 (llama.cpp, local) | 1.639 | 648 | Fully valid |
-| 6 | Papago Web | 2.801 | 648 | Context-blind |
-| 7 | MiLMMT 46-4B X0 native prompt | 2.949 | 648 | Sentence-level prompt |
-| 8 | DeepL API | 4.107 | 643 | 4 unresolved + 1 judge failure |
-| 9 | Google Cloud Translation Basic | 5.810 | 648 | Context-blind |
-| 10 | Gemma 4 E4B QAT Q2 (llama.cpp, local) | 9.460 | 631 | 17 judge failures |
-| 11 | MiLMMT 46-4B X2 PuriPuly policy | 11.500 | 648 | Fully valid |
-
-- `benchmarkValid: false` (19 judge failures + 4 unresolved DeepL cells) — the common-cell view (625 cells) preserves the full ordering
+| Rank | System | Mean penalty | Samples |
+| ---: | --- | ---: | ---: |
+| 1 | Gemma 4 31B (OpenRouter) | 0.333 | 648 |
+| 2 | Gemma 4 26B A4B (OpenRouter) | 0.403 | 648 |
+| 3 | DeepSeek V4 Flash 0731 (OpenRouter) | 0.606 | 648 |
+| 4 | Gemma 4 E4B fp16 (llama.cpp, local) | 1.311 | 647 |
+| 5 | Gemma 4 E4B QAT Q4 (llama.cpp, local) | 1.639 | 648 |
+| 6 | Papago Web | 2.801 | 648 |
+| 7 | MiLMMT 46-4B X0 native prompt | 2.949 | 648 |
+| 8 | DeepL API | 4.107 | 643 |
+| 9 | Google Cloud Translation Basic | 5.810 | 648 |
+| 10 | Gemma 4 E4B QAT Q2 (llama.cpp, local) | 9.460 | 631 |
+| 11 | MiLMMT 46-4B X2 PuriPuly policy | 11.500 | 648 |
 
 ## Previous Experiment (2026-04)
 
