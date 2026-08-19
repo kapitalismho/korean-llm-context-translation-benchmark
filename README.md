@@ -36,8 +36,8 @@ Primary score: raw mean penalty — lower is better.
 | 5 | Gemma 4 E4B QAT Q4 | 1.639 | 648 |
 | 6 | Papago Web | 2.801 | 648 |
 | 7 | MiLMMT 46-4B X0 | 2.949 | 648 |
+| 8 | Gemini 3.5 Live Translate, CER ≤ 5% subset | 3.219 | 224 |
 | 8 | Gemini 3.5 Live Translate | 4.033 | 638 |
-| — | Gemini 3.5 Live Translate, CER ≤ 5% subset | 3.219 | 224 |
 | 9 | DeepL API | 4.107 | 643 |
 | 10 | Google Cloud Translation Basic | 5.810 | 648 |
 | 11 | Gemma 4 E4B QAT Q2 | 9.460 | 631 |
