@@ -11,7 +11,33 @@ cp .env.example .env
 
 Fill the provider credentials needed for the participants you run. Local llama.cpp arms need servers on ports 8080–8083 (`scripts/llama-server.ps1`); the Papago arm needs the Python bridge (`pip install -r scripts/papago-bridge-requirements.txt`).
 
-## Current Experiment (2026-08)
+## Current Experiment (2026-08 Live)
+
+Benchmark config:
+
+```text
+data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json
+```
+
+The published Live run (`gemini35-live-two-voice-20260817`) is a fork of the issue-1 run: 7,124 cells were copied from `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01` and only the 640 Gemini 3.5 Live Translate cells were newly translated. A fresh Live-only run would be:
+
+```bash
+npm run bench:cli -- \
+  --benchmark-config data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json \
+  --participant-registry data/participants/registry.json \
+  --participants gemini35-live-translate-two-voice \
+  --judge-model google/gemini-3.7-flash:batch \
+  --judge-backend openrouter-batch
+```
+
+The Live arm additionally requires:
+
+- the TTS audio asset pipeline that produced `gemba-mqm-context-v1-two-voice` (see `experiments/2026-08-gemini35-live-two-voice/audio-assets/manifest.json` for the model files, voices `sohee`/`uncle_fu`, and qwentts.cpp runtime used), and
+- a `gemini-live-translate-no-prompt.md` provenance marker matching the recorded fingerprint (its contents are never sent to the Live session).
+
+Full issue-1-style reruns (all text participants) are documented in `experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/README.md#reproduction` and below.
+
+## Archived Experiment (2026-08 issue-1)
 
 Benchmark config:
 
@@ -32,7 +58,7 @@ npm run bench:cli -- \
   --judge-concurrency 6
 ```
 
-The launch helper `scripts/experiment/launch-issue1.ps1` wraps the full sequence used for the published run, including the fork-and-merge integration (`scripts/experiment/prepare-integrated-papago-deepseek.ts`).
+The launch helper `scripts/experiment/launch-issue1.ps1` wraps the full sequence used for the published issue-1 run, including the fork-and-merge integration (`scripts/experiment/prepare-integrated-papago-deepseek.ts`).
 
 ## Archived Experiment (2026-04)
 
@@ -44,9 +70,9 @@ After run artifacts exist under `output/`, the runner writes per-run report JSON
 
 ```bash
 node --import tsx scripts/generate-ranking-chart.ts \
-  --run-id <run-id> \
-  --summary-path experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/summary-overall.penalty.json \
-  --run-status-path experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731/reports/run-status.json \
-  --svg-out docs/assets/leaderboard-2026-08.svg \
+  --run-id gemini35-live-two-voice-20260817 \
+  --summary-path experiments/2026-08-gemini35-live-two-voice/reports/summary-overall.penalty.json \
+  --run-status-path experiments/2026-08-gemini35-live-two-voice/reports/run-status.json \
+  --svg-out docs/assets/leaderboard-2026-08-live.svg \
   --judge-label "Gemini 3.7 Flash"
 ```

@@ -1,0 +1,154 @@
+{
+  "benchmarkValid": false,
+  "totalExpected": 7776,
+  "totalNormalized": 7764,
+  "translationFailureHistoricalCount": 12,
+  "translationFailureUnresolvedCount": 12,
+  "commonCellCount": 617,
+  "judgeFailureRatesByParticipantLanguage": {
+    "gemma4-e4b-qat-q2::en": {
+      "ok": 203,
+      "failed": 13
+    },
+    "gemma4-e4b-qat-q2::ja": {
+      "ok": 213,
+      "failed": 3
+    },
+    "gemma4-e4b-qat-q2::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-qat-q4::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-qat-q4::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-qat-q4::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-fp16::en": {
+      "ok": 215,
+      "failed": 1
+    },
+    "gemma4-e4b-fp16::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-fp16::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-native::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-native::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-native::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-puripuly-policy::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-puripuly-policy::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-puripuly-policy::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepl-api::en": {
+      "ok": 213,
+      "failed": 1
+    },
+    "deepl-api::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepl-api::zh-Hans": {
+      "ok": 214,
+      "failed": 0
+    },
+    "papago-web::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "papago-web::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "papago-web::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemini35-live-translate-two-voice::en": {
+      "ok": 212,
+      "failed": 2
+    },
+    "gemini35-live-translate-two-voice::ja": {
+      "ok": 213,
+      "failed": 0
+    },
+    "gemini35-live-translate-two-voice::zh-Hans": {
+      "ok": 213,
+      "failed": 0
+    }
+  }
+}

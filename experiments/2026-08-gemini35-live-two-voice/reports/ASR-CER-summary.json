@@ -1,0 +1,137 @@
+{
+  "runId": "gemini35-live-two-voice-20260817",
+  "generatedAt": "2026-08-19T07:34:34.414Z",
+  "version": "v2-strict",
+  "methodology": {
+    "reference": "runtime.json trim only",
+    "hypothesis": "input_transcription_events -> accumulateTranscript per turnIndex",
+    "cer": "(S+D+I)/N codepoints",
+    "buckets": [
+      "0-5%",
+      "5-15%",
+      "15-30%",
+      "30-60%",
+      "60%+"
+    ]
+  },
+  "counts": {
+    "runtimeSamples": 216,
+    "detailsSuccess": 640,
+    "detailsFail": 12,
+    "perSampleAgg": 214,
+    "missingSampleIds": [
+      "ctx3-single-use-pragmatic_intent_resolution-003",
+      "ctx3-single-use-pragmatic_intent_resolution-004"
+    ]
+  },
+  "stats": {
+    "current": {
+      "count": 640,
+      "mean": 0.11211112453299987,
+      "median": 0.07692307692307693,
+      "min": 0,
+      "max": 1.5,
+      "std": 0.16554138318399247,
+      "p10": 0,
+      "p90": 0.19047619047619047,
+      "p95": 0.2916666666666667
+    },
+    "context": {
+      "count": 640,
+      "mean": 0.08853079106762865,
+      "median": 0.06521739130434782,
+      "min": 0,
+      "max": 2.6956521739130435,
+      "std": 0.15786379212935564,
+      "p10": 0.009433962264150943,
+      "p90": 0.14871794871794872,
+      "p95": 0.19540229885057472
+    },
+    "combined": {
+      "count": 640,
+      "mean": 0.09157048467103616,
+      "median": 0.07407407407407407,
+      "min": 0,
+      "max": 1.5555555555555556,
+      "std": 0.11423903128135114,
+      "p10": 0.02857142857142857,
+      "p90": 0.14150943396226415,
+      "p95": 0.20754716981132076
+    },
+    "nonKoInputCount": 20,
+    "trimExact": 71,
+    "qInCur": 102
+  },
+  "correlations": {
+    "curVsPenalty": 0.3615736017720241,
+    "ctxVsPenalty": 0.026968681934024605,
+    "combinedVsPenalty": 0.15044617016718626
+  },
+  "buckets": [
+    {
+      "bucket": "0-5%",
+      "count": 218,
+      "pct": 0.340625,
+      "penaltyMean": 3.2350230414746544,
+      "beh": {
+        "used_correctly": 130,
+        "missed_required_context": 17,
+        "ignored_irrelevant_context": 57,
+        "misused_context": 13,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "5-15%",
+      "count": 313,
+      "pct": 0.4890625,
+      "penaltyMean": 3.753205128205128,
+      "beh": {
+        "used_correctly": 197,
+        "missed_required_context": 12,
+        "ignored_irrelevant_context": 95,
+        "misused_context": 8,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "15-30%",
+      "count": 79,
+      "pct": 0.1234375,
+      "penaltyMean": 4.8354430379746836,
+      "beh": {
+        "used_correctly": 50,
+        "missed_required_context": 3,
+        "ignored_irrelevant_context": 15,
+        "misused_context": 11,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "30-60%",
+      "count": 17,
+      "pct": 0.0265625,
+      "penaltyMean": 6,
+      "beh": {
+        "used_correctly": 15,
+        "missed_required_context": 0,
+        "ignored_irrelevant_context": 1,
+        "misused_context": 1,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "60%+",
+      "count": 13,
+      "pct": 0.0203125,
+      "penaltyMean": 16.615384615384617,
+      "beh": {
+        "used_correctly": 5,
+        "missed_required_context": 2,
+        "ignored_irrelevant_context": 4,
+        "misused_context": 2,
+        "unclear": 0
+      }
+    }
+  ]
+}

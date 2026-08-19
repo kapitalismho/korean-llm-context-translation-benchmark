@@ -16,7 +16,8 @@ The current judge prompt set (`data/judge-prompts/gemba-mqm-context-v1/`) uses t
 
 ## Judge Configuration
 
-- 2026-08 experiment: judge backend `openrouter-batch`, judge model `google/gemini-3.7-flash:batch`
+- 2026-08 Live experiment (current): judge backend `openrouter-batch`, judge model `google/gemini-3.7-flash:batch` (3 batch jobs; the 640 Live cells were newly judged, the other 7,124 rows were judged in the issue-1 run under the same setup)
+- 2026-08 issue-1 experiment (archived): judge backend `openrouter-batch`, judge model `google/gemini-3.7-flash:batch`
 - 2026-04 experiment: judge backend `vertex`, judge model `gemini-3.1-pro-preview`
 
 The runner also supports a Vertex AI judge backend and a Gemini CLI judge backend for experiments, but public benchmark reports should identify the judge backend used.

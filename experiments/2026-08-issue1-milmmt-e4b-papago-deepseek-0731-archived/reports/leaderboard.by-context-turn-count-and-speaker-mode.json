@@ -1,0 +1,476 @@
+{
+  "1::dyadic": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 5.635514018691588,
+      "samples": 107,
+      "failed_samples": 1
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 1.0277777777777777,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 0.7685185185185185,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 2.574074074074074,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 14.777777777777779,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.18518518518518517,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.19444444444444445,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 3.759259259259259,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 2.2314814814814814,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 1.5833333333333333,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.6296296296296297,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ],
+  "1::single": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 6.663461538461538,
+      "samples": 104,
+      "failed_samples": 4
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 1.2222222222222223,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 1.0833333333333333,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 1.8703703703703705,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 16.86111111111111,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.2037037037037037,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.21296296296296297,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 4.907407407407407,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 3.8425925925925926,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 2.435185185185185,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.3148148148148148,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ],
+  "2::dyadic": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 8.5,
+      "samples": 106,
+      "failed_samples": 2
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 1.2037037037037037,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 1.0740740740740742,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 3.009259259259259,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 10.194444444444445,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.4351851851851852,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.37962962962962965,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 4.611111111111111,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 4.074074074074074,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 3.1203703703703702,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.6111111111111112,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ],
+  "2::single": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 12.352380952380953,
+      "samples": 105,
+      "failed_samples": 3
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 1.5277777777777777,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 1.1574074074074074,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 2.888888888888889,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 10.435185185185185,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.4074074074074074,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.3888888888888889,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 6.2407407407407405,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 2.803738317757009,
+      "samples": 107,
+      "failed_samples": 1
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 2.6574074074074074,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.6481481481481481,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ],
+  "3::dyadic": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 11.377358490566039,
+      "samples": 106,
+      "failed_samples": 2
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 2.240740740740741,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 1.5233644859813085,
+      "samples": 107,
+      "failed_samples": 1
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 3.5462962962962963,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 9.101851851851851,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.4351851851851852,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.6296296296296297,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 6.925925925925926,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 5.685185185185185,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 3.3333333333333335,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.7962962962962963,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ],
+  "3::single": [
+    {
+      "participant_id": "gemma4-e4b-qat-q2",
+      "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+      "mean_penalty": 12.320388349514563,
+      "samples": 103,
+      "failed_samples": 5
+    },
+    {
+      "participant_id": "gemma4-e4b-qat-q4",
+      "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+      "mean_penalty": 2.611111111111111,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-e4b-fp16",
+      "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+      "mean_penalty": 2.259259259259259,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "mean_penalty": 3.8055555555555554,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "milmmt-4b-puripuly-policy",
+      "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+      "mean_penalty": 7.62962962962963,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-31b",
+      "participant_display_name": "Gemma 4 31B via OpenRouter",
+      "mean_penalty": 0.3333333333333333,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma-4-26b-openrouter",
+      "participant_display_name": "Gemma 4 26B via OpenRouter",
+      "mean_penalty": 0.6111111111111112,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "google-cloud-translate-basic",
+      "participant_display_name": "Google Cloud Translation Basic",
+      "mean_penalty": 8.416666666666666,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "mean_penalty": 6.0673076923076925,
+      "samples": 104,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "papago-web",
+      "participant_display_name": "Papago Web",
+      "mean_penalty": 3.675925925925926,
+      "samples": 108,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "deepseek-v4-flash-0731-openrouter",
+      "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+      "mean_penalty": 0.6388888888888888,
+      "samples": 108,
+      "failed_samples": 0
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "en": {
+    "gemma4-e4b-qat-q2": {
+      "critical": 31,
+      "major": 133,
+      "minor": 117
+    },
+    "gemma4-e4b-qat-q4": {
+      "critical": 0,
+      "major": 27,
+      "minor": 72
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 19,
+      "minor": 68
+    },
+    "milmmt-4b-native": {
+      "critical": 0,
+      "major": 66,
+      "minor": 82
+    },
+    "milmmt-4b-puripuly-policy": {
+      "critical": 53,
+      "major": 81,
+      "minor": 75
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 1,
+      "minor": 16
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 5,
+      "minor": 19
+    },
+    "google-cloud-translate-basic": {
+      "critical": 0,
+      "major": 41,
+      "minor": 55
+    },
+    "deepl-api": {
+      "critical": 2,
+      "major": 117,
+      "minor": 98
+    },
+    "papago-web": {
+      "critical": 2,
+      "major": 102,
+      "minor": 95
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 0,
+      "major": 11,
+      "minor": 30
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 7,
+      "major": 135,
+      "minor": 121
+    }
+  },
+  "ja": {
+    "gemma4-e4b-qat-q2": {
+      "critical": 61,
+      "major": 147,
+      "minor": 172
+    },
+    "gemma4-e4b-qat-q4": {
+      "critical": 2,
+      "major": 59,
+      "minor": 99
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 54,
+      "minor": 85
+    },
+    "milmmt-4b-native": {
+      "critical": 3,
+      "major": 100,
+      "minor": 140
+    },
+    "milmmt-4b-puripuly-policy": {
+      "critical": 100,
+      "major": 83,
+      "minor": 104
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 12,
+      "minor": 38
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 17,
+      "minor": 36
+    },
+    "google-cloud-translate-basic": {
+      "critical": 46,
+      "major": 314,
+      "minor": 220
+    },
+    "deepl-api": {
+      "critical": 2,
+      "major": 116,
+      "minor": 106
+    },
+    "papago-web": {
+      "critical": 1,
+      "major": 81,
+      "minor": 109
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 1,
+      "major": 35,
+      "minor": 36
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 4,
+      "major": 102,
+      "minor": 148
+    }
+  },
+  "zh-Hans": {
+    "gemma4-e4b-qat-q2": {
+      "critical": 45,
+      "major": 149,
+      "minor": 135
+    },
+    "gemma4-e4b-qat-q4": {
+      "critical": 1,
+      "major": 57,
+      "minor": 101
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 45,
+      "minor": 105
+    },
+    "milmmt-4b-native": {
+      "critical": 4,
+      "major": 117,
+      "minor": 99
+    },
+    "milmmt-4b-puripuly-policy": {
+      "critical": 81,
+      "major": 105,
+      "minor": 78
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 10,
+      "minor": 47
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 11,
+      "minor": 41
+    },
+    "google-cloud-translate-basic": {
+      "critical": 6,
+      "major": 66,
+      "minor": 85
+    },
+    "deepl-api": {
+      "critical": 10,
+      "major": 158,
+      "minor": 132
+    },
+    "papago-web": {
+      "critical": 1,
+      "major": 99,
+      "minor": 101
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 0,
+      "major": 9,
+      "minor": 27
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 8,
+      "major": 100,
+      "minor": 144
+    }
+  }
+}

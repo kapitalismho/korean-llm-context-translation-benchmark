@@ -1,0 +1,62 @@
+[
+  {
+    "participant_id": "gemma4-e4b-qat-q2",
+    "participant_display_name": "Gemma 4 E4B QAT Q2 (llama.cpp)",
+    "normalized_macro_mean_penalty": 0.8279684302498712
+  },
+  {
+    "participant_id": "gemma4-e4b-qat-q4",
+    "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+    "normalized_macro_mean_penalty": 0.11844726079952524
+  },
+  {
+    "participant_id": "gemma4-e4b-fp16",
+    "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+    "normalized_macro_mean_penalty": 0.08964797102356135
+  },
+  {
+    "participant_id": "milmmt-4b-native",
+    "participant_display_name": "MiLMMT 46-4B X0 (native)",
+    "normalized_macro_mean_penalty": 0.23631989504413156
+  },
+  {
+    "participant_id": "milmmt-4b-puripuly-policy",
+    "participant_display_name": "MiLMMT 46-4B X2 (PuriPuly policy)",
+    "normalized_macro_mean_penalty": 1
+  },
+  {
+    "participant_id": "gemma4-31b",
+    "participant_display_name": "Gemma 4 31B via OpenRouter",
+    "normalized_macro_mean_penalty": 0.0032603025560772048
+  },
+  {
+    "participant_id": "gemma-4-26b-openrouter",
+    "participant_display_name": "Gemma 4 26B via OpenRouter",
+    "normalized_macro_mean_penalty": 0.010052021263716066
+  },
+  {
+    "participant_id": "google-cloud-translate-basic",
+    "participant_display_name": "Google Cloud Translation Basic",
+    "normalized_macro_mean_penalty": 0.4332675255770213
+  },
+  {
+    "participant_id": "deepl-api",
+    "participant_display_name": "DeepL API",
+    "normalized_macro_mean_penalty": 0.35265123584517294
+  },
+  {
+    "participant_id": "papago-web",
+    "participant_display_name": "Papago Web",
+    "normalized_macro_mean_penalty": 0.24038186385646101
+  },
+  {
+    "participant_id": "deepseek-v4-flash-0731-openrouter",
+    "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+    "normalized_macro_mean_penalty": 0.027706177983357463
+  },
+  {
+    "participant_id": "gemini35-live-translate-two-voice",
+    "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+    "normalized_macro_mean_penalty": 0.3596902742411104
+  }
+]

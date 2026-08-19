@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#fafafa"/>
+  <rect x="50" y="40" width="1100" height="320" rx="12" fill="#ffffff" stroke="#cccccc" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="600" y="170" font-family="Segoe UI, sans-serif" font-size="28" fill="#666666" text-anchor="middle">Chart placeholder</text>
+  <text x="600" y="210" font-family="Segoe UI, sans-serif" font-size="18" fill="#888888" text-anchor="middle">docs/assets/leaderboard-2026-08-live.svg</text>
+  <text x="600" y="240" font-family="Segoe UI, sans-serif" font-size="14" fill="#aaaaaa" text-anchor="middle">Overall leaderboard: lower mean penalty is better</text>
+</svg>
