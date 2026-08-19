@@ -27,25 +27,26 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 
 Primary score: raw mean penalty — lower is better.
 
-| Rank | System | Mean penalty | Samples | Note |
-| ---: | --- | ---: | ---: | --- |
-| 1 | Gemma 4 31B (OpenRouter) | 0.333 | 648 | Reused from issue-1 run |
-| 2 | Gemma 4 26B A4B (OpenRouter) | 0.403 | 648 | Reused from issue-1 run |
-| 3 | DeepSeek V4 Flash 0731 (OpenRouter) | 0.606 | 648 | Reused from issue-1 run |
-| 4 | Gemma 4 E4B fp16 (llama.cpp, local) | 1.311 | 647 | Reused from issue-1 run |
-| 5 | Gemma 4 E4B QAT Q4 (llama.cpp, local) | 1.639 | 648 | Reused from issue-1 run |
-| 6 | Papago Web | 2.801 | 648 | Reused from issue-1 run; context-blind |
-| 7 | MiLMMT 46-4B X0 native prompt | 2.949 | 648 | Reused from issue-1 run; context-blind |
-| 8 | Gemini 3.5 Live Translate (Two Voice) | 4.033 | 638 | New cell in this run; see caveats |
-| 9 | DeepL API | 4.107 | 643 | Reused from issue-1 run |
-| 10 | Google Cloud Translation Basic | 5.810 | 648 | Reused from issue-1 run; context-blind |
-| 11 | Gemma 4 E4B QAT Q2 (llama.cpp, local) | 9.460 | 631 | Reused from issue-1 run |
-| 12 | MiLMMT 46-4B X2 PuriPuly policy | 11.500 | 648 | Reused from issue-1 run |
+| Rank | System | Mean penalty | Samples |
+| ---: | --- | ---: | ---: |
+| 1 | Gemma 4 31B | 0.333 | 648 |
+| 2 | Gemma 4 26B A4B | 0.403 | 648 |
+| 3 | DeepSeek V4 Flash 0731 | 0.606 | 648 |
+| 4 | Gemma 4 E4B fp16 | 1.311 | 647 |
+| 5 | Gemma 4 E4B QAT Q4 | 1.639 | 648 |
+| 6 | Papago Web | 2.801 | 648 |
+| 7 | MiLMMT 46-4B X0 | 2.949 | 648 |
+| 8 | Gemini 3.5 Live Translate (Two Voice) | 4.033 | 638 |
+| 9 | DeepL API | 4.107 | 643 |
+| 10 | Google Cloud Translation Basic | 5.810 | 648 |
+| 11 | Gemma 4 E4B QAT Q2 | 9.460 | 631 |
+| 12 | MiLMMT 46-4B X2 | 11.500 | 648 |
 
-## Previous Experiment (2026-08 issue-1, archived)
+## Previous Experiment (2026-04, archived)
 
-- **Full details:** [Here](experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/)
-- MiLMMT / Gemma 4 E4B local arms vs Papago, DeepSeek 0731 — same judge setup as the current run, and the source of most of its rows. Its leaderboard numbers are preserved in the archived README
+- **Full details:** [Here](experiments/2026-04-gemini-context-v2/)
+- Gemini 3.1 Flash-lite led (0.573); context-aware LLMs beat commercial services, context use beat no-context baselines
+- Different prompt (`gemini-context-v2.md`) and judge (`gemini-3.1-pro-preview`) — **not directly comparable** with the current experiment
 
 ## Dataset
 
