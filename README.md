@@ -18,7 +18,7 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 - Papago is the strongest traditional MT service (2.801) vs. DeepL (4.107) and Google (5.810)
 - Local Gemma 4 E4B degrades with quantization: FP16 1.311 → QAT Q4 1.639 → QAT Q2 collapses at 9.460
 - MiLMMT 46-4B fails in both prompt regimes: native 2.949 (24.1% missed context), Context policy 11.500 (25.5% misused context)
-- Gemini 3.5 Live Translate lands mid-pack (4.033): far behind the text LLMs (Gemma 4 31B 0.333, Gemma 4 26B 0.403, DeepSeek 0731 0.606), slightly behind Papago (2.801), ahead of DeepL (4.107) and Google Basic (5.810)
+- Gemini 3.5 Live Translate lands mid-pack (4.033): far behind the text LLMs (Gemma 4 31B 0.333, Gemma 4 26B 0.403, DeepSeek 0731 0.606), slightly behind Papago (2.801), ahead of DeepL (4.107) and Google Basic (5.810). Even on the CER ≤ 5% subset (224 cells, 35% of Live sessions), its penalty is 3.219 — still far above the text LLMs
 - Live misses required context on 6.6% of samples and misuses context on 7.0% — worse than the leading text models (1.2–1.9% missed, ≤0.5% misused)
 - Live's ASR CER (current utterance) has mean 0.112 — roughly one wrong character per nine; correlation with quality penalty is weak (r = 0.36), and even the cleanest-CER samples score far below the text LLMs
 - [CER caveats](experiments/2026-08-gemini35-live-two-voice/README.md#caveats--read-before-citing-this-run): ASR analysis is unofficial, and the strict CER mean is above the 5% band
@@ -36,7 +36,8 @@ Primary score: raw mean penalty — lower is better.
 | 5 | Gemma 4 E4B QAT Q4 | 1.639 | 648 |
 | 6 | Papago Web | 2.801 | 648 |
 | 7 | MiLMMT 46-4B X0 | 2.949 | 648 |
-| 8 | Gemini 3.5 Live Translate (Two Voice) | 4.033 | 638 |
+| 8 | Gemini 3.5 Live Translate | 4.033 | 638 |
+| — | Gemini 3.5 Live Translate, CER ≤ 5% subset | 3.219 | 224 |
 | 9 | DeepL API | 4.107 | 643 |
 | 10 | Google Cloud Translation Basic | 5.810 | 648 |
 | 11 | Gemma 4 E4B QAT Q2 | 9.460 | 631 |
