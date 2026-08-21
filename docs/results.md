@@ -13,15 +13,16 @@ All numbers below come from `experiments/2026-08-gemini35-live-10p-highjudge/rep
 
 ### Overall
 
-- **Gemini 3.5 Live Translate (audio-native, two voice) scores 3.723** — behind every text LLM arm and Papago (2.699), ahead of DeepL (3.914) and Google Cloud Translation Basic (5.731). Common-cell (631 cells): 3.685, same ordering.
-- The gap to the text LLMs is large: Gemma 4 31B 0.353 / 26B 0.387 / DeepSeek 0731 0.571; even the small local Gemma 4 E4B arms (1.353–1.577) are 2.5× better.
-- Error profile on the 638 scored Live cells: 14 critical / 325 major / 400 minor; `accuracy/mistranslation` (346) and `accuracy/addition` (122) dominate, consistent with an audio-native pipeline that must transcribe before translating.
+- LLMs outperform traditional MT on multi-turn casual dialogue — best LLM 0.35 (Gemma 4 31B) vs. best MT Papago 2.70.
+- Context helps: same Gemma 4 E4B QAT Q4 improves 31.5% with full history + policy (1.45 vs. 2.12 sentence-only, same high-effort judge; see `ablation/` appendix).
+- Google Translate is competitive for en (1.22) and zh-Hans (2.49) but collapses on ja (13.49), driving its overall 5.73.
+- Quantization costs quality for the small local model: Gemma 4 E4B fp16 1.35 → QAT Q4 1.58.
 
 ### By Target Language (common-cell)
 
-- **English:** Gemma 4 31B best (0.082), ahead of Gemma 4 26B (0.197) and DeepSeek V4 Flash 0731 (0.361). Live is weakest here (4.221, 6 of its 14 critical errors).
-- **Japanese:** Gemma 4 31B best (0.493), Gemma 4 26B second (0.573). Live 3.512.
-- **Simplified Chinese:** DeepSeek V4 Flash 0731 best of all systems (0.329). Live's strongest language (3.329).
+- **English:** Gemma 4 31B best (0.082), ahead of Gemma 4 26B (0.197) and DeepSeek V4 Flash 0731 (0.361). Google 1.22 (competitive).
+- **Japanese:** Gemma 4 31B best (0.493), Gemma 4 26B second (0.573). Google collapses to 13.49 (43 critical / 323 major) — majority of its overall penalty.
+- **Simplified Chinese:** DeepSeek V4 Flash 0731 best of all systems (0.329). Google 2.49 (competitive).
 
 ### Audio-Native ASR / CER
 

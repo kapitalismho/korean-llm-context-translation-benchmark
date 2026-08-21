@@ -13,40 +13,40 @@ An appendix to the 2026-08 high-judge experiment: a single-model A/B ablation me
 
 ## Headline
 
-Primary score: raw mean penalty (GEMBA-MQM severity weights minor 1 / major 5 / critical 25). Lower is better.
+Primary score: raw mean penalty (GEMBA-MQM severity weights minor 1 / major 5 / critical 25). Lower is better. Same Gemma 4 E4B QAT Q4, same high-effort judge — paired comparison is like-for-like.
 
-| Condition | Mean penalty | Scored samples |
-| --- | ---: | ---: |
-| A — sentence only | 2.118 | 642 |
-| B — policy + full history | 1.452 | 642 |
-| **Improvement (B over A)** | **31.5%** | |
+![Context ablation — sentence-only vs. policy + full history (Gemma 4 E4B QAT Q4)](assets/context-ablation-e4b-q4.png)
 
-Paired comparison (same item + language, 642 pairs): A better on 134, B better on 236, equal on 272.
+| Condition | Mean penalty | Scored | Paired win (n=642) |
+| --- | ---: | ---: | --- |
+| A — sentence only | 2.118 | 642 | 134 |
+| B — policy + full history | 1.452 | 642 | 236 |
+| **Δ (B − A)** | **−0.666 (−31.5%)** | — | **+102 (tie 272)** |
 
 ## Slices
 
 By context expectation (`use` = context required, `ignore` = context is a false lead):
 
-| Expectation | A mean | B mean | n |
-| --- | ---: | ---: | ---: |
-| use | 2.310 | 1.509 | 432 |
-| ignore | 1.724 | 1.333 | 210 |
+| Expectation | A mean | B mean | Δ | Δ% | n |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| use | 2.310 | 1.509 | −0.801 | −34.7% | 432 |
+| ignore | 1.724 | 1.333 | −0.391 | −22.7% | 210 |
 
 By target language:
 
-| Language | A mean | B mean | n |
-| --- | ---: | ---: | ---: |
-| English | 1.850 | 0.874 | 214 |
-| Japanese | 2.168 | 1.794 | 214 |
-| Chinese Simplified | 2.336 | 1.687 | 214 |
+| Language | A mean | B mean | Δ | Δ% | n |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| English | 1.850 | 0.874 | −0.976 | −52.8% | 214 |
+| Japanese | 2.168 | 1.794 | −0.374 | −17.3% | 214 |
+| Chinese Simplified | 2.336 | 1.687 | −0.649 | −27.8% | 214 |
 
-By context turn count — the gap widens as prior context grows:
+By context turn count:
 
-| Turns | A mean | B mean | n |
-| --- | ---: | ---: | ---: |
-| 1 | 1.722 | 0.995 | 216 |
-| 2 | 2.000 | 1.139 | 216 |
-| 3 | 2.648 | 2.243 | 210 |
+| Turns | A mean | B mean | Δ | Δ% | n |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 1.722 | 0.995 | −0.727 | −42.2% | 216 |
+| 2 | 2.000 | 1.139 | −0.861 | −43.1% | 216 |
+| 3 | 2.648 | 2.243 | −0.405 | −15.3% | 210 |
 
 ## Caveats — read before citing this appendix
 

@@ -32,12 +32,10 @@ The common-cell view (631 sample-cells scored OK for every system) keeps this or
 
 ## Key Findings
 
-- **Audio-native Live translation lands mid-pack**: Gemini 3.5 Live Translate (3.723) is far behind the text LLMs (Gemma 4 31B 0.353, 26B 0.387, DeepSeek 0731 0.571) and the small local E4B arms (1.353–1.577), and behind Papago (2.699). It beats DeepL (3.914) and Google Basic (5.731).
-- **Context behavior is worse than the leading text models**: Live misses required context on 9.2% of samples and misuses context on 6.0% (vs 1.2–2.8% missed / ≤0.9% misused for Gemma 4 31B, 26B, DeepSeek 0731).
-- **English is the weakest language for Live** (4.221 common-cell, 6 critical errors); Simplified Chinese is the strongest (3.329), Japanese close behind (3.512). Quality degrades with context length: ctx1 2.944 → ctx2 3.326 → ctx3 4.947.
-- **Penalty is driven by mistranslation/addition**, consistent with an audio-native pipeline that must transcribe before translating: 14 critical / 325 major / 400 minor errors on 638 judged cells, with `accuracy/mistranslation` (346) and `accuracy/addition` (122) the dominant error classes.
-- **ASR CER is a contributing but not the dominant factor**: current-utterance CER mean is 0.112 (about 1 wrong character per 9); correlation with penalty is weak (r = 0.29, R² ≈ 0.08). Even in the cleanest CER bucket (CER ≤ 5%, 223 judged cells), Live's mean penalty is 2.991 — far above the text LLMs (0.35–1.58).
-- **Context is worth ~32% on the small local model (ablation appendix)**: on Gemma 4 E4B QAT Q4, removing context (sentence-only prompt) raises the mean penalty from 1.452 to 2.118 (31.5%); B wins 236 of 470 non-tied pairs, and the gap widens with context length (ctx1 0.995→1.722, ctx3 2.243→2.648). See `ablation/README.md`.
+- LLMs outperform traditional MT on multi-turn casual dialogue — best LLM 0.35 (Gemma 4 31B) vs. best MT Papago 2.70.
+- Context helps: same Gemma 4 E4B QAT Q4 improves 31.5% with full history + policy (1.45 vs. 2.12 sentence-only, same high-effort judge; see `ablation/README.md`).
+- Google Translate is competitive for en (1.22) and zh-Hans (2.49) but collapses on ja (13.49), driving its overall 5.73.
+- Quantization costs quality for the small local model: Gemma 4 E4B fp16 1.35 → QAT Q4 1.58.
 
 ## Caveats — read before citing this run
 
