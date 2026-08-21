@@ -1,0 +1,158 @@
+{
+  "en": {
+    "gemma4-e4b-qat-q4": {
+      "critical": 0,
+      "major": 28,
+      "minor": 60
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 23,
+      "minor": 55
+    },
+    "milmmt-4b-native": {
+      "critical": 1,
+      "major": 77,
+      "minor": 71
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 2,
+      "minor": 12
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 5,
+      "minor": 16
+    },
+    "google-cloud-translate-basic": {
+      "critical": 0,
+      "major": 44,
+      "minor": 44
+    },
+    "deepl-api": {
+      "critical": 2,
+      "major": 117,
+      "minor": 92
+    },
+    "papago-web": {
+      "critical": 1,
+      "major": 103,
+      "minor": 80
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 0,
+      "major": 11,
+      "minor": 27
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 6,
+      "major": 128,
+      "minor": 114
+    }
+  },
+  "ja": {
+    "gemma4-e4b-qat-q4": {
+      "critical": 2,
+      "major": 55,
+      "minor": 93
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 55,
+      "minor": 88
+    },
+    "milmmt-4b-native": {
+      "critical": 2,
+      "major": 105,
+      "minor": 125
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 14,
+      "minor": 35
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 18,
+      "minor": 32
+    },
+    "google-cloud-translate-basic": {
+      "critical": 43,
+      "major": 323,
+      "minor": 223
+    },
+    "deepl-api": {
+      "critical": 3,
+      "major": 110,
+      "minor": 98
+    },
+    "papago-web": {
+      "critical": 0,
+      "major": 83,
+      "minor": 96
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 1,
+      "major": 32,
+      "minor": 31
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 4,
+      "major": 100,
+      "minor": 148
+    }
+  },
+  "zh-Hans": {
+    "gemma4-e4b-qat-q4": {
+      "critical": 1,
+      "major": 57,
+      "minor": 94
+    },
+    "gemma4-e4b-fp16": {
+      "critical": 0,
+      "major": 50,
+      "minor": 94
+    },
+    "milmmt-4b-native": {
+      "critical": 5,
+      "major": 116,
+      "minor": 111
+    },
+    "gemma4-31b": {
+      "critical": 0,
+      "major": 11,
+      "minor": 47
+    },
+    "gemma-4-26b-openrouter": {
+      "critical": 0,
+      "major": 10,
+      "minor": 38
+    },
+    "google-cloud-translate-basic": {
+      "critical": 5,
+      "major": 64,
+      "minor": 92
+    },
+    "deepl-api": {
+      "critical": 5,
+      "major": 160,
+      "minor": 138
+    },
+    "papago-web": {
+      "critical": 1,
+      "major": 100,
+      "minor": 93
+    },
+    "deepseek-v4-flash-0731-openrouter": {
+      "critical": 0,
+      "major": 9,
+      "minor": 27
+    },
+    "gemini35-live-translate-two-voice": {
+      "critical": 4,
+      "major": 97,
+      "minor": 138
+    }
+  }
+}

@@ -1,0 +1,724 @@
+{
+  "en": {
+    "leaderboard": [
+      {
+        "participant_id": "gemma4-e4b-qat-q4",
+        "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+        "mean_penalty": 0.9259259259259259,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-e4b-fp16",
+        "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+        "mean_penalty": 0.7870370370370371,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "milmmt-4b-native",
+        "participant_display_name": "MiLMMT 46-4B X0 (native)",
+        "mean_penalty": 2.2372093023255815,
+        "samples": 215,
+        "failed_samples": 1
+      },
+      {
+        "participant_id": "gemma4-31b",
+        "participant_display_name": "Gemma 4 31B via OpenRouter",
+        "mean_penalty": 0.10185185185185185,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma-4-26b-openrouter",
+        "participant_display_name": "Gemma 4 26B via OpenRouter",
+        "mean_penalty": 0.18981481481481483,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "google-cloud-translate-basic",
+        "participant_display_name": "Google Cloud Translation Basic",
+        "mean_penalty": 1.2222222222222223,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepl-api",
+        "participant_display_name": "DeepL API",
+        "mean_penalty": 3.4131455399061035,
+        "samples": 213,
+        "failed_samples": 1
+      },
+      {
+        "participant_id": "papago-web",
+        "participant_display_name": "Papago Web",
+        "mean_penalty": 2.8703703703703702,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepseek-v4-flash-0731-openrouter",
+        "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+        "mean_penalty": 0.37962962962962965,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemini35-live-translate-two-voice",
+        "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+        "mean_penalty": 4.264150943396227,
+        "samples": 212,
+        "failed_samples": 2
+      }
+    ],
+    "severityBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "critical": 0,
+        "major": 28,
+        "minor": 60
+      },
+      "gemma4-e4b-fp16": {
+        "critical": 0,
+        "major": 23,
+        "minor": 55
+      },
+      "milmmt-4b-native": {
+        "critical": 1,
+        "major": 77,
+        "minor": 71
+      },
+      "gemma4-31b": {
+        "critical": 0,
+        "major": 2,
+        "minor": 12
+      },
+      "gemma-4-26b-openrouter": {
+        "critical": 0,
+        "major": 5,
+        "minor": 16
+      },
+      "google-cloud-translate-basic": {
+        "critical": 0,
+        "major": 44,
+        "minor": 44
+      },
+      "deepl-api": {
+        "critical": 2,
+        "major": 117,
+        "minor": 92
+      },
+      "papago-web": {
+        "critical": 1,
+        "major": 103,
+        "minor": 80
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "critical": 0,
+        "major": 11,
+        "minor": 27
+      },
+      "gemini35-live-translate-two-voice": {
+        "critical": 6,
+        "major": 128,
+        "minor": 114
+      }
+    },
+    "errorClassBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "accuracy/omission": 25,
+        "accuracy/mistranslation": 42,
+        "style/awkward": 12,
+        "terminology/inappropriate for context": 5,
+        "accuracy/addition": 1,
+        "fluency/grammar": 3
+      },
+      "gemma4-e4b-fp16": {
+        "accuracy/mistranslation": 38,
+        "style/awkward": 15,
+        "fluency/grammar": 3,
+        "accuracy/addition": 2,
+        "accuracy/omission": 16,
+        "fluency/punctuation": 1,
+        "terminology/inappropriate for context": 1,
+        "fluency/spelling": 2
+      },
+      "milmmt-4b-native": {
+        "accuracy/omission": 17,
+        "style/awkward": 12,
+        "accuracy/mistranslation": 107,
+        "terminology/inappropriate for context": 6,
+        "fluency/grammar": 2,
+        "fluency/register": 1,
+        "accuracy/addition": 3,
+        "accuracy/untranslated text": 1
+      },
+      "gemma4-31b": {
+        "accuracy/mistranslation": 8,
+        "accuracy/omission": 5,
+        "style/awkward": 1
+      },
+      "gemma-4-26b-openrouter": {
+        "accuracy/addition": 2,
+        "accuracy/mistranslation": 6,
+        "style/awkward": 2,
+        "fluency/spelling": 1,
+        "accuracy/omission": 9,
+        "accuracy/untranslated text": 1
+      },
+      "google-cloud-translate-basic": {
+        "accuracy/mistranslation": 61,
+        "style/awkward": 14,
+        "fluency/grammar": 3,
+        "fluency/punctuation": 2,
+        "terminology/inappropriate for context": 1,
+        "accuracy/omission": 6,
+        "fluency/spelling": 1
+      },
+      "deepl-api": {
+        "accuracy/mistranslation": 139,
+        "accuracy/omission": 41,
+        "accuracy/addition": 4,
+        "style/awkward": 15,
+        "fluency/grammar": 2,
+        "fluency/punctuation": 1,
+        "fluency/register": 2,
+        "fluency/inconsistency": 1,
+        "terminology/inappropriate for context": 4,
+        "accuracy/untranslated text": 1,
+        "fluency/spelling": 1
+      },
+      "papago-web": {
+        "accuracy/mistranslation": 132,
+        "accuracy/addition": 3,
+        "style/awkward": 29,
+        "accuracy/omission": 7,
+        "terminology/inappropriate for context": 5,
+        "fluency/punctuation": 4,
+        "fluency/grammar": 2,
+        "fluency/register": 1,
+        "fluency/spelling": 1
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "accuracy/mistranslation": 20,
+        "style/awkward": 6,
+        "accuracy/omission": 5,
+        "fluency/grammar": 2,
+        "accuracy/addition": 1,
+        "terminology/inappropriate for context": 3,
+        "accuracy/untranslated text": 1
+      },
+      "gemini35-live-translate-two-voice": {
+        "accuracy/mistranslation": 147,
+        "accuracy/omission": 31,
+        "accuracy/addition": 30,
+        "fluency/grammar": 14,
+        "style/awkward": 18,
+        "fluency/punctuation": 8
+      }
+    },
+    "failures": [
+      {
+        "participant_id": "deepl-api",
+        "participant_display_name": "DeepL API",
+        "source_id": "ctx2-single-use-referent_resolution-001",
+        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::en::deepl-api"
+      },
+      {
+        "participant_id": "milmmt-4b-native",
+        "participant_display_name": "MiLMMT 46-4B X0 (native)",
+        "source_id": "ctx2-dyadic-ignore-stale_context_resistance-003",
+        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
+      },
+      {
+        "participant_id": "gemini35-live-translate-two-voice",
+        "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+        "source_id": "ctx2-single-use-pragmatic_intent_resolution-003",
+        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
+      },
+      {
+        "participant_id": "gemini35-live-translate-two-voice",
+        "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+        "source_id": "ctx3-single-ignore-stale_context_resistance-001",
+        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
+      }
+    ]
+  },
+  "ja": {
+    "leaderboard": [
+      {
+        "participant_id": "gemma4-e4b-qat-q4",
+        "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+        "mean_penalty": 1.9351851851851851,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-e4b-fp16",
+        "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+        "mean_penalty": 1.6805555555555556,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "milmmt-4b-native",
+        "participant_display_name": "MiLMMT 46-4B X0 (native)",
+        "mean_penalty": 3.240740740740741,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-31b",
+        "participant_display_name": "Gemma 4 31B via OpenRouter",
+        "mean_penalty": 0.4861111111111111,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma-4-26b-openrouter",
+        "participant_display_name": "Gemma 4 26B via OpenRouter",
+        "mean_penalty": 0.5648148148148148,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "google-cloud-translate-basic",
+        "participant_display_name": "Google Cloud Translation Basic",
+        "mean_penalty": 13.48611111111111,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepl-api",
+        "participant_display_name": "DeepL API",
+        "mean_penalty": 3.3472222222222223,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "papago-web",
+        "participant_display_name": "Papago Web",
+        "mean_penalty": 2.365740740740741,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepseek-v4-flash-0731-openrouter",
+        "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+        "mean_penalty": 1,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemini35-live-translate-two-voice",
+        "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+        "mean_penalty": 3.511737089201878,
+        "samples": 213,
+        "failed_samples": 0
+      }
+    ],
+    "severityBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "critical": 2,
+        "major": 55,
+        "minor": 93
+      },
+      "gemma4-e4b-fp16": {
+        "critical": 0,
+        "major": 55,
+        "minor": 88
+      },
+      "milmmt-4b-native": {
+        "critical": 2,
+        "major": 105,
+        "minor": 125
+      },
+      "gemma4-31b": {
+        "critical": 0,
+        "major": 14,
+        "minor": 35
+      },
+      "gemma-4-26b-openrouter": {
+        "critical": 0,
+        "major": 18,
+        "minor": 32
+      },
+      "google-cloud-translate-basic": {
+        "critical": 43,
+        "major": 323,
+        "minor": 223
+      },
+      "deepl-api": {
+        "critical": 3,
+        "major": 110,
+        "minor": 98
+      },
+      "papago-web": {
+        "critical": 0,
+        "major": 83,
+        "minor": 96
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "critical": 1,
+        "major": 32,
+        "minor": 31
+      },
+      "gemini35-live-translate-two-voice": {
+        "critical": 4,
+        "major": 100,
+        "minor": 148
+      }
+    },
+    "errorClassBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "accuracy/mistranslation": 74,
+        "style/awkward": 22,
+        "accuracy/addition": 2,
+        "accuracy/untranslated text": 9,
+        "fluency/grammar": 14,
+        "non-translation": 2,
+        "fluency/register": 3,
+        "accuracy/omission": 19,
+        "terminology/inappropriate for context": 3,
+        "fluency/spelling": 2
+      },
+      "gemma4-e4b-fp16": {
+        "accuracy/untranslated text": 14,
+        "fluency/grammar": 14,
+        "accuracy/mistranslation": 60,
+        "fluency/register": 7,
+        "accuracy/omission": 19,
+        "style/awkward": 19,
+        "accuracy/addition": 4,
+        "terminology/inappropriate for context": 5,
+        "fluency/spelling": 1
+      },
+      "milmmt-4b-native": {
+        "accuracy/mistranslation": 135,
+        "terminology/inappropriate for context": 15,
+        "style/awkward": 22,
+        "fluency/register": 23,
+        "accuracy/omission": 20,
+        "accuracy/untranslated text": 4,
+        "fluency/grammar": 6,
+        "non-translation": 1,
+        "fluency/inconsistency": 1,
+        "accuracy/addition": 3,
+        "fluency/spelling": 2
+      },
+      "gemma4-31b": {
+        "accuracy/omission": 8,
+        "terminology/inappropriate for context": 4,
+        "accuracy/mistranslation": 23,
+        "fluency/register": 2,
+        "fluency/grammar": 2,
+        "fluency/punctuation": 1,
+        "accuracy/addition": 2,
+        "accuracy/untranslated text": 2,
+        "style/awkward": 4,
+        "fluency/spelling": 1
+      },
+      "gemma-4-26b-openrouter": {
+        "accuracy/mistranslation": 25,
+        "accuracy/untranslated text": 6,
+        "style/awkward": 7,
+        "terminology/inappropriate for context": 4,
+        "fluency/grammar": 2,
+        "accuracy/omission": 5,
+        "fluency/register": 1
+      },
+      "google-cloud-translate-basic": {
+        "accuracy/mistranslation": 378,
+        "accuracy/omission": 19,
+        "style/awkward": 70,
+        "fluency/grammar": 56,
+        "fluency/register": 27,
+        "terminology/inappropriate for context": 25,
+        "accuracy/untranslated text": 9,
+        "fluency/spelling": 4,
+        "accuracy/addition": 1
+      },
+      "deepl-api": {
+        "fluency/grammar": 2,
+        "style/awkward": 24,
+        "accuracy/mistranslation": 128,
+        "fluency/register": 11,
+        "accuracy/omission": 24,
+        "terminology/inappropriate for context": 12,
+        "accuracy/addition": 2,
+        "accuracy/untranslated text": 6,
+        "fluency/spelling": 2
+      },
+      "papago-web": {
+        "accuracy/mistranslation": 94,
+        "terminology/inappropriate for context": 9,
+        "style/awkward": 35,
+        "fluency/register": 6,
+        "fluency/grammar": 10,
+        "fluency/punctuation": 2,
+        "accuracy/omission": 20,
+        "fluency/spelling": 2,
+        "accuracy/addition": 1
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "style/awkward": 9,
+        "accuracy/mistranslation": 39,
+        "terminology/inappropriate for context": 5,
+        "fluency/register": 1,
+        "non-translation": 1,
+        "accuracy/addition": 2,
+        "accuracy/omission": 6,
+        "fluency/spelling": 1
+      },
+      "gemini35-live-translate-two-voice": {
+        "accuracy/addition": 52,
+        "style/awkward": 30,
+        "fluency/punctuation": 7,
+        "accuracy/omission": 31,
+        "accuracy/mistranslation": 95,
+        "fluency/register": 4,
+        "terminology/inappropriate for context": 7,
+        "fluency/grammar": 21,
+        "fluency/spelling": 5
+      }
+    },
+    "failures": []
+  },
+  "zh-Hans": {
+    "leaderboard": [
+      {
+        "participant_id": "gemma4-e4b-qat-q4",
+        "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+        "mean_penalty": 1.8703703703703705,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-e4b-fp16",
+        "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+        "mean_penalty": 1.5925925925925926,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "milmmt-4b-native",
+        "participant_display_name": "MiLMMT 46-4B X0 (native)",
+        "mean_penalty": 3.7777777777777777,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-31b",
+        "participant_display_name": "Gemma 4 31B via OpenRouter",
+        "mean_penalty": 0.4722222222222222,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma-4-26b-openrouter",
+        "participant_display_name": "Gemma 4 26B via OpenRouter",
+        "mean_penalty": 0.4074074074074074,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "google-cloud-translate-basic",
+        "participant_display_name": "Google Cloud Translation Basic",
+        "mean_penalty": 2.486111111111111,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepl-api",
+        "participant_display_name": "DeepL API",
+        "mean_penalty": 4.990610328638498,
+        "samples": 213,
+        "failed_samples": 1
+      },
+      {
+        "participant_id": "papago-web",
+        "participant_display_name": "Papago Web",
+        "mean_penalty": 2.861111111111111,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "deepseek-v4-flash-0731-openrouter",
+        "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+        "mean_penalty": 0.3333333333333333,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemini35-live-translate-two-voice",
+        "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+        "mean_penalty": 3.3943661971830985,
+        "samples": 213,
+        "failed_samples": 0
+      }
+    ],
+    "severityBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "critical": 1,
+        "major": 57,
+        "minor": 94
+      },
+      "gemma4-e4b-fp16": {
+        "critical": 0,
+        "major": 50,
+        "minor": 94
+      },
+      "milmmt-4b-native": {
+        "critical": 5,
+        "major": 116,
+        "minor": 111
+      },
+      "gemma4-31b": {
+        "critical": 0,
+        "major": 11,
+        "minor": 47
+      },
+      "gemma-4-26b-openrouter": {
+        "critical": 0,
+        "major": 10,
+        "minor": 38
+      },
+      "google-cloud-translate-basic": {
+        "critical": 5,
+        "major": 64,
+        "minor": 92
+      },
+      "deepl-api": {
+        "critical": 5,
+        "major": 160,
+        "minor": 138
+      },
+      "papago-web": {
+        "critical": 1,
+        "major": 100,
+        "minor": 93
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "critical": 0,
+        "major": 9,
+        "minor": 27
+      },
+      "gemini35-live-translate-two-voice": {
+        "critical": 4,
+        "major": 97,
+        "minor": 138
+      }
+    },
+    "errorClassBreakdown": {
+      "gemma4-e4b-qat-q4": {
+        "accuracy/mistranslation": 86,
+        "style/awkward": 18,
+        "accuracy/omission": 23,
+        "fluency/register": 1,
+        "fluency/grammar": 10,
+        "terminology/inappropriate for context": 7,
+        "accuracy/addition": 1,
+        "accuracy/untranslated text": 6
+      },
+      "gemma4-e4b-fp16": {
+        "accuracy/mistranslation": 74,
+        "accuracy/omission": 23,
+        "accuracy/addition": 3,
+        "style/awkward": 18,
+        "fluency/register": 2,
+        "fluency/grammar": 11,
+        "terminology/inappropriate for context": 5,
+        "accuracy/untranslated text": 6,
+        "fluency/spelling": 2
+      },
+      "milmmt-4b-native": {
+        "accuracy/omission": 19,
+        "accuracy/mistranslation": 158,
+        "style/awkward": 20,
+        "fluency/spelling": 4,
+        "terminology/inappropriate for context": 16,
+        "fluency/grammar": 2,
+        "accuracy/untranslated text": 4,
+        "accuracy/addition": 9
+      },
+      "gemma4-31b": {
+        "accuracy/mistranslation": 23,
+        "accuracy/addition": 7,
+        "fluency/register": 1,
+        "accuracy/omission": 9,
+        "style/awkward": 10,
+        "fluency/grammar": 1,
+        "accuracy/untranslated text": 5,
+        "terminology/inappropriate for context": 2
+      },
+      "gemma-4-26b-openrouter": {
+        "terminology/inappropriate for context": 4,
+        "accuracy/mistranslation": 22,
+        "accuracy/omission": 10,
+        "style/awkward": 8,
+        "fluency/grammar": 3,
+        "accuracy/untranslated text": 1
+      },
+      "google-cloud-translate-basic": {
+        "accuracy/mistranslation": 112,
+        "terminology/inappropriate for context": 8,
+        "accuracy/omission": 23,
+        "style/awkward": 11,
+        "fluency/grammar": 2,
+        "fluency/register": 2,
+        "accuracy/addition": 3
+      },
+      "deepl-api": {
+        "accuracy/omission": 63,
+        "accuracy/mistranslation": 181,
+        "fluency/punctuation": 24,
+        "terminology/inappropriate for context": 12,
+        "fluency/grammar": 1,
+        "fluency/register": 2,
+        "accuracy/addition": 11,
+        "style/awkward": 6,
+        "accuracy/untranslated text": 2,
+        "fluency/inconsistency": 1
+      },
+      "papago-web": {
+        "accuracy/mistranslation": 125,
+        "accuracy/omission": 12,
+        "style/awkward": 37,
+        "fluency/grammar": 10,
+        "accuracy/untranslated text": 1,
+        "terminology/inappropriate for context": 7,
+        "fluency/register": 1,
+        "accuracy/addition": 1
+      },
+      "deepseek-v4-flash-0731-openrouter": {
+        "style/awkward": 5,
+        "accuracy/omission": 8,
+        "fluency/register": 1,
+        "accuracy/mistranslation": 15,
+        "fluency/grammar": 1,
+        "accuracy/untranslated text": 1,
+        "terminology/inappropriate for context": 3,
+        "accuracy/addition": 1,
+        "fluency/spelling": 1
+      },
+      "gemini35-live-translate-two-voice": {
+        "accuracy/mistranslation": 104,
+        "accuracy/omission": 26,
+        "accuracy/addition": 40,
+        "fluency/punctuation": 23,
+        "style/awkward": 26,
+        "fluency/register": 1,
+        "fluency/grammar": 17,
+        "terminology/inappropriate for context": 2
+      }
+    },
+    "failures": [
+      {
+        "participant_id": "deepl-api",
+        "participant_display_name": "DeepL API",
+        "source_id": "ctx2-single-use-referent_resolution-001",
+        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
+      }
+    ]
+  }
+}

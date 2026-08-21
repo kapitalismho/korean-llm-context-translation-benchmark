@@ -25,11 +25,14 @@ const FILE_ALLOWLIST = [
   'data/LICENSE',
   'data/benchmarks/gemba-mqm-context-v1-gemini-context-v2.json',
   'data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json',
+  'data/benchmarks/gemba-mqm-context-v1-ablation.json',
   'data/prompts/gemini-context-v2.md',
   'data/prompts/simple-translation.md',
   'data/prompts/puripuly-translation-latest.md',
   'data/prompts/milmmt-x0-native.md',
   'data/prompts/milmmt-x2-puripuly.md',
+  'data/prompts/neutral-context.md',
+  'data/prompts/gemini-live-translate-no-prompt.md',
   'tests/reporting.test.ts',
 ];
 

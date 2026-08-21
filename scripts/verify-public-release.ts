@@ -31,11 +31,11 @@ const REQUIRED_DOCS = [
 ];
 
 const REQUIRED_REPORTS = [
-  'experiments/2026-04-gemini-context-v2/reports/leaderboard.overall.csv',
-  'experiments/2026-04-gemini-context-v2/reports/leaderboard.by-language.csv',
-  'experiments/2026-04-gemini-context-v2/reports/leaderboard.by-context-expectation.csv',
-  'experiments/2026-04-gemini-context-v2/reports/context-behavior.csv',
-  'experiments/2026-04-gemini-context-v2/reports/run-summary.json',
+  'experiments/2026-04-gemini-context-v2-archived/reports/leaderboard.overall.csv',
+  'experiments/2026-04-gemini-context-v2-archived/reports/leaderboard.by-language.csv',
+  'experiments/2026-04-gemini-context-v2-archived/reports/leaderboard.by-context-expectation.csv',
+  'experiments/2026-04-gemini-context-v2-archived/reports/context-behavior.csv',
+  'experiments/2026-04-gemini-context-v2-archived/reports/run-summary.json',
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/README.md',
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/manifest.json',
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/fork-prepared.json',
@@ -43,13 +43,16 @@ const REQUIRED_REPORTS = [
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/reports/run-status.json',
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/reports/leaderboard.by-language.json',
   'experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/reports/context-behavior.rates.json',
-  'experiments/2026-08-gemini35-live-two-voice/README.md',
-  'experiments/2026-08-gemini35-live-two-voice/manifest.json',
-  'experiments/2026-08-gemini35-live-two-voice/fork-prepared.json',
-  'experiments/2026-08-gemini35-live-two-voice/reports/summary-overall.penalty.json',
-  'experiments/2026-08-gemini35-live-two-voice/reports/run-status.json',
-  'experiments/2026-08-gemini35-live-two-voice/reports/leaderboard.by-language.json',
-  'experiments/2026-08-gemini35-live-two-voice/reports/context-behavior.rates.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/README.md',
+  'experiments/2026-08-gemini35-live-10p-highjudge/manifest.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/fork-prepared.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/reports/summary-overall.penalty.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/reports/run-status.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/reports/leaderboard.by-language.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/reports/context-behavior.rates.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/ablation/README.md',
+  'experiments/2026-08-gemini35-live-10p-highjudge/ablation/manifest.json',
+  'experiments/2026-08-gemini35-live-10p-highjudge/ablation/reports/ablation-ab-comparison.md',
 ];
 
 const BLOCKED_PATHS = [
@@ -173,11 +176,11 @@ function assertAbsent(root: string, relativePath: string): void {
 }
 
 function assertNoUnexpectedReportFiles(root: string): void {
-  const reportsRoot = path.join(root, 'experiments', '2026-04-gemini-context-v2', 'reports');
+  const reportsRoot = path.join(root, 'experiments', '2026-04-gemini-context-v2-archived', 'reports');
   const expected = new Set(REQUIRED_REPORTS.map((item) => path.basename(item)));
 
   for (const entry of readdirSync(reportsRoot, { withFileTypes: true })) {
-    const relativeEntry = `experiments/2026-04-gemini-context-v2/reports/${entry.name}`;
+    const relativeEntry = `experiments/2026-04-gemini-context-v2-archived/reports/${entry.name}`;
 
     if (!entry.isFile()) {
       throw new Error(`Report artifact must be a file: ${relativeEntry}`);

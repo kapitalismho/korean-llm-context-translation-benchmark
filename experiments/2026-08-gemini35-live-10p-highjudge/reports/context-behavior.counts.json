@@ -1,0 +1,72 @@
+{
+  "gemma4-e4b-qat-q4": {
+    "used_correctly": 429,
+    "missed_required_context": 38,
+    "ignored_irrelevant_context": 178,
+    "misused_context": 3,
+    "unclear": 0
+  },
+  "gemma4-e4b-fp16": {
+    "used_correctly": 423,
+    "missed_required_context": 37,
+    "ignored_irrelevant_context": 182,
+    "misused_context": 6,
+    "unclear": 0
+  },
+  "milmmt-4b-native": {
+    "used_correctly": 340,
+    "missed_required_context": 120,
+    "ignored_irrelevant_context": 182,
+    "misused_context": 4,
+    "unclear": 1
+  },
+  "gemma4-31b": {
+    "used_correctly": 466,
+    "missed_required_context": 6,
+    "ignored_irrelevant_context": 173,
+    "misused_context": 3,
+    "unclear": 0
+  },
+  "gemma-4-26b-openrouter": {
+    "used_correctly": 455,
+    "missed_required_context": 8,
+    "ignored_irrelevant_context": 182,
+    "misused_context": 3,
+    "unclear": 0
+  },
+  "google-cloud-translate-basic": {
+    "used_correctly": 305,
+    "missed_required_context": 142,
+    "ignored_irrelevant_context": 198,
+    "misused_context": 3,
+    "unclear": 0
+  },
+  "deepl-api": {
+    "used_correctly": 344,
+    "missed_required_context": 88,
+    "ignored_irrelevant_context": 187,
+    "misused_context": 23,
+    "unclear": 0
+  },
+  "papago-web": {
+    "used_correctly": 336,
+    "missed_required_context": 123,
+    "ignored_irrelevant_context": 189,
+    "misused_context": 0,
+    "unclear": 0
+  },
+  "deepseek-v4-flash-0731-openrouter": {
+    "used_correctly": 461,
+    "missed_required_context": 16,
+    "ignored_irrelevant_context": 168,
+    "misused_context": 2,
+    "unclear": 1
+  },
+  "gemini35-live-translate-two-voice": {
+    "used_correctly": 361,
+    "missed_required_context": 47,
+    "ignored_irrelevant_context": 193,
+    "misused_context": 34,
+    "unclear": 3
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "gemma4-e4b-qat-q4": {
+    "missed_required_context_rate": 0.0787037037037037,
+    "misused_context_rate": 0
+  },
+  "gemma4-e4b-fp16": {
+    "missed_required_context_rate": 0.0763888888888889,
+    "misused_context_rate": 0.004629629629629629
+  },
+  "milmmt-4b-native": {
+    "missed_required_context_rate": 0.2569444444444444,
+    "misused_context_rate": 0.004651162790697674
+  },
+  "gemma4-31b": {
+    "missed_required_context_rate": 0.011574074074074073,
+    "misused_context_rate": 0
+  },
+  "gemma-4-26b-openrouter": {
+    "missed_required_context_rate": 0.013888888888888888,
+    "misused_context_rate": 0.009259259259259259
+  },
+  "google-cloud-translate-basic": {
+    "missed_required_context_rate": 0.30787037037037035,
+    "misused_context_rate": 0.004629629629629629
+  },
+  "deepl-api": {
+    "missed_required_context_rate": 0.1658878504672897,
+    "misused_context_rate": 0.0514018691588785
+  },
+  "papago-web": {
+    "missed_required_context_rate": 0.2662037037037037,
+    "misused_context_rate": 0
+  },
+  "deepseek-v4-flash-0731-openrouter": {
+    "missed_required_context_rate": 0.027777777777777776,
+    "misused_context_rate": 0.004629629629629629
+  },
+  "gemini35-live-translate-two-voice": {
+    "missed_required_context_rate": 0.09219858156028368,
+    "misused_context_rate": 0.06046511627906977
+  }
+}

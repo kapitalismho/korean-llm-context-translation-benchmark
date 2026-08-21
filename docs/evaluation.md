@@ -12,7 +12,7 @@ The cell penalty is the sum of error severity weights. The public leaderboards r
 
 ## Judge Prompt Format
 
-The current judge prompt set (`data/judge-prompts/gemba-mqm-context-v1/`) uses the upstream GEMBA-MQM text annotation format — `Critical:` / `Major:` / `Minor:` severity sections with `<class> - "<span>"` error lines — extended with a trailing `contextBehavior:` line. The client parses and validates the text response. The 2026-04 experiment used an earlier JSON-output version of the same prompt set, preserved under `experiments/2026-04-gemini-context-v2/judge-prompts/`.
+The current judge prompt set (`data/judge-prompts/gemba-mqm-context-v1/`) uses the upstream GEMBA-MQM text annotation format — `Critical:` / `Major:` / `Minor:` severity sections with `<class> - "<span>"` error lines — extended with a trailing `contextBehavior:` line. The client parses and validates the text response. The 2026-04 experiment used an earlier JSON-output version of the same prompt set, preserved under `experiments/2026-04-gemini-context-v2-archived/judge-prompts/`.
 
 ## Judge Configuration
 

@@ -1,0 +1,2176 @@
+{
+  "adapterVersion": "1.0.0",
+  "puripulyCommit": "4ad02d02146a46f79d816a3352e358ee791f34bf",
+  "puripulyResolvedAt": "adapter-execution",
+  "generatedAtUtc": "2026-08-20T07:26:29.460043+00:00",
+  "runtimeConfig": {
+    "context_time_window_s": 30,
+    "context_max_entries": 3,
+    "integrated_context_time_window_s": 40,
+    "integrated_context_max_entries": 4,
+    "peer_translation_enabled": true,
+    "integrated_context_enabled": true
+  },
+  "entries": [
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 오프라인 매장 가서 여름용 샌들이랑 슬리퍼 샀어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "da0fe5133cde9043e6b8ba1bedfc86264c0bf9f43d36dd5fa13ae81119d433e7"
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아, 우리 동네 세탁소 아저씨 진짜 너무 불친절해.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "4dc59210e916415f665ec162b7dbf2f107493bca4ccaf6c300dc12efafe51467"
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"길고양이 중에 꼬리 짧고 애교 많은 치즈냥이 한 마리 있잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "84a3a1de2a10eeb8d3366f5936380bddaf1b17b71432ff6ebce4b0001866af11"
+    },
+    {
+      "sampleId": "ctx1-single-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 딱 한 상자 남은 한정판 눈사람 케이크 드디어 구했어!\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c012b9acca44331ec2d07ac4b0294cd566643e204fc8276c545f1f54cc09a759"
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말에 동기들은 전부 부산으로 놀러 갔다더라고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "6e714fc27c4a90b396ee7cacba44e1ac2a04060c519f4f8df459558da1bcf8ab"
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 과일 가게에서 사과랑 배 중에 엄청 고민했거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ab4be962996191fcba4b20e1b4e950eca424781e550cceeb42495e63f92c3e7f"
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"할머니, 저 내일 한 달 동안 유럽 배낭여행 출발해요.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "21dbbb2b890de2d4ab9a4bebc86a387af2497ef8690f669e2c22d785d5996682"
+    },
+    {
+      "sampleId": "ctx1-single-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 카페에서 내 옛날 절친이었던 지민이 우연히 마주쳤어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "22d4ee1c77cb8571d27cd9bfa5412903765c104cf7aebb07ef36e4d279e40a1f"
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 팀장님이 부서 단식에서 1차는 본인이 전부 쏜다고 엄청 생색내셨잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "fc4a86ddb921b4e22c8c53edfd303989d9d5d120314a510efac93c8266a499a8"
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 아침 9시 컴퓨터실 수강신청 클릭 진짜 전쟁이었어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "585cf2eb4f3be71467e9b2184c5196c36179052f9a3d187cafd82a4b2cea7f2a"
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 홍대 클럽에서 어떤 취한 남자가 선 넘으면서 자꾸 치근덕대더라구.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "31e80d8576a0f6c0fcff3b3ce45159d90053592e01928653a49965a365139a2c"
+    },
+    {
+      "sampleId": "ctx1-single-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 오후에 본 동네 편의점 알바 면접 느낌 괜찮았어. 점장님도 맘에 들어하시고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "a0688adbd2ed1263991b85cf5c41c66ab75c0cd2e1dde709d276483fb2c64c82"
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 새로 산 핸드폰 떨어뜨려서 하루 만에 액정이 완전 박살 났어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "82f9dcf6a0dfc2720757ea7603c95fa95a3d17eaa5391b4961676d440a2a15cb"
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 내가 진짜 아끼는 한정판 향수니까 오늘만 특별히 너 빌려주는 거야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ceaffa2bfccb976c957a69d1ae5f350ebacc73258d93e78e7a0bfa91696af9bb"
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어머님, 다음 주에 아버님이랑 두 분이서 놀러 가시게 제주도 펜션 예약해 드릴까요?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "f3c9706b4d36026c227457b25a835e301051c62e66621dacb651efa552f4cb5a"
+    },
+    {
+      "sampleId": "ctx1-single-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"김 대리, 퇴근 시간 다 된 건 아는데 이 보고서 내일 아침 회의 전까지 무조건 필요하거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "3c3a849647f52c1c66a147e8d0c3726385d5efb85a591489a0c8c5e57dbd3d66"
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 너 어제 술 먹고 길거리에서 남의 집 담벼락에 오줌 싼 거 동영상 다 찍혔더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "1eb0456c7bb97209b135e9ac684989c90f51524b86fd6ea7bff0b98064067aa5"
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어르신, 날씨도 엄청 쌀쌀한데 여기 전기장판 온도 좀 더 올려드릴까요?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "d8e7c909afc8f5dffcd8fff6049d0600cd7009e80db29d36f2d9fed815649872"
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 너 저번에 체육대회 때 내가 빌려준 축구화 왜 역대급으로 질질 끌고 안 주냐?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "242d57f35b723befb4659597346bc88142cd534e31cb7dba64807211ee5042ed"
+    },
+    {
+      "sampleId": "ctx1-single-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"고객님, 현재 가입하신 5G 베이직 요금제로는 데이터 무제한 혜택을 받으실 수 없습니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "9a69cda186b7030e6859ce2deb8799f190d66352c61a59938a837f12b4c77d98"
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 밤새도록 전공과목 벼락치기 하느라 에너지 드링크를 무려 세 캔이나 마셨어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c559e3c0d62babf1e6ff4df1091685242dfc369babfc93797291d9aad962819c"
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"일단 삼겹살을 먼저 바싹 굽고 나서 코팅된 그 돼지기름에 신김치를 볶아야 돼.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "3b0c367c487e5eecefcd715e6971e9041db4a7ae5b8174e4be9b2b288c76f525"
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어? 방금 내가 과장님한테 올릴 험담 카톡을 실수로 부서 전체 톡방에 올렸네!\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "891a2283ff564d4edf15cbe3ef84843e37f61e2a27240f27c3f6f1e77ef04049"
+    },
+    {
+      "sampleId": "ctx1-single-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 이번 달 월급 들어오면 뒤도 안 돌아보고 바로 적금 통장으로 100만 원부터 뺄 거야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c2a9f469d0468e3b6d18638ce21084daf9bdfd1467c9e58c7b721652626227b7"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 넷플릭스에 새로 올라온 드라마 진짜 시간 가는 줄 모르고 정주행했어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "8ef9f4b238b721416504d633ec3274a433f5e29f0aa7a072ffaf9a0674526713"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말에 동아리 엠티 가는 장소가 강원도 산골짜기로 확정 났대.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "cf761d0481c5446155a958a253c1c58bc903da54975b125bb7e03ea67875dc2c"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"할머니, 어제 제가 병원에서 타다 드린 무릎 관절약은 좀 드셔 보셨어요?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "67c59ff5656b75d9cbfd3f23b5a1a47237a67f34203df7c5807c382dc9059b8e"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 이번 달에 신발 뽑기 당첨돼서 진짜 비싼 한정판 운동화 샀잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "5c0f5a497027400f39a77be517ea543a988660fe24806902167f9429e9ee8cb9"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 뷔페에서 완전 과식했더니 배가 터질 것처럼 부르고 숨쉬기도 힘들어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "f0be939517921bb85b5ab281f88edadde786817bab7d9b2e980f134c4f2df4fd"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"지금 밖에는 우박 섞인 진눈깨비랑 눈이 엄청나게 퍼붓고 있어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "f147b20405b79a652937647ffdf3183955a62529ada11c928855f7b2666ba78b"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 진짜 이번 여름엔 다이어트 성공할 거라서 오늘부터 저녁은 안 먹어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "536fe1580476ced2ef42bb42dd6a953e3ea063279f4d26fc6741d8da0b78f3d7"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어차피 이번 주말 내내 폭우 쏟아진다고 하니까 그냥 집에나 박혀 있어야지.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "a9f0f7b609c850b375df05818910d9c94be4d95110aaa57c0735d682e3b5c494"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"옆집 강아지 덩치도 산만 한 데다 엄청 사나워서 가까이 가기 너무 무서워.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "6d261f962c2c9c0b38f07d274be73fb4e12357459ef5a64a94de36931a314948"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"와, 나 스무 살 때만 해도 진짜 밤새 술 마시고 미친 듯이 놀러 다녔는데.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "57062e71899e947ff3f24b1c5d3060b66dd4b9a2a335095031e95134479cd084"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"그때 한 달 동안 바다 서핑 배울 때는 진짜 물속에만 살았잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "5592db50b35bb286dcf4d1e0062a8eb3d4a470f0d0caebfa0ef9e9faab9c215e"
+    },
+    {
+      "sampleId": "ctx1-single-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 드디어 미친 듯이 준비했던 토익 900점 넘었어! 진짜 대박이다!\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "7a3d16bb2e0fa057f34ce7a2091f448d0ac6663141b79d45ec13cfd3c3ed2b51"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"새로 온 인턴들 사원증은 다 발급됐나요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "075552f6e11809e4e4bbf55b2a597f9fcdf22bbab8469cccd63118089677b023"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번에 본사에서 파견 온 줄리아 연구원 어때요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c680c6f9300aa977feb212bc4645cf981810c27c9fb863c017806dc3a8d0c2aa"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"오늘 회의록이랑 발표 자료 전부 다 출력할까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "3fad5592ca48d58102dc72890f5e4fccf6c785f9f800ad4d2c8af40c5816ae78"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"냉장고에 뒀던 내 딸기 케이크 못 봤어?!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "d15a0cf64c90cacac71d990e195a064125c1eb42435df25e7804f1f41f74d527"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 출장 렌터카 예약은 어떻게 할까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "78ea65662dbd03bbe8e04fe7572d274949f1f95514a384f6f5efb3f2f3ca8aea"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 디자인 시안, A안이랑 B안 중에 어떤 게 나아 보여요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c9033542f8a23bde74c762060f6e3093f4932b60ef5e886ae7fdde49fc2eed2e"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이 식당, 김치찌개는 맛있는데 계란말이가 영 별로네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "7274c6b906d92b36c2b9ad1644cda8e1b07b8751660a82fcd92dd266b41f7557"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"오늘 회의 3시 맞죠?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "4b249dcb771923e7a49dd82451cef9e6cf5542ae70d7e9984e4572dbe4fa5bcb"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"밖에 햇빛 엄청 센데 자외선 차단제 바르고 가.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "282366c4cdf1c450ad237ae378c731255b3a2fd1d28a6e3e95bda4c45a317d86"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 달 카드값이 왜 벌써 한도 초과지?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "875eb5b27506ec41c55fc5f73e047b167eb4df55aa65c119b949890e14f3c207"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"팀장님이 방금 전에 찾으시던 작년도 워크샵 영수증 어디 있어요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "637e671efec5881b0ed164e0579e190498c71485e9b815d40743432d25cd34b5"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"맥주 두 잔, 사이다 한 잔 시켰는데 더 시킬 사람?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "7abea2ccbf61ea4f486a426cb714801bce88f6086a0cbca971361b1b3d7a2c5a"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"부장님, 내일까지 마무리하라 하신 기획안 모레까지는 안 될까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b3b2e28a51dbbbbddda7fb00c14575d6584c2b817323ecd94d39809117710845"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 달 신사업 예산, 본사에서 반의반으로 깎았다는데?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "57909bddb26339564360fe0e60234226e5f936caf8c18b1af06882967ccd6e64"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이 무거운 박스들 제가 3층 회의실까지 다 올려드릴까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "daefb426d15113eadeb7e0f0e1e609eabe0ddf0fabdbf2025ba786700cea56db"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 주식 시장 반등할 거라는데, 빚내서 투자해볼까?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "17099bd48ddadad88fc2b46da05f2be4a9c8dd66bda3091c0869828551d9c9fa"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"대표님, 내일 오전에 예정된 투자자 미팅 관련 특이사항 없습니다.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "10f36c701be96e4525be4c05f331edaa74e766df6c98ded5c1de3adb170e76d0"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"야, 오늘 밤에 클럽 갈 건데 올 거냐?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "061216f44b0ea69c7b7c101318aa98929e7ce43e03cf2a865256917fa5798113"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"고객님, 반품 처리를 위해 내일 오후 방문 수거를 진행해도 괜찮으실까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "46872a35ba52f2d5732df111edd3ca5af7ee5955d88b0ea03e85db79c7df9329"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"교수님, 이번 중간고사 대체 과제 제출 기한을 하루만 연장해 주실 수 있을까요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "edb65f31b19a05d263e56e8060bf7b487ed778425953997f019a12b7bc854efe"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"어제 회식에서 끝까지 달렸다며? 오늘 출근해서 괜찮아?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "743750ce8b23c4aa5395e6a11b814070396b6573bfd55d556c03771bb1881c6d"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 달에도 영업팀들 전체 목표 실적에 미달할 것 같습니다.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b5222e77e15589747c2dc9647360da4cd07a1a35d327243ca2553c227de0eac6"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"아까 점심 먹고 양치질은 제대로 했어?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b0512023abde5df03f878ec35e94f741b518993a2d2e73d9df144cdc2b4c3c62"
+    },
+    {
+      "sampleId": "ctx1-dyadic-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"보내주신 이메일에 계약서 첨부파일이 없던데요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "153d26edbf3c10cf803155a91e023dc364cb25b9983e22a39deaad2fcc90685c"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"야 어제 넷플릭스에 새로 올라온 좀비 드라마 봤냐? 완전 꿀잼이더라.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c231855b2955c5b2a9cedfaaad01a6aef819100553a03ba5dd9f0ad597086577"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"할아비가 뉴스 보니까 내일 태풍 온다더라. 우산 꼭 챙겨 가라.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "02d9865d6c58b63c7b7c405ef83db0179e34c68fef0d522a538622fa6e24abfa"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"선배님, 다음 주 동아리 축제 때 부스 운영 시간표 다 짰습니다.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "ec4a02f2a292067a0c59f0ee1edee4ef6503651c98bd0002dcbf451a5784ceb2"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"어제 딜러샵 가서 새로 나온 외제차 보고 왔는데 디자인 진짜 멋있더라.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "663ae9a0734a45f3b3340376d6b9efc53c663546da4c57e61de8021af5c0fd90"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번에 제주도 목장에 가서 조카들 태워주려고 말 타는 법 배웠어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "eb15a32a09c755c9f8ecf9fd28be752e89623e65b370745c4a7627fe53fdb96b"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"요즘 주식 계좌 완전 파란 불이라서 눈물 날 거 같아...\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "0a87ec434ce3af4559add8c4d2df3caede3835470a486b43342f0549867eb27a"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"너 저번에 매운 마라탕 먹고 응급실 실려갔잖아. 오늘은 절대 안 돼.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "239c7cb47f5fc27ec27d671b1c7afbe70f74766c8f019fbb689ae32407e463d5"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"이번 주말 내내 태풍 오고 폭우 쏟아진대. 글램핑 예약해둔 거 다 글렀어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "d80c78cc01aa985b3e05d0e813eef030f0c690798db9c14f4dd63ab1b674ccef"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"너 저번부터 계속 영어 스터디 가기 싫어서 환불받을 거라고 난리였잖아.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "11f108a0b559715eca3331d552783f771e8309c3530548f2a6ddcff13f80f200"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"나 방금 고속터미널에서 출발했어!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "a6d74d0d6308c92cba47ff1e04c0b0be57b3729e89f374c8a961d96aa98d0393"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"솔직히 너 어제 나한테 말 너무 심하게 한 거 알아?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "8620b897c8caf283c4e58bb9fe1ca3370c252227e7970e6e25d0ee5a16511775"
+    },
+    {
+      "sampleId": "ctx1-dyadic-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c0"
+      ],
+      "renderedContext": "- [peer, 0s ago] \"아저씨, 전 짜장면 먹을 건데 아저씨는 뭐 드실래요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "4f4fa3d6e9a7e2f293b0fc3b02b95e1af592cd2fa05bbce79772394dbe2d5a42"
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 펜션 엠티 가서 무리로 찍은 단체 사진들 수십 장 쫙 다 받았어.\"\n- [self, 0s ago] \"그중에서 딱 한 장 너랑 나랑 둘이서만 엽기 표정 짓고 찍힌 거 아까 톡으로 보냈잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "dcb0a7242a8da30acff6e737da512cffc8e92c41b0e8571e691b0b8cf6443109"
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"저번에 파티에서 만났던 키 크고 단발머리인 프랑스 교환학생 여자애 기억나지?\"\n- [self, 0s ago] \"걔가 어제 디엠으로 갑자기 자기 곧 겨울방학 때 서울 놀러 온다고 연락했더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "3d27413a27bf5fa9a85dbdcd9f10d0c72a05e5521912e7601fb9d0dffa569871"
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"사장님, 방금 지시하신 결산 서류철은 B동 3층 대회의실 원탁 테이블 위에 먼저 올려뒀습니다.\"\n- [self, 0s ago] \"그리고 커피는 아직 식지 않도록 텀블러에 담아서 여기 탕비실에 보관 중입니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "5e2785fafa149ac5d8eb232e86ff7407445e0abac8999f2549d6612ee878e952"
+    },
+    {
+      "sampleId": "ctx2-single-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"우리 집 고양이는 츄르 간식만 보면 눈 돌아가서 미친 듯이 달려들잖아.\"\n- [self, 0s ago] \"근데 아까 비싼 돈 주고 새로 산 연어 캔을 처음 까주니까 냄새만 맡고 화장실 구석으로 도망치더라고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "8bc1af942f628c19c1fc8c6369476b432233583b2fa68be8029ff3d139c5edf7"
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"내일 아침 일찍 건강검진 있어서 오늘 밤 9시부터 물 한 모금도 마시면 안 된대.\"\n- [self, 0s ago] \"근데 지금 내 눈앞에 어제 먹다 남은 양념치킨이 계속 아른아른거려서 안달이 나 죽겠어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "456fc1e59dc127af30b684e66cfbc342fe33ea1c48f122e74e14f3be8974fc62"
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"팀장님, 저번 달 부서 실적 보고서 폰트는 전부 맑은 고딕으로 통일하라고 하셨죠?\"\n- [self, 0s ago] \"표 양식도 기존 세로형 말고 가로형으로 길게 뽑아 달라고 하셔서 싹 고쳐놨습니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "109c0183c624e03812279865890a6e5a592583d8ad715bdd7a4617c761643f44"
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말 데이트는 모처럼 화창하니까 한강 공원에 돗자리 깔고 치맥이나 할까 생각했지.\"\n- [self, 0s ago] \"아침에 뉴스 보니까 주말 내내 미세먼지 수치 최악이라 밖에서 뭐 먹었다간 코 완전 막힌다네.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "9988c8d35c26f9a39b121bd49d903388994db5234fd6afb77d18d558ff2192b1"
+    },
+    {
+      "sampleId": "ctx2-single-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 방금 전남친 인스타 스토리 몰래 염탐하다가 실수로 좋아요 하트를 눌러버린 거 있지.\"\n- [self, 0s ago] \"진짜 심장 쿵 내려앉아서 0.1초 만에 취소 누르고 내 계정 아예 비공개로 돌려버리긴 했는데.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "d3ce4bed46fb29a61df5b1cc6d29167c19e86607bd9fa169bc40355c2c028183"
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"요즘 스크린 너무 많이 봐서 눈이 침침하길래 블루라이트 완벽 차단 안경을 새로 하나 맞췄잖아.\"\n- [self, 0s ago] \"근데 이게 코받침이 너무 낮게 설계돼서 고개만 숙여도 자꾸 흘러내려 엄청 짜증나네.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "91c31e6d1db1adbc1c3ca953d9d0611aed1e5a8d5a79c649cf028aa31bddbb3d"
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"요즘 환절기라 그런지 어제부터 계속 으슬으슬 춥고 잔기침이 안 떨어져서 죽겠어.\"\n- [self, 0s ago] \"혹시 몰라서 아까 동네 내과 가서 독감 코로나 키트 검사 다 했는데 다행히 둘 다 음성이래.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "54f1b8044766981042bbeec3aaa4075b1433ef61039c2890e3e2407fcc153e4b"
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말에 회사 창립 20주년 기념일 대규모 행사 겹쳐서 기획팀 완전 초상집 분위기야.\"\n- [self, 0s ago] \"거기에 하반기 연말 정산 기간까지 겹쳐버려서 부서 전체 전화통에 불이나고 있거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "a513ac5dc68eb290ef2b9bcb232238e02a2439a368a78fcf88dee99ed35e94b7"
+    },
+    {
+      "sampleId": "ctx2-single-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"다음 주 수요일 당장 기말고사인데 아직 수학 시험 범위 절반도 진도 못 나간 거 실화냐.\"\n- [self, 0s ago] \"게다가 학교 수학 쌤이 이번엔 반평균 깎으려고 점수 테러용 킬러 문항 낸다고 으름장 놓으셨어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "1c61a402a9650092781c79dd6add33b4ee12221abe985adb2e99493724996427"
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 야근하다가 너무 스트레스 받아서 편의점에서 컵라면이랑 삼각김밥 3개를 까먹었거든.\"\n- [self, 0s ago] \"오늘 아침에 눈뜨자마자 체중계 올라가니까 정확히 2키로가 쪄있더라고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "15cf419a8c52565fb7b2cdc6ac6ff00b96e3b13735d196e19fd8c67f01ae7c39"
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"동아리 회비 횡령하고 잠적한 전 회장 놈한테 어제 카톡으로 돈 언제 갚을 거냐고 따졌어.\"\n- [self, 0s ago] \"그랬더니 자기도 지금 지갑 사정이 너무 어렵다면서 오히려 내 번호를 차단 박아버리더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "8d9bbf71a70f44b1e3f638c30111ae98950f170034f3c8f6f9b5e17f26d9e285"
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 신입사원 김 대리가 나한테 쪼르르 와서는 자기 업무 너무 많다고 울상을 짓더라.\"\n- [self, 0s ago] \"근데 나도 지금 내 메인 프로젝트 마감 코앞이라 회사에서 이틀째 집에 못 가고 있거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "5d49cc690c017201e1f787df32007fa1c5b574f74b3875d7296f8f7049639c51"
+    },
+    {
+      "sampleId": "ctx2-single-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 방금 통장 잔고 탈탈 털어서 이번 달 원룸 월세랑 밀린 관리비 다 냈더니 3천 원 남았어.\"\n- [self, 0s ago] \"근데 집에 쌀도 똑 떨어지고 냉장고엔 일주일 전 먹다 남은 쉰 김치밖에 없네.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "b4abaa155cb8f9c64a529dd65ce4cf068fc15ca1db5a303d801c64483c8d0a61"
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야 너 어제 신촌에서 술 마시다 말고 도대체 인사도 없이 어디로 도망갔냐?\"\n- [self, 0s ago] \"어제 우리가 네 몫까지 밀린 안줏값 다 결제하느라 진짜 잔고 바닥나고 피똥 쌀 뻔했어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "420406ea7121e21b28f3ccfe5e108f3f2e37d486fa0e6615ce178e6e7ed7ae37"
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"사장님, 이번 주 금요일로 예정되었던 외부 임원진 골프 회동 취소 건 관련하여 보고드립니다.\"\n- [self, 0s ago] \"오늘 아침 기상청 특보에 따르면 당일 오전에 거센 폭우와 강풍이 예상된다고 합니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "a70e85bb0e89e3e1a0fe31b848a82d4e6ab1b86bd005353213158a0a5ecd67bb"
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"엄마, 저번 환갑 생신 때 내가 무리해서 사드린 그 빨간색 등산복 패딩 말이야.\"\n- [self, 0s ago] \"이모가 어제 보더니 자기 입고 있는 것보다 훨씬 예쁘다고 막 부러워했다며?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "e99ac595800099ae4a3ffea79bdb9f320a036391682af0c38a4b6a1e3f01ebe4"
+    },
+    {
+      "sampleId": "ctx2-single-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 너 저번 주말에 내 방 몰래 기어 들어와서 내 향수 마음대로 뿌리고 나갔지?\"\n- [self, 0s ago] \"그거 내가 스무 살 생일 선물로 받은 해외 한정판이라서 엄청 아껴 쓰던 거란 말이야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "e7a887e194a597ab57ba2dd813f42eed19b0b519fb2b484fa15492cdc6ee7119"
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 아침에 출근할 때 지옥철에서 사람들한테 엄청 치이면서 억지로 끼어 탔어.\"\n- [self, 0s ago] \"회사 도착해서 팟캐스트 들으려고 가방을 열어보니까 바깥 지퍼가 활짝 열려있더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "2628485e84631a5fc103886813771eff4584118ee6b4ee33ff9b6547860bd8e6"
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 인터넷 요리 채널 레시피 보고 태어나서 처음으로 김치찌개 끓여보고 있거든.\"\n- [self, 0s ago] \"방금 막 냄비에 썰어둔 돼지고기 먼저 달달 볶다가 신김치 넣고 같이 볶는 것까진 끝냈어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "a066ce365c337794201e3cf23fca43ec19f42b44cf4a1f444652355d88a10642"
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 낮에 분명히 세탁기 쾌속으로 돌려놓고 빨래 건조대에 다 예쁘게 널어놨다고 굳게 믿었어.\"\n- [self, 0s ago] \"근데 방금 낼 아침에 당장 입을 흰 셔츠 찾으려고 베란다 나갔다가 뒷목 잡고 쓰러질 뻔했잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "0d9866f08e838b60d26fd84b997d0714ffd2f8e06ef719648691798e72664d19"
+    },
+    {
+      "sampleId": "ctx2-single-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 저녁 6시 이후로 물 한 모금 안 마시고 오늘 아침에 거울 봤는데 얼굴 붓기가 하나도 안 빠진 거야.\"\n- [self, 0s ago] \"알고 보니까 나도 모르게 새벽에 몽유병 환자처럼 편의점 다녀와서 컵라면 하나를 국물까지 다 먹었대.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "672cb97329f0330e5e75b8c8067b717419eb0576572f2728e4f0b5a17ba68d85"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 내일 대학원 면접인데 너무 심장이 떨리고 긴장돼서 청심환까지 사다 놨어.\"\n- [self, 0s ago] \"혹시라도 교수님들이 날카로운 압박 질문 던지면 머리 하얘질까 봐 걱정이야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "56b34901e579d37418b034bdb3fc44ef5f925acf8e6f93e59c4d27a04cbfd168"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 부장님이 내 기획안 보더니 당장 쓰레기통에 처박으라고 미친 듯이 소리 지르셨어.\"\n- [self, 0s ago] \"진짜 회사 자존심 다 상하고 당장 사표 쓰고 싶어서 몰래 화장실에서 눈물만 주룩주룩 났잖아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "2ced5a9933809224e804f360be9281f408d2cb4c327bf3798a0a2e70852f7f9d"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"다음 주말에 남자친구 부모님 처음 뵙기로 해서 도대체 어떤 옷을 입고 가야 할지 멘붕이야.\"\n- [self, 0s ago] \"단정한 백화점 투피스를 살까 아니면 그냥 깔끔한 흰 블라우스에 검정 슬랙스를 매치할까?\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "920029e637cc0ccbb189d893e01c35f6dc617cebdb072d29628698043c0493bb"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"내일 모레 당장 마감인 핵심 프로젝트인데 메인 서버 개발자가 갑자기 어제부터 잠수 탔어.\"\n- [self, 0s ago] \"지금 당장 코드 합치지 않으면 납기일 절대 못 맞추고 클라이언트한테 거액의 소송 당할 위기야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "5726bcf4d041c8d6e83a1d0c76dc87cba1b128fa67690a260962394dfc4b4aa0"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 이제 드디어 불법 토토랑 도박 사이트 아이디 다 삭제하고 정신 차리기로 굳게 결심했어.\"\n- [self, 0s ago] \"진짜 이번에야말로 그동안 흔들렸던 과거에서 손을 씻고 제대로 된 인간으로 새 출발 할 거니까 지켜봐 줘.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "9e239c53ea9c770f4f531dd8714baa6bb046646fa069d6d16cca1eb0bb79b946"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"벌써 진급 누락만 세 번째인데 나보다 실력 없는 후배들은 다 팀장 달고 있어서 진짜 서러워.\"\n- [self, 0s ago] \"이번 승진 심사에서도 나 혼자만 물을 먹었으니 이대로면 퇴사하고 치킨집이나 차려야 할 듯.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "de372ac20cd5c82f6942a2af1d04d81ee30ec6637fc91a51a455df031db8daea"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 오늘부로 진짜 내 목숨을 걸고 독하게 마음먹고 평생 피우던 담배 영원히 끊기로 맹세했어.\"\n- [self, 0s ago] \"아까 주머니에 있던 가스 라이터랑 남은 담배 두 갑도 변기에 넣고 확 물 내려버렸거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "52cb5009ec321d3918d77093b639aee1cee6802c95c69ccb2f60a6aaf016e65b"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 진짜 지출 방어해야 되는 거지라서 오늘 점심은 유통기한 지난 삼각김밥 하나로 때울 거야.\"\n- [self, 0s ago] \"다음 주 월급 들어오기 전까지 하루에 만 원 이상 절대 안 쓸 거니까 약속 잡자고 나 부르지 마.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c2a7bead66dad1aaba541ade9415ed949e258b208a86d12d18bbc4e3be28a4a2"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"바깥에 비 쏟아지고 날씨 진짜 최악이라서 난 오늘 하루 종일 내 침대 밖으로 한 발짝도 안 나갈 거야.\"\n- [self, 0s ago] \"그냥 두꺼운 겨울 이불 푹 뒤집어쓰고 방구석에서 넷플릭스 로맨스 영화나 정주행하면서 푹 쉴래.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c1f2430998da62521f286ca25e5905dc3e0f058cc29220fd7cb16f35b054a507"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 점심에 병원 갔더니 의사 선생님이 당장 술 입에 대지도 말고 싹 끊으라고 무섭게 경고하셨어.\"\n- [self, 0s ago] \"혈액 검사 보니까 간 수치 완전 쓰레기라서 이대로 한 달만 더 가면 대학병원에 바로 입원해야 된대.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "aac877bc60a55085bdc66e117ef3dbe3cc49c957712a390b30b0418d1e3311ca"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"코로나 때 주식 물린 거 눈물 머금고 3년 존버한 끝에 드디어 본전 찾아서 방금 전량 당장 다 매도 완료했어.\"\n- [self, 0s ago] \"진짜 내 심장 갈아먹는 기분이라 다시는 내 인생 80년 동안 주식 투자 같은 멍청한 짓은 절대 안 할 거다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "eed445ea8c5e612e65386f71dc34429eb86ad8cab2d8914d8bc2f1cb911961f6"
+    },
+    {
+      "sampleId": "ctx2-single-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 드디어 두 달 만에 운전면허 도로주행 시험 감점 하나도 없이 만점으로 합격하고 신나서 집 가는 길이야.\"\n- [self, 0s ago] \"이제 완전 타고난 베스트 드라이버니까 조만간 내가 내 차 끌고 너희들 픽업해서 서울 근교로 드라이브 싹 시켜줄게.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "56560df5286dde5639dba61b65516329abd2aedc52cf7058efe9acf99af687e1"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 엄마가 주신 반찬통 두 개 다 냉장고에 넣었어?\"\n- [peer, 0s ago] \"아직 식탁 위에 그냥 뒀어. 뚜껑도 안 닫았네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "f14a9dd7fb495a8d49d6ea53c2724b119a7f9e5606896ec1e9a6771421a36110"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너네 옆집에 새로 이사 온 스웨덴 금발 남학생 말이야.\"\n- [peer, 0s ago] \"아 걔? 어제 엘리베이터에서 마주쳤는데 엄청 쑥스러워하더라.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c38360c5dc8dbd2deb9723a15e1324801ce504d5d569fcc0558ad7ea359a7d04"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 어제 큰맘 먹고 아이패드 프로 최고 사양으로 질렀어!\"\n- [peer, 0s ago] \"오 대박. 나도 어제 다이소 가서 천 원짜리 액정 클리너 세트 하나 샀는데.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "e84661b926307e6f2f49259741eda99cd11302edf65d9e26ce35b708bf8da32f"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번에 새로 오신 영어 원어민 선생님 앨리스 말이야.\"\n- [peer, 0s ago] \"어, 성격 되게 깐깐하고 숙제도 엄청 많이 내주신다는 분?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "840c25603427350a0aed285f16dbce04af9845f34e54413bf69a69f65e778f29"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 팀장님이 김 대리한테 내일 또 지각하면 진짜 죽는다고 엄청 화내시던데.\"\n- [peer, 0s ago] \"근데 방금 김 대리님 회식 자리에서 소주 네 병째 박살내고 계셔...\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "43952be1625b7be3fed4cc5a52d8f7e004acdcd90a4c415ad8946df1d63e82b9"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"교수님, 이번 학기 제 졸업 논문 최종 심사표 다 작성하셨습니까?\"\n- [peer, 0s ago] \"어, 거의 다 했는데 자네 서류 쪽 코멘트를 좀 더 다듬고 있네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c167b697a9f5c03df1fcda85d102765312eb2c12d554f783a9c761f0590d5f8e"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너 노트북 새로 산다며? 맥북이랑 그램 중에 뭐 살지 정했어?\"\n- [peer, 0s ago] \"계속 고민하다가 결국 들고 다니기 가벼운 게 최고인 것 같아서 그램으로 마음이 기우네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "e5edb49c1b47ed765c5b0fd96d9304176681de41dc74f129181c4697eae2db2e"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너 어제 지민이랑 대판 싸웠다며. 좀 풀었어?\"\n- [peer, 0s ago] \"아침에 내가 먼저 장문의 미안하다는 카톡을 남기긴 했어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "f307c9f78963b7d6b6e0b79f6b10baca53cb2271bdda9ad665aae6780e474c8f"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너 이번 주말에 보는 토익 시험 공부는 많이 했어?\"\n- [peer, 0s ago] \"아직 모의고사 한 회차도 안 풀었어... 진짜 미치겠다.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "ec0d26b778ba53e747ba1a1114afe77d48586d848c6fd5efe06746ec4cdc07f3"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"방금 소개팅하고 온 민수 봤어? 사진이랑 완전 똑같이 생겨서 훈훈하더라.\"\n- [peer, 0s ago] \"오 성공했나 보네? 성격도 매너 있고 좋대?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "61a654d21f69673e2d64b862e736406d53b5ffda829611f6438a3aa2b84337f3"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 김 부장님 이번에 또 우리 부서에 말도 안 되는 말꼬리 잡기 지시 내린 거 들었어?\"\n- [peer, 0s ago] \"진짜 그 인간은 왜 그 모양이냐. 일은 제대로 하나도 안 하면서.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "a4faa57bd6ab3bfd344c76076ac699c1e325b181ae080cf63a8078b942f4f3a4"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"요즘 알바 대타 너무 많이 뛰어서 온몸이 찌뿌둥하고 스트레스 장난 아니야.\"\n- [peer, 0s ago] \"그러니까 주말에 좀 쉬어야지. 집에서 뭐 하면서 쉴 건데?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "8b0c63922054cf04f7f401ad755a180f6cdcfaf0efc8db2f03b6e248e04b818c"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"엄마, 나 이번 기말고사 수학 진짜 자신 있어. 백점 맞을지도 몰라.\"\n- [peer, 0s ago] \"어유 그러셔, 어제도 새벽 두 시까지 침대에서 소리 지르며 게임하시는 거 내가 똑똑히 봤구먼.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "93a57105369b5dbc2ece1d304249c6b3313b55aeeb0fd52ca5938bb1b4504044"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 날씨 너무 더워서 동아리방 에어컨 틀었는데 고장 났더라.\"\n- [peer, 0s ago] \"맞아, 나도 아까 잠깐 들렀는데 진짜 찜통이라 땀 뻘뻘 흘리다 도망 나왔어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "afa3a5a297617e6f5eb18aa6c219142ed0c794a64a42411fe4b6cdd553b6558b"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"선배님, 어제 급하게 주신 고객 데이터 정리 알바, 제가 밤새서 엑셀 다 끝내놓긴 했습니다.\"\n- [peer, 0s ago] \"오 고생했어! 근데 막상 보니까 내가 원하던 분류 기준이 아니네. 미안한데 처음부터 다시 좀 해줄래?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b8412673d36ecd6695d706457398d3220f7ba66a5877f389c307f696c333efee"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아들, 이번 고등부 모의고사 평균 90점 못 넘으면 다음 달 용돈 다 끊어버릴 줄 알아.\"\n- [peer, 0s ago] \"아빠 진짜 너무해요! 나 저번 달 내내 피방 안 가고 학원 안 빠지면서 열심히 했단 말이야.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "de69bc6f29fe436776fa0a1534c502f6f97a1fb4b72cc38234d6e6f2467ea8bf"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야 너 어제 술 처먹고 길바닥에서 막장으로 춤춘 거 동영상 다 찍혔어.\"\n- [peer, 0s ago] \"아 미친 진짜 혀 깨물고 죽고 싶다... 혹시 그거 지워줄 수 있어?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "26dfb1fc411ff987cd81956d40f3c9f16646df5bb616c45a8f0b182775d951c4"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"부장님, 죄송하지만 이번 주 금요일 오후에 반차 사용 결재를 좀 올려도 되겠습니까?\"\n- [peer, 0s ago] \"금요일 오후? 그때 핵심 거래처 임원진분들 우리 부서 방문 미팅 잡혀 있는 거 알지 않나?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "aef6aac8ee3105327103130046f762eea21819a3510e098488a714c7b7858f86"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"할머니, 어제 시장 건너 약국에서 제가 사다 드린 무릎 관절약은 좀 드셔 보셨어요?\"\n- [peer, 0s ago] \"아이고 늙으면 다 아픈 건데 뭣하러 비싼 걸 사 왔어. 아까워서 안 먹었다 아직.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "512d79976e5a3805f6c5c44f7c18593756a927eed845fcf2ebe5de53516f1df0"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"김 후배, 너 저번 주말에 빌려간 내 전공책 왜 아직도 반납 안 하냐?\"\n- [peer, 0s ago] \"죄송합니다 선배님! 제가 이번 주말에 깜빡하고 고향 집에 그대로 두고 와버렸습니다...\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "5adfada9f17ea4301ead0fc4b64b109afd8044aeeffbe4cae2acc433577cc4ec"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 어제 농구 동아리에서 시합 뛰다가 발목 완전히 심하게 접질렸어.\"\n- [peer, 0s ago] \"헉, 그래서 어제 저녁 내내 단톡방에 아무 말도 없고 조용했구나. 병원은 가봤어?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "08e8cc9e519fbf249c27f5b7dd8357cb8637637869a924a3ee4c7c0a904377ce"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말 3일간 황금연휴인데 좀 쉴 거야? 난 드디어 속초로 서핑하러 가.\"\n- [peer, 0s ago] \"난 핑계 김에 밀린 집안일이나 싹 하려고. 한 달 내내 방 청소를 아예 손도 안 댔거든.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "32060a88783a804f2dcb5a1cdb8a3599bff69a5d6e94fd14b09d9141d786c127"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 본부장님 얼굴색 완전 최악이던데 혹시 너 결산 보고서 또 까였어?\"\n- [peer, 0s ago] \"어... 매출 액수 숫자 단위 하나 틀린 거 들켜서 한 시간 동안 서서 엄청 깨졌어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "8b269c5c1ead4f7067db0033ad7bb2c5d3d82cb93caf4e704d0357ddd7277a2b"
+    },
+    {
+      "sampleId": "ctx2-dyadic-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너 아까 점심 먹고 분명히 나한테 독하게 다이어트한다고 오늘부터 간식 다 끊는다고 맹세했지?\"\n- [peer, 0s ago] \"응, 진짜 맹세코 이번엔 독하게 맘먹고 운동도 끊고 저녁도 방울토마토만 먹을 거야.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "9f6106284b77b720512043b58061d331195976fd2c1042aaf591a4fc7627eb60"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"엄마, 나 이번 방학 때 친구들이랑 한 달 동안 유럽 배낭여행 다녀올까 해.\"\n- [peer, 0s ago] \"유럽? 거긴 소매치기도 많고 위험하다던데 엄마는 절대 반대야.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "c3342bdd39d612f59bc68dbdab85229e5bc6d36475b845cdda7783b0cb721d5a"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"김 대리, 내일 아침 본부장님 주관 주간 회의 자료 취합은 다 끝났나?\"\n- [peer, 0s ago] \"네 팀장님, 방금 마지막 자료 들어와서 정리 후 메일로 보내드렸습니다.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "249d81a2733c80042fb386978acfff9e79c1f16ad80796cb29247ebffe5dd83a"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너 어제 소개팅한 남자분 어땠어? 프사 보니까 완전 훈남이던데.\"\n- [peer, 0s ago] \"프사만 멀쩡했어. 말이 진짜 너무 안 통해서 밥만 먹고 도망 나왔어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "674da8de11e557de4fb22e7155b1b3792c02615066e65ce2dd0997285113af1b"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 어제 새벽에 한정판 운동화 드로우 넣은 거 드디어 당첨됐어!\"\n- [peer, 0s ago] \"와 미쳤다! 그거 요즘 프리미엄 엄청 붙어서 리셀 가 장난 아니잖아.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "9f26e44522a556912e64577dc1ca11d2d5766192469babe5ec0bcf14764fd8a3"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 점심 뷔페에서 완전 무리해서 과식했더니 배가 안 꺼지네.\"\n- [peer, 0s ago] \"너 아까 혼자서 생연어 초밥만 스무 접시 넘게 부술 때부터 알아봤어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "1359787c5e72ccd0579e3aa2574e52e77c065867996690e9854c41bc9c06e393"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"와 지금 창밖 봐봐. 4월인데 뜬금없이 눈이 펑펑 오고 있어.\"\n- [peer, 0s ago] \"요즘 날씨 오락가락 미쳤어. 어제는 골프공만 한 우박이 떨어지질 않나.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "4f9cfe833366d297519782fe0af09e5f0d81cb5c982ed8e472a54e7c3c59d2c5"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 진짜 큰일 났다. 오늘부터 무조건 굶으면서 지옥의 다이어트 할 거임.\"\n- [peer, 0s ago] \"네가? 맨날 입으로만 작심삼일이면서 이번엔 또 며칠이나 가나 보자.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "87191ca295636a07f53aa579cd10ae9eccfd179bf23fea87919e60106fc63949"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"일기예보 보니까 이번 주말 내내 태풍 오고 폭우 쏟아진대서 우울해.\"\n- [peer, 0s ago] \"어차피 놀러 갈 돈도 없는데 잘됐지 뭐. 집에서 뒹굴거리면서 넷플릭스나 보자.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "e60d5691b354d0a5e7fdf0c4395f92a810d381b2ba46eead9e29b016df9fa78b"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"옆집 강아지 덩치도 늑대만 한 데다 이빨 드러내서 진짜 너무 무서워.\"\n- [peer, 0s ago] \"맞아, 아까 지나가는데 우리 쪽 보면서 계속 짖길래 나도 소름 돋아서 도망쳤잖아.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "bb7c9b25285c61d22c8c6eb9ab9cea9339c90772d06a93f08bc01b89b3893581"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"야, 우리 스무 살 땐 매일 밤새워 클럽 가고 술 마셔도 다음날 멀쩡했는데.\"\n- [peer, 0s ago] \"그때 진짜 미쳤지. 체력이 남아돌아서 피씨방에서 3일씩 밤새고 그랬잖아.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "0da418e30d3105b65dbc0ee17c73d9680aa4fcfe62e6e2d6a449264934be2e4e"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"저번 여름휴가 때 한 달 내내 매일 강릉 바다 점령하고 서핑했잖아.\"\n- [peer, 0s ago] \"그때 우리 둘 다 피부 완전 새까맣게 타서 현지인 다 됐었지.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b3cdf6162605e4baac372303b80c4d9de3b6c142ba72c0f12dbb0bac7f1628f2"
+    },
+    {
+      "sampleId": "ctx2-dyadic-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 드디어 토익 900점 넘었어! 미쳤다 생전 처음이야!\"\n- [peer, 0s ago] \"대박! 너 저번 달 내내 기출 돌리면서 고생고생하더니 드디어 해냈구나.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "171576cae3a86dcc1a3a52aa23eec362ecf701aedef0fe8b3d7cbf61b4337de4"
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 백화점 쇼핑 가서 가을용 브라운 트렌치코트랑 신상 검은색 가죽 재킷을 둘 다 피팅룸에서 입어봤어.\"\n- [self, 0s ago] \"트렌치코트는 어깨 핏이 진짜 예술이었는데 가격표 보니까 내 예산을 훌쩍 넘어서 눈물을 머금고 포기했지.\"\n- [self, 0s ago] \"대신 재킷은 시즌 마감 세일 중이라 딱 10만 원이길래 망설임 없이 기분 좋게 일시불 카드로 시원하게 긁었어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "e343d15ce2033e60f0ea5df8c6017b6f8e391bce697286144ce603e037ba0696"
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 카페에서 공부하는데 내 노트북 바로 옆자리에 어떤 키 엄청 크고 잘생긴 외국인 남자가 앉았거든.\"\n- [self, 0s ago] \"근데 그 사람이 갑자기 내 어깨를 톡톡 치더니 유창한 한국어로 노트북 충전기 좀 빌릴 수 있냐고 예의 바르게 묻더라고.\"\n- [self, 0s ago] \"내가 흔쾌히 어댑터 빌려주니까 나중에 고맙다면서 자기 영어 이름 알려주고 아이스 아메리카노까지 직접 사서 내 자리에 놔줬어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "6cc072da07c1bad6acc400347f62f300316dd687c7a39821cc4ffc1100604931"
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번에 강남 토익 스터디원 모집 글 올렸는데 지원한 사람 중에 대학교 재학생 두 명이랑 직장인 세 분이 있었어.\"\n- [self, 0s ago] \"근데 직장인 세 분은 면접 수요일 저녁마다 정기 야근이나 회식이 있어서 내가 정해둔 룰이랑 시간이 너무 안 맞더라고.\"\n- [self, 0s ago] \"그래서 눈물을 머금고 시간 도저히 안 맞는 그분들은 스터디원 합류를 죄송하다고 아주 정중하게 거절했지.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "e347420c543e551383a282f38b88979e13b6f9a5639d7dda26024fc6a3efc756"
+    },
+    {
+      "sampleId": "ctx3-single-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 진짜 마음 굳게 먹고 내년 초에 다니던 진상 회사 확 때려치우고 6개월 동안 유럽 배낭여행 훌쩍 떠날 거야.\"\n- [self, 0s ago] \"아까 부모님한테 말씀드렸더니 미쳤냐면서 당장 정신 차리고 재취업 이력서나 준비하라고 엄청난 등짝 스매싱을 날리시더라.\"\n- [self, 0s ago] \"그래도 난 이미 적금 예금 다 깼고 런던행 비행기 편도 티켓까지 수수료 불사하고 결제해버려서 절대 뒤로 못 물러나.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "545f9dad11c6a010505423e2aa912c40441ae63b3377f9a0f5e99c2e26dc5112"
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 오후에 회사 반차 내고 완전 오랜만에 동창 친구들 만나서 한강 뚝섬 공원 가서 돗자리 펴고 치맥하며 놀기로 했거든.\"\n- [self, 0s ago] \"근데 갑자기 한강 쪽에 미친 듯이 비가 억수같이 쏟아져서 야외에서 노는 건 사치고 완전히 계획 다 물 건너가버렸어.\"\n- [self, 0s ago] \"어쩔 수 없이 다들 단톡방에서 비 안 맞는 실내에서 시간 보낼 곳 엄청 찾다가 그냥 코엑스 아쿠아리움이나 구경 가자고 합의 봤어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "04855f529948ad852b51ee50559a8caa6ee617e4989fe290483b6e1195fd1faa"
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"방금 인터넷 애플스토어에서 아이패드 프로 12.9인치 최고 사양 풀옵션으로 장바구니에 담아놓고 결제 버튼 당장 누를까 엄청 고민했어.\"\n- [self, 0s ago] \"근데 내 폰으로 은행 통장 잔고 앱 켜서 확인해 보니까 이번 달 식비랑 원룸 월세 내고 나면 잔액이 아예 마이너스 찍히겠더라고.\"\n- [self, 0s ago] \"이율 높은 카드 할부로 12개월 긁을까도 생각했는데 다음 달 카드값 도저히 감당 못 해서 20대에 신용불량자 될 거 같아.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "0930698dd3b2a3e57adfcf77e8c8cd7d1a3bdb796e57a66b05157e0910446fa6"
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 회식에서 소주 엄청 마시고 집에 와서 옷도 못 벗고 그대로 기절했는데 오늘 아침에 눈 떠보니까 내 200만 원짜리 최신형 스마트폰이 없어.\"\n- [self, 0s ago] \"어제 갔던 술집 구석구석 전화해 봐도 종업원이 분실물 안 들어왔다 그러고 타고 온 택시 기사님 영수증 번호도 못 찾아서 진짜 미치고 팔짝 뛰겠네.\"\n- [self, 0s ago] \"방금 내 룸메이트 친구가 자기 폰으로 경찰청 유실물 통합 포털 사이트에 내 기종 비슷한 핸드폰 올라와 있는지 싹 다 새로고침하며 검색해 줬거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "01c5b8af00ba0cab17c6a43b63cb2ffad3badad7b65eaad8cdee262af4cac43c"
+    },
+    {
+      "sampleId": "ctx3-single-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 부장님이 내일 아침 9시 전체 임원진 회의에 쓸 부서 실적 요약 피피티 발표 자료를 오늘 밤 자정 전까지 혼자 다 만들라는 거야.\"\n- [self, 0s ago] \"근데 나 아까 저녁 7시에 칼퇴 준비 다 하고 컴퓨터 껐는데 갑자기 팀 단톡방에 팀원들 다 보게 이렇게 미친 폭탄 업무 공지를 때리시는 거 있지.\"\n- [self, 0s ago] \"지금 허겁지겁 집 와서 벽시계 보니까 벌써 밤 10시 반이라서 데드라인 자정까지 남은 시간 딱 1시간 반밖에 없는데 불안해 미쳐버리겠네.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "e19c7bcbeeac239ed8e20c602f94de11fc23fd499a32e34d65183c344f2abccf"
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 아침부터 마법의 날 생리통이 너무 심해서 아랫배가 칼로 끊어질 것 같이 아프고 식은땀이 줄줄 흘러서 회사 탕비실 소파에 시체처럼 누워있었어.\"\n- [self, 0s ago] \"회사 앞 약국에서 제일 쎈 진통제 두 알 사 먹었는데도 효과가 하나도 없고 손발이 얼음장처럼 차갑게 다 굳어가네.\"\n- [self, 0s ago] \"다행히 착한 옆자리 동기 서포터가 나 과로로 쓰러질 거 같다고 자기 서랍에 아껴둔 비싼 홍삼 꿀차 액기스 티백 박스를 선뜻 공짜로 주더라고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "fb8cfacb7c7cf163de6eb8186bc1a564ae938604dd347ac2b283cc2ce7585be3"
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 요즘 회사에서 프로젝트할 때 매번 회의 지각하고 서류 수치 틀리는 실수 연발했더니 부장님한테 진짜 단단히 억울하게 완전 찍혔어.\"\n- [self, 0s ago] \"어제 주간 회의 시간에도 내가 밤새 피 터지게 쓴 기획안 보더니 그딴 건 당장 파쇄기 쓰레기통에나 찢어 버리라고 팀원들 쫙 다 보는 앞에서 망신을 주더라고.\"\n- [self, 0s ago] \"솔직히 내가 데이터 검증 안 한 잘못한 부분도 분명히 있긴 한데, 그래도 직장 상사가 어떻게 부모님 욕 인신공격까지 섞어가며 그렇게 심하게 선을 넘게 혼내냐.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "528e60fb7142635a280db980647c9c9447d35d13815c3cd3dcfafecc535679ae"
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 달 전공 필수 기말고사가 너무 극악으로 어려워서 학생들 평균 점수 완전 반토막 났다고 교수님이 갑자기 이번 주말에 재시험 일정을 강제로 잡으셨어.\"\n- [self, 0s ago] \"억울해 죽겠지만 어제 새벽 4시까지 도서관에서 무식하게 두꺼운 전공 서적 3번이나 회독하고 족보 예상 기출문제 싹 다 백지에 쓰면서 달달 외웠어.\"\n- [self, 0s ago] \"아까 9시에 강의실에서 빈 시험지 딱 처음 받았을 땐 또 망한 거 같아 막막했는데, 막상 펜 들고 풀다 보니까 어젯밤에 내가 찍은 아는 문제만 쏙쏙 기적처럼 나와서 30분 만에 술술 풀리더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "dfb9408709d542eb21c47e1e03a78f8b7692e6129feeef6c948c92d7d5193ba1"
+    },
+    {
+      "sampleId": "ctx3-single-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"요즘 두 달 전부터 이상하게 밥만 먹으면 소화가 너무 안 되고 위장이 송곳으로 콕콕 찌르듯이 아파서 결국 못 참고 동네 내과 방문해서 수면 위내시경을 풀코스로 받았거든.\"\n- [self, 0s ago] \"결과 보는데 의사 선생님이 위궤양 위염 초기 심각한 증상이라고 당분간 술 담배 매운 거 짠 거 절대 입에 대지도 금지하고 맹맹한 흰죽만 먹으라고 엄청 혼내셨어.\"\n- [self, 0s ago] \"근데 내시경 병원 검사비 십얼마랑 점막 보호 치료용 짜 먹는 물약이랑 알약 2주일치를 한꺼번에 처방받아서 밑에 1층 약국에서 카드로 다 결제했단 말이야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "86bdfb3c7ad6fd0bfff6027d4ee20603a58cd881747e20a922e7b6521f4a8d6b"
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 오후에 집 근처 로또 판매점에서 당첨 확률 높다는 수동 번호로 큰맘 먹고 5만 원어치나 샀어.\"\n- [self, 0s ago] \"이번에 혹시 1등 당첨되면 당장 퇴사 명분 삼고 강남에 아파트 한 채 바로 파워 결제해야지 하고 김칫국 엄청 마셨지.\"\n- [self, 0s ago] \"방금 생방송 추첨 끝나고 큐알 코드로 확인해 봤는데 5만 원어치 번호 중에 진짜 단 한 개도 안 맞고 다 빗나가더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "bb2c6af112eb79561db98100c814b6e70c5a28e5d2c00a4f2a1c2f8563842b80"
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 롤 랭크 게임 돌리는데 시작하자마자 우리 팀 정글러가 상대 진영으로 아무 생각 없이 무리하게 쳐들어가는 거야.\"\n- [self, 0s ago] \"내가 핑 엄청 찍으면서 제발 뒤로 빼라고 경고했는데 기어코 들어가더니 결국 1분 만에 처참하게 퍼스트 블러드 따이고 죽더라고.\"\n- [self, 0s ago] \"그 뒤로 계속 팀원들 남 탓만 하더니 고의로 수십 번을 죽어줘서 결국 15분 만에 우리 본진 넥서스가 시원하게 밀려버렸어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "48a86bb028f9cf9f93da476200422f7a5d1fa17fea3353e63541c048a8572483"
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 고등학교 동창회 단톡방에서 다음 달에 제주도 풀빌라 펜션 빌려서 2박 3일 다 같이 신나게 놀러 가자고 공지가 올라왔네.\"\n- [self, 0s ago] \"근데 나 요즘 빡세게 취업 준비하느라 주말 알바도 다 그만둬서 당장 낼 비행기 값이랑 펜션 숙소 회비 20만 원조차 없단 말이야.\"\n- [self, 0s ago] \"애들이 돈 쪼들리면 자기네들이 십시일반으로 모아서 내줄 테니까 제발 몸만이라도 오라고 자꾸 꼬드기는데 솔직히 그딴 동정 너무 비참해.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ebfe9c9acb3071ac97fca14f77b900c9f3b8ca83a4eb3d618e0d879e22d3b371"
+    },
+    {
+      "sampleId": "ctx3-single-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"이번 주말에 봄맞이 방 청소 대대적으로 하려고 어제 쿠팡에서 물티슈랑 먼지떨이 같은 청소 용품 엄청 많이 샀거든.\"\n- [self, 0s ago] \"근데 막상 아침 9시에 눈 뜨니까 유튜브 쇼츠 알고리즘에 빠져서 침대에 누워서 하루 죙일 스마트폰 화면만 멍하니 봤네.\"\n- [self, 0s ago] \"지금 벌써 해 다 지고 밤 10시가 넘었는데 결국 로봇 청소기 버튼 한 번 안 누르고 옆에 배달 음식 쓰레기만 더 산더미처럼 쌓였어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "1b028210dca9560fed8378aa398198875683239975711390cbf563f4e41f0093"
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"금일 오전 9시부로 영업 2팀에서 제출한 하반기 신제품 마케팅 전략 기획안 1차 검토 작업을 모두 완료하였습니다.\"\n- [self, 0s ago] \"해당 기획안의 3페이지 예산안 타당성이 다소 부족하여 추가적인 보완이 필요하다는 피드백을 유선상으로 전달한 바 있습니다.\"\n- [self, 0s ago] \"방금 전 영업 2팀 최 과장으로부터 예산안 데이터가 전면 수정된 2차 기획안을 사내 이메일망을 통해 다시 수령하였습니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "62817aeed9943380608bf089123ede4517945a3f339a7cd90ad79a1cc9b9caf0"
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아 ㅆㅂ 진짜 아침부터 출근길 만원 지하철 타다가 얼타는 표정의 어떤 미친 아저씨한테 발등 제대로 콱 밟혀서 개빡치네.\"\n- [self, 0s ago] \"아프냐고 사과라도 하든가. 남의 발 뭉개놓고 귀에 노이즈 캔슬링 이어폰 꽂은 채로 폰만 쳐다보고 모른 척 쌩까는 게 진짜 얼탱이가 없더라.\"\n- [self, 0s ago] \"내가 어이없어서 옆에서 빤히 쳐다보니까 뭘 꼴아보냐는 식으로 위아래로 기분 나쁘게 훑어보는데 진짜 그 자리에서 명치 한 대 칠 뻔했어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "29f30694d5caa2fd0bd24fc03509c369f493f6b385c9f961c72e600ff15fd463"
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"안뇨옹! 오늘은 우리 사랑스러운 구독자 뽀쨕이 애기들한테 내가 평소에 젤루 아끼는 최애 쿨톤 핑크 블러셔 추천해 주려고 카메라 켰찌롱!\"\n- [self, 0s ago] \"이거 가루 날림도 없고 뽀송한 발색 진짜 양쪽 볼따구에 한 번만 콕 올려주면 완전 뽀용뽀용해서 요정 같아 보인다구 다들 엄청 탐냈던 그 제품이양.\"\n- [self, 0s ago] \"가격도 할인받으면 겨우 한 개에 만 원밖에 안 해서 완전 혜자 가격이니까 다들 근처 올리브영 빅세일할 때 무조건 당장 달려가서 장바구니에 쟁여놔야 해.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "dc1fb9acfb4e1a5edd01e3c8db430a0b8e89ed302ed9e67c5a7136dc3ffcd2b3"
+    },
+    {
+      "sampleId": "ctx3-single-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"자 방금 들어오신 시청자 여러분, 지금 바로 상대 진영 최종 보스 몹 뚝배기 깨러 레이드 극딜 하이라이트 영상 바로 달립니다. 집중하세요.\"\n- [self, 0s ago] \"아 서버 렉 뭐야! 갑자기 핑 100까지 튀어서 피하기 생존 스킬 삑사리 났잖아. 이거 개발사 영자들 돈만 빨아먹고 서버 관리 안 하냐 갓겜 수준 진짜.\"\n- [self, 0s ago] \"휴 일단 마나 포션 쭉쭉 빨면서 뒤쪽 바위에서 존버 타다가 제 공격 궁극기 쿨타임 돌면 바로 점멸 플래시 쓰고 이니시 화끈하게 걸겠습니다.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "eb55bf8606f93863cc00b860835d4505bde5c7c6cb9fd041e7ca46d4070cca4b"
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 혼자 밥 먹으려고 요리 유튜브 쇼츠 보니까 전자레인지 전용 용기에 계란 넣고 딱 1분만 돌리면 초간단 반숙 수란이 완성된다고 하더라고.\"\n- [self, 0s ago] \"그래서 나도 집에서 뚱뚱한 머그컵에 정수기 물 붓고 날계란 조심스럽게 톡 까서 넣은 다음에 노른자 안 터뜨리고 그대로 렌지에 넣고 돌렸어.\"\n- [self, 0s ago] \"근데 한 40초쯤 윙윙 돌아갔을 때 갑자기 렌지 안에서 퍽 혹은 펑 하는 엄청난 폭발음이 크게 들리면서 틈새로 연기가 확 나더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "06701edd740b6a5e3d515e428e2c3e3365273859cbde3887d48957f10a6a251f"
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 기분 전환 겸 백화점 매장에서 20만 원 주고 진짜 구름처럼 새하얀 한정판 나이키 농구 운동화 새로 사서 처음으로 개시하고 신고 나갔지.\"\n- [self, 0s ago] \"근데 편의점 길 가다가 갑자기 하늘에서 구멍 뚫린 것처럼 예보에도 없던 소나기가 미친 듯이 쏟아져서 앞 바닥 점자블록이 다 진흙탕이 된 거야.\"\n- [self, 0s ago] \"당황해서 비 피하려고 상가 처마 밑으로 막 후다닥 뛰어가다가 그만 시커먼 흙탕물 웅덩이를 발바닥으로 제대로 팍 밟아버렸어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "63a72daf50c8a92cf3aab764758383ad9c7790c2dfedb8438c80711b43be1e33"
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"내일 제일 친한 중학교 동창 친구 생일이라서 밤에 홈베이킹으로 달달한 초코칩 쿠키 반죽 예쁘게 동그랗게 빚어서 오븐 트레이 위에 띄엄띄엄 올렸거든.\"\n- [self, 0s ago] \"유튜브 영상 레시피에는 180도 온도에서 딱 15분만 겉바속촉으로 굽고 꺼내라고 적혀있었는데, 소파에서 폰 하다가 깜박 잠이 들어서 30분이나 구워버렸어.\"\n- [self, 0s ago] \"주방에서 엄청나게 탄 냄새가 진동해서 놀라 가지고 화들짝 깨서 오븐 문 열어보니까 귀여운 쿠키 표면이 완전 새까만 화산재 돌멩이처럼 굳어있더라고.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "9ca42082b545a2a962f89c2e5cabd45b25953d0e1ec61202280d7b7ffc8d63fa"
+    },
+    {
+      "sampleId": "ctx3-single-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 아침에 일어났는데 배가 아파서 유튜브 쇼츠 신나게 보면서 큰일 볼일 보려고 바지 뒷주머니에 내 소중한 아이폰 대충 꽂아놓고 화장실 변기에 앉았어.\"\n- [self, 0s ago] \"다 싸고 휴지로 닦은 다음에 일어나서 엉거주춤 바지 지퍼 추스르는데 갑자기 주머니 헐렁한 틈 사이로 아이폰이 중력의 법칙에 따라 스르륵 훌러덩 미끄러지더라고.\"\n- [self, 0s ago] \"그대로 손쓸 틈도 없이 경쾌하게 퐁당 소리 내면서 똥물 가득한 변기통 한가운데로 내 피 같은 아이폰이 완벽한 자세로 다이빙을 해버린 거야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "f1f98962d9ad81694064f870f2bf320d365e80b5ddce245e64fb90f3e602ffcc"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 아침에 자다 일어났는데 갑자기 오른쪽 아랫배가 예리한 칼로 찌르듯이 아파서 숨도 제대로 못 쉬겠더라.\"\n- [self, 0s ago] \"결국 119 구급차 타고 응급실로 실려 와서 씨티 찍어보니까 급성 맹장염이라서 당장 입원하고 수술해야 된대.\"\n- [self, 0s ago] \"지금 링거로 무통 주사 잔뜩 맞았는데도 배가 너무 찢어질 거 같이 고통스러워서 응급실 침대에서 계속 뒹굴면서 울고 있어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "98472b53e7277bf00c27c4b47b4ee819ff0e8dd8badd5b7896aeb88e566e4e8e"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 밤에 피곤하게 야근 퇴근하고 원룸 현관문 도어락 비밀번호 누르고 집에 들어갔는데 방구석 옷장이 싹 다 뒤집어져 있는 거야.\"\n- [self, 0s ago] \"알고 보니까 도둑놈이 베란다 방범 창문을 쇠지렛대로 다 깨부수고 들어와서 내 현금 금고랑 소중한 노트북까지 다 털어갔어.\"\n- [self, 0s ago] \"지금 감식반 경찰관들 와서 집안 전체에 지문 채취 가루 뿌리고 폴리스 라인 치고 경찰서에서 진술서 쓰느라 밤새 한숨도 못 잤어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ce14a5e5791aa5fe5ab35d7289cf27d5f9c295df72c682ecbf0cfdd63e0fb706"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 진짜 내가 정말 간절하게 가고 싶었던 제일 큰 외국계 기업 최종 임원 면접이었는데 완전 바보 멍청이처럼 망쳤어.\"\n- [self, 0s ago] \"영어로 1분 동안 장점 위주로 자기소개하라고 찔러왔는데 갑자기 머리가 하얘져서 아무 말도 못 하고 꿀 먹은 벙어리처럼 서 있었어.\"\n- [self, 0s ago] \"압박 면접관이 한숨 푹 쉬면서 그냥 이제 그만 나가보라고 차갑게 말해서 나 지금 로비 화장실 휴지통 앞에서 펑펑 우는 중이야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "40fc2103c2d7644db7e81ff5cab07c18c640ac3b0f927eff46d71f8ec6dd9071"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"내년 화창한 봄에는 나도 드디어 지긋지긋한 노처녀 딱지 떼고 진짜 평생을 함께 믿고 살아갈 착하고 좋은 사람 만나고 싶어.\"\n- [self, 0s ago] \"그래서 어제 남정네 잘 붙는다고 엄청 유명하게 소문난 용하다는 점집 가서 부적도 10만 원이나 주고 쓰고 굿도 하려고 알아보고 왔어.\"\n- [self, 0s ago] \"진짜 내년에 남자 생기면 시골 친척들이랑 친구들 다 불러 모아서 고급 호텔에서 아주 성대하게 잔치 열고 평생 자랑하고 싶단 말이야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "53a0db56e271b6342ca74196c5cee5b93b61959c2ae353cdd60af00ed8c919b7"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 요즘 주말마다 오프라인 독서 모임이랑 직장인 와인 동호회 열심히 나가면서 진짜 새로운 각계각층의 유능한 사람들 엄청 많이 사귀고 있거든.\"\n- [self, 0s ago] \"어제도 모임 뒤풀이에서 친하게 알게 된 어떤 성공한 스타트업 피씨엠 대표님이 자기네 회사 VIP 파티에 지인 자격으로 특급 초대해주셨어.\"\n- [self, 0s ago] \"확실히 이곳저곳 돌아다니면서 인맥 관리 단단히 해두니까 다른 데선 못 구하는 예상치 못한 고급 정보도 엄청 많이 얻고 사회생활하는 데 너무 유리하더라.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "7a5ba8b44e1639e5f4e0eb605225f3c7801ea4e6061afc2b22059607775e4ea3"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"솔직히 내가 내 주변 친구들에 비해서 남자 보는 조건 기운 잣대 기준이 그렇게 흠잡을 정도로 까다로운 것도 절대 아닌데 왜 이렇게 지독하게 연애가 안 되는지 모르겠어.\"\n- [self, 0s ago] \"난 복잡하게 안 보고 그냥 키는 180 이상에 인서울 대학 무조건 나오고 연봉 최소 7천 이상에 절대 담배 안 피우고 나한테만 다정한 사람이면 딱 되거든.\"\n- [self, 0s ago] \"근데 주변 친척들이나 지인들은 자꾸 나한테 제발 백마탄 왕자님 꿈 깨라며 현실을 좀 파악하고 내 주제 파악 좀 하라고 맨날 모일 때마다 팩폭 구박만 하고 난리야.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ce29e2e9650f405f74dac0a20aa6a67f9a5ecff43eda1ead394e194cb8a8140b"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나 원래 태생이 심장 약한 엄청난 쫄보라서 미스터리나 심리 공포 영화 장르는 극장 근처에 아예 쳐다보지도 못하고 새빨간 포스터만 우연히 봐도 거품 물고 기절하거든.\"\n- [self, 0s ago] \"초등학생 어릴 때 전설의 고향 구미호 편 티비에서 우연히 잠깐 스쳐 지나가듯 봤다가 잔상이 남아서 무려 한 달 동안 엄마 품에서 덜덜 떨며 오줌 싸면서 지리며 잤어.\"\n- [self, 0s ago] \"그래서 대학 동기 친구들이 매번 핼러윈 파티 시즌 때 놀이공원 귀신의 집이나 호러메이즈 가자고 꼬셔도 난 무조건 입구 밖에서 벤치 지키며 혼자 외롭게 팝콘이나 먹어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "6b6e2413f9ace0a7f41bbed8326366fdbd2b5b3478a41edb04b9a58287b778f5"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"난 진짜 선천적으로 간에 알코올 분해 효소가 아예 1도 없어서 도수 10도짜리 순한 소주 반 잔만 실수로 마셔도 온몸이 토마토처럼 빨개지고 심장 쿵쾅거리다 응급실 실려가.\"\n- [self, 0s ago] \"그래서 대학교 1학년 신입생 환영회 술자리 첫날때도 선배들 다 마시는데 나 혼자 테이블 구석에 쭈그려서 칠성 사이다만 홀짝이느라 분위기 텐션 절대 못 맞추고 완전히 겉돌았어.\"\n- [self, 0s ago] \"그날 응급실 다녀온 이후로 내 평생 죽기 전까지 내 입안에 단 한 방울의 알코올 액체도 절대 입술에 닿게 하지 않겠다고 부처님이랑 할머니 납골당 앞에서 피눈물 흘리며 맹세까지 했지.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "c30568ac1c0c99366f9c35c543d7c33b196d004aee11d77afde669300037de13"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"나는 방 안에 놓인 인테리어 소품이나 물건 딱 하나라도 1센티미터 제자리에 안 놓여 있으면 호흡곤란 오고 스트레스받아서 진짜 미쳐버리는 극도의 강박증 완벽주의 미니멀리스트야.\"\n- [self, 0s ago] \"내 하얀색 방에 딱 봐도 잘 때 쓸 매트리스 침대랑 심플한 책상 덜렁 두 개 빼고는 아무것도 안 두고, 옷장 옷도 딱 계절별로 단 3벌씩만 남기고 싹 다 당근마켓에 진작에 내다 팔았어.\"\n- [self, 0s ago] \"눈부신 흰색 대리석 바닥에 까만 머리카락 단 한 가닥이라도 떨어진 꼴을 내 두 눈 뜨고 절대 못 참고 못 봐서 하루에 로봇 청소기 2번 돌리고 내 손으로 물걸레질을 5번씩 박박 돌리거든.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "36d4cf8a8b7e93edc42b7afa213c58955b4a3d7689d3df33188d85b7c422c85a"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 두근거리는 마음으로 동네 근처 인문계 고등학교 파릇파릇한 1학년 신입생 입학식 다녀왔는데, 엄마가 사준 교복 상의 사이즈가 너무 아빠 옷처럼 헐렁하게 커서 코미디언 양복 입은 거 같아.\"\n- [self, 0s ago] \"하 빨리 답답한 이 학교에서 조기 졸업하고 교복 벗어던진 자유로운 스무 살 어른 성인 돼서 새벽 첫차 다닐 때까지 피씨방 밤새 가서 게임하고 호프집에서 치킨에 생맥주 시원하게 마시는 게 내 인생 유일한 소원이야.\"\n- [self, 0s ago] \"근데 망할 지금 내 통금 있는 현실은 내일모레 칠 무시무시한 중간고사 수학 시험 범위 구석구석 족보 기출문제나 미친 듯이 책상 앞에서 눈 뒤집고 풀어야 하는 불쌍한 고딩 노예 신세니까 슬프다 한숨만 나와.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "2bbada58da3ada53f736328e1d8593a3c8b7da48fdad9a9411517ff2cc1f9b08"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 강원도 스키장 블랙 다이아몬드 최상급 빙판 코스에서 초보 주제에 괜히 무리해서 S자 멋부리다가 뒤로 확 넘어져서 오른쪽 다리 종아리 뼈가 산산조각이 났어.\"\n- [self, 0s ago] \"지금 동네 정형외과 6인실 병동에 누워서 하반신 전체에 두꺼운 흰색 석고 통깁스 칭칭 감고 꼼짝없이 링거 줄 매단 침대에 결박돼서 간병인 이모님이 밥도 떠먹여주는 불쌍한 처지야.\"\n- [self, 0s ago] \"오늘 아침 회진 때 주치의 담당 의사 쌤이 앞으로 내 뼈 붙으려면 최소 두 달은 목발 두 개 짚고 없이는 복도 화장실조차 혼자서 절대 걸어서 못 갈 거라고 세상 절망적인 사형 선고를 하셨어.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "ef48a5d10494563e79ce503ed43fd5d6f4c60bf2a32366e439743863a387a184"
+    },
+    {
+      "sampleId": "ctx3-single-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오늘 정신과에서 처방받은 진짜 독한 파란색 수면 알약 두 알이나 물이랑 같이 먹었는데도 눈만 말똥말똥 해져서 도저히 잠이 안 와서 새벽 3시 반까지 전기장판 침대에서 양 1000마리 셌어.\"\n- [self, 0s ago] \"스트레스성 불면증이 갈수록 너무 고통스럽게 심해서 다음 주 주말에 강남에 유명한 뇌파 수면 클리닉 진료 특진으로 피의 예약해놨는데 내일 출근해서 아침 주간 회의 시간에 무조건 꾸벅꾸벅 침 흘리며 졸까 봐 벌써부터 미치겠어.\"\n- [self, 0s ago] \"신이 있다면 제발 내 이 멈추지 않는 톱니바퀴 같은 걱정 뇌가 불안한 망상 생각 좀 제발 그만 멈추게 하고 제발 딱 단 1시간만이라도 의식 잃고 기절하듯이 푹 깊은 달콤한 렘수면 잠에 빠졌으면 소원이 없겠다 진짜 제발 살려줘.\"",
+      "resolvedMode": "local",
+      "candidateHistoryHash": "426c2391414ecbd9097f70136d2b0c2da3aaac0427ba2bb51f1bffcc6dd9046c"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어, 맞아. 책장은 거실 소파 옆에 뒀고, 서랍장은 내 침대 옆에 바짝 붙여놨지.\"\n- [peer, 0s ago] \"저번에 우리가 이케아 가서 샀던 큰 진열형 책장이랑 작은 서랍장 기억나?\"\n- [peer, 0s ago] \"근데 침대 옆에 둔 건 아무리 봐도 방 벽지 색깔이랑 너무 안 어울려서 튀는 것 같네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "79b2103a61d3c269272d788e3645c9e2c80ce72ff77fd8d3fef41d18a7b868ea"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"당연하지! 걔 수학 진짜 잘해서 나 맨날 야자 때 과외해주고 밥 얻어먹고 그랬잖아.\"\n- [peer, 0s ago] \"너 옛날 중학교 때 맨날 같이 다니던 그 두꺼운 뿔테 안경 쓴 남자애 철수 기억나냐?\"\n- [peer, 0s ago] \"방금 길에서 우연히 마주쳤는데 완전 살 빼고 수염 기른 근육맨 돼서 딴 사람인 줄 알았어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b6b0425705a940e127980419c598ace4bfe3c44d4be491c2975b628ce4a37a73"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"수고 많았어. 근데 우리 부장님이 심한 해산물 갑각류 알레르기 있으시니까 일식집은 일단 무조건 빼야겠다.\"\n- [peer, 0s ago] \"이번 부서 팀 회식 장소 후보군으로 강남역 고깃집 세 군데랑 일식집 한 군데 찾아봤어.\"\n- [peer, 0s ago] \"아 맞다, 그 중요한 걸 깜빡했네. 그럼 일식당 빼버리고 남은 후보들로 다시 표 만들어서 단톡방에 올릴까?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "9d699585f7cefc8066f0f739209edb0f71bbed87aed9e6fe31b72b93e2caf454"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-referent_resolution-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"네가? 맨날 아침 9시 통근버스도 놓쳐서 택시 타는 주제에 과연 그게 작심삼일이나 갈까 궁금하다.\"\n- [peer, 0s ago] \"나 내일부터 진짜 새벽 5시 반에 일어나서 주 5일 수영장 가기로 독하게 마음먹었어.\"\n- [peer, 0s ago] \"진짜 이번엔 수영 학원비 30만 원 한 번에 피 같은 내 돈으로 다 결제해서 아까워서라도 무조건 갈 거거든.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "3c5ce6493eaadab58c2c3600f99372451d5cf98f7637123a209780bad2f5b240"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"응, 안 그래도 어디 갈지 인터넷 뒤져봤는데 남양주 팔당댐 쪽에 뷰 좋은 빵집 있더라.\"\n- [peer, 0s ago] \"이번 주말 데이트 때 미세먼지도 없고 날씨도 엄청 좋다길래 내가 외곽 예쁜 카페 가자고 했잖아.\"\n- [peer, 0s ago] \"근데 주말이라 차 엄청 심하게 막힐 것 같은데 그냥 고생하지 말고 서울 안에서 연남동이나 갈까?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "43162068fc857c4d9bc2ad1d031328b2b0787bd37ffaf5d1fef7e0f50e6a4c69"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"법카면 당연히 무조건 소고기지! 나 진짜 오늘 점심도 굶어서 한우 배 터지게 먹을 자신 있어.\"\n- [peer, 0s ago] \"방금 팀장님이 한 달 만에 부서 전체 회식하자고 법카 주셨는데 엄청 비싼 한우 고깃집 갈까?\"\n- [peer, 0s ago] \"아 차, 근데 방금 막내 김 대리님 지독한 장염 걸리셔서 죽밖에 못 드신다고 단톡방에 올리셨네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "5f3206720273d55c7c14794eb9c113ad56a3a19ba710d35f28827b4177531e15"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"미안미안 아직 반의반도 못 읽었는데, 혹시 책 돌려줄 겸 오늘 저녁에 퇴근하고 잠깐 만날래?\"\n- [peer, 0s ago] \"너 저번에 나한테 억지로 빌려간 내 다이어트 식단 관련 한정판 책자 다 읽었으면 반납 좀 해.\"\n- [peer, 0s ago] \"나 오늘 저녁엔 강남역에서 저녁 요가 수업 풀타임으로 있어서 이동 못 하는데 강남으로 올 수 있어?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b6135339323858b2e39066da60f0559ee789cc875b648ab9f3e1de23e711bc0c"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-ellipsis_completion-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"뭐라고?! 나 지금 방 완전 한 달 동안 쓰레기 안 버린 돼지우린데 어떡해! 당장 대청소해야겠다.\"\n- [peer, 0s ago] \"야 진짜 큰일 났다! 오늘 저녁에 갑자기 우리 엄마가 너네 자취방으로 고향 반찬 잔뜩 갖다주신대.\"\n- [peer, 0s ago] \"엄마 지금 고속 버스터미널 도착하셔서 택시 타고 오시면 한 30분 남았을 테니까 일단 눈에 띄는 쓰레기부터 숨겨!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "73780deceee16f75252ccb0eae8c4a5fdbbf386f4f64e774673e3e8f272a9559"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아까 수영 끝나고 네가 손목 완전 답답하다고 풀어서 네 검은색 운동 가방 앞주머니에 대충 넣는 거 내가 봤어.\"\n- [peer, 0s ago] \"큰일 났다, 수영장 여성 탈의실 3번 락커에 분명히 똑바로 넣어둔 내 비싼 애플 스마트워치 어디 갔지?\"\n- [peer, 0s ago] \"아 맞다! 진짜 요즘 내 정신머리가 왜 이러냐. 이따 러닝할 때 심박수 재야 되니까 당장 꺼내야지.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "0bc1a4ae5c7bb6e59ce33ef401136e21239c450b6dbe14a1517b5dda9c7f05b6"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아직 젊은데 병원 가서 먹는 탈모약이나 두피에 바르는 비싼 영양제라도 사야 하는 거 아냐?\"\n- [peer, 0s ago] \"요즘 회사에서 프로젝트 때문에 매일 밤새워서 스트레스 받아 그런지 정수리가 너무 휑하게 탈모가 와서 우울해.\"\n- [peer, 0s ago] \"근본적인 치료는 이미 틀렸고 그냥 어제 인터넷에서 힙스터들이 쓰는 비니 모자 열 개 세트 주문했어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "fbf8c3a7aa3865bdb6ed0fc1350d0e1f0f23338d318af70bb3f829fede3f21e3"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"너구리처럼 혼자서 3인분짜리 점보 특대 사이즈를 욕심내서 욱여넣었으니까 당연히 다 못 먹고 터질 지경이 되지.\"\n- [peer, 0s ago] \"아까 회사 점심 메뉴로 시킨 중국집 마라탕이 진짜 양이 세숫대야처럼 구역질 나게 많아서 절반이나 남겼어.\"\n- [peer, 0s ago] \"지금 진짜 호흡 곤란 올 거 같이 숨도 못 쉴 것 같아서 편의점 까스활명수 두 병이나 원샷했는데 효과가 1도 없네.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b5167a7b14ee8e30e8802806db41fc2d3c7b6c7c1231a04c78edb9e9ece077a6"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-sense_disambiguation-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"빨리 시간 날 때 이비인후과 가서 처방전 받고 코감기약 안 지어 먹었어? 그러다 진짜 코 헐어서 피 나겠다.\"\n- [peer, 0s ago] \"요즘 미세먼지에 환절기 알레르기까지 제대로 겹쳐서 축농증 걸린 마냥 누런 콧물이 폭포수처럼 쏟아져.\"\n- [peer, 0s ago] \"어제 강한 약으로 먹고 있는데도 두루마리 휴지로 하도 닦아내서 벌써 인중이랑 콧볼이 다 부풀어 오르고 따가워 죽겠어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "f66f2ec5b0255c1a96deb534fc5a5adbe826a333cc66ed03952fd392cd998b15"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"오, 진짜? 맨날 야자 시간에 엎드려 자더니 이번엔 웬일로 빡공했네. 결과 기대할게.\"\n- [peer, 0s ago] \"나 이번 중간고사 수학 공부 진짜 미친 듯이 밤새서 100점 맞을지도 몰라.\"\n- [peer, 0s ago] \"방금 시험 끝나고 가채점해 봤는데 뒤에 주관식 다섯 문제 다 날아가서 50점 나왔어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "8e7c284fc9836c6515a2153fc4352ed8044b44e36754a7c2e604f8591afc3562"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아 진짜? 나 오늘 진짜 6시 칼퇴하고 집 가서 우리 집 늙은 강아지 약 먹여야 하는데...\"\n- [peer, 0s ago] \"아까 부장님이 오늘 저녁에 부서 전체 다같이 삼겹살 회식하자고 하시더라.\"\n- [peer, 0s ago] \"에이, 다 같이 가는 열외 없는 분위긴데 너 혼자만 빠지면 부장님 엄청 서운해하실걸?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b6b8d8c3dce31b2114da33782790ab5aed0dc0844bc2fd6c70b1fe8a1fc42184"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"진짜 고마운데 괜찮아. 은행에 대출 조금 더 나오나 알아보고 어떻게든 내가 알아서 해결해 볼게.\"\n- [peer, 0s ago] \"너 이번에 새로 이사 가는 전셋집 보증금 모자라다며? 원하면 내가 200만 원 빌려줄까?\"\n- [peer, 0s ago] \"에이, 나한테 부담 안 가져도 돼. 나 어차피 당장 쓸 데도 없이 통장에 놀고 있는 여윳돈이라서 그래.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "cd4ccfdb5676d1b379c78eb316bc4b62fd9f58f61ff915d88715437f3447cf18"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-pragmatic_intent_resolution-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"벌써 이번 주만 세 번째 술 약속이네. 알았어, 어차피 말려도 나갈 거니까 조심히 놀고 와.\"\n- [peer, 0s ago] \"오늘 저녁에 나 오랜만에 고등학교 동창들이랑 술 약속 있어서 자정 넘어서 엄청 늦게 들어갈게.\"\n- [peer, 0s ago] \"응 미안해, 애들이 자꾸 카톡으로 부르니까 도저히 안 나갈 수가 없네. 금방 마시고 올게.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "f08acb41f5df93792851cd6de53262b2107b7c6bf2bc4626b0660e3e9033541e"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"네, 부장님. 방금 오탈자 검수까지 모두 완벽하게 마치고 부장님 사내 메일로 방금 송부드렸습니다.\"\n- [peer, 0s ago] \"김 대리, 어제 지시한 해외 파트너사 미팅 자료 영문 초안 다 작성했나? 오후에 바로 보고해야 돼.\"\n- [peer, 0s ago] \"수고했어. 근데 3페이지 북미 진출 매출 그래프 수치가 약간 작년 분기 옛날 데이터 같은데?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "4eb90f8063dfce421a118ae6977f7f6932b1784c2f77dca8990a4f1295eca2f1"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아, 진짜 미안. 그거 내가 카페에서 잠깐 화장실 간 사이에 어떤 놈이 들고 튀었어.\"\n- [peer, 0s ago] \"야, 너 어제 내가 빌려준 닌텐도 스위치 게임기 도대체 어디 뒀냐? 방에 아무리 찾아도 없네.\"\n- [peer, 0s ago] \"돌았냐? 그거 내가 야간 알바해서 한 푼 두 푼 모아 산 내 보물 1호인데 진짜 미쳤어? 당장 내놓으라고!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "3bb8f77d9cfaab94ceaadae23b6fcd59d3bf2369e11f0f1938699e96ad287d40"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"고객님, 정말 대단히 죄송합니다. 주말이라 주문이 밀려 주방 직원이 픽업 포장 과정에서 큰 실수를 한 것 같습니다.\"\n- [peer, 0s ago] \"아니, 제가 오늘 오전에 돌잔치용으로 예약 주문한 케이크가 축하 문구도 없이 빈 채로 배달 왔잖아요!\"\n- [peer, 0s ago] \"이거 하나 때문에 우리 애 중요한 생일 파티 다 망쳤는데 이거 환불해 줄 거예요, 말 거예요?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "addc58fcef44e76d33057420c662bf7996f09c2251bc85eb39ba8088f44a1831"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-register_carryover-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"헉, 울 애기 짜증 나게 누가 감히 괴롭혀써! 내가 당장 찾아가서 아주 그냥 다 혼내주까?\"\n- [peer, 0s ago] \"자기야, 나 오늘 회사에서 짜증 나는 부장님한테 억울하게 털려서 진짜 너무 우울하고 기운 없더 ㅠㅠㅠ\"\n- [peer, 0s ago] \"웅 ㅠㅠ 빨리 퇴근하구 나랑 매운 떡볶이 먹으면서 쓰레기 같은 부장 욕 좀 오조오억번 들어주라아앙.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "9650d5ca703597d5e17375dde0222e45b273ced57248f3f0015c08f4c8bb8582"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"잘했어. 그 다음에 마늘 표면 색깔이 노릇노릇해지면 썰어둔 양파 붓고 같이 볶아야 돼.\"\n- [peer, 0s ago] \"방금 네가 전화로 알려준 레시피 대로 프라이팬에 올리브유 두르고 썰어둔 마늘 달달 볶기 시작했어.\"\n- [peer, 0s ago] \"아, 잠시 유튜브 영상 딴짓하다가 냄새나서 보니까 마늘이 완전 시커멓게 숯덩이로 타버렸는데 어떡해?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "af302aacc0a7242581d81cb900a81254c0dfbca431ee928d6327772418c7f5e5"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"뭐? 우리 인기 교양 수강신청 피켓팅 시간까지 딱 15분 남았는데 예약해둔 PC방 늦으면 어떡해.\"\n- [peer, 0s ago] \"나 지금 너 만나러 2호선 타고 뚝섬역 가고 있는데 방금 앞차 고장 나서 열차가 통째로 멈춰 섰어.\"\n- [peer, 0s ago] \"그래서 바로 내려서 카카오 택시 타려니까 갑자기 비 쏟아져서 길 엄청 막혀. 진짜 완벽하게 망한 듯.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "add6d86b1eb72cd888af8eca3377da7fe8d17c208f8edd4a15cb5aee18fef276"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"응, 그거 진짜 부드럽고 따뜻하더라. 방금 고깃집 다녀와서 냄새나는 것 같길래 세탁기에 넣고 온수 울코스 돌렸어.\"\n- [peer, 0s ago] \"너 저번에 내 생일 때 큰맘 먹고 백화점에서 사준 베이지색 캐시미어 100% 니트 진짜 잘 입고 다녀.\"\n- [peer, 0s ago] \"야 미쳤어?! 그거 캐시미어라 온수 세탁하면 조직 다 오그라들고 줄어들어서 완전 핏 다 망가진단 말이야!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "ebf89eff0e7a5f009ab01d6a5550160a3df2184f69329eca7aebb25665cfc03a"
+    },
+    {
+      "sampleId": "ctx3-dyadic-use-temporal_or_causal_linkage-004",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"과연 의지박약인 네가 길거리 떡볶이랑 프라이드치킨의 달콤한 유혹을 단 하루라도 참을 수 있을지 진짜 의문이다.\"\n- [peer, 0s ago] \"나 오늘부터 여름에 바디프로필 사진 찍으려고 무염 닭가슴살만 먹으면서 지독하게 식단 할 거야.\"\n- [peer, 0s ago] \"나 진짜 지금 아까부터 배고파서 쓰러질 거 같지만 꾹 참고 방금 닭가슴살 샐러드만 간신히 꾸역꾸역 먹었어.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b189eaca505f857e4e2b947f1ececc0933ce422c20cd26b997b9d9de742f52da"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아니, 진짜 너무 떨려서 방금 약국에서 청심환 사 먹고 자리에 앉아서 면접 스크립트 달달 외우는 중이야.\"\n- [peer, 0s ago] \"너 내일 아침 완전 중요한 공기업 최종 면접이라며? 정장 충비나 예상 질문 준비는 다 했어?\"\n- [peer, 0s ago] \"너무 잔뜩 쫄지 말고 원래 평소 하던 대로 당당하게 자신감 있게 말해. 넌 무조건 합격할 거니까!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "015f50192ea9067143539cd4cd6ee9509134bef0c87bc2ed4eb83b95ae693e89"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"응, 오늘 일이 손에 안 잡히더라. 퇴근하자마자 부서원들 다 같이 문상 가기로 했어. 너무 안타까워...\"\n- [peer, 0s ago] \"어제 김 과장님 아버님 갑작스럽게 돌아가셨다며. 오늘 퇴근하고 장례식장 조문 갈 거야?\"\n- [peer, 0s ago] \"나도 이따가 밤에 따로 찾아가서 위로해 드리려고. 혹시 부조금 봉투에는 보통 얼마 넣는 게 적당할까?\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "903e3b84c524016faa16dcd2e3df61568cce15ab0a21b747e9dfe71d1e770d0d"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-topic_shift_independence-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"응, 뒤차가 브레이크 못 밟고 세게 박아서 차는 반파됐는데 다행히 내가 다친 데는 거의 없어 보이네.\"\n- [peer, 0s ago] \"너 방금 고속도로에서 10중 추돌 대형 사고 났다며! 피 엄청 흘린다던데 어디 크게 안 다쳤어?!\"\n- [peer, 0s ago] \"진짜 큰일 날 뻔했네. 겉으론 멀쩡해도 내상 입었을 수 있으니까 당장 응급실 가서 정밀 검사부터 제대로 받아!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "bbc412ec33c5f42938c09677ffb535eeb7eb0693197f49ecbea915087c2ae3ce"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"진짜 회의 시간에 민망해 죽는 줄 알았어. 부서원 다 같이 고생한 건데 팀장님이 나만 너무 비행기를 태우시더라고.\"\n- [peer, 0s ago] \"이번 신제품 기획안 네가 낸 아이디어 덕분에 완전히 대박 나서 팀장님이 너 완전 칭찬하셨다며?\"\n- [peer, 0s ago] \"아니야 겸손 떨지 마, 네가 솔직히 진짜 제일 핵심 역할을 했으니까 당연히 그 정도 칭찬과 대우는 받아야지!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "1f86ba18f10c98b7ba94da6e4178384789e22902600b3398e6e762e169f56b95"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 밤에 홈페이지에 합격자 발표 났는데 이번에도 어김없이 깔끔하게 미역국 먹고 처참하게 광탈당했어.\"\n- [peer, 0s ago] \"너 저번에 진짜 목숨 걸고 올인해서 지원했던 그 대기업 하반기 공채 서류 전형 최종 결과 어떻게 됐어?\"\n- [peer, 0s ago] \"아이고... 너무 상처받고 낙심하지 말고 다음 상반기에 다시 웃으면서 도전해 보자. 네 스펙이면 떡을 치고 충분해.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "df1952566d398cae8cec3c6dc34ed2177acc649f8a3c784ef5b420aa60eb5e75"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-false_lead_trap-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"말도 마. 나 영하 10도에 밖에서 2시간 동안 레스토랑 앞에서 덜덜 떨며 기다렸는데 결국 비참하게 바람맞았어.\"\n- [peer, 0s ago] \"너 어제 새로 알게 된 썸남이랑 시내 중심가 분위기 좋은 이탈리안 레스토랑에서 저녁 먹기로 한 거 아니었어?\"\n- [peer, 0s ago] \"뭐라고?! 그 미친놈이 사람을 밖에서 얼려 죽이려고 진짜 제정신이야? 당장 연락처 모조리 차단하고 상종도 하지 마!\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "2db54f86d2fbbbd00f96d41c52c0bd0df9d0d98897bd0a1a86a193b05941342c"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"응, 다음 달 내 불쌍한 월급날이 올 때까지 커피 찌꺼기 씹으면서 하루에 5천 원 이상 절대 안 쓰고 숨만 쉬면서 살려고.\"\n- [peer, 0s ago] \"너 요새 주식장에 넣은 거 반토막 나서 통장 잔고 완전히 박살 났다고 맨날 집에서 컵라면만 먹고 살지 않아?\"\n- [peer, 0s ago] \"짠하고 불쌍한 녀석... 내가 주말에 내 카드로 순대 국밥이라도 한 그릇 든든하게 사줄 테니까 꾹 참고 며칠만 버텨.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "b995790660f2bb0a301c74e84d895ea20b864f0e5c54433f81f50fa9e506b52e"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어떻게 하긴 뭘 어떻게 해. 당장 새벽에 헤어지자고 쌍욕 한 바가지로 퍼붓고 모든 연락망 다 차단했어. 진짜 꼴도 쳐다보기 싫어.\"\n- [peer, 0s ago] \"야, 너 바람둥이 남자친구가 몰래 뒤에서 전 여자친구랑 매일 밤 카톡 연락하다가 너한테 제대로 걸렸다며? 어떻게 할 거야?\"\n- [peer, 0s ago] \"진짜 네가 백번 천번 잘한 결정이야! 그런 쓰레기 같은 놈은 미련 1도 갖지 말고 단번에 네 인생 호적에서 영원히 파버려야 돼.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "7c5977e17a0e10d06237b2c4cac93c71195e61c929c712e0ae39ad64abdca15f"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-stale_context_resistance-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어, 진짜 뼈를 깎는 고통으로 독하게 마음먹고 어제저녁 6시부터 물 한 모금 안 마시고 필사적으로 굶는 다이어트 중이야.\"\n- [peer, 0s ago] \"너 당장 다음 주 일요일이 여동생 럭셔리 호텔 결혼식이라서 핏 딱 붙는 실크 스퀘어넥 무조건 입어야 해서 빡세게 굶는다지 않았어?\"\n- [peer, 0s ago] \"그래, 기왕 진짜 큰맘 먹고 이틀 동안 굶는 거 끝까지 악착같이 버텨서 예쁜 원피스 입고 친척들 사이에서 사진 예쁘게 잘 나와야지.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "63e8e5300306c078833cf7feb8fafda259b0e14aad7ca5e2f90f5e2a327f8a5a"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-001",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"어제 딱 평가 손익 -50% 찍고 파란불 들어오자마자 진짜 눈물을 뚝뚝 흘리며 머금고 코인 다 손절 쳤어. 내 인생에 다신 안 해.\"\n- [peer, 0s ago] \"요즘 비트코인 엄청 폭락해서 다들 재산 탕진하고 한강 다리로 간다 난리인데 네 마이너스 통장 계좌는 좀 무사해?\"\n- [peer, 0s ago] \"진짜 네가 제일 현명하게 엑싯 잘했어. 푼돈 남은 돈이라도 건진 게 어디야. 당분간 폭락장인 업비트 주식 앱 아예 쳐다보지도 마.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "60602289ecff034615000cecbd7731c4cbcaf60757dbd6b927d702f620bf0176"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-002",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"진짜 날씨 요정 다 죽었네 우울하고 짜증 나게. 황금 같은 주말 연휴에 비 오면 산에 가서 물웅덩이 피하는 거 말고 할 게 하나도 없잖아.\"\n- [peer, 0s ago] \"야 너 이번 주말에 산속에 집중 폭우 기상특보 엄청 급하게 쏟아진대. 글램핑 펜션 세 달 전에 예약해 놓은 거 취소해야 되는 거 아냐?\"\n- [peer, 0s ago] \"내 말이. 위약금 수수료 몇십만 원 눈탱이 엄청 물리더라도 그냥 과감하게 취소하고 날씨 좋은 다음 달로 싹 다 날짜 미루는 게 정신 건강에 좋을 듯.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "2af3acc2d4f0bcc001a654549d73ffdfb4730cf3147864c403a828bcea611b0d"
+    },
+    {
+      "sampleId": "ctx3-dyadic-ignore-metadata_nonliteral_resistance-003",
+      "selectedCandidateIds": [
+        "c1",
+        "c0",
+        "c2"
+      ],
+      "renderedContext": "- [self, 0s ago] \"아 진짜 대기실 의자에 앉아있는데 심장 터질 만큼 너무 긴장돼서 미치겠어. 어제 덜덜 외운 T자 코스 평행 주차 공식 뇌에서 하얗게 다 까먹을까 봐 조마조마 떠는 중이야.\"\n- [peer, 0s ago] \"너 드디어 오늘 아침 운전 면허증 2종 보통 도로주행 실기 시험 떨리는 마음으로 마지막으로 보는 날이잖아. 이번엔 진짜 합격할 것 같아?\"\n- [peer, 0s ago] \"괜히 긴장 타지 마. 조수석에 채점관 깐깐한 감독관 타도 너무 주눅 들어서 쫄지 말고, 평소 동네 연습 면허 학원 강사님이랑 부드럽게 핸들링 연습하던 대로만 속으로 되뇌이면서 천천히 차분하게 해.\"",
+      "resolvedMode": "integrated",
+      "candidateHistoryHash": "1b62098e83bf34ce1c10ef9840e4b1e260096a3b4824003ac3951da691b38806"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Experiment: Issue #1 — MiLMMT / Gemma 4 E4B local arms vs Papago, DeepSeek 0731 (2026-08, archived)
 
-> **Archived.** The current experiment is [Gemini 3.5 Live Translate (audio-native two voice)](../2026-08-gemini35-live-two-voice/), which forks this run: all of its rows are reused here and only the Live cells are new. This README is preserved as-is for the issue-1 results.
+> **Archived.** The current experiment is [Gemini 3.5 Live Translate (audio-native two voice), high-effort judge](../2026-08-gemini35-live-10p-highjudge/), whose row set descends from this run. This README is preserved as-is for the issue-1 results.
 
 - **Run ID:** `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01`
 - **Run date:** 2026-08-15

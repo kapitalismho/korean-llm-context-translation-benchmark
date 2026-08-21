@@ -1,0 +1,19 @@
+{
+  "benchmarkId": "gemba-mqm-context-v1-ablation",
+  "description": "PuriPuly context ablation on the frozen v1 development dataset: A/B/C/D/O conditions across fixed models (gemma4-31b, gemma4-e4b-qat-q4). A/B use the neutral context prompt; C/D/O use the canonical PuriPuly policy prompt. D runtime selection is manifest-backed; O uses authoring-only relevantContextIndices.",
+  "sharedPromptFile": "../prompts/puripuly-translation-latest.md",
+  "dataFile": "../datasets/gemba-mqm-context-v1/runtime.json",
+  "runtimeSelectionManifestFile": "../datasets/gemba-mqm-context-v1/context-selection-manifest.json",
+  "targetLanguages": [
+    "en",
+    "ja",
+    "zh-Hans"
+  ],
+  "targetLanguageLabels": {
+    "en": "English",
+    "ja": "Japanese",
+    "zh-Hans": "Chinese Simplified"
+  },
+  "datasetKind": "context",
+  "judgePromptSetId": "gemba-mqm-context-v1"
+}

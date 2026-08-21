@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 3,
+  "runId": "ablation-ab-highjudge-20260820",
+  "benchmarkId": "gemba-mqm-context-v1-ablation",
+  "datasetVersion": "runtime.json",
+  "datasetKind": "context",
+  "datasetFingerprintSha256": "765b89dc08b4edba4d29362224bb34bdd9e70856d904fb9f7c4e2ccb623e8879",
+  "promptVersion": "puripuly-translation-latest.md",
+  "promptFingerprintSha256": "4a358267c36bd929a3b2de1c70a2b3d1a3419dc56d6f50bb3b5786a49712fcb4",
+  "judgePromptVersion": "gemba-mqm-context-v1",
+  "judgePromptSetId": "gemba-mqm-context-v1",
+  "judgeBackend": "openrouter-batch",
+  "judgeModelId": "google/gemini-3.7-flash:batch",
+  "targetLanguages": [
+    "en",
+    "ja",
+    "zh-Hans"
+  ],
+  "targetLanguageLabels": {
+    "en": "English",
+    "ja": "Japanese",
+    "zh-Hans": "Chinese Simplified"
+  },
+  "limitApplied": 216,
+  "participants": [
+    {
+      "participantId": "gemma4-e4b-qat-q4-ablation-a",
+      "displayName": "Gemma 4 E4B QAT Q4 (Ablation A: sentence only)",
+      "provider": "llamacpp",
+      "providerModelId": "gemma-4-E4B-it-qat-UD-Q4_K_XL",
+      "promptFile": "data/prompts/neutral-context.md",
+      "promptFingerprintSha256": "82a1dd47638bc73fa46f4a6c2dae9e148deb884fdf24109639962e4481b35f55",
+      "llamaCppServerUrl": "http://127.0.0.1:8081",
+      "llamaCppMode": "chat"
+    },
+    {
+      "participantId": "gemma4-e4b-qat-q4-ablation-b",
+      "displayName": "Gemma 4 E4B QAT Q4 (Ablation B: policy + all history)",
+      "provider": "llamacpp",
+      "providerModelId": "gemma-4-E4B-it-qat-UD-Q4_K_XL",
+      "promptFile": "data/prompts/puripuly-translation-latest.md",
+      "promptFingerprintSha256": "4a358267c36bd929a3b2de1c70a2b3d1a3419dc56d6f50bb3b5786a49712fcb4",
+      "llamaCppServerUrl": "http://127.0.0.1:8081",
+      "llamaCppMode": "chat"
+    }
+  ],
+  "translationConcurrencyPerModel": 1,
+  "resume": false,
+  "vertexProject": null,
+  "vertexRegion": null,
+  "vendoredGembaCommit": "a7a7eff8e46998447c6cbf09d06affc8f1b99ab4",
+  "openRouterBatchJobIds": [
+    "batch-1787220091-Dq9o3Hj6TPK1ZUS5Ns3e",
+    "batch-1787220966-b30PF5HOQCXqRUQ5y9lP"
+  ],
+  "openRouterBatchApiBaseUrl": "https://openrouter.ai/api",
+  "openRouterBatchModelId": "google/gemini-3.7-flash:batch",
+  "sanitized": "promptFile paths rewritten to repo-relative locations; fingerprints unchanged; see reports/ for canonical results"
+}

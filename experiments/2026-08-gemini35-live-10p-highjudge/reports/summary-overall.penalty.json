@@ -1,0 +1,52 @@
+[
+  {
+    "participant_id": "gemma4-e4b-qat-q4",
+    "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+    "mean_penalty": 1.5771604938271604
+  },
+  {
+    "participant_id": "gemma4-e4b-fp16",
+    "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+    "mean_penalty": 1.353395061728395
+  },
+  {
+    "participant_id": "milmmt-4b-native",
+    "participant_display_name": "MiLMMT 46-4B X0 (native)",
+    "mean_penalty": 3.0865533230293662
+  },
+  {
+    "participant_id": "gemma4-31b",
+    "participant_display_name": "Gemma 4 31B via OpenRouter",
+    "mean_penalty": 0.3533950617283951
+  },
+  {
+    "participant_id": "gemma-4-26b-openrouter",
+    "participant_display_name": "Gemma 4 26B via OpenRouter",
+    "mean_penalty": 0.3873456790123457
+  },
+  {
+    "participant_id": "google-cloud-translate-basic",
+    "participant_display_name": "Google Cloud Translation Basic",
+    "mean_penalty": 5.731481481481482
+  },
+  {
+    "participant_id": "deepl-api",
+    "participant_display_name": "DeepL API",
+    "mean_penalty": 3.9143302180685358
+  },
+  {
+    "participant_id": "papago-web",
+    "participant_display_name": "Papago Web",
+    "mean_penalty": 2.699074074074074
+  },
+  {
+    "participant_id": "deepseek-v4-flash-0731-openrouter",
+    "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+    "mean_penalty": 0.5709876543209876
+  },
+  {
+    "participant_id": "gemini35-live-translate-two-voice",
+    "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+    "mean_penalty": 3.7225705329153604
+  }
+]

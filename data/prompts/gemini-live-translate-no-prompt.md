@@ -1,0 +1,1 @@
+Provenance marker only: Gemini Live Translate receives no prompt or synthetic spoken instruction. This file is fingerprinted for the participant snapshot but its contents are never sent to the Live session.

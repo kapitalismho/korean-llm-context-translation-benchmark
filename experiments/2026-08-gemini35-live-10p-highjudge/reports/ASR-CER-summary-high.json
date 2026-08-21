@@ -1,0 +1,177 @@
+{
+  "runId": "gemini35-live-10p-highjudge-20260820",
+  "generatedAt": "2026-08-21T00:59:18.345Z",
+  "version": "high-judge-recalc",
+  "basis": "ASR-CER-detail.jsonl 640 (same CER as v2-strict) + high judge penalties",
+  "methodology": {
+    "reference": "runtime.json trim only",
+    "hypothesis": "input_transcription_events -> accumulateTranscript per turnIndex",
+    "cer": "(S+D+I)/N codepoints",
+    "buckets": [
+      "0-5%",
+      "5-15%",
+      "15-30%",
+      "30-60%",
+      "60%+"
+    ]
+  },
+  "counts": {
+    "runtimeSamples": 216,
+    "detailsSuccess": 640,
+    "perSampleAgg": 214,
+    "judgedHigh": 638,
+    "judgeFailedHigh": 2,
+    "cleanStrict": 218,
+    "cleanInclusive": 224,
+    "judgedCleanStrict": 217,
+    "judgedCleanInclusive": 223
+  },
+  "stats": {
+    "current": {
+      "count": 640,
+      "mean": 0.11211112453299987,
+      "median": 0.07692307692307693,
+      "min": 0,
+      "max": 1.5,
+      "std": 0.16554138318399247,
+      "p10": 0,
+      "p90": 0.19047619047619047,
+      "p95": 0.2916666666666667
+    },
+    "context": {
+      "count": 640,
+      "mean": 0.08853079106762865,
+      "median": 0.06521739130434782,
+      "min": 0,
+      "max": 2.6956521739130435,
+      "std": 0.15786379212935564,
+      "p10": 0.009433962264150943,
+      "p90": 0.14871794871794872,
+      "p95": 0.19540229885057472
+    },
+    "combined": {
+      "count": 640,
+      "mean": 0.09157048467103616,
+      "median": 0.07407407407407407,
+      "min": 0,
+      "max": 1.5555555555555556,
+      "std": 0.11423903128135114,
+      "p10": 0.02857142857142857,
+      "p90": 0.14150943396226415,
+      "p95": 0.20754716981132076
+    },
+    "nonKoInputCount": 20,
+    "trimExact": 71,
+    "qInCur": 102
+  },
+  "correlations": {
+    "curVsPenalty": 0.28982212587877326,
+    "ctxVsPenalty": 0.03040220795789565,
+    "combinedVsPenalty": 0.12920812441102775
+  },
+  "buckets": [
+    {
+      "bucket": "0-5%",
+      "count": 218,
+      "judgedCount": 217,
+      "pct": 0.340625,
+      "penaltyMean": 3.0046082949308754,
+      "penaltyMedian": 1,
+      "penaltyP90": 6,
+      "penaltyMax": 25,
+      "beh": {
+        "used_correctly": 117,
+        "missed_required_context": 16,
+        "ignored_irrelevant_context": 71,
+        "misused_context": 13,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "5-15%",
+      "count": 313,
+      "judgedCount": 312,
+      "pct": 0.4890625,
+      "penaltyMean": 3.6314102564102564,
+      "penaltyMedian": 2,
+      "penaltyP90": 7,
+      "penaltyMax": 26,
+      "beh": {
+        "used_correctly": 183,
+        "missed_required_context": 21,
+        "ignored_irrelevant_context": 100,
+        "misused_context": 8,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "15-30%",
+      "count": 79,
+      "judgedCount": 79,
+      "pct": 0.1234375,
+      "penaltyMean": 4.227848101265823,
+      "penaltyMedian": 5,
+      "penaltyP90": 7,
+      "penaltyMax": 25,
+      "beh": {
+        "used_correctly": 43,
+        "missed_required_context": 6,
+        "ignored_irrelevant_context": 19,
+        "misused_context": 11,
+        "unclear": 0
+      }
+    },
+    {
+      "bucket": "30-60%",
+      "count": 17,
+      "judgedCount": 17,
+      "pct": 0.0265625,
+      "penaltyMean": 5.235294117647059,
+      "penaltyMedian": 5,
+      "penaltyP90": 11,
+      "penaltyMax": 25,
+      "beh": {
+        "used_correctly": 12,
+        "missed_required_context": 1,
+        "ignored_irrelevant_context": 2,
+        "misused_context": 1,
+        "unclear": 1
+      }
+    },
+    {
+      "bucket": "60%+",
+      "count": 13,
+      "judgedCount": 13,
+      "pct": 0.0203125,
+      "penaltyMean": 12.846153846153847,
+      "penaltyMedian": 5,
+      "penaltyP90": 30,
+      "penaltyMax": 30,
+      "beh": {
+        "used_correctly": 6,
+        "missed_required_context": 3,
+        "ignored_irrelevant_context": 1,
+        "misused_context": 1,
+        "unclear": 2
+      }
+    }
+  ],
+  "headline": {
+    "le5_inclusive": {
+      "n": 224,
+      "judged": 223,
+      "mean": 2.991031390134529,
+      "median": 1
+    },
+    "lt5_strict": {
+      "n": 218,
+      "judged": 217,
+      "mean": 3.0046082949308754
+    },
+    "overall": {
+      "n": 640,
+      "judged": 638,
+      "mean": 3.7225705329153604
+    }
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "sourceRunId": "issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01",
-  "newRunId": "gemini35-live-two-voice-20260817",
-  "copiedTranslationCount": 7124,
-  "copiedFailureCount": 4,
-  "allowPromptMismatch": false,
-  "preparedAtUtc": "2026-08-17T23:53:13.662Z",
-  "sanitized": "copy of the run's fork provenance record; live translations are new cells (640), all other cells were reused from the source run"
-}

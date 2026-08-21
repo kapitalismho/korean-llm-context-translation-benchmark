@@ -1,0 +1,12 @@
+rank,participant_id,participant_display_name,mean_penalty,samples,benchmark_valid,caveat,source_run_id
+1,gemini-3.1-flash-lite,Gemini 3.1 Flash-lite,0.572531,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+2,gemini-3-flash,Gemini 3 Flash,0.595679,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+3,gemma-4-26b-openrouter,Gemma 4 26B via OpenRouter,0.813272,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+4,qwen-3.5-plus,Qwen 3.5 Plus,0.958333,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+5,deepseek-v4-flash,DeepSeek V4 Flash,1.024691,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+6,gemma-4-26b-openrouter-nocontext-baseline,Gemma 4 26B via OpenRouter (No context baseline),1.265432,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+7,deepseek-v4-flash-nocontext-baseline,DeepSeek V4 Flash (No context baseline),1.646605,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+8,qwen-3.5-flash,Qwen 3.5 Flash,2.197531,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
+9,deepl-api,DeepL API,4.962733,644,false,"reuse-only partial row; 644/648 valid cells; 4 unresolved cells",gemba-mqm-context-v1-gemini-context-v2-expanded-deepl-reuse-20260429-052309
+10,deepl-api-nocontext,DeepL API (No context),5.717391,644,false,"reuse-only partial row; 644/648 valid cells; 4 unresolved cells",gemba-mqm-context-v1-gemini-context-v2-expanded-deepl-nocontext-reuse-20260429-052839
+11,google-cloud-translate-basic,Google Cloud Translation Basic,5.998457,648,true,,gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514
