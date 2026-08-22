@@ -1,10 +1,11 @@
 {
   "manifestVersion": 3,
-  "runId": "gemini35-live-10p-highjudge-20260820",
+  "runId": "unified-12arm-highjudge-20260822",
   "benchmarkId": "gemba-mqm-context-v1-milmmt-e4b",
   "datasetVersion": "runtime.json",
   "datasetKind": "context",
-  "datasetFingerprintSha256": "9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110",
+  "datasetFingerprintSha256": "765b89dc08b4edba4d29362224bb34bdd9e70856d904fb9f7c4e2ccb623e8879",
+  "datasetFingerprintNote": "The run was made against the collector's runtime.json serialization without the optional relativeTimeLabel fields (648 occurrences); the repo-frozen runtime.json (same samples, relativeTimeLabel present) hashes to 9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110. Sample content is identical (deep JSON comparison after removing relativeTimeLabel keys).",
   "promptVersion": "puripuly-translation-latest.md",
   "promptFingerprintSha256": "4a358267c36bd929a3b2de1c70a2b3d1a3419dc56d6f50bb3b5786a49712fcb4",
   "judgePromptVersion": "gemba-mqm-context-v1",
@@ -208,11 +209,27 @@
           }
         }
       }
+    },
+    {
+      "participantId": "hymt2-7b-q4xl",
+      "displayName": "Hy-MT2 7B",
+      "provider": "llamacpp",
+      "providerModelId": "Hy-MT2-7B-UD-Q4_K_XL",
+      "llamaCppServerUrl": "http://127.0.0.1:8084",
+      "llamaCppMode": "chat",
+      "llamaCppSampling": "hymt2"
+    },
+    {
+      "participantId": "gemma4-12b-qat-q4xl",
+      "displayName": "Gemma 4 12B QAT Q4",
+      "provider": "llamacpp",
+      "providerModelId": "gemma-4-12B-it-qat-UD-Q4_K_XL",
+      "llamaCppServerUrl": "http://127.0.0.1:8085",
+      "llamaCppMode": "chat"
     }
   ],
   "translationConcurrencyPerModel": 1,
   "resume": false,
-  "forkFromRunId": "gemini35-live-two-voice-20260817",
   "forkPromptMismatchAllowed": true,
   "vertexProject": null,
   "vertexRegion": null,
@@ -226,5 +243,6 @@
   ],
   "openRouterBatchApiBaseUrl": "https://openrouter.ai/api",
   "openRouterBatchModelId": "google/gemini-3.7-flash:batch",
+  "provenanceNote": "Unified 12-arm collect: the 10 arms carried over from gemini35-live-two-voice-20260817 keep their translations and high-effort judgments byte-identical (judged in gemini35-live-10p-highjudge-20260820; the 5 openRouterBatchJobIds above are that run's inherited judge jobs). hymt2-7b-q4xl and gemma4-12b-qat-q4xl were translated and judged fresh for this collect (source sessions hymt2-7b-q4xl-highjudge-20260822 and gemma4-12b-qat-q4xl-highjudge-20260822).",
   "sanitized": "promptFile/audioAssetManifestFile paths rewritten to repo-relative locations; fingerprints unchanged; see reports/ for canonical results"
 }

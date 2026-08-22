@@ -4,25 +4,25 @@
       "participant_id": "deepl-api",
       "participant_display_name": "DeepL API",
       "source_id": "ctx2-single-use-referent_resolution-001",
-      "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::en::deepl-api"
+      "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-referent_resolution-001::en::deepl-api"
     },
     {
       "participant_id": "milmmt-4b-native",
       "participant_display_name": "MiLMMT 46-4B X0 (native)",
       "source_id": "ctx2-dyadic-ignore-stale_context_resistance-003",
-      "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
+      "stable_key": "unified-12arm-highjudge-20260822::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
     },
     {
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "source_id": "ctx2-single-use-pragmatic_intent_resolution-003",
-      "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
+      "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
     },
     {
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "source_id": "ctx3-single-ignore-stale_context_resistance-001",
-      "stable_key": "gemini35-live-10p-highjudge-20260820::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
+      "stable_key": "unified-12arm-highjudge-20260822::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
     }
   ],
   "ja": [],
@@ -31,7 +31,7 @@
       "participant_id": "deepl-api",
       "participant_display_name": "DeepL API",
       "source_id": "ctx2-single-use-referent_resolution-001",
-      "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
+      "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
     }
   ]
 }

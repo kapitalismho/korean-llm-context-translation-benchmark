@@ -9,7 +9,7 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 ## Current Experiment (2026-08)
 
 - **Full details:** [Here](experiments/2026-08-gemini35-live-10p-highjudge/)
-- **Setup:** Gemini 3.5 Live Translate (audio-native, two-voice TTS) vs. the 2026-08 text/MT field — Gemma 4 31B/26B, DeepSeek V4 Flash 0731, local Gemma 4 E4B arms (fp16/QAT Q4), MiLMMT 46-4B X0, Papago/DeepL/Google. All rows judged by Gemini 3.7 Flash (batch) with high reasoning effort; all translations are fork-reused from the issue-1 run, all cells are freshly judged
+- **Setup:** Unified 12-arm collect — Gemini 3.5 Live Translate (audio-native, two-voice TTS) vs. the 2026-08 text/MT field — Gemma 4 31B/26B/12B QAT Q4, DeepSeek V4 Flash 0731, local Gemma 4 E4B arms (fp16/QAT Q4), Hy-MT2 7B, MiLMMT 46-4B X0, Papago/DeepL/Google. All rows judged by Gemini 3.7 Flash (batch) with high reasoning effort; the 10 carried arms reuse translations and judgments byte-identical from the issue-1-lineage runs, Hy-MT2 7B and Gemma 4 12B QAT Q4 are fresh
 
 **Key findings:**
 
@@ -17,6 +17,7 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 - Context helps: same Gemma 4 E4B QAT Q4 improves 31.5% with full history + policy (1.45 vs. 2.12 sentence-only, same high-effort judge; see `ablation/` appendix)
 - Google Translate is competitive for en (1.22) and zh-Hans (2.49) but collapses on ja (13.49), driving its overall 5.73
 - Quantization costs quality for the small local model: Gemma 4 E4B fp16 1.35 → QAT Q4 1.58
+- Gemma 4 12B QAT Q4 is the strongest local arm (0.855); dedicated MT model Hy-MT2 7B scores 1.86 but misuses irrelevant context more than any other system (8.3%)
 
 ![Overall leaderboard: lower mean penalty is better](docs/assets/leaderboard-2026-08-highjudge.png)
 
@@ -28,14 +29,16 @@ Primary score: raw mean penalty — lower is better.
 | 1    | Gemma 4 31B                                | 0.353        | 648     |
 | 2    | Gemma 4 26B A4B                            | 0.387        | 648     |
 | 3    | DeepSeek V4 Flash 0731                     | 0.571        | 648     |
-| 4    | Gemma 4 E4B fp16                           | 1.353        | 648     |
-| 5    | Gemma 4 E4B QAT Q4                         | 1.577        | 648     |
-| 6    | Papago Web                                 | 2.699        | 648     |
-| 7    | MiLMMT 46-4B                               | 3.087        | 647     |
+| 4    | Gemma 4 12B QAT Q4                         | 0.855        | 648     |
+| 5    | Gemma 4 E4B fp16                           | 1.353        | 648     |
+| 6    | Gemma 4 E4B QAT Q4                         | 1.577        | 648     |
+| 7    | Hy-MT2 7B                                  | 1.863        | 648     |
+| 8    | Papago Web                                 | 2.699        | 648     |
+| 9    | MiLMMT 46-4B                               | 3.087        | 647     |
 | -    | Gemini 3.5 Live Translate, CER ≤ 5% subset | 2.991        | 223     |
-| 8    | Gemini 3.5 Live Translate                  | 3.723        | 638     |
-| 9    | DeepL API                                  | 3.914        | 642     |
-| 10   | Google Cloud Translation Basic             | 5.731        | 648     |
+| 10   | Gemini 3.5 Live Translate                  | 3.723        | 638     |
+| 11   | DeepL API                                  | 3.914        | 642     |
+| 12   | Google Cloud Translation Basic             | 5.731        | 648     |
 
 
 ### Context ablation — sentence-only vs. policy + full history

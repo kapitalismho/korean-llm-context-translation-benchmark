@@ -1,9 +1,9 @@
 {
   "currentPhase": "complete",
-  "updatedAt": "2026-08-20T11:52:39.278Z",
+  "updatedAt": "2026-08-22T08:43:53.840Z",
   "overall": {
-    "completed": 12948,
-    "succeeded": 12931,
+    "completed": 15540,
+    "succeeded": 15523,
     "failed": 17,
     "retryCount": 0,
     "cumulativeRetryCount": 0
@@ -98,76 +98,31 @@
       "retryCount": 0,
       "inflight": 0,
       "remaining": 0
+    },
+    {
+      "participantId": "hymt2-7b-q4xl",
+      "completed": 1296,
+      "succeeded": 1296,
+      "failed": 0,
+      "retryCount": 0,
+      "inflight": 0,
+      "remaining": 0
+    },
+    {
+      "participantId": "gemma4-12b-qat-q4xl",
+      "completed": 1296,
+      "succeeded": 1296,
+      "failed": 0,
+      "retryCount": 0,
+      "inflight": 0,
+      "remaining": 0
     }
   ],
   "throttleBuckets": [
     {
-      "throttleBucketKey": "llamacpp::gemma-4-E4B-it-fp16",
-      "participantIds": [
-        "gemma4-e4b-fp16"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "deepl::deepl-api",
-      "participantIds": [
-        "deepl-api"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "openrouter::deepseek/deepseek-v4-flash-0731",
-      "participantIds": [
-        "deepseek-v4-flash-0731-openrouter"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "papago::papago-web",
-      "participantIds": [
-        "papago-web"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "openrouter::google/gemma-4-26b-a4b-it",
-      "participantIds": [
-        "gemma-4-26b-openrouter"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "llamacpp::gemma-4-E4B-it-qat-UD-Q4_K_XL",
-      "participantIds": [
-        "gemma4-e4b-qat-q4"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
       "throttleBucketKey": "openrouter::google/gemma-4-31b-it",
       "participantIds": [
         "gemma4-31b"
-      ],
-      "inflight": 0,
-      "queued": 0,
-      "cooldownUntil": null
-    },
-    {
-      "throttleBucketKey": "llamacpp::MiLMMT-46-4B-v1.0.f16",
-      "participantIds": [
-        "milmmt-4b-native"
       ],
       "inflight": 0,
       "queued": 0,
@@ -192,18 +147,81 @@
       "cooldownUntil": null
     },
     {
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
+      "throttleBucketKey": "llamacpp::gemma-4-12B-it-qat-UD-Q4_K_XL",
       "participantIds": [
-        "gemma-4-26b-openrouter",
-        "google-cloud-translate-basic",
-        "deepl-api",
-        "milmmt-4b-native",
-        "gemma4-31b",
-        "gemma4-e4b-qat-q4",
-        "gemma4-e4b-fp16",
-        "papago-web",
-        "deepseek-v4-flash-0731-openrouter",
-        "gemini35-live-translate-two-voice"
+        "gemma4-12b-qat-q4xl"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "deepl::deepl-api",
+      "participantIds": [
+        "deepl-api"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "openrouter::google/gemma-4-26b-a4b-it",
+      "participantIds": [
+        "gemma-4-26b-openrouter"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "llamacpp::Hy-MT2-7B-UD-Q4_K_XL",
+      "participantIds": [
+        "hymt2-7b-q4xl"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "llamacpp::gemma-4-E4B-it-qat-UD-Q4_K_XL",
+      "participantIds": [
+        "gemma4-e4b-qat-q4"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "papago::papago-web",
+      "participantIds": [
+        "papago-web"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "llamacpp::MiLMMT-46-4B-v1.0.f16",
+      "participantIds": [
+        "milmmt-4b-native"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "openrouter::deepseek/deepseek-v4-flash-0731",
+      "participantIds": [
+        "deepseek-v4-flash-0731-openrouter"
+      ],
+      "inflight": 0,
+      "queued": 0,
+      "cooldownUntil": null
+    },
+    {
+      "throttleBucketKey": "llamacpp::gemma-4-E4B-it-fp16",
+      "participantIds": [
+        "gemma4-e4b-fp16"
       ],
       "inflight": 0,
       "queued": 0,
@@ -213,108 +231,108 @@
   "inflightItems": [],
   "recentFailures": [
     {
-      "phase": "judge",
+      "phase": "translation",
       "eventType": "failure",
-      "timestamp": "2026-08-20T11:52:39.089Z",
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
-      "stableKey": "gemini35-live-10p-highjudge-20260820::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice",
-      "sourceId": "ctx3-single-ignore-stale_context_resistance-001",
-      "sourcePreview": "근데 방금 넷플릭스에 뜬 컨저링 엑소시스트 호러 무비를 혼자 원룸 불 다 끄고 새벽 2시에 무삭제 풀버전으로 봤는데 개뿔 너무 유치하고 시시해서 하품만 쩍쩍 나오더라.",
-      "sourceLang": "Korean",
-      "targetLanguage": "en",
-      "participantId": "gemini35-live-translate-two-voice",
-      "participantModelId": "gemini-3.5-live-translate-preview",
-      "provider": "gemini-live-translate",
-      "attempt": 1,
-      "maxAttempts": 3,
-      "latencyMs": null,
-      "errorClass": "unknown",
-      "errorSummary": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "rawErrorMessage": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "nextDelayMs": null
-    },
-    {
-      "phase": "judge",
-      "eventType": "failure",
-      "timestamp": "2026-08-20T11:52:38.981Z",
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
-      "stableKey": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice",
-      "sourceId": "ctx2-single-use-pragmatic_intent_resolution-003",
-      "sourcePreview": "누구는 뭐 회사에 맛있는 거 먹고 꿀 빨러 오는 줄 아나 봐.",
-      "sourceLang": "Korean",
-      "targetLanguage": "en",
-      "participantId": "gemini35-live-translate-two-voice",
-      "participantModelId": "gemini-3.5-live-translate-preview",
-      "provider": "gemini-live-translate",
-      "attempt": 1,
-      "maxAttempts": 3,
-      "latencyMs": null,
-      "errorClass": "unknown",
-      "errorSummary": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "rawErrorMessage": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "nextDelayMs": null
-    },
-    {
-      "phase": "judge",
-      "eventType": "failure",
-      "timestamp": "2026-08-20T11:52:37.347Z",
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
-      "stableKey": "gemini35-live-10p-highjudge-20260820::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native",
-      "sourceId": "ctx2-dyadic-ignore-stale_context_resistance-003",
-      "sourcePreview": "누워서 자기 뱃살 까고 발라당 애교 부리는 거 천사가 따로 없네.",
-      "sourceLang": "Korean",
-      "targetLanguage": "en",
-      "participantId": "milmmt-4b-native",
-      "participantModelId": "MiLMMT-46-4B-v1.0.f16",
-      "provider": "llamacpp",
-      "attempt": 1,
-      "maxAttempts": 3,
-      "latencyMs": null,
-      "errorClass": "unknown",
-      "errorSummary": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "rawErrorMessage": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "nextDelayMs": null
-    },
-    {
-      "phase": "judge",
-      "eventType": "failure",
-      "timestamp": "2026-08-20T11:52:37.033Z",
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
-      "stableKey": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api",
-      "sourceId": "ctx2-single-use-referent_resolution-001",
-      "sourcePreview": "진짜 너무 웃기게 나와서 그러는데 나 그거 인스타 스토리에 올려도 대?",
+      "timestamp": "2026-08-18T05:05:17.908Z",
+      "throttleBucketKey": "gemini-live-translate::gemini-3.5-live-translate-preview",
+      "stableKey": "unified-12arm-highjudge-20260822::ctx3-single-use-pragmatic_intent_resolution-004::zh-Hans::gemini35-live-translate-two-voice",
+      "sourceId": "ctx3-single-use-pragmatic_intent_resolution-004",
+      "sourcePreview": null,
       "sourceLang": "Korean",
       "targetLanguage": "zh-Hans",
-      "participantId": "deepl-api",
-      "participantModelId": "deepl-api",
-      "provider": "deepl",
-      "attempt": 1,
-      "maxAttempts": 3,
+      "participantId": "gemini35-live-translate-two-voice",
+      "participantModelId": "gemini-3.5-live-translate-preview",
+      "provider": "gemini-live-translate",
+      "attempt": 5,
+      "maxAttempts": null,
       "latencyMs": null,
-      "errorClass": "unknown",
-      "errorSummary": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "rawErrorMessage": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
+      "errorClass": "timeout",
+      "errorSummary": "AbortError: Live session request timed out.",
+      "rawErrorMessage": "AbortError: Live session request timed out.",
       "nextDelayMs": null
     },
     {
-      "phase": "judge",
+      "phase": "translation",
       "eventType": "failure",
-      "timestamp": "2026-08-20T11:52:37.032Z",
-      "throttleBucketKey": "openrouter-batch::google/gemini-3.7-flash:batch",
-      "stableKey": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::en::deepl-api",
-      "sourceId": "ctx2-single-use-referent_resolution-001",
-      "sourcePreview": "진짜 너무 웃기게 나와서 그러는데 나 그거 인스타 스토리에 올려도 대?",
+      "timestamp": "2026-08-18T04:54:42.751Z",
+      "throttleBucketKey": "gemini-live-translate::gemini-3.5-live-translate-preview",
+      "stableKey": "unified-12arm-highjudge-20260822::ctx3-single-use-pragmatic_intent_resolution-004::ja::gemini35-live-translate-two-voice",
+      "sourceId": "ctx3-single-use-pragmatic_intent_resolution-004",
+      "sourcePreview": null,
+      "sourceLang": "Korean",
+      "targetLanguage": "ja",
+      "participantId": "gemini35-live-translate-two-voice",
+      "participantModelId": "gemini-3.5-live-translate-preview",
+      "provider": "gemini-live-translate",
+      "attempt": 5,
+      "maxAttempts": null,
+      "latencyMs": null,
+      "errorClass": "timeout",
+      "errorSummary": "AbortError: Live session request timed out.",
+      "rawErrorMessage": "AbortError: Live session request timed out.",
+      "nextDelayMs": null
+    },
+    {
+      "phase": "translation",
+      "eventType": "failure",
+      "timestamp": "2026-08-18T04:44:07.782Z",
+      "throttleBucketKey": "gemini-live-translate::gemini-3.5-live-translate-preview",
+      "stableKey": "unified-12arm-highjudge-20260822::ctx3-single-use-pragmatic_intent_resolution-004::en::gemini35-live-translate-two-voice",
+      "sourceId": "ctx3-single-use-pragmatic_intent_resolution-004",
+      "sourcePreview": null,
       "sourceLang": "Korean",
       "targetLanguage": "en",
-      "participantId": "deepl-api",
-      "participantModelId": "deepl-api",
-      "provider": "deepl",
-      "attempt": 1,
-      "maxAttempts": 3,
+      "participantId": "gemini35-live-translate-two-voice",
+      "participantModelId": "gemini-3.5-live-translate-preview",
+      "provider": "gemini-live-translate",
+      "attempt": 5,
+      "maxAttempts": null,
       "latencyMs": null,
-      "errorClass": "unknown",
-      "errorSummary": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
-      "rawErrorMessage": "OpenRouter batch line failed: invalid MQM annotation: Error: annotation is incomplete (missing severity sections, malformed error line, or missing trailing contextBehavior line)",
+      "errorClass": "timeout",
+      "errorSummary": "AbortError: Live session request timed out.",
+      "rawErrorMessage": "AbortError: Live session request timed out.",
+      "nextDelayMs": null
+    },
+    {
+      "phase": "translation",
+      "eventType": "failure",
+      "timestamp": "2026-08-18T04:33:29.469Z",
+      "throttleBucketKey": "gemini-live-translate::gemini-3.5-live-translate-preview",
+      "stableKey": "unified-12arm-highjudge-20260822::ctx3-single-use-pragmatic_intent_resolution-003::zh-Hans::gemini35-live-translate-two-voice",
+      "sourceId": "ctx3-single-use-pragmatic_intent_resolution-003",
+      "sourcePreview": null,
+      "sourceLang": "Korean",
+      "targetLanguage": "zh-Hans",
+      "participantId": "gemini35-live-translate-two-voice",
+      "participantModelId": "gemini-3.5-live-translate-preview",
+      "provider": "gemini-live-translate",
+      "attempt": 5,
+      "maxAttempts": null,
+      "latencyMs": null,
+      "errorClass": "timeout",
+      "errorSummary": "AbortError: Live session request timed out.",
+      "rawErrorMessage": "AbortError: Live session request timed out.",
+      "nextDelayMs": null
+    },
+    {
+      "phase": "translation",
+      "eventType": "failure",
+      "timestamp": "2026-08-18T04:22:49.859Z",
+      "throttleBucketKey": "gemini-live-translate::gemini-3.5-live-translate-preview",
+      "stableKey": "unified-12arm-highjudge-20260822::ctx3-single-use-pragmatic_intent_resolution-003::ja::gemini35-live-translate-two-voice",
+      "sourceId": "ctx3-single-use-pragmatic_intent_resolution-003",
+      "sourcePreview": null,
+      "sourceLang": "Korean",
+      "targetLanguage": "ja",
+      "participantId": "gemini35-live-translate-two-voice",
+      "participantModelId": "gemini-3.5-live-translate-preview",
+      "provider": "gemini-live-translate",
+      "attempt": 5,
+      "maxAttempts": null,
+      "latencyMs": null,
+      "errorClass": "timeout",
+      "errorSummary": "AbortError: Live session request timed out.",
+      "rawErrorMessage": "AbortError: Live session request timed out.",
       "nextDelayMs": null
     }
   ],

@@ -69,6 +69,20 @@
       "mean_penalty": 3.702325581395349,
       "samples": 215,
       "failed_samples": 1
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.4583333333333335,
+      "samples": 216,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.9675925925925926,
+      "samples": 216,
+      "failed_samples": 0
     }
   ],
   "use": [
@@ -141,6 +155,20 @@
       "mean_penalty": 3.7328605200945626,
       "samples": 423,
       "failed_samples": 1
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.5648148148148149,
+      "samples": 432,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.7986111111111112,
+      "samples": 432,
+      "failed_samples": 0
     }
   ]
 }

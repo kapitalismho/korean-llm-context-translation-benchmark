@@ -59,6 +59,18 @@
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 4.221153846153846,
       "samples": 208
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.5528846153846154,
+      "samples": 208
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.34615384615384615,
+      "samples": 208
     }
   ],
   "ja": [
@@ -121,6 +133,18 @@
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 3.511737089201878,
       "samples": 213
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.215962441314554,
+      "samples": 213
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.3568075117370892,
+      "samples": 213
     }
   ],
   "zh-Hans": [
@@ -182,6 +206,18 @@
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 3.3285714285714287,
+      "samples": 210
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.7904761904761906,
+      "samples": 210
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.819047619047619,
       "samples": 210
     }
   ]

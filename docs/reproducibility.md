@@ -9,7 +9,7 @@ npm install
 cp .env.example .env
 ```
 
-Fill the provider credentials needed for the participants you run. Local llama.cpp arms need servers on ports 8080–8083 (`scripts/llama-server.ps1`); the Papago arm needs the Python bridge (`pip install -r scripts/papago-bridge-requirements.txt`).
+Fill the provider credentials needed for the participants you run. Local llama.cpp arms need servers on ports 8081–8085 (`scripts/llama-server.ps1`); the Papago arm needs the Python bridge (`pip install -r scripts/papago-bridge-requirements.txt`).
 
 ## Current Experiment (2026-08, high judge)
 
@@ -19,20 +19,23 @@ Benchmark config:
 data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json
 ```
 
-The published run (`gemini35-live-10p-highjudge-20260820`) is a fork of the live-two-voice run: all 6,468 translations (10 participants, including the 640 Gemini 3.5 Live Translate cells) were copied from `gemini35-live-two-voice-20260817` and every cell was newly judged with the high-effort judge. A judge-only rerun of the same fork would be:
+The published run (`unified-12arm-highjudge-20260822`) is a unified 12-arm collect: the 10 carried arms reuse translations and high-effort judgments byte-identical from `gemini35-live-10p-highjudge-20260820` (translations descend from `gemini35-live-two-voice-20260817`), while `hymt2-7b-q4xl` and `gemma4-12b-qat-q4xl` were translated and judged fresh. A reproduction of the collect would be:
 
 ```bash
 npm run bench:cli -- \
   --benchmark-config data/benchmarks/gemba-mqm-context-v1-milmmt-e4b.json \
   --participant-registry data/participants/registry.json \
-  --participants gemma4-e4b-qat-q4,gemma4-e4b-fp16,milmmt-4b-native,gemma4-31b,gemma-4-26b-openrouter,google-cloud-translate-basic,deepl-api,papago-web,deepseek-v4-flash-0731-openrouter,gemini35-live-translate-two-voice \
+  --participants gemma4-e4b-qat-q4,gemma4-e4b-fp16,milmmt-4b-native,gemma4-31b,gemma-4-26b-openrouter,google-cloud-translate-basic,deepl-api,papago-web,deepseek-v4-flash-0731-openrouter,gemini35-live-translate-two-voice,hymt2-7b-q4xl,gemma4-12b-qat-q4xl \
   --fork-from-run gemini35-live-two-voice-20260817 \
   --fork-allow-prompt-mismatch \
   --judge-model google/gemini-3.7-flash:batch \
   --judge-backend openrouter-batch \
   --judge-reasoning-effort high \
+  --translation-concurrency-per-model 1 \
   --judge-concurrency 6
 ```
+
+The fork covers the 10 carried arms; the two new arms have no source rows and therefore run fresh (local llama.cpp servers on ports 8084/8085 respectively). The Gemini 3.5 Live Translate arm is not defined in this repository's registry (its `gemini-live-translate` provider harness and the TTS asset pipeline live with the audio-native collection setup); its provenance is pinned in `experiments/2026-08-gemini35-live-10p-highjudge/audio-assets/manifest.json`.
 
 The Live arm additionally requires:
 
@@ -74,9 +77,11 @@ After run artifacts exist under `output/`, the runner writes per-run report JSON
 
 ```bash
 node --import tsx scripts/generate-ranking-chart.ts \
-  --run-id gemini35-live-10p-highjudge-20260820 \
-  --summary-path experiments/2026-08-gemini35-live-10p-highjudge/reports/summary-overall.penalty.json \
+  --run-id unified-12arm-highjudge-20260822 \
+  --summary-path experiments/2026-08-gemini35-live-10p-highjudge/reports/leaderboard-chart-input.json \
   --run-status-path experiments/2026-08-gemini35-live-10p-highjudge/reports/run-status.json \
   --svg-out docs/assets/leaderboard-2026-08-highjudge.svg \
   --judge-label "Gemini 3.7 Flash (high reasoning effort)"
 ```
+
+`leaderboard-chart-input.json` is `summary-overall.penalty.json` plus the standalone "Gemini 3.5 Live Translate, CER ≤ 5% subset" row (`gemini35-live-cer-le5-subset`, mean from `ASR-CER-summary-high.json → headline.le5_inclusive`) so the chart matches the README leaderboard. Convert the SVG to PNG at 2× (e.g., headless Chrome: `chrome --headless=new --force-device-scale-factor=2 --window-size=960,586 --screenshot=…`).

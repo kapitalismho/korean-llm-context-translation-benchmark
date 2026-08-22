@@ -1,7 +1,7 @@
 {
   "benchmarkValid": false,
-  "totalExpected": 6480,
-  "totalNormalized": 6468,
+  "totalExpected": 7776,
+  "totalNormalized": 7764,
   "translationFailureHistoricalCount": 12,
   "translationFailureUnresolvedCount": 12,
   "commonCellCount": 631,
@@ -124,6 +124,30 @@
     },
     "gemini35-live-translate-two-voice::zh-Hans": {
       "ok": 213,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::zh-Hans": {
+      "ok": 216,
       "failed": 0
     }
   }

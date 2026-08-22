@@ -9,7 +9,7 @@ Primary score is raw mean penalty from the GEMBA-MQM-based evaluation. Lower is 
 
 ## 2026-08 High-Judge Experiment: Notable Slices
 
-All numbers below come from `experiments/2026-08-gemini35-live-10p-highjudge/reports/`. The run reuses the full 10-participant row set from the live-two-voice run (6,468 cells, including its 640 Gemini 3.5 Live Translate cells); every cell was newly judged by `google/gemini-3.7-flash:batch` with high reasoning effort.
+All numbers below come from `experiments/2026-08-gemini35-live-10p-highjudge/reports/`. The unified 12-arm run carries over the full 10-participant row set of the 2026-08-20 high-judge publication (6,468 cells, translations *and* judgments byte-identical) and adds two fresh arms — Hy-MT2 7B and Gemma 4 12B QAT Q4 (1,296 cells translated and judged new) — for 7,764 cells total, all under the same high-effort `google/gemini-3.7-flash:batch` judge.
 
 ### Overall
 
@@ -17,6 +17,7 @@ All numbers below come from `experiments/2026-08-gemini35-live-10p-highjudge/rep
 - Context helps: same Gemma 4 E4B QAT Q4 improves 31.5% with full history + policy (1.45 vs. 2.12 sentence-only, same high-effort judge; see `ablation/` appendix).
 - Google Translate is competitive for en (1.22) and zh-Hans (2.49) but collapses on ja (13.49), driving its overall 5.73.
 - Quantization costs quality for the small local model: Gemma 4 E4B fp16 1.35 → QAT Q4 1.58.
+- New arms: Gemma 4 12B QAT Q4 is the strongest local arm overall (0.855, between DeepSeek V4 Flash and E4B fp16); dedicated MT model Hy-MT2 7B scores 1.86 — behind the Gemma locals, ahead of Papago, and with the highest context-misuse rate in the field (8.3%).
 
 ### By Target Language (common-cell)
 
@@ -26,7 +27,7 @@ All numbers below come from `experiments/2026-08-gemini35-live-10p-highjudge/rep
 
 ### Audio-Native ASR / CER
 
-- Current-utterance CER (strict definition, see `reports/ASR-CER-analysis-high.md`): mean 0.112, median 0.077, p90 0.190, trim-exact 11.1% (CER values reused from the v2-strict detail of the source run; penalties are the high-effort ones).
+- Current-utterance CER (strict definition, see `reports/ASR-CER-analysis-high.md`): mean 0.112, median 0.077, p90 0.190, trim-exact 11.1% (recomputed from this run's `translation-provider-details.jsonl`; values identical to the previous publication).
 - CER correlates only weakly with quality penalty (r = 0.29, R² ≈ 0.08); context CER has no correlation (r = 0.03).
 - Even in the cleanest CER bucket (CER ≤ 5%, 223 judged cells), Live's mean penalty is 2.991 — 2–8× above the text models. Transcription errors explain part of the quality gap, not all of it.
 - Caveats: the CER analysis is unofficial, 3.1% of Live sessions carry a wrong `languageCode` label (Korean audio labeled `ja`/`en`, sometimes with a genuinely Japanese transcription), and the strict CER mean does not fall within a 5% band.
@@ -45,8 +46,8 @@ Quality degrades as prior-context length grows (1 → 3 turns) for every system.
 
 ### Run Validity and Cost
 
-- 6,480 expected cells, 6,468 normalized, 6,463 scored. `benchmarkValid: false` due to 12 unresolved translation failures (8 Live session timeouts + 4 historical DeepL) and 5 judge failures (2 Live cells, DeepL en/zh, MiLMMT X0 en — all invalid MQM annotations from the batch judge). The common-cell ordering matches the full ordering.
-- Judge cost: $7.13 (`gemini-3.7-flash:batch` with high reasoning effort via OpenRouter, 5 batch jobs). No translations were generated in this run; translation costs were not tracked.
+- 7,776 expected cells, 7,764 normalized, 7,759 scored. `benchmarkValid: false` due to 12 unresolved translation failures (8 Live session timeouts across `ctx3-single-use-pragmatic_intent_resolution-002/003/004` + 4 historical DeepL en/zh) and 5 judge failures (2 Live cells, DeepL en/zh, MiLMMT X0 en — all invalid MQM annotations from the batch judge, inherited unchanged from the carried arms). The common-cell ordering matches the full ordering.
+- Judge cost recorded in the merged artifacts: $7.74 (`gemini-3.7-flash:batch` with high reasoning effort via OpenRouter; includes the inherited batch jobs plus the two fresh arms' sessions). Translation costs were not tracked.
 
 ## Archived Experiments
 
@@ -55,4 +56,4 @@ Quality degrades as prior-context length grows (1 → 3 turns) for every system.
 
 ## Cross-Experiment Comparability
 
-All experiments share the dataset but differ in translation prompt, judge model, judge prompt format, and participant set. In addition, this run *reuses* all of its rows from the live-two-voice run: no new translations were generated, only the judge. Do not treat the reused rows as fresh measurements, and do not mix scores from different experiments in one table or chart.
+All experiments share the dataset but differ in translation prompt, judge model, judge prompt format, and participant set. In addition, this run *reuses* the rows of its 10 carried arms (translations and judgments) from the 2026-08-20 high-judge publication; only Hy-MT2 7B and Gemma 4 12B QAT Q4 are fresh measurements. Do not treat the carried rows as fresh measurements, and do not mix scores from different experiments in one table or chart.

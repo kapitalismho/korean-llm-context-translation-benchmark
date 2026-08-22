@@ -68,5 +68,19 @@
     "ignored_irrelevant_context": 193,
     "misused_context": 34,
     "unclear": 3
+  },
+  "hymt2-7b-q4xl": {
+    "used_correctly": 415,
+    "missed_required_context": 28,
+    "ignored_irrelevant_context": 156,
+    "misused_context": 49,
+    "unclear": 0
+  },
+  "gemma4-12b-qat-q4xl": {
+    "used_correctly": 455,
+    "missed_required_context": 12,
+    "ignored_irrelevant_context": 178,
+    "misused_context": 3,
+    "unclear": 0
   }
 }

@@ -1,8 +1,8 @@
 {
-  "runId": "gemini35-live-10p-highjudge-20260820",
-  "generatedAt": "2026-08-21T00:59:18.345Z",
+  "runId": "unified-12arm-highjudge-20260822",
+  "generatedAt": "2026-08-22T09:25:33.007Z",
   "version": "high-judge-recalc",
-  "basis": "ASR-CER-detail.jsonl 640 (same CER as v2-strict) + high judge penalties",
+  "basis": "input_transcription_events 640 Live cells of unified-12arm-highjudge-20260822 + unified-run high judge penalties (Live judge rows inherited byte-identical from gemini35-live-10p-highjudge-20260820)",
   "methodology": {
     "reference": "runtime.json trim only",
     "hypothesis": "input_transcription_events -> accumulateTranscript per turnIndex",
@@ -29,33 +29,33 @@
   "stats": {
     "current": {
       "count": 640,
-      "mean": 0.11211112453299987,
+      "mean": 0.11211112453299962,
       "median": 0.07692307692307693,
       "min": 0,
       "max": 1.5,
-      "std": 0.16554138318399247,
+      "std": 0.1655413831839922,
       "p10": 0,
       "p90": 0.19047619047619047,
       "p95": 0.2916666666666667
     },
     "context": {
       "count": 640,
-      "mean": 0.08853079106762865,
+      "mean": 0.08853079106762861,
       "median": 0.06521739130434782,
       "min": 0,
       "max": 2.6956521739130435,
-      "std": 0.15786379212935564,
+      "std": 0.15786379212935553,
       "p10": 0.009433962264150943,
       "p90": 0.14871794871794872,
       "p95": 0.19540229885057472
     },
     "combined": {
       "count": 640,
-      "mean": 0.09157048467103616,
+      "mean": 0.09157048467103614,
       "median": 0.07407407407407407,
       "min": 0,
       "max": 1.5555555555555556,
-      "std": 0.11423903128135114,
+      "std": 0.11423903128135122,
       "p10": 0.02857142857142857,
       "p90": 0.14150943396226415,
       "p95": 0.20754716981132076
@@ -65,9 +65,9 @@
     "qInCur": 102
   },
   "correlations": {
-    "curVsPenalty": 0.28982212587877326,
-    "ctxVsPenalty": 0.03040220795789565,
-    "combinedVsPenalty": 0.12920812441102775
+    "curVsPenalty": 0.28982212587877526,
+    "ctxVsPenalty": 0.0304022079578959,
+    "combinedVsPenalty": 0.1292081244110281
   },
   "buckets": [
     {

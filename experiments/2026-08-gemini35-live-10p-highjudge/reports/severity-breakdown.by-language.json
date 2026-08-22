@@ -49,6 +49,16 @@
       "critical": 6,
       "major": 128,
       "minor": 114
+    },
+    "hymt2-7b-q4xl": {
+      "critical": 2,
+      "major": 44,
+      "minor": 79
+    },
+    "gemma4-12b-qat-q4xl": {
+      "critical": 0,
+      "major": 12,
+      "minor": 24
     }
   },
   "ja": {
@@ -101,6 +111,16 @@
       "critical": 4,
       "major": 100,
       "minor": 148
+    },
+    "hymt2-7b-q4xl": {
+      "critical": 4,
+      "major": 60,
+      "minor": 79
+    },
+    "gemma4-12b-qat-q4xl": {
+      "critical": 2,
+      "major": 36,
+      "minor": 59
     }
   },
   "zh-Hans": {
@@ -153,6 +173,16 @@
       "critical": 4,
       "major": 97,
       "minor": 138
+    },
+    "hymt2-7b-q4xl": {
+      "critical": 3,
+      "major": 49,
+      "minor": 59
+    },
+    "gemma4-12b-qat-q4xl": {
+      "critical": 0,
+      "major": 25,
+      "minor": 56
     }
   }
 }

@@ -33,12 +33,12 @@ All experiments run on dataset `gemba-mqm-context-v1` (fingerprint `9ab9e9875215
 
 | | 2026-04 (archived) | 2026-08 issue-1 (archived) | 2026-08 high judge (current) |
 | --- | --- | --- | --- |
-| Run ID | `gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514` | `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01` | `gemini35-live-10p-highjudge-20260820` |
-| Translation prompt | `gemini-context-v2.md` | `puripuly-translation-latest.md` (MiLMMT arms use their own) | Live: no prompt (audio only, provenance marker file); other rows reused from live-two-voice |
+| Run ID | `gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514` | `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01` | `unified-12arm-highjudge-20260822` |
+| Translation prompt | `gemini-context-v2.md` | `puripuly-translation-latest.md` (MiLMMT arms use their own) | Live: no prompt (audio only, provenance marker file); Hy-MT2 7B and Gemma 4 12B QAT Q4 fresh; other rows carried over |
 | Judge model | `gemini-3.1-pro-preview` | `google/gemini-3.7-flash:batch` | `google/gemini-3.7-flash:batch`, reasoning effort high |
 | Judge backend | Vertex AI | OpenRouter Batch API | OpenRouter Batch API |
 | Judge prompt format | JSON structured output | Upstream GEMBA-MQM text annotation | Upstream GEMBA-MQM text annotation |
-| Participants | Gemini/Gemma/Qwen/DeepSeek + DeepL + Google | Gemma 31B/26B, DeepSeek 0731, local E4B ×3, MiLMMT ×2, Papago, DeepL, Google | Gemini 3.5 Live Translate (audio-native two voice) + 9 text/MT rows reused |
+| Participants | Gemini/Gemma/Qwen/DeepSeek + DeepL + Google | Gemma 31B/26B, DeepSeek 0731, local E4B ×3, MiLMMT ×2, Papago, DeepL, Google | Gemini 3.5 Live Translate (audio-native two voice), Gemma 31B/26B/12B QAT Q4, DeepSeek 0731, local E4B ×2, Hy-MT2 7B, MiLMMT X0, Papago, DeepL, Google (10 carried arms reused) |
 | Extra arms | no-context baselines | quantization and prompt-regime arms | TTS two-voice audio pipeline, ASR CER analysis |
 | Reports | CSV under `experiments/2026-04-…/reports/` | JSON under `experiments/2026-08-…-archived/reports/` | JSON + JSONL raw data under `experiments/2026-08-gemini35-live-10p-highjudge/` |
 
@@ -46,4 +46,4 @@ Because the prompt, judge, and judge prompt format differ, scores from different
 
 The 2026-08 issue-1 run was a fork-and-merge continuation: 5,828 translations were reused from an earlier run of the same benchmark config, 1,296 were imported (Papago, DeepSeek 0731), and only missing cells were judged fresh. See `experiments/2026-08-…-archived/fork-prepared.json`.
 
-The 2026-08 high-judge run forks from the live-two-voice run (`gemini35-live-two-voice-20260817`): all 6,468 translations are reused (10 participants, including the 640 Gemini 3.5 Live Translate cells) and every cell is newly judged with the high-effort judge. The Live participant streams locally TTS-synthesized two-voice audio (`Qwen3-TTS-12Hz-0.6B-CustomVoice`, voices `sohee`/`uncle_fu`) into `gemini-3.5-live-translate-preview`; its streaming transcription is recorded in `translation-provider-details.jsonl` and analyzed in `reports/ASR-CER-analysis-high.md`. See `experiments/2026-08-gemini35-live-10p-highjudge/README.md`.
+The 2026-08 high-judge lineage forks from the live-two-voice run (`gemini35-live-two-voice-20260817`): all 6,468 carried translations (10 participants, including the 640 Gemini 3.5 Live Translate cells) were reused and judged with the high-effort judge in `gemini35-live-10p-highjudge-20260820`. The unified collect `unified-12arm-highjudge-20260822` re-publishes those 10 arms byte-identically (same 5 batch jobs) and adds two fresh arms — Hy-MT2 7B and Gemma 4 12B QAT Q4 — translated and judged in their own high-judge sessions. The Live participant streams locally TTS-synthesized two-voice audio (`Qwen3-TTS-12Hz-0.6B-CustomVoice`, voices `sohee`/`uncle_fu`) into `gemini-3.5-live-translate-preview`; its streaming transcription is recorded in `translation-provider-details.jsonl` and analyzed in `reports/ASR-CER-analysis-high.md`. See `experiments/2026-08-gemini35-live-10p-highjudge/README.md`.

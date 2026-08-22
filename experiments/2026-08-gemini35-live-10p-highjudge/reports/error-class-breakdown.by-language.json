@@ -90,6 +90,22 @@
       "fluency/grammar": 14,
       "style/awkward": 18,
       "fluency/punctuation": 8
+    },
+    "hymt2-7b-q4xl": {
+      "accuracy/addition": 18,
+      "accuracy/mistranslation": 70,
+      "terminology/inappropriate for context": 8,
+      "style/awkward": 7,
+      "fluency/grammar": 4,
+      "accuracy/omission": 15,
+      "fluency/register": 1,
+      "fluency/spelling": 2
+    },
+    "gemma4-12b-qat-q4xl": {
+      "accuracy/mistranslation": 20,
+      "accuracy/omission": 12,
+      "terminology/inappropriate for context": 2,
+      "style/awkward": 2
     }
   },
   "ja": {
@@ -203,6 +219,29 @@
       "terminology/inappropriate for context": 7,
       "fluency/grammar": 21,
       "fluency/spelling": 5
+    },
+    "hymt2-7b-q4xl": {
+      "accuracy/addition": 10,
+      "accuracy/mistranslation": 70,
+      "accuracy/omission": 23,
+      "terminology/inappropriate for context": 17,
+      "style/awkward": 11,
+      "fluency/register": 7,
+      "fluency/grammar": 2,
+      "accuracy/untranslated text": 1,
+      "fluency/spelling": 2
+    },
+    "gemma4-12b-qat-q4xl": {
+      "accuracy/untranslated text": 24,
+      "style/awkward": 17,
+      "accuracy/mistranslation": 32,
+      "fluency/spelling": 6,
+      "terminology/inappropriate for context": 5,
+      "fluency/grammar": 5,
+      "accuracy/addition": 4,
+      "accuracy/omission": 2,
+      "fluency/character encoding": 1,
+      "non-translation": 1
     }
   },
   "zh-Hans": {
@@ -306,6 +345,27 @@
       "fluency/register": 1,
       "fluency/grammar": 17,
       "terminology/inappropriate for context": 2
+    },
+    "hymt2-7b-q4xl": {
+      "accuracy/addition": 20,
+      "accuracy/mistranslation": 57,
+      "fluency/grammar": 3,
+      "style/awkward": 4,
+      "terminology/inappropriate for context": 6,
+      "accuracy/omission": 18,
+      "fluency/spelling": 2,
+      "accuracy/untranslated text": 1
+    },
+    "gemma4-12b-qat-q4xl": {
+      "accuracy/untranslated text": 16,
+      "fluency/grammar": 4,
+      "style/awkward": 13,
+      "accuracy/mistranslation": 27,
+      "accuracy/omission": 11,
+      "terminology/inappropriate for context": 5,
+      "fluency/spelling": 3,
+      "fluency/register": 1,
+      "accuracy/addition": 1
     }
   }
 }

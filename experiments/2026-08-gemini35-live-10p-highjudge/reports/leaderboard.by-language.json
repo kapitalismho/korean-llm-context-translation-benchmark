@@ -70,6 +70,20 @@
         "mean_penalty": 4.264150943396227,
         "samples": 212,
         "failed_samples": 2
+      },
+      {
+        "participant_id": "hymt2-7b-q4xl",
+        "participant_display_name": "Hy-MT2 7B",
+        "mean_penalty": 1.6157407407407407,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-12b-qat-q4xl",
+        "participant_display_name": "Gemma 4 12B QAT Q4",
+        "mean_penalty": 0.3888888888888889,
+        "samples": 216,
+        "failed_samples": 0
       }
     ],
     "severityBreakdown": {
@@ -122,6 +136,16 @@
         "critical": 6,
         "major": 128,
         "minor": 114
+      },
+      "hymt2-7b-q4xl": {
+        "critical": 2,
+        "major": 44,
+        "minor": 79
+      },
+      "gemma4-12b-qat-q4xl": {
+        "critical": 0,
+        "major": 12,
+        "minor": 24
       }
     },
     "errorClassBreakdown": {
@@ -215,6 +239,22 @@
         "fluency/grammar": 14,
         "style/awkward": 18,
         "fluency/punctuation": 8
+      },
+      "hymt2-7b-q4xl": {
+        "accuracy/addition": 18,
+        "accuracy/mistranslation": 70,
+        "terminology/inappropriate for context": 8,
+        "style/awkward": 7,
+        "fluency/grammar": 4,
+        "accuracy/omission": 15,
+        "fluency/register": 1,
+        "fluency/spelling": 2
+      },
+      "gemma4-12b-qat-q4xl": {
+        "accuracy/mistranslation": 20,
+        "accuracy/omission": 12,
+        "terminology/inappropriate for context": 2,
+        "style/awkward": 2
       }
     },
     "failures": [
@@ -222,25 +262,25 @@
         "participant_id": "deepl-api",
         "participant_display_name": "DeepL API",
         "source_id": "ctx2-single-use-referent_resolution-001",
-        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::en::deepl-api"
+        "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-referent_resolution-001::en::deepl-api"
       },
       {
         "participant_id": "milmmt-4b-native",
         "participant_display_name": "MiLMMT 46-4B X0 (native)",
         "source_id": "ctx2-dyadic-ignore-stale_context_resistance-003",
-        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
+        "stable_key": "unified-12arm-highjudge-20260822::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
       },
       {
         "participant_id": "gemini35-live-translate-two-voice",
         "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
         "source_id": "ctx2-single-use-pragmatic_intent_resolution-003",
-        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
+        "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
       },
       {
         "participant_id": "gemini35-live-translate-two-voice",
         "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
         "source_id": "ctx3-single-ignore-stale_context_resistance-001",
-        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
+        "stable_key": "unified-12arm-highjudge-20260822::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
       }
     ]
   },
@@ -315,6 +355,20 @@
         "mean_penalty": 3.511737089201878,
         "samples": 213,
         "failed_samples": 0
+      },
+      {
+        "participant_id": "hymt2-7b-q4xl",
+        "participant_display_name": "Hy-MT2 7B",
+        "mean_penalty": 2.2175925925925926,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-12b-qat-q4xl",
+        "participant_display_name": "Gemma 4 12B QAT Q4",
+        "mean_penalty": 1.337962962962963,
+        "samples": 216,
+        "failed_samples": 0
       }
     ],
     "severityBreakdown": {
@@ -367,6 +421,16 @@
         "critical": 4,
         "major": 100,
         "minor": 148
+      },
+      "hymt2-7b-q4xl": {
+        "critical": 4,
+        "major": 60,
+        "minor": 79
+      },
+      "gemma4-12b-qat-q4xl": {
+        "critical": 2,
+        "major": 36,
+        "minor": 59
       }
     },
     "errorClassBreakdown": {
@@ -480,6 +544,29 @@
         "terminology/inappropriate for context": 7,
         "fluency/grammar": 21,
         "fluency/spelling": 5
+      },
+      "hymt2-7b-q4xl": {
+        "accuracy/addition": 10,
+        "accuracy/mistranslation": 70,
+        "accuracy/omission": 23,
+        "terminology/inappropriate for context": 17,
+        "style/awkward": 11,
+        "fluency/register": 7,
+        "fluency/grammar": 2,
+        "accuracy/untranslated text": 1,
+        "fluency/spelling": 2
+      },
+      "gemma4-12b-qat-q4xl": {
+        "accuracy/untranslated text": 24,
+        "style/awkward": 17,
+        "accuracy/mistranslation": 32,
+        "fluency/spelling": 6,
+        "terminology/inappropriate for context": 5,
+        "fluency/grammar": 5,
+        "accuracy/addition": 4,
+        "accuracy/omission": 2,
+        "fluency/character encoding": 1,
+        "non-translation": 1
       }
     },
     "failures": []
@@ -555,6 +642,20 @@
         "mean_penalty": 3.3943661971830985,
         "samples": 213,
         "failed_samples": 0
+      },
+      {
+        "participant_id": "hymt2-7b-q4xl",
+        "participant_display_name": "Hy-MT2 7B",
+        "mean_penalty": 1.7546296296296295,
+        "samples": 216,
+        "failed_samples": 0
+      },
+      {
+        "participant_id": "gemma4-12b-qat-q4xl",
+        "participant_display_name": "Gemma 4 12B QAT Q4",
+        "mean_penalty": 0.8379629629629629,
+        "samples": 216,
+        "failed_samples": 0
       }
     ],
     "severityBreakdown": {
@@ -607,6 +708,16 @@
         "critical": 4,
         "major": 97,
         "minor": 138
+      },
+      "hymt2-7b-q4xl": {
+        "critical": 3,
+        "major": 49,
+        "minor": 59
+      },
+      "gemma4-12b-qat-q4xl": {
+        "critical": 0,
+        "major": 25,
+        "minor": 56
       }
     },
     "errorClassBreakdown": {
@@ -710,6 +821,27 @@
         "fluency/register": 1,
         "fluency/grammar": 17,
         "terminology/inappropriate for context": 2
+      },
+      "hymt2-7b-q4xl": {
+        "accuracy/addition": 20,
+        "accuracy/mistranslation": 57,
+        "fluency/grammar": 3,
+        "style/awkward": 4,
+        "terminology/inappropriate for context": 6,
+        "accuracy/omission": 18,
+        "fluency/spelling": 2,
+        "accuracy/untranslated text": 1
+      },
+      "gemma4-12b-qat-q4xl": {
+        "accuracy/untranslated text": 16,
+        "fluency/grammar": 4,
+        "style/awkward": 13,
+        "accuracy/mistranslation": 27,
+        "accuracy/omission": 11,
+        "terminology/inappropriate for context": 5,
+        "fluency/spelling": 3,
+        "fluency/register": 1,
+        "accuracy/addition": 1
       }
     },
     "failures": [
@@ -717,7 +849,7 @@
         "participant_id": "deepl-api",
         "participant_display_name": "DeepL API",
         "source_id": "ctx2-single-use-referent_resolution-001",
-        "stable_key": "gemini35-live-10p-highjudge-20260820::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
+        "stable_key": "unified-12arm-highjudge-20260822::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
       }
     ]
   }

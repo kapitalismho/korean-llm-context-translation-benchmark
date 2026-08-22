@@ -354,7 +354,7 @@ export function renderSlideReadyRankingChartHtml(svg: string): string {  return 
   ].join('\n');
 }
 
-export type ColumnChartCategory = 'api-llm' | 'local-llm' | 'dedicated-mt' | 'commercial';
+export type ColumnChartCategory = 'api-llm' | 'local-llm' | 'dedicated-mt' | 'live' | 'commercial';
 
 export interface RenderColumnLeaderboardChartOptions {
   rows: readonly PenaltySummaryRow[];
@@ -364,37 +364,46 @@ export interface RenderColumnLeaderboardChartOptions {
 }
 
 const COLUMN_TITLE = 'Mean error penalty per sentence';
-const COLUMN_SUBTITLE = 'Korean → EN / JA / ZH-Hans · 216 multi-turn samples × 3 languages · GEMBA-MQM evaluation · Lower is better';
+const COLUMN_SUBTITLE = 'Korean → EN / JA / ZH-Hans · 216 multi-turn samples · Gemba MQM evaluation · Lower is better';
 const COLUMN_FONT_FAMILY = 'Segoe UI, Helvetica, Arial, sans-serif';
 
 const COLUMN_CATEGORY_FILLS: Record<ColumnChartCategory, string> = {
   'api-llm': '#2563eb',
   'local-llm': '#2563eb',
-  'dedicated-mt': '#2dd4bf',
-  commercial: '#f59e0b',
+  'dedicated-mt': '#2563eb',
+  live: '#ff7f0e',
+  commercial: '#ff7f0e',
 };
 
 const COLUMN_SHORT_LABELS: Record<string, string> = {
   'gemma4-31b': 'Gemma 4 31B',
-  'gemma-4-26b-openrouter': 'Gemma 4 26B',
-  'deepseek-v4-flash-0731-openrouter': 'DeepSeek V4F 0731',
+  'gemma-4-26b-openrouter': 'Gemma 4 26B A4B',
+  'deepseek-v4-flash-0731-openrouter': 'DeepSeek V4 Flash 0731',
+  'gemma4-12b-qat-q4xl': 'Gemma 4 12B QAT Q4',
   'gemma4-e4b-fp16': 'Gemma 4 E4B fp16',
   'gemma4-e4b-qat-q4': 'Gemma 4 E4B QAT Q4',
   'gemma4-e4b-qat-q2': 'Gemma 4 E4B QAT Q2',
-  'milmmt-4b-native': 'MiLMMT X0',
+  'hymt2-7b-q4xl': 'Hy-MT2 7B',
+  'gemini35-live-cer-le5-subset': 'Gemini 3.5 Live Translate, CER ≤ 5% subset',
+  'gemini35-live-translate-two-voice': 'Gemini 3.5 Live Translate',
+  'milmmt-4b-native': 'MiLMMT 46-4B',
   'milmmt-4b-puripuly-policy': 'MiLMMT X2',
-  'papago-web': 'Papago',
-  'deepl-api': 'DeepL',
+  'papago-web': 'Papago Web',
+  'deepl-api': 'DeepL API',
   'deepl-api-nocontext': 'DeepL (no ctx)',
-  'google-cloud-translate-basic': 'Google Basic',
+  'google-cloud-translate-basic': 'Google Cloud Translation Basic',
 };
 
 export function classifyColumnChartCategory(participantId: string): ColumnChartCategory {
-  if (participantId.startsWith('gemma4-e4b-')) {
+  if (participantId.startsWith('gemini35-live')) {
+    return 'live';
+  }
+
+  if (participantId.startsWith('gemma4-e4b-') || participantId.startsWith('gemma4-12b-')) {
     return 'local-llm';
   }
 
-  if (participantId.startsWith('milmmt-')) {
+  if (participantId.startsWith('milmmt-') || participantId.startsWith('hymt2-')) {
     return 'dedicated-mt';
   }
 
@@ -421,7 +430,7 @@ export function renderColumnLeaderboardChartSvg(options: RenderColumnLeaderboard
   const barCount = rows.length;
   const bandWidth = plotWidth / barCount;
   const barWidth = bandWidth * 0.62;
-  const labelRoom = 96;
+  const labelRoom = 170;
   const yAxisMax = Math.ceil(Math.max(...rows.map((row) => row.mean_penalty ?? 0), 1) / 2) * 2;
   const plotBottom = 430;
   const plotHeight = plotBottom - plotTop;
@@ -449,7 +458,7 @@ export function renderColumnLeaderboardChartSvg(options: RenderColumnLeaderboard
     return [
       `<g data-participant-id="${escapeXml(row.participant_id)}">`,
       `<rect x="${(bandCenter - (barWidth / 2)).toFixed(1)}" y="${barTop.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${(plotBottom - barTop).toFixed(1)}" fill="${fill}" />`,
-      `<text x="${bandCenter.toFixed(1)}" y="${(barTop - 8).toFixed(1)}" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">${formatPenalty(penalty)}</text>`,
+      `<text x="${bandCenter.toFixed(1)}" y="${(barTop - 8).toFixed(1)}" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">${penalty.toFixed(3)}</text>`,
       `<text x="${bandCenter.toFixed(1)}" y="${(plotBottom + 14).toFixed(1)}" font-size="13" fill="#334155" text-anchor="end" transform="rotate(-45 ${bandCenter.toFixed(1)} ${plotBottom + 14})">${escapeXml(label)}</text>`,
       `</g>`,
     ].join('');

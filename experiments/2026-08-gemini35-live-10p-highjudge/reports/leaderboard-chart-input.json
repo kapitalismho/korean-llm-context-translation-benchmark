@@ -2,61 +2,66 @@
   {
     "participant_id": "gemma4-e4b-qat-q4",
     "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
-    "normalized_macro_mean_penalty": 0.213160555959943
+    "mean_penalty": 1.5771604938271604
   },
   {
     "participant_id": "gemma4-e4b-fp16",
     "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
-    "normalized_macro_mean_penalty": 0.1756275484968407
+    "mean_penalty": 1.353395061728395
   },
   {
     "participant_id": "milmmt-4b-native",
     "participant_display_name": "MiLMMT 46-4B X0 (native)",
-    "normalized_macro_mean_penalty": 0.48816715629159607
+    "mean_penalty": 3.0865533230293662
   },
   {
     "participant_id": "gemma4-31b",
     "participant_display_name": "Gemma 4 31B via OpenRouter",
-    "normalized_macro_mean_penalty": 0.009940636200716845
+    "mean_penalty": 0.3533950617283951
   },
   {
     "participant_id": "gemma-4-26b-openrouter",
     "participant_display_name": "Gemma 4 26B via OpenRouter",
-    "normalized_macro_mean_penalty": 0.014364137451360594
+    "mean_penalty": 0.3873456790123457
   },
   {
     "participant_id": "google-cloud-translate-basic",
     "participant_display_name": "Google Cloud Translation Basic",
-    "normalized_macro_mean_penalty": 0.5771368740526991
+    "mean_penalty": 5.731481481481482
   },
   {
     "participant_id": "deepl-api",
     "participant_display_name": "DeepL API",
-    "normalized_macro_mean_penalty": 0.6718766197300995
+    "mean_penalty": 3.9143302180685358
   },
   {
     "participant_id": "papago-web",
     "participant_display_name": "Papago Web",
-    "normalized_macro_mean_penalty": 0.4508290963561283
+    "mean_penalty": 2.699074074074074
   },
   {
     "participant_id": "deepseek-v4-flash-0731-openrouter",
     "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
-    "normalized_macro_mean_penalty": 0.03542217857537899
+    "mean_penalty": 0.5709876543209876
   },
   {
     "participant_id": "gemini35-live-translate-two-voice",
     "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
-    "normalized_macro_mean_penalty": 0.6299995081230882
+    "mean_penalty": 3.7225705329153604
   },
   {
     "participant_id": "hymt2-7b-q4xl",
     "participant_display_name": "Hy-MT2 7B",
-    "normalized_macro_mean_penalty": 0.2673610000241009
+    "mean_penalty": 1.8626543209876543
   },
   {
     "participant_id": "gemma4-12b-qat-q4xl",
     "participant_display_name": "Gemma 4 12B QAT Q4",
-    "normalized_macro_mean_penalty": 0.08094705845032522
+    "mean_penalty": 0.8549382716049383
+  },
+  {
+    "participant_id": "gemini35-live-cer-le5-subset",
+    "participant_display_name": "Gemini 3.5 Live Translate, CER ≤ 5% subset",
+    "mean_penalty": 2.991031390134529
   }
 ]

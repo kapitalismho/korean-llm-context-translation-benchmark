@@ -38,5 +38,13 @@
   "gemini35-live-translate-two-voice": {
     "missed_required_context_rate": 0.09219858156028368,
     "misused_context_rate": 0.06046511627906977
+  },
+  "hymt2-7b-q4xl": {
+    "missed_required_context_rate": 0.06018518518518518,
+    "misused_context_rate": 0.08333333333333333
+  },
+  "gemma4-12b-qat-q4xl": {
+    "missed_required_context_rate": 0.023148148148148147,
+    "misused_context_rate": 0
   }
 }

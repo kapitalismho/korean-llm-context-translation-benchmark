@@ -251,5 +251,21 @@
     "displayName": "Papago Web",
     "provider": "papago",
     "providerModelId": "papago-web"
+  },
+  {
+    "participantId": "hymt2-7b-q4xl",
+    "displayName": "Hy-MT2 7B",
+    "provider": "llamacpp",
+    "providerModelId": "Hy-MT2-7B-UD-Q4_K_XL",
+    "llamaCppServerUrl": "http://127.0.0.1:8084",
+    "llamaCppMode": "chat"
+  },
+  {
+    "participantId": "gemma4-12b-qat-q4xl",
+    "displayName": "Gemma 4 12B QAT Q4",
+    "provider": "llamacpp",
+    "providerModelId": "gemma-4-12B-it-qat-UD-Q4_K_XL",
+    "llamaCppServerUrl": "http://127.0.0.1:8085",
+    "llamaCppMode": "chat"
   }
 ]

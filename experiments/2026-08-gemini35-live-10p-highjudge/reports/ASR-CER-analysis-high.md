@@ -1,11 +1,10 @@
-# ASR CER 분석 — gemini35-live-10p-highjudge-20260820 (high judge 재산정)
+# ASR CER 분석 — unified-12arm-highjudge-20260822 (high judge 재산정, 통합 12-arm 런 재검증)
 
-*생성 시각:* 2026-08-20T00:00:00Z (high reasoning 재산정)
-*기반 데이터:* `runtime.json` 216샘플 (fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`) + `translation-provider-details.jsonl` Live 성공 640건 + `judge-normalized.jsonl` high judge (reasoning effort `high`) 6463 ok / penalty = critical×25+major×5+minor×1
-*번역문 동일성:* 번역문은 `gemini35-live-two-voice-20260817` (medium judge) 와 100% 동일 — 640 Live 셀 전사/번역 재사용, judge만 `openrouter-batch` `google/gemini-3.7-flash:batch` `reasoning={enabled:true, effort:"high"}` 로 재심사. 2건 judge 실패는 양쪽 런 동일 (`ctx2-single-use-pragmatic_intent_resolution-003::en`, `ctx3-single-ignore-stale_context_resistance-001::en`).
-*TTS 동결:* `Qwen3-TTS-12Hz-0.6B-CustomVoice` (sohee/uncle_fu) / TTS manifest `output/tts-assets/gemba-mqm-context-v1-two-voice/manifest.json` SHA256 `98779efb78936b92…` / datasetFingerprint `9ab9e987…5110` (런 manifest 기준). TTS manifest 파일 내부 `datasetFingerprintSha256` 필드는 `765b89dc…` 로 기록되어 있으나 런 검증은 `9ab9e987` 로 통과 (fork 직전 `9432633` 복원 상태) — 음성-원문 대조 SHA256은 양쪽 모두 일치.
-*검증:* runtime 원문 ↔ provider-details 전사 누적 동치 (`src/gemini-live-translate.ts:444 accumulateTranscript` 동일 로직) — source run (`gemini35-live-two-voice-20260817`, repo에서 삭제됨) 의 ASR-CER-detail 640행 CER을 그대로 재사용; CER+penalty 결합은 `ASR-CER-highjudge-join.jsonl`. 재현 스크립트 `cer_highjudge_recalc.mjs` (Node 22, 무의존성).
-*대조 기준:* source run 의 `ASR-CER-analysis.md` (v2-strict, medium judge; repo에서 삭제됨) 와 동일 CER 정의, penalty만 high로 교체.
+*생성 시각:* 2026-08-22T00:00:00Z (unified 12-arm 런 아티팩트에서 전체 재계산)
+*기반 데이터:* `runtime.json` 216샘플 (repo freeze fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`; 런 manifest은 `relativeTimeLabel` 필드가 없는 수집기 직렬화 기준 `765b89dc…` 기록 — 샘플 내용 동일) + `translation-provider-details.jsonl` Live 성공 640건 + `judge-normalized.jsonl` high judge (reasoning effort `high`) 7,764행 중 Live ok 638 / penalty = critical×25+major×5+minor×1
+*번역문 동일성:* Live 640 셀의 전사/번역은 `gemini35-live-two-voice-20260817` 계보에서 두 번의 공개 런(10-arm → 통합 12-arm)을 거치며 100% 바이트 동일하게 승계되었다. high judge 판정 행도 10-arm 런(`gemini35-live-10p-highjudge-20260820`)에서 바이트 동일히 승계 (배치 잡 5건 동일). 본 문서는 통합 런의 아티팩트로 CER을 재계산하고 판정을 재결합했으며, 모든 통계가 이전 공개치와 일치함을 확인했다 (CER 640건 전부 일치, penalty/behavior/status 불일치 0).
+*TTS 동결:* `Qwen3-TTS-12Hz-0.6B-CustomVoice` (sohee/uncle_fu) / TTS manifest SHA256 `98779efb78936b92…` / 음성-원문 대조 SHA256은 양쪽 직렬화 모두 일치.
+*검증:* runtime 원문 ↔ provider-details 전사 누적 동치 (`src/gemini-live-translate.ts:444 accumulateTranscript` 동일 로직 재구현) — CER+penalty 결합은 `ASR-CER-highjudge-join.jsonl`. 요약 통계·버킷·상관·headline은 join 파일에서 재산정 (`ASR-CER-summary-high.json`).
 
 ## 0. 방법론 — 원본과 동일
 
@@ -152,15 +151,15 @@ return acc;
 
 ## 6. 재현
 
-- CER+penalty 결합: standalone 스크립트 `cer_highjudge_recalc.mjs` (Node 22, 무의존성) — 이 런의 `translation-provider-details.jsonl` 전사 누적과 `judge-normalized.jsonl` penalty를 결합해 `reports/ASR-CER-highjudge-join.jsonl` (640행) 생성.
-- per-bucket 통계 / Pearson r: standalone 스크립트 `cer_high_md.mjs` — join 파일과 bucket 정의를 입력받아 이 문서의 통계를 출력.
+- CER+penalty 결합: standalone 스크립트 (Node 22, 무의존성) — 이 런의 `translation-provider-details.jsonl` 전사 누적(accumulateTranscript 동일 로직 재구현)과 `judge-normalized.jsonl` penalty를 결합해 `reports/ASR-CER-highjudge-join.jsonl` (640행) 생성. 통합 런 아티팩트로 전체 재계산했으며 이전 공개치와의 교차검증에서 CER/penalty/behavior/status 불일치 0.
+- per-bucket 통계 / Pearson r: join 파일과 bucket 정의([0,0.05), [0.05,0.15), [0.15,0.30), [0.30,0.60), [0.60,∞), 분위수는 (n−1)p 의 higher/ceil) 로부터 재산정해 `ASR-CER-summary-high.json` 생성.
 - 스크립트 원본은 분석 작업 환경의 임시 디렉터리에 있으며 공개 릴리스에는 포함되지 않는다; 결합 결과와 요약은 `reports/` 에 그대로 보존된다.
 SHA (hex 16):
-- runtime.json (high run) `9ab9e98752155a83…` (이 분석의 reference)
+- runtime.json (repo freeze, reference) `9ab9e98752155a83…` / 런 manifest 수집기 직렬화 `765b89dc08b4edba…` (샘플 내용 동일)
 - TTS manifest `98779efb78936b92…` (파일 전체)
-- provider-details `9b77610cdbe9445b…`
-- judge-normalized (high) `13fdb586288a11f8…`
-- CER detail (v2) `ed1d19b8d634fa50…` 와 동일 (CER 재계산 없음)
+- provider-details (unified run) `ccab653ce68af8be…`
+- judge-normalized (unified run, 7,764행) `802d0b6ca4c95b2f…`
+- CER detail (v2) `ed1d19b8d634fa50…` 와 동일 (CER 재계산 없음 — 본 재계산으로도 640건 전부 일치 확인)
 
 ---
 
@@ -180,5 +179,5 @@ SHA (hex 16):
 - `reports/ASR-CER-highjudge-join.jsonl` — per-record 640행 (cerCurrent/cerCtx/cerCombined + penaltyHigh/penaltyOld + behHigh/behOld)
 - `reports/ASR-CER-summary-high.json` — 요약 통계 (아래)
 - 원본 CER: source run (`gemini35-live-two-voice-20260817`) 의 `ASR-CER-detail.jsonl` (640행) / `ASR-CER-analysis.md` (v2-strict, medium judge) — repo에서 삭제되어 `ASR-CER-highjudge-join.jsonl` (CER+penalty 결합) 이 영구 기록
-- 원본: `translation-provider-details.jsonl` (640), `runtime.json` (216), `judge-normalized.jsonl` (high, 6468행, 5 fail), `translation-failures.jsonl` (12)
+- 원본: `translation-provider-details.jsonl` (640), `runtime.json` (216), `judge-normalized.jsonl` (high, 7,764행 중 Live 638 ok / 2 fail), `translation-failures.jsonl` (12)
 

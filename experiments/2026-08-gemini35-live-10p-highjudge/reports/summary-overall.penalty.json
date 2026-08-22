@@ -48,5 +48,15 @@
     "participant_id": "gemini35-live-translate-two-voice",
     "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
     "mean_penalty": 3.7225705329153604
+  },
+  {
+    "participant_id": "hymt2-7b-q4xl",
+    "participant_display_name": "Hy-MT2 7B",
+    "mean_penalty": 1.8626543209876543
+  },
+  {
+    "participant_id": "gemma4-12b-qat-q4xl",
+    "participant_display_name": "Gemma 4 12B QAT Q4",
+    "mean_penalty": 0.8549382716049383
   }
 ]

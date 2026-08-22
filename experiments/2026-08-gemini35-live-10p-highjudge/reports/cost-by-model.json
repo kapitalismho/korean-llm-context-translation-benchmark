@@ -39,8 +39,12 @@
     "totalCostUsd": 0,
     "unknownCostRecordCount": 640
   },
+  "gemma-4-12B-it-qat-UD-Q4_K_XL": {
+    "totalCostUsd": 0,
+    "unknownCostRecordCount": 648
+  },
   "google/gemini-3.7-flash": {
-    "totalCostUsd": 7.128444,
+    "totalCostUsd": 7.737473,
     "unknownCostRecordCount": 5
   }
 }

@@ -69,6 +69,20 @@
       "mean_penalty": 2.5277777777777777,
       "samples": 72,
       "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.0277777777777777,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.5138888888888888,
+      "samples": 72,
+      "failed_samples": 0
     }
   ],
   "false_lead_trap": [
@@ -139,6 +153,20 @@
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 4.314814814814815,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.1666666666666667,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.18518518518518517,
       "samples": 54,
       "failed_samples": 0
     }
@@ -213,6 +241,20 @@
       "mean_penalty": 3.9814814814814814,
       "samples": 54,
       "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.925925925925926,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.3703703703703705,
+      "samples": 54,
+      "failed_samples": 0
     }
   ],
   "pragmatic_intent_resolution": [
@@ -285,6 +327,20 @@
       "mean_penalty": 5.301587301587301,
       "samples": 63,
       "failed_samples": 1
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.5555555555555554,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.7777777777777778,
+      "samples": 72,
+      "failed_samples": 0
     }
   ],
   "referent_resolution": [
@@ -355,6 +411,20 @@
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 3.9166666666666665,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.4722222222222223,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.6666666666666666,
       "samples": 72,
       "failed_samples": 0
     }
@@ -429,6 +499,20 @@
       "mean_penalty": 3.375,
       "samples": 72,
       "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 0.7083333333333334,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.0555555555555556,
+      "samples": 72,
+      "failed_samples": 0
     }
   ],
   "sense_disambiguation": [
@@ -499,6 +583,20 @@
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 3.5833333333333335,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.1666666666666665,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.1944444444444444,
       "samples": 72,
       "failed_samples": 0
     }
@@ -573,6 +671,20 @@
       "mean_penalty": 3.641509433962264,
       "samples": 53,
       "failed_samples": 1
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 3.3703703703703702,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.2962962962962963,
+      "samples": 54,
+      "failed_samples": 0
     }
   ],
   "temporal_or_causal_linkage": [
@@ -645,6 +757,20 @@
       "mean_penalty": 3.888888888888889,
       "samples": 72,
       "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 1.4583333333333333,
+      "samples": 72,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 0.5833333333333334,
+      "samples": 72,
+      "failed_samples": 0
     }
   ],
   "topic_shift_independence": [
@@ -715,6 +841,20 @@
       "participant_id": "gemini35-live-translate-two-voice",
       "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
       "mean_penalty": 2.8703703703703702,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "hymt2-7b-q4xl",
+      "participant_display_name": "Hy-MT2 7B",
+      "mean_penalty": 2.3703703703703702,
+      "samples": 54,
+      "failed_samples": 0
+    },
+    {
+      "participant_id": "gemma4-12b-qat-q4xl",
+      "participant_display_name": "Gemma 4 12B QAT Q4",
+      "mean_penalty": 1.0185185185185186,
       "samples": 54,
       "failed_samples": 0
     }
