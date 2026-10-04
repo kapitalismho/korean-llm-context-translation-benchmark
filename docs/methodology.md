@@ -27,11 +27,39 @@ Severity weights are:
 
 For a participant, `mean_penalty` is the mean total penalty over valid judged cells.
 
-## Experiments
+## Main Experiments
 
-All experiments run on dataset `gemba-mqm-context-v1` (fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`). Everything else may differ per experiment:
+All three use `gemba-mqm-context-v1`: 216 Korean items × English, Japanese, and Simplified Chinese = 648 expected cells per system or condition.
 
-| | 2026-04 (archived) | 2026-08 issue-1 (archived) | 2026-08 high judge (current) |
+| Experiment | Question | Design | Results |
+| --- | --- | --- | --- |
+| 1 — Integrated comparison | Which translation systems perform best? | 12 text-input systems + 3 direct speech translators | [15-system comparison](../experiments/2026-09-integrated-15-system/) |
+| 2 — Full-stack translation | Which speech-input pipeline produces the best translation? | 6 ASR→LLM pipelines + the same 3 direct speech translators | [9-pipeline comparison](../experiments/2026-09-fullstack/) |
+| 3 — Context effect | How much do history and policy help the same model? | Gemma 4 E4B QAT Q4: sentence-only vs. policy + full history | [642 paired cells](../experiments/2026-08-gemini35-live-10p-highjudge/ablation/) |
+
+### Inputs and Comparisons
+
+- Experiment 1 labels text and speech inputs; its 12-system text-only view excludes recognition effects.
+- Experiment 2 includes ASR errors in the final translation score. Judges compare against canonical Korean text and context, not the recognized transcript. Gemini Transcribe and Gemini Live Translate are distinct systems.
+- Soniox→LLM uses pure-STT transcripts. Direct speech results are shared between Experiments 1 and 2, not independent repetitions.
+- Experiment 3 changes both policy and history. It measures their combined effect, with `use` and `ignore` slices reported separately.
+
+### Reporting
+
+- All-valid means retain each system's coverage; failed or missing judgments are excluded, never scored as zero.
+- Common-cell rankings use the intersection of successful source-item/target-language keys within each comparison. Experiment 2 has 618 common cells; this is distinct from Experiment 1's intersection.
+- Context effects use the 642 cells successfully judged in both conditions, with paired improvement, regression, and tie counts.
+- Reports include language, context expectation, and context-length slices where available.
+
+### Timing
+
+Text translation times span request to full response. For ASR→LLM, ASR and translation were collected separately; their sum is not measured integrated end-to-end latency. Direct speech session times include realtime-paced context/current audio. These timing boundaries are reported separately.
+
+## Historical Experiments
+
+The earlier publications use the same dataset (fingerprint `9ab9e98752155a83cda100fc121f1b952474c82c1a20607887d9eb774855d110`). Their original configurations are preserved below.
+
+| | 2026-04 (archived) | 2026-08 issue-1 (archived) | 2026-08 high judge |
 | --- | --- | --- | --- |
 | Run ID | `gemba-mqm-context-v1-gemini-context-v2-expanded-nodeepl-api-20260429-011514` | `issue1-milmmt-e4b-papago-deepseek-0731-integrated-20260815-01` | `unified-12arm-highjudge-20260822` |
 | Translation prompt | `gemini-context-v2.md` | `puripuly-translation-latest.md` (MiLMMT arms use their own) | Live: no prompt (audio only, provenance marker file); Hy-MT2 7B and Gemma 4 12B QAT Q4 fresh; other rows carried over |

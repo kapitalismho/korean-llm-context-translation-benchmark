@@ -1,0 +1,68 @@
+{
+  "runId": "unified-15arm-gpt6-luna-audio-20260927-001",
+  "assembledAtUtc": "2026-09-27T04:21:21.636Z",
+  "mergeTool": "scripts/merge-audio-runs.ts",
+  "judgeReasoningEffort": "high",
+  "forkFromRun": false,
+  "resume": false,
+  "sourceRuns": [
+    {
+      "role": "base",
+      "runId": "unified-13arm-gpt6-luna-mergeonly-20260924",
+      "benchmarkValid": false,
+      "manifestSha256": "7edacbdca4e63e31b2343af05d15755a5643a2dfed8e8f029496c9810a1e14aa",
+      "openRouterBatchJobIds": [],
+      "artifactSha256": {
+        "translations.jsonl": "681c4955d992bf4e37985102aff299c602e6fa9e3d18596aa6e1629c5da57a27",
+        "translation-failures.jsonl": "b7b982e785f03e8df3d439cf172dde976689985d998d20a725393f8aa6aa9668",
+        "translation-metrics.jsonl": "226bd6b89f7673e7365e8a7cb54f2c002ca5e94d4fa2d2bb2aa67fd4c8fd0d85",
+        "translation-provider-details.jsonl": "3faf4f9057cffe1d6adeaaf481e32f96d86b1e350ff3bda4d134369b9cdcdd43",
+        "judge-normalized.jsonl": "47f604f36a2ff69aac0456c1b6c808b3237486c5cb81719e90a5e6ccc876dbfc",
+        "judge-raw.jsonl": "02367fc73a55a852c1ded498262d704155722321364c151a724fa5f884621390",
+        "judge-metrics.jsonl": "9e9317539cbb79cd064b21fae2a85be291630fdcf37e91b47c178411d8566745",
+        "judge-failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "translationCount": 8412,
+      "historicalTranslationFailureCount": 12,
+      "unresolvedTranslationCount": 12,
+      "failedJudgeCount": 5
+    },
+    {
+      "role": "source",
+      "runId": "audio-qwen38-soniox-full-20260927-001",
+      "benchmarkValid": false,
+      "manifestSha256": "1f02057e213e5658fc555a0b3cb2e1f54fcf714b459950c50c3e0005d0637f4a",
+      "openRouterBatchJobIds": [
+        "batch-1790471059-xTQ3sjRkgniNptH4nfIL",
+        "batch-1790476739-Xdrp2IYUIg1BMRML5swy",
+        "batch-1790480152-kbxGWiZqPznfHIOyBETF"
+      ],
+      "artifactSha256": {
+        "translations.jsonl": "02080ef707941bcfff2fa602ffa1a2055b8cd3dad87cae60c6286f5f2160753d",
+        "translation-failures.jsonl": "9b77f25754794a2e642543082eb3c516c0e44b2c569f188587591683533b977d",
+        "translation-metrics.jsonl": "98b2a3d2ad32448c864a3e3d541655ff2b977443d5bfd87f45dd472aeb2bfdb2",
+        "translation-provider-details.jsonl": "6acdbe764d43d3930280f3f0fb2c12337d0ed40619e38e09cfefe7877deb9ce2",
+        "judge-normalized.jsonl": "4f214ed0959c316ed824d4c6b8fa87e8a2e2e92d41eec3560c3e6a9c5efae8db",
+        "judge-raw.jsonl": "202980abb89225a51a4016b59f191bff5fa091a93c0327d373122a02e00ecfec",
+        "judge-metrics.jsonl": "fc8cefa89cbf85af6034699a02b379a961e91365d89ab380389e839a7dcab59a",
+        "judge-failures.jsonl": "ed4f1a758ac68c2ac0840e8c5e761324580c54483da5f0ce103d9063b9fd6937"
+      },
+      "translationCount": 1291,
+      "historicalTranslationFailureCount": 757,
+      "unresolvedTranslationCount": 5,
+      "failedJudgeCount": 14
+    }
+  ],
+  "carriedTranslationCount": 8412,
+  "carriedJudgeCount": 8412,
+  "carriedHistoricalTranslationFailureCount": 12,
+  "carriedUnresolvedTranslationCount": 12,
+  "carriedFailedJudgeCount": 5,
+  "reusedTranslationCount": 9703,
+  "reusedJudgeCount": 9703,
+  "historicalTranslationFailureCount": 769,
+  "unresolvedTranslationCount": 17,
+  "failedJudgeCount": 19,
+  "translationFailuresArtifact": "translation-failures.jsonl",
+  "newApiCallCount": 0
+}

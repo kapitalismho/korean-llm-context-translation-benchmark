@@ -1,6 +1,6 @@
-# Appendix: Context Ablation — A (sentence only) vs B (policy + full history) on Gemma 4 E4B QAT Q4 (2026-08)
+# Main Experiment 3 — Context Effect
 
-An appendix to the 2026-08 high-judge experiment: a single-model A/B ablation measuring the effect of context availability on translation quality. The model is fixed (`gemma-4-E4B-it-qat-UD-Q4_K_XL`, local llama.cpp); only the prompt condition changes. Both conditions are judged with the same high-effort judge as the main experiment, so the pair comparison is like-for-like.
+Paired A/B comparison on one fixed model: Gemma 4 E4B QAT Q4 (`gemma-4-E4B-it-qat-UD-Q4_K_XL`, local llama.cpp). A receives only the current sentence; B receives the translation policy and full conversation history. The original 2026-08 ablation artifacts are reused unchanged.
 
 - **Run ID:** `ablation-ab-highjudge-20260820`
 - **Run date:** 2026-08-20
@@ -15,7 +15,7 @@ An appendix to the 2026-08 high-judge experiment: a single-model A/B ablation me
 
 Primary score: raw mean penalty (GEMBA-MQM severity weights minor 1 / major 5 / critical 25). Lower is better. Same Gemma 4 E4B QAT Q4, same high-effort judge — paired comparison is like-for-like.
 
-![Context ablation — sentence-only vs. policy + full history (Gemma 4 E4B QAT Q4)](assets/context-ablation-e4b-q4.png)
+![Context ablation — sentence-only vs. policy + full history (Gemma 4 E4B QAT Q4)](assets/context-ablation-e4b-q4.svg)
 
 | Condition | Mean penalty | Scored | Paired win (n=642) |
 | --- | ---: | ---: | --- |
@@ -51,8 +51,8 @@ By context turn count:
 ## Caveats — read before citing this appendix
 
 1. **A/B is only valid within this run.** Condition B is a fresh translation under the current prompt revision (`4a358267…`); the main experiment's Gemma 4 E4B QAT Q4 row (1.577) was generated under the previous revision (`792ed1aa…`) in its source run. Same model and same high-effort judge, but different prompt revision and sampling — do not compare B (1.452) directly against the main leaderboard row.
-2. **12 missing cells.** `ctx3-dyadic-ignore-metadata_nonliteral_resistance-002/003` failed translation in both conditions (6 items × 2 languages × 2 conditions; same 2 items that timed out in the main experiment's Live sessions). Both conditions miss the same cells, so the paired comparison (642 pairs) is unaffected.
-3. **Single model.** The ablation isolates the context effect on one local 4B model only; it is not a claim about larger models or commercial services (those rows in the main experiment are context-blind or reuse their own prompts).
+2. **12 missing cells.** `ctx3-dyadic-ignore-metadata_nonliteral_resistance-002/003` failed translation in both conditions (2 items × 3 languages × 2 conditions). Both conditions miss the same cells, leaving 642 valid pairs.
+3. **Scope.** Both history and policy change, so this measures their combined effect on one local model, not a history-only effect or a claim about every system.
 
 ## Files
 
@@ -61,4 +61,5 @@ By context turn count:
 - `judge-normalized.jsonl` / `judge-raw.jsonl` — normalized and raw judge outputs for all 1,284 cells
 - `judge-events.jsonl` / `judge-failures.jsonl` — judge run events (no judge failures in this run)
 - `reports/ablation-ab-comparison.md` — the A/B comparison summary
+- [reports/leaderboard-chart-input.json](reports/leaderboard-chart-input.json) — exact mean penalties on the 642 valid A/B pairs, used for the SVG chart
 - `manifest.json` — run configuration (prompt paths rewritten to repo-relative locations; fingerprints unchanged)

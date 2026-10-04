@@ -1,0 +1,92 @@
+[
+  {
+    "participant_id": "gemma4-e4b-qat-q4",
+    "participant_display_name": "Gemma 4 E4B QAT Q4 (llama.cpp)",
+    "mean_penalty": 1.5604575163398693,
+    "samples": 612
+  },
+  {
+    "participant_id": "gemma4-e4b-fp16",
+    "participant_display_name": "Gemma 4 E4B fp16 (llama.cpp)",
+    "mean_penalty": 1.3366013071895424,
+    "samples": 612
+  },
+  {
+    "participant_id": "milmmt-4b-native",
+    "participant_display_name": "MiLMMT 46-4B X0 (native)",
+    "mean_penalty": 3.0784313725490198,
+    "samples": 612
+  },
+  {
+    "participant_id": "gemma4-31b",
+    "participant_display_name": "Gemma 4 31B via OpenRouter",
+    "mean_penalty": 0.34477124183006536,
+    "samples": 612
+  },
+  {
+    "participant_id": "gemma-4-26b-openrouter",
+    "participant_display_name": "Gemma 4 26B via OpenRouter",
+    "mean_penalty": 0.39869281045751637,
+    "samples": 612
+  },
+  {
+    "participant_id": "google-cloud-translate-basic",
+    "participant_display_name": "Google Cloud Translation Basic",
+    "mean_penalty": 5.88562091503268,
+    "samples": 612
+  },
+  {
+    "participant_id": "deepl-api",
+    "participant_display_name": "DeepL API",
+    "mean_penalty": 3.820261437908497,
+    "samples": 612
+  },
+  {
+    "participant_id": "papago-web",
+    "participant_display_name": "Papago Web",
+    "mean_penalty": 2.584967320261438,
+    "samples": 612
+  },
+  {
+    "participant_id": "deepseek-v4-flash-0731-openrouter",
+    "participant_display_name": "DeepSeek V4 Flash (0731) via OpenRouter",
+    "mean_penalty": 0.5833333333333334,
+    "samples": 612
+  },
+  {
+    "participant_id": "gemini35-live-translate-two-voice",
+    "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+    "mean_penalty": 3.7091503267973858,
+    "samples": 612
+  },
+  {
+    "participant_id": "hymt2-7b-q4xl",
+    "participant_display_name": "Hy-MT2 7B",
+    "mean_penalty": 1.838235294117647,
+    "samples": 612
+  },
+  {
+    "participant_id": "gemma4-12b-qat-q4xl",
+    "participant_display_name": "Gemma 4 12B QAT Q4",
+    "mean_penalty": 0.8349673202614379,
+    "samples": 612
+  },
+  {
+    "participant_id": "gpt6-luna-openrouter",
+    "participant_display_name": "GPT-6 Luna (OpenRouter)",
+    "mean_penalty": 0.10784313725490197,
+    "samples": 612
+  },
+  {
+    "participant_id": "qwen38-live-translate-two-voice",
+    "participant_display_name": "Qwen 3.8 LiveTranslate (two-voice audio history)",
+    "mean_penalty": 2.1143790849673203,
+    "samples": 612
+  },
+  {
+    "participant_id": "soniox-translate-two-voice",
+    "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+    "mean_penalty": 4.897058823529412,
+    "samples": 612
+  }
+]

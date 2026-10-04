@@ -4,61 +4,108 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 
 - Korean conversational utterances (1–3 prior context turns) translated into English, Japanese, and Simplified Chinese
 - Tests both required-context recovery (referents, ellipsis, register) and irrelevant-context rejection (topic shifts, false leads)
-- A series of experiments on one frozen dataset — each experiment has its own prompt, judge, and participants, so **scores are not comparable across experiments**
+- Three main experiments on one frozen dataset: integrated system comparison, speech-input full-stack translation, and paired context effects
 
-## Current Experiment (2026-08)
+## Main Experiments (2026-09)
 
-- **Full details:** [Here](experiments/2026-08-gemini35-live-10p-highjudge/)
-- **Setup:** Unified 12-arm collect — Gemini 3.5 Live Translate (audio-native, two-voice TTS) vs. the 2026-08 text/MT field — Gemma 4 31B/26B/12B QAT Q4, DeepSeek V4 Flash 0731, local Gemma 4 E4B arms (fp16/QAT Q4), Hy-MT2 7B, MiLMMT 46-4B X0, Papago/DeepL/Google. All rows judged by Gemini 3.7 Flash (batch) with high reasoning effort; the 10 carried arms reuse translations and judgments byte-identical from the issue-1-lineage runs, Hy-MT2 7B and Gemma 4 12B QAT Q4 are fresh
+216 Korean items × 3 target languages = 648 expected cells per system. Primary score: raw mean MQM penalty — lower is better.
+
+### Experiment 1 — 15-System Integrated Comparison
+
+- **Full details:** [Here](experiments/2026-09-integrated-15-system/)
+- **Setup:** 12 text-input systems + 3 direct speech-translation systems, extending the previous comparison with GPT-6 Luna, Qwen 3.8 Live Translate, and Soniox Translate.
 
 **Key findings:**
 
-- LLMs outperform traditional MT on multi-turn casual dialogue — best LLM 0.35 (Gemma 4 31B) vs. best MT Papago 2.70
-- Context helps: same Gemma 4 E4B QAT Q4 improves 31.5% with full history + policy (1.45 vs. 2.12 sentence-only, same high-effort judge; see `ablation/` appendix)
-- Google Translate is competitive for en (1.22) and zh-Hans (2.49) but collapses on ja (13.49), driving its overall 5.73
-- Quantization costs quality for the small local model: Gemma 4 E4B fp16 1.35 → QAT Q4 1.58
-- Gemma 4 12B QAT Q4 is the strongest local arm (0.855); dedicated MT model Hy-MT2 7B scores 1.86 but misuses irrelevant context more than any other system (8.3%)
+- GPT-6 Luna leads (0.130); Gemma 4 31B follows (0.353). Best commercial MT: Papago (2.699).
+- Gemma 4 12B QAT Q4 is the strongest local arm (0.855).
+- Qwen 3.8 leads the three direct speech translators (2.124). Speech scores include recognition errors.
 
-![Overall leaderboard: lower mean penalty is better](docs/assets/leaderboard-2026-08-highjudge.png)
+![Overall leaderboard: lower mean penalty is better](experiments/2026-09-integrated-15-system/assets/leaderboard.svg)
 
-Primary score: raw mean penalty — lower is better.
+Means below use all valid judgments per system. The [common-cell report](experiments/2026-09-integrated-15-system/reports/summary-overall.penalty.common-cell.json) compares 612 matched cells and keeps the same ordering; the text-only view excludes the three speech systems.
+
+| Rank | System | Input | Mean penalty | Samples |
+| ---: | --- | --- | ---: | ---: |
+| 1 | GPT-6 Luna | Text | 0.130 | 648 |
+| 2 | Gemma 4 31B | Text | 0.353 | 648 |
+| 3 | Gemma 4 26B A4B | Text | 0.387 | 648 |
+| 4 | DeepSeek V4 Flash 0731 | Text | 0.571 | 648 |
+| 5 | Gemma 4 12B QAT Q4 | Text | 0.855 | 648 |
+| 6 | Gemma 4 E4B fp16 | Text | 1.353 | 648 |
+| 7 | Gemma 4 E4B QAT Q4 | Text | 1.577 | 648 |
+| 8 | Hy-MT2 7B | Text | 1.863 | 648 |
+| 9 | Qwen 3.8 Live Translate | Speech | 2.124 | 647 |
+| 10 | Papago Web | Text | 2.699 | 648 |
+| 11 | MiLMMT 46-4B | Text | 3.087 | 647 |
+| 12 | Gemini 3.5 Live Translate | Speech | 3.723 | 638 |
+| 13 | DeepL API | Text | 3.914 | 642 |
+| 14 | Soniox Translate | Speech | 5.010 | 630 |
+| 15 | Google Cloud Translation Basic | Text | 5.731 | 648 |
+
+#### Speech translation — current-utterance CER ≤ 5%
+
+Separate results for cells whose recognized **current utterance** has a character error rate (CER) of **5% or less**, using valid MQM judgments from the [audio-ASR report](experiments/2026-09-integrated-15-system/reports/audio-asr.json). Lower mean penalty is better.
+
+| System | Mean penalty (CER ≤ 5%) | Samples |
+| --- | ---: | ---: |
+| Qwen 3.8 Live Translate | 1.392 | 286 |
+| Gemini 3.5 Live Translate | 2.991 | 223 |
+| Soniox Translate | 3.473 | 355 |
+
+Each system uses its own qualifying cells, not a shared subset. The filter does not require context-audio CER ≤ 5%; these are conditional results, not ASR-free translation scores.
+
+### Experiment 2 — Full-Stack Translation
+
+- **Full details:** [Here](experiments/2026-09-fullstack/)
+- **Setup:** Korean speech → target-language text: 6 ASR→LLM pipelines + the same 3 direct speech translators from Experiment 1. TTS output is not evaluated.
+
+**Key findings:**
+
+- Gemini Transcribe → Luna leads (0.676), followed by Soniox pure STT → Luna (0.942).
+- With Gemma 26B, Qwen3-ASR 1.7B and Gemini Transcribe are close (1.024 / 1.084).
+- Soniox performs better as pure STT feeding an LLM than as a direct translator.
+
+![Full-stack translation: mean penalty on 618 common cells](experiments/2026-09-fullstack/assets/leaderboard.svg)
+
+Ranking uses the same **618 successfully judged cells** across all nine systems. Samples show each system's full valid coverage out of 648.
+
+| Rank | Speech → translation | Architecture | Mean penalty (n=618) | Full valid / 648 |
+| ---: | --- | --- | ---: | ---: |
+| 1 | Gemini 3.5 Transcribe → GPT-6 Luna · none | ASR→LLM | 0.676 | 648 |
+| 2 | Soniox pure STT → GPT-6 Luna · none | ASR→LLM | 0.942 | 648 |
+| 3 | Qwen3-ASR 1.7B → Gemma 4 26B | ASR→LLM | 1.024 | 648 |
+| 4 | Gemini 3.5 Transcribe → Gemma 4 26B | ASR→LLM | 1.084 | 648 |
+| 5 | Soniox pure STT → Gemma 4 26B | ASR→LLM | 1.293 | 648 |
+| 6 | Qwen 3.8 Live Translate | Direct speech | 2.108 | 647 |
+| 7 | Qwen3-ASR 0.6B → Gemma 4 26B | ASR→LLM | 2.374 | 647 |
+| 8 | Gemini 3.5 Live Translate | Direct speech | 3.754 | 638 |
+| 9 | Soniox Translate | Direct speech | 4.989 | 630 |
+
+Gemini Transcribe is distinct from Gemini Live Translate. Soniox→LLM uses the latest pure-STT transcripts. Scores include ASR error propagation; the reference remains the canonical Korean text.
+
+**Latency:** ASR and LLM stages were collected separately, so integrated end-to-end latency is not measured. Direct speech session times include realtime-paced context/current audio. [Timing report](experiments/2026-09-fullstack/reports/fullstack-latency.json).
+
+### Experiment 3 — Context Effect
+
+- **Full details:** [Here](experiments/2026-08-gemini35-live-10p-highjudge/ablation/)
+- **Setup:** Same Gemma 4 E4B QAT Q4, sentence-only vs. policy + full conversation history.
+- **Key finding:** Policy + history reduces mean penalty by **31.5%** on 642 valid pairs: 236 improved, 134 worsened, 272 tied.
+
+![Context effect — sentence-only vs. policy + full history](experiments/2026-08-gemini35-live-10p-highjudge/ablation/assets/context-ablation-e4b-q4.svg)
+
+| Condition | Mean penalty | Paired samples |
+| --- | ---: | ---: |
+| Sentence only | 2.118 | 642 |
+| Policy + full history | 1.452 | 642 |
+
+The comparison changes both history and translation policy, not history alone. [Slices](experiments/2026-08-gemini35-live-10p-highjudge/ablation/#slices) cover required/irrelevant context, target language, and context length.
 
 
-| Rank | System                                     | Mean penalty | Samples |
-| ----: | ------------------------------------------ | ------------: | -------: |
-| 1    | Gemma 4 31B                                | 0.353        | 648     |
-| 2    | Gemma 4 26B A4B                            | 0.387        | 648     |
-| 3    | DeepSeek V4 Flash 0731                     | 0.571        | 648     |
-| 4    | Gemma 4 12B QAT Q4                         | 0.855        | 648     |
-| 5    | Gemma 4 E4B fp16                           | 1.353        | 648     |
-| 6    | Gemma 4 E4B QAT Q4                         | 1.577        | 648     |
-| 7    | Hy-MT2 7B                                  | 1.863        | 648     |
-| 8    | Papago Web                                 | 2.699        | 648     |
-| 9    | MiLMMT 46-4B                               | 3.087        | 647     |
-| -    | Gemini 3.5 Live Translate, CER ≤ 5% subset | 2.991        | 223     |
-| 10   | Gemini 3.5 Live Translate                  | 3.723        | 638     |
-| 11   | DeepL API                                  | 3.914        | 642     |
-| 12   | Google Cloud Translation Basic             | 5.731        | 648     |
+## Previous Experiments
 
-
-### Context ablation — sentence-only vs. policy + full history
-
-![Context ablation — sentence-only vs. policy + full history (Gemma 4 E4B QAT Q4)](experiments/2026-08-gemini35-live-10p-highjudge/ablation/assets/context-ablation-e4b-q4.png)
-
-Full slices in [ablation/](experiments/2026-08-gemini35-live-10p-highjudge/ablation/) · paired n=642 (B wins 236 vs. 134, tie 272)
-
-
-| Condition                     | Mean penalty | Samples |
-| ----------------------------- | ------------: | -------: |
-| Gemma 4 E4B QAT Q4 Context    | 1.452        | 642     |
-| Gemma 4 E4B QAT Q4 No Context | 2.118        | 642     |
-
-
-## Previous Experiment (2026-04, archived)
-
-- **Full details:** [Here](experiments/2026-04-gemini-context-v2-archived/)
-- Gemini 3.1 Flash-lite led (0.573); context-aware LLMs beat commercial services, context use beat no-context baselines
-- Different prompt (`gemini-context-v2.md`) and judge (`gemini-3.1-pro-preview`) — **not directly comparable** with the current experiment
+- **2026-08:** [12-system comparison](experiments/2026-08-gemini35-live-10p-highjudge/). Gemma 4 31B led (0.353); this is the base comparison extended in Experiment 1.
+- **2026-04, archived:** [Original context-v2 experiment](experiments/2026-04-gemini-context-v2-archived/). Gemini 3.1 Flash-lite led (0.573); a separate historical result.
 
 ## Dataset
 
@@ -77,11 +124,15 @@ npm run bench:cli -- \
   --judge-reasoning-effort high
 ```
 
+This is an example of the earlier runner setup. The published September collections and their source-adapter requirements are documented in [Reproducibility](docs/reproducibility.md#published-main-experiments).
+
 - Full reruns need provider API keys, the two-voice TTS asset pipeline, and a judge model — [Here](docs/reproducibility.md)
 
 ## Documentation
 
-- Current experiment details: [Here](experiments/2026-08-gemini35-live-10p-highjudge/README.md)
+- Experiment 1 — integrated comparison: [Here](experiments/2026-09-integrated-15-system/)
+- Experiment 2 — full-stack translation: [Here](experiments/2026-09-fullstack/)
+- Experiment 3 — context effect: [Here](experiments/2026-08-gemini35-live-10p-highjudge/ablation/)
 - Methodology &amp; experiment comparison: [Here](docs/methodology.md)
 - Result analysis: [Here](docs/results.md)
 - Evaluation (GEMBA-MQM judging): [Here](docs/evaluation.md)

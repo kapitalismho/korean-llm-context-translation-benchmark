@@ -1,0 +1,47 @@
+[
+  {
+    "participant_id": "gpt6luna-none-asr-gemini35",
+    "participant_display_name": "Gemini Transcribe → Luna",
+    "mean_penalty": 0.6763754045307443
+  },
+  {
+    "participant_id": "luna-asr-soniox-pure-stt-v5",
+    "participant_display_name": "Soniox STT → Luna",
+    "mean_penalty": 0.941747572815534
+  },
+  {
+    "participant_id": "gemma26b-asr-qwen17",
+    "participant_display_name": "Qwen ASR 1.7B → Gemma 26B",
+    "mean_penalty": 1.0242718446601942
+  },
+  {
+    "participant_id": "gemma26b-asr-gemini35",
+    "participant_display_name": "Gemini Transcribe → Gemma 26B",
+    "mean_penalty": 1.0841423948220066
+  },
+  {
+    "participant_id": "gemma-asr-soniox-pure-stt-v5",
+    "participant_display_name": "Soniox STT → Gemma 26B",
+    "mean_penalty": 1.2928802588996764
+  },
+  {
+    "participant_id": "qwen38-live-translate-two-voice",
+    "participant_display_name": "Qwen 3.8 Live Translate",
+    "mean_penalty": 2.1084142394822005
+  },
+  {
+    "participant_id": "gemma26b-asr-qwen06",
+    "participant_display_name": "Qwen ASR 0.6B → Gemma 26B",
+    "mean_penalty": 2.3737864077669903
+  },
+  {
+    "participant_id": "gemini35-live-translate-two-voice",
+    "participant_display_name": "Gemini 3.5 Live Translate",
+    "mean_penalty": 3.7540453074433655
+  },
+  {
+    "participant_id": "soniox-translate-two-voice",
+    "participant_display_name": "Soniox Translate",
+    "mean_penalty": 4.988673139158576
+  }
+]

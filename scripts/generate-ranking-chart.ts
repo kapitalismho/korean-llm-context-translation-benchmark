@@ -20,6 +20,8 @@ interface CliOptions {
   htmlOut?: string;
   style: 'column' | 'slide';
   judgeLabel?: string;
+  title?: string;
+  subtitle?: string;
 }
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -76,6 +78,14 @@ function parseArgs(argv: string[]): CliOptions {
         options.judgeLabel = requireOptionValue(argv, index, '--judge-label');
         index += 1;
         break;
+      case '--title':
+        options.title = requireOptionValue(argv, index, '--title');
+        index += 1;
+        break;
+      case '--subtitle':
+        options.subtitle = requireOptionValue(argv, index, '--subtitle');
+        index += 1;
+        break;
       default:
         throw new Error(`Unknown option: ${arg}`);
     }
@@ -111,6 +121,8 @@ if (options.style === 'column') {
   const svg = renderColumnLeaderboardChartSvg({
     rows: summaryRows,
     judgeLabel: options.judgeLabel ?? 'GEMBA-MQM automated judge',
+    title: options.title,
+    subtitle: options.subtitle,
   });
 
   ensureParentDir(svgOut);

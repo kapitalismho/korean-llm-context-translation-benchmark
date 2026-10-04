@@ -11,7 +11,17 @@ cp .env.example .env
 
 Fill the provider credentials needed for the participants you run. Local llama.cpp arms need servers on ports 8081–8085 (`scripts/llama-server.ps1`); the Papago arm needs the Python bridge (`pip install -r scripts/papago-bridge-requirements.txt`).
 
-## Current Experiment (2026-08, high judge)
+## Published Main Experiments
+
+The September results are imported collections, not new executions in this repository:
+
+- [Experiment 1](../experiments/2026-09-integrated-15-system/) includes the 15-system reports and cell-level translation/judgment evidence.
+- [Experiment 2](../experiments/2026-09-fullstack/) includes the nine-stack comparison, timing report, and judgment inputs.
+- [Experiment 3](../experiments/2026-08-gemini35-live-10p-highjudge/ablation/) reuses the existing paired context artifacts.
+
+The GPT-6 Luna, Qwen/Soniox speech, and ASR collection adapters live in the source collection project, `prompt-ab-tester`; the imported manifests describe those runs. The commands below document the earlier runner setup, not a fresh nine-stack execution.
+
+## Earlier Experiment (2026-08, high judge)
 
 Benchmark config:
 
@@ -73,15 +83,39 @@ The 2026-04 run used `data/benchmarks/gemba-mqm-context-v1-gemini-context-v2.jso
 
 ## Regenerating Reports
 
-After run artifacts exist under `output/`, the runner writes per-run report JSON files (as published under `experiments/<experiment>/reports/`). The chart for the current experiment can be regenerated with:
+The runner writes per-run report JSON files under `output/`. Regenerate Experiment 1's chart directly from the published report:
 
 ```bash
 node --import tsx scripts/generate-ranking-chart.ts \
-  --run-id unified-12arm-highjudge-20260822 \
-  --summary-path experiments/2026-08-gemini35-live-10p-highjudge/reports/leaderboard-chart-input.json \
-  --run-status-path experiments/2026-08-gemini35-live-10p-highjudge/reports/run-status.json \
-  --svg-out docs/assets/leaderboard-2026-08-highjudge.svg \
-  --judge-label "Gemini 3.7 Flash (high reasoning effort)"
+  --run-id unified-15arm-gpt6-luna-audio-20260927-001 \
+  --summary-path experiments/2026-09-integrated-15-system/reports/summary-overall.penalty.json \
+  --run-status-path experiments/2026-09-integrated-15-system/reports/run-status.json \
+  --svg-out experiments/2026-09-integrated-15-system/assets/leaderboard.svg \
+  --judge-label "Gemini 3.7 Flash"
 ```
 
-`leaderboard-chart-input.json` is `summary-overall.penalty.json` plus the standalone "Gemini 3.5 Live Translate, CER ≤ 5% subset" row (`gemini35-live-cer-le5-subset`, mean from `ASR-CER-summary-high.json → headline.le5_inclusive`) so the chart matches the README leaderboard. Convert the SVG to PNG at 2× (e.g., headless Chrome: `chrome --headless=new --force-device-scale-factor=2 --window-size=960,586 --screenshot=…`).
+This chart uses all 15 systems' all-valid means, matching the README table. The earlier August chart and its CER-subset row remain with the historical publication.
+
+Regenerate Experiment 2 from the 618-cell common means:
+
+```bash
+node --import tsx scripts/generate-ranking-chart.ts \
+  --run-id asr-soniox-pure-medium-20260929-001 \
+  --summary-path experiments/2026-09-fullstack/reports/leaderboard-chart-input.json \
+  --svg-out experiments/2026-09-fullstack/assets/leaderboard.svg \
+  --title "Full-stack translation" \
+  --subtitle "Korean → EN / JA / ZH-Hans · 618 common cells · Mean MQM penalty · Lower is better" \
+  --judge-label "Gemini 3.7 Flash"
+```
+
+Regenerate Experiment 3 from the 642 valid A/B pairs:
+
+```bash
+node --import tsx scripts/generate-ranking-chart.ts \
+  --run-id ablation-ab-highjudge-20260820 \
+  --summary-path experiments/2026-08-gemini35-live-10p-highjudge/ablation/reports/leaderboard-chart-input.json \
+  --svg-out experiments/2026-08-gemini35-live-10p-highjudge/ablation/assets/context-ablation-e4b-q4.svg \
+  --title "Context effect" \
+  --subtitle "Gemma 4 E4B QAT Q4 · 642 paired cells · Policy + history: 31.5% lower penalty" \
+  --judge-label "Gemini 3.7 Flash"
+```

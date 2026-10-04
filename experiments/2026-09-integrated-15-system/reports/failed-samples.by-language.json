@@ -1,0 +1,121 @@
+{
+  "en": [
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "source_id": "ctx2-single-use-referent_resolution-001",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-single-use-referent_resolution-001::en::deepl-api"
+    },
+    {
+      "participant_id": "milmmt-4b-native",
+      "participant_display_name": "MiLMMT 46-4B X0 (native)",
+      "source_id": "ctx2-dyadic-ignore-stale_context_resistance-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-dyadic-ignore-stale_context_resistance-003::en::milmmt-4b-native"
+    },
+    {
+      "participant_id": "gemini35-live-translate-two-voice",
+      "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+      "source_id": "ctx2-single-use-pragmatic_intent_resolution-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-single-use-pragmatic_intent_resolution-003::en::gemini35-live-translate-two-voice"
+    },
+    {
+      "participant_id": "gemini35-live-translate-two-voice",
+      "participant_display_name": "Gemini 3.5 Live Translate (Audio-native Two Voice)",
+      "source_id": "ctx3-single-ignore-stale_context_resistance-001",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-single-ignore-stale_context_resistance-001::en::gemini35-live-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx1-single-use-ellipsis_completion-004",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx1-single-use-ellipsis_completion-004::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx1-single-use-sense_disambiguation-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx1-single-use-sense_disambiguation-002::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx1-single-use-pragmatic_intent_resolution-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx1-single-use-pragmatic_intent_resolution-003::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx1-dyadic-use-register_carryover-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx1-dyadic-use-register_carryover-002::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx2-dyadic-use-referent_resolution-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-dyadic-use-referent_resolution-003::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx2-dyadic-use-sense_disambiguation-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-dyadic-use-sense_disambiguation-003::en::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx3-dyadic-ignore-false_lead_trap-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-dyadic-ignore-false_lead_trap-002::en::soniox-translate-two-voice"
+    }
+  ],
+  "ja": [],
+  "zh-Hans": [
+    {
+      "participant_id": "deepl-api",
+      "participant_display_name": "DeepL API",
+      "source_id": "ctx2-single-use-referent_resolution-001",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-single-use-referent_resolution-001::zh-Hans::deepl-api"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx1-single-use-sense_disambiguation-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx1-single-use-sense_disambiguation-002::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx2-dyadic-use-sense_disambiguation-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-dyadic-use-sense_disambiguation-002::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx3-single-ignore-topic_shift_independence-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-single-ignore-topic_shift_independence-002::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx3-single-ignore-stale_context_resistance-002",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-single-ignore-stale_context_resistance-002::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx3-dyadic-ignore-topic_shift_independence-003",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-dyadic-ignore-topic_shift_independence-003::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "soniox-translate-two-voice",
+      "participant_display_name": "Soniox STT-RT v5 one-way translation (two-voice audio history)",
+      "source_id": "ctx2-dyadic-use-pragmatic_intent_resolution-001",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx2-dyadic-use-pragmatic_intent_resolution-001::zh-Hans::soniox-translate-two-voice"
+    },
+    {
+      "participant_id": "qwen38-live-translate-two-voice",
+      "participant_display_name": "Qwen 3.8 LiveTranslate (two-voice audio history)",
+      "source_id": "ctx3-dyadic-use-ellipsis_completion-001",
+      "stable_key": "unified-15arm-gpt6-luna-audio-20260927-001::ctx3-dyadic-use-ellipsis_completion-001::zh-Hans::qwen38-live-translate-two-voice"
+    }
+  ]
+}

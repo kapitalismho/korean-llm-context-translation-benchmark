@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "prompt-ab-tester",
+  "sourceReport": "output/asr-soniox-pure-medium-20260929-001/fullstack-comparison.json",
+  "pathBase": "This experiment directory",
+  "note": "Reports, all five hash-pinned normalized judgment inputs, and the latest Soniox cascade manifest are imported byte-for-byte. No paths or metadata were changed; the manifest contains no workstation paths. Full normalized files are retained to verify source hashes even where they contain participants outside this nine-stack comparison. Source report evidence paths identify original artifacts, not local filenames.",
+  "files": [
+    {
+      "source": "output/asr-soniox-pure-medium-20260929-001/fullstack-comparison.json",
+      "local": "reports/fullstack-comparison.json",
+      "sha256": "142c6c063cc93eb84fa33b7b9fbd94f654b64a2fe53823913d5b1e5874f190d3",
+      "bytes": 52182,
+      "transformation": "none"
+    },
+    {
+      "source": "output/asr-soniox-pure-medium-20260929-001/fullstack-latency.json",
+      "local": "reports/fullstack-latency.json",
+      "sha256": "1d20e30dd7e4ba3af7681a2ba71f8cf3585c71a893a40dbaaef2eabfb5a5aa1d",
+      "bytes": 3093,
+      "transformation": "none"
+    },
+    {
+      "source": "output/asr-gpt6luna-gemini35-20260928-001/judge-normalized.jsonl",
+      "local": "inputs/asr-gpt6luna-gemini35-20260928-001/judge-normalized.jsonl",
+      "sha256": "954257046db93f5f87434bc08f64da1e53cc206a745d6cbd6aa8d10a72cc63b8",
+      "bytes": 548762,
+      "transformation": "none"
+    },
+    {
+      "source": "output/asr-gemma26b-threeway-20260927-001/partial-first-batch/judge-normalized.jsonl",
+      "local": "inputs/asr-gemma26b-threeway-20260927-001/partial-first-batch/judge-normalized.jsonl",
+      "sha256": "64194d7e8aa047a1befb727c6d92fb34f04860f7df263f21d2498100eb320b20",
+      "bytes": 1691927,
+      "transformation": "none"
+    },
+    {
+      "source": "output/audio-qwen38-soniox-full-20260927-001/judge-normalized.jsonl",
+      "local": "inputs/audio-qwen38-soniox-full-20260927-001/judge-normalized.jsonl",
+      "sha256": "4f214ed0959c316ed824d4c6b8fa87e8a2e2e92d41eec3560c3e6a9c5efae8db",
+      "bytes": 1267782,
+      "transformation": "none"
+    },
+    {
+      "source": "output/gemini35-live-10p-highjudge-20260820/judge-normalized.jsonl",
+      "local": "inputs/gemini35-live-10p-highjudge-20260820/judge-normalized.jsonl",
+      "sha256": "13fdb586288a11f8b27bcac772b2834226dd621f44da0c310a5c073de3c2f457",
+      "bytes": 5897836,
+      "transformation": "none"
+    },
+    {
+      "source": "output/asr-soniox-pure-medium-20260929-001/judge-normalized.jsonl",
+      "local": "inputs/asr-soniox-pure-medium-20260929-001/judge-normalized.jsonl",
+      "sha256": "4f35bd3528a5923adb7cb3297068866037b7af4339d210ae4f5f07fbccaf8ee9",
+      "bytes": 1123999,
+      "transformation": "none"
+    },
+    {
+      "source": "output/asr-soniox-pure-medium-20260929-001/manifest.json",
+      "local": "inputs/asr-soniox-pure-medium-20260929-001/manifest.json",
+      "sha256": "b1663ce2b89eeba7051655b30f7cd3eeab5c45d283f87b47fc414453d1e0f4a2",
+      "bytes": 1641,
+      "transformation": "none"
+    }
+  ],
+  "sharedDirectSpeech": {
+    "experiment": "../2026-09-integrated-15-system/README.md",
+    "translations": "../2026-09-integrated-15-system/translations.jsonl",
+    "manifest": "../2026-09-integrated-15-system/manifest.json",
+    "participants": [
+      "qwen38-live-translate-two-voice",
+      "gemini35-live-translate-two-voice",
+      "soniox-translate-two-voice"
+    ],
+    "note": "The direct speech observations are shared with Main Experiment 1; their complete original judgment inputs are retained here for source hash verification."
+  }
+}

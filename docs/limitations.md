@@ -1,6 +1,10 @@
 # Limitations
 
 - This benchmark measures Korean multi-turn context translation, not general translation quality.
+- Experiment 1 mixes labeled text and speech inputs. Speech scores include recognition effects; use its text-only view for text translation comparisons.
+- Experiment 2 evaluates speech-to-text translation quality, not output TTS. Its ASR and LLM timings were collected separately, so measured integrated end-to-end latency is unavailable.
+- The three direct speech translators share observations between Experiments 1 and 2; these are not independent repetitions. Common-cell sets differ between comparisons.
+- Experiment 3 changes both history and policy on one fixed model. It does not isolate history alone.
 - Result sets use automated judge models. Automated judging can reflect model bias; the 2026-08 high-judge experiment judged with `gemini-3.7-flash:batch` (reasoning effort high), the 2026-08 issue-1 experiment with `gemini-3.7-flash:batch`, the 2026-04 experiment with `gemini-3.1-pro-preview`.
 - The 2026-08 high-judge run reports `benchmarkValid: false`: 12 unresolved translation failures (8 Gemini Live session timeouts across `ctx3-single-use-pragmatic_intent_resolution-002/003/004`, plus 4 historical DeepL failures carried over from the forked runs) and 5 judge failures (2 Live cells, DeepL en/zh, MiLMMT X0 en — all invalid MQM annotations from the batch judge). Per-system scored sample counts differ (638–648). The common-cell ordering matches the full ordering.
 - The 2026-08 high-judge lineage is a fork-and-merge continuation. In the unified 12-arm collect (`unified-12arm-highjudge-20260822`), the 10 carried arms keep translations *and* judgments byte-identical from `gemini35-live-10p-highjudge-20260820`; only Hy-MT2 7B and Gemma 4 12B QAT Q4 are fresh measurements. The carried text rows were themselves generated across multiple earlier sessions and runs, some under a previous revision of the translation prompt (the fork was made with a prompt mismatch allowed).

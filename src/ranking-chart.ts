@@ -376,6 +376,7 @@ const COLUMN_CATEGORY_FILLS: Record<ColumnChartCategory, string> = {
 };
 
 const COLUMN_SHORT_LABELS: Record<string, string> = {
+  'gpt6-luna-openrouter': 'GPT-6 Luna',
   'gemma4-31b': 'Gemma 4 31B',
   'gemma-4-26b-openrouter': 'Gemma 4 26B A4B',
   'deepseek-v4-flash-0731-openrouter': 'DeepSeek V4 Flash 0731',
@@ -386,6 +387,8 @@ const COLUMN_SHORT_LABELS: Record<string, string> = {
   'hymt2-7b-q4xl': 'Hy-MT2 7B',
   'gemini35-live-cer-le5-subset': 'Gemini 3.5 Live Translate, CER ≤ 5% subset',
   'gemini35-live-translate-two-voice': 'Gemini 3.5 Live Translate',
+  'qwen38-live-translate-two-voice': 'Qwen 3.8 Live Translate',
+  'soniox-translate-two-voice': 'Soniox Translate',
   'milmmt-4b-native': 'MiLMMT 46-4B',
   'milmmt-4b-puripuly-policy': 'MiLMMT X2',
   'papago-web': 'Papago Web',
@@ -395,7 +398,7 @@ const COLUMN_SHORT_LABELS: Record<string, string> = {
 };
 
 export function classifyColumnChartCategory(participantId: string): ColumnChartCategory {
-  if (participantId.startsWith('gemini35-live')) {
+  if (participantId.startsWith('gemini35-live') || participantId.startsWith('qwen38-live') || participantId.startsWith('soniox-translate')) {
     return 'live';
   }
 

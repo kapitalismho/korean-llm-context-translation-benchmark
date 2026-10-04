@@ -1,0 +1,12 @@
+[
+  {
+    "participant_id": "gemma4-e4b-qat-q4-ablation-a",
+    "participant_display_name": "Sentence only",
+    "mean_penalty": 2.1183800623052957
+  },
+  {
+    "participant_id": "gemma4-e4b-qat-q4-ablation-b",
+    "participant_display_name": "Policy + full history",
+    "mean_penalty": 1.4517133956386292
+  }
+]

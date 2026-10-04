@@ -1,0 +1,37 @@
+{
+  "scope": "Saved timing evidence; offline analysis only, no new API calls",
+  "trueCascadeEndToEndMeasured": false,
+  "warning": "ASR turns/sessions and LLM calls were collected separately. Do not add these measurements and label the sum measured E2E. Direct speech full-session times include paced context/current audio and are not comparable to LLM-only request times.",
+  "aggregation": "Repository R7 percentile interpolation, rounded milliseconds",
+  "cascadeLlmOnly": [
+    {"pipeline":"Gemini 3.5 Transcribe -> GPT-6 Luna none","n":648,"meanMs":1595,"p95Ms":2446},
+    {"pipeline":"Soniox pure STT -> GPT-6 Luna none","n":648,"meanMs":1511,"p95Ms":2077},
+    {"pipeline":"Qwen3-ASR 1.7B -> Gemma 4 26B","n":648,"meanMs":786,"p95Ms":1244},
+    {"pipeline":"Gemini 3.5 Transcribe -> Gemma 4 26B","n":648,"meanMs":799,"p95Ms":1289},
+    {"pipeline":"Soniox pure STT -> Gemma 4 26B","n":648,"meanMs":1144,"p95Ms":2071},
+    {"pipeline":"Qwen3-ASR 0.6B -> Gemma 4 26B","n":648,"meanMs":788,"p95Ms":1208}
+  ],
+  "directSpeechFullSession": [
+    {"model":"Qwen 3.8 Live Translate","n":648,"expected":648,"meanMs":32916,"p95Ms":68108},
+    {"model":"Gemini 3.5 Live Translate","n":640,"expected":648,"meanMs":37684,"p95Ms":75820},
+    {"model":"Soniox Translate","n":643,"expected":648,"meanMs":33996,"p95Ms":69359}
+  ],
+  "separateAsr": [
+    {"model":"Qwen3-ASR 0.6B","n":648,"meanMs":1357,"p95Ms":2466,"unit":"isolated turn","boundary":"Local decoder call after audio read/validation"},
+    {"model":"Qwen3-ASR 1.7B","n":648,"meanMs":383,"p95Ms":681,"unit":"isolated turn","boundary":"Local submit/decode call until worker returns; different execution path from 0.6B"},
+    {"model":"Gemini 3.5 Transcribe","n":648,"meanMs":10706,"p95Ms":17708,"unit":"isolated turn","boundary":"Session open, realtime-paced audio, sealing, authoritative transcript and close"},
+    {"model":"Soniox pure STT","n":215,"expectedInitialSessions":216,"meanMs":34609,"p95Ms":69497,"unit":"multi-turn session","boundary":"WebSocket creation through all context/current streamed turns and finalization, including inserted 700ms silence per turn","note":"One initial session failed; authorized retry session 12438ms is separate. Complete downstream source uses 646 initial turns plus 2 retry turns."}
+  ],
+  "sonioxPureCurrentFinalizationWait":{"n":215,"meanMs":281,"p95Ms":710,"boundary":"Client-observed finalize frame to <fin>, not server-only compute or full ASR time"},
+  "evidence":[
+    "output/asr-gemma26b-threeway-20260927-001/translation-metrics.jsonl",
+    "output/asr-gpt6luna-gemini35-20260928-001/translation-metrics.jsonl",
+    "output/asr-soniox-pure-medium-20260929-001/translation-metrics.jsonl",
+    "output/unified-15arm-gpt6-luna-audio-20260927-001/translation-metrics.jsonl",
+    "output/asr-fourway-frozen-20260927-001/transcripts.jsonl",
+    "output/soniox-pure-stt-full-20260929-001/sessions.jsonl",
+    "output/soniox-pure-stt-full-20260929-001/wire-events.jsonl",
+    "output/soniox-pure-stt-full-20260929-001/retry-001/sessions.jsonl",
+    "agent://fullstack-latency-evidence"
+  ]
+}

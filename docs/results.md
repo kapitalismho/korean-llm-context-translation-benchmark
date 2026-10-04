@@ -2,10 +2,46 @@
 
 Results are published per experiment under `experiments/`. Each experiment folder contains the canonical report tables (`reports/`) and a README with setup, leaderboard, and caveats.
 
-- Current experiment: `experiments/2026-08-gemini35-live-10p-highjudge/`
-- Archived experiments: `experiments/2026-08-issue1-milmmt-e4b-papago-deepseek-0731-archived/`, `experiments/2026-04-gemini-context-v2-archived/`
+- [Experiment 1 — 15-system integrated comparison](../experiments/2026-09-integrated-15-system/)
+- [Experiment 2 — 9-pipeline full-stack translation](../experiments/2026-09-fullstack/)
+- [Experiment 3 — paired context effect](../experiments/2026-08-gemini35-live-10p-highjudge/ablation/)
+- Earlier publications remain under their original `experiments/2026-08-…/` and `experiments/2026-04-…/` paths.
 
 Primary score is raw mean penalty from the GEMBA-MQM-based evaluation. Lower is better.
+
+## Experiment 1 — Integrated Comparison
+
+The 15-system comparison extends the earlier 12-system field with GPT-6 Luna and two direct speech translators.
+
+- GPT-6 Luna has the lowest all-valid mean penalty (0.130), followed by Gemma 4 31B (0.353).
+- Gemma 4 12B QAT Q4 leads the local models (0.855); Papago leads the conventional MT services (2.699).
+- Among direct speech translators, Qwen 3.8 (2.124) scores below Gemini Live (3.723) and Soniox (5.010).
+- Text and speech inputs are labeled. Speech scores include recognition effects; they are not text-only controls.
+
+Full and common-cell tables, language/context slices, and coverage are in the [experiment reports](../experiments/2026-09-integrated-15-system/reports/).
+
+## Experiment 2 — Full-Stack Translation
+
+On the 618 successful cells shared by all nine stacks:
+
+- Gemini Transcribe → Luna leads (0.676); Soniox pure STT → Luna follows (0.942).
+- Qwen3-ASR 1.7B → Gemma and Gemini Transcribe → Gemma are close (1.024 / 1.084).
+- Soniox pure STT → Gemma (1.293) also scores below Soniox direct translation (4.989).
+- Qwen 3.8 is the strongest direct speech translator (2.108).
+
+The [comparison report](../experiments/2026-09-fullstack/reports/fullstack-comparison.json) retains all-valid means and failed/missing counts. Direct speech observations are reused from Experiment 1; their means differ here because the common-cell set differs.
+
+The [timing report](../experiments/2026-09-fullstack/reports/fullstack-latency.json) separates ASR, LLM-only requests, and direct speech sessions. There is no measured integrated ASR→LLM end-to-end latency.
+
+## Experiment 3 — Context Effect
+
+Gemma 4 E4B QAT Q4 improves from 2.118 (sentence-only) to 1.452 (policy + full history): **31.5% lower penalty** on 642 paired cells.
+
+- Improved: 236; worsened: 134; tied: 272.
+- Required context (`use`): 2.310 → 1.509.
+- Irrelevant context (`ignore`): 1.724 → 1.333.
+
+This is a combined history-and-policy effect on one model. [Full paired slices](../experiments/2026-08-gemini35-live-10p-highjudge/ablation/#slices).
 
 ## 2026-08 High-Judge Experiment: Notable Slices
 

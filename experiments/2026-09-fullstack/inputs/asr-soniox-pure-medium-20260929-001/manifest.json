@@ -1,0 +1,49 @@
+{
+  "manifestVersion": 3,
+  "runId": "asr-soniox-pure-medium-20260929-001",
+  "benchmarkId": "gemba-mqm-context-v1-milmmt-e4b",
+  "datasetVersion": "runtime.json",
+  "datasetKind": "context",
+  "datasetFingerprintSha256": "765b89dc08b4edba4d29362224bb34bdd9e70856d904fb9f7c4e2ccb623e8879",
+  "promptVersion": "puripuly-translation-latest.md",
+  "promptFingerprintSha256": "4a358267c36bd929a3b2de1c70a2b3d1a3419dc56d6f50bb3b5786a49712fcb4",
+  "judgePromptVersion": "gemba-mqm-context-v1",
+  "judgePromptSetId": "gemba-mqm-context-v1",
+  "judgeBackend": "openrouter-batch",
+  "judgeModelId": "google/gemini-3.7-flash:batch",
+  "targetLanguages": [
+    "en",
+    "ja",
+    "zh-Hans"
+  ],
+  "targetLanguageLabels": {
+    "en": "English",
+    "ja": "Japanese",
+    "zh-Hans": "Chinese Simplified"
+  },
+  "limitApplied": 216,
+  "participants": [
+    {
+      "participantId": "gemma-asr-soniox-pure-stt-v5",
+      "displayName": "Gemma 4 26B / Soniox pure STT",
+      "provider": "openrouter",
+      "providerModelId": "google/gemma-4-26b-a4b-it"
+    },
+    {
+      "participantId": "luna-asr-soniox-pure-stt-v5",
+      "displayName": "GPT-6 Luna none / Soniox pure STT",
+      "provider": "openrouter",
+      "providerModelId": "openai/gpt-6-luna-effort-none"
+    }
+  ],
+  "translationConcurrencyPerModel": 6,
+  "resume": false,
+  "vertexProject": null,
+  "vertexRegion": null,
+  "vendoredGembaCommit": "a7a7eff8e46998447c6cbf09d06affc8f1b99ab4",
+  "openRouterBatchJobIds": [
+    "batch-1790690620-5JC1PBYBXrnwUqF2VQ94"
+  ],
+  "openRouterBatchApiBaseUrl": "https://openrouter.ai/api",
+  "openRouterBatchModelId": "google/gemini-3.7-flash:batch"
+}

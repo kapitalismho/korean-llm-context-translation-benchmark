@@ -1,0 +1,190 @@
+{
+  "benchmarkValid": false,
+  "totalExpected": 9720,
+  "totalNormalized": 9703,
+  "translationFailureHistoricalCount": 769,
+  "translationFailureUnresolvedCount": 17,
+  "commonCellCount": 612,
+  "judgeFailureRatesByParticipantLanguage": {
+    "gemma4-e4b-qat-q4::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-qat-q4::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-qat-q4::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-fp16::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-fp16::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-e4b-fp16::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-native::en": {
+      "ok": 215,
+      "failed": 1
+    },
+    "milmmt-4b-native::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "milmmt-4b-native::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-31b::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma-4-26b-openrouter::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "google-cloud-translate-basic::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepl-api::en": {
+      "ok": 213,
+      "failed": 1
+    },
+    "deepl-api::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepl-api::zh-Hans": {
+      "ok": 213,
+      "failed": 1
+    },
+    "papago-web::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "papago-web::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "papago-web::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "deepseek-v4-flash-0731-openrouter::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemini35-live-translate-two-voice::en": {
+      "ok": 212,
+      "failed": 2
+    },
+    "gemini35-live-translate-two-voice::ja": {
+      "ok": 213,
+      "failed": 0
+    },
+    "gemini35-live-translate-two-voice::zh-Hans": {
+      "ok": 213,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "hymt2-7b-q4xl::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gemma4-12b-qat-q4xl::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gpt6-luna-openrouter::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gpt6-luna-openrouter::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "gpt6-luna-openrouter::zh-Hans": {
+      "ok": 216,
+      "failed": 0
+    },
+    "qwen38-live-translate-two-voice::en": {
+      "ok": 216,
+      "failed": 0
+    },
+    "qwen38-live-translate-two-voice::ja": {
+      "ok": 216,
+      "failed": 0
+    },
+    "qwen38-live-translate-two-voice::zh-Hans": {
+      "ok": 215,
+      "failed": 1
+    },
+    "soniox-translate-two-voice::en": {
+      "ok": 208,
+      "failed": 7
+    },
+    "soniox-translate-two-voice::ja": {
+      "ok": 214,
+      "failed": 0
+    },
+    "soniox-translate-two-voice::zh-Hans": {
+      "ok": 208,
+      "failed": 6
+    }
+  }
+}
