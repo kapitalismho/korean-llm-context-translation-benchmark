@@ -21,9 +21,9 @@ GEMBA-MQM-based benchmark for Korean multi-turn context translation — LLMs vs.
 - Gemma 4 12B QAT Q4 is the strongest local arm (0.855).
 - Qwen 3.8 leads the three direct speech translators (2.124). Speech scores include recognition errors.
 
-![Overall leaderboard: lower mean penalty is better](experiments/2026-09-integrated-15-system/assets/leaderboard.svg)
+![Overall leaderboard with three CER ≤ 5% speech-subset bars: lower mean penalty is better](experiments/2026-09-integrated-15-system/assets/leaderboard.svg)
 
-Means below use all valid judgments per system. The [common-cell report](experiments/2026-09-integrated-15-system/reports/summary-overall.penalty.common-cell.json) compares 612 matched cells and keeps the same ordering; the text-only view excludes the three speech systems.
+The chart includes three additional teal bars for the speech systems' current-utterance CER ≤ 5% subsets, sorted alongside the full results. These use system-specific qualifying cells, not a shared subset. Means in the table below use all valid judgments per system. The [common-cell report](experiments/2026-09-integrated-15-system/reports/summary-overall.penalty.common-cell.json) compares 612 matched cells and keeps the same ordering; the text-only view excludes the three speech systems.
 
 | Rank | System | Input | Mean penalty | Samples |
 | ---: | --- | --- | ---: | ---: |
